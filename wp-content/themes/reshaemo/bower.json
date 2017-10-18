@@ -1,0 +1,8 @@
+{
+  "name": "reshaemo",
+  "description": "Buy Diploma WordPress Site",
+  "author": "Oleg Kovalyov",
+  "devDependencies": {
+    "bootstrap": "v4.0.0-beta"
+  }
+}

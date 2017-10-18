@@ -1,0 +1,210 @@
+/*!
+Theme Name: WP-Reshaemo
+Theme URI: http://underscores.me/
+Author: Oleg Kovalyov
+Author URI: http://www.smartinet.com.ua/
+Description: Buy Diploma WordPress Site
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: reshaemo
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+WP-Reshaemo is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+@import "../bower_components/bootstrap/scss/bootstrap-reboot";
+@import "../bower_components/bootstrap/scss/utilities";
+@import "../bower_components/bootstrap/scss/grid";
+//@import "../bower_components/bootstrap/scss/buttons";
+//@import "../bower_components/bootstrap/scss/alert";
+//@import "../bower_components/bootstrap/scss/badge";
+//@import "../bower_components/bootstrap/scss/tooltip";
+//@import "../bower_components/bootstrap/scss/popover";
+//@import "../bower_components/bootstrap/scss/transitions";
+@import "../bower_components/bootstrap/scss/navbar";
+
+
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media/media";
+
+@import "custom";
+
+body {
+  color: #333;
+}
+
+.site-header {
+    background: #3C5BAE;
+    box-shadow: 2px 2px 3px #888;
+    margin-bottom: 6px;
+    .toplarge-menu {
+        display: flex;
+        margin-bottom: 25px;
+        .navbar-dark {
+            align-self: stretch;
+            background: #343a40;
+            padding: 0;
+            #navbarNav {
+                align-self: stretch;
+                ul.navbar-nav {
+                    align-self: stretch;
+                    background: #E9F8FF; 
+                    margin-left: 0.2em;
+                    //margin-bottom: 20px;
+                }
+            }
+        }
+        ul li {
+            margin-bottom: -23px;
+            background-color: #BFE0F1;
+            padding: 0 3px;
+            margin-right: 5px;
+            width: 20%;
+        }
+        & ul li:last-child {
+            margin-right: 0;
+        }
+        .navbar-expand-lg {
+            display: flex;
+        }    
+    }    
+}
+
+.topnarrow-menu {
+    box-shadow: 2px 3px 5px #888;
+    padding: 0;
+    .navbar-brand {
+        font-size: smaller;
+    }
+    & #navbarNav {
+        align-self: stretch;
+        justify-content: end;
+        ul.navbar-nav {
+            align-self: stretch;
+            align-items: center;
+        }
+    }
+    .nav-link {
+        padding: 12px 2px;
+        display: inline-block;
+        text-transform: lowercase;
+        &:hover {
+            text-decoration: none;
+            background-color: #FABA36;
+        }
+    }
+    
+}
+
+.main-navigation {
+    //background: #eee;
+}
+
+#triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 105px solid transparent;
+    border-right: 10px solid #BFE0F1;
+    border-bottom: 105px solid transparent;
+    margin-right: -15px;
+}
+
+#triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 105px solid transparent;
+	border-left: 10px solid #BFE0F1;
+	border-bottom: 105px solid transparent;
+	margin-left: -15px;
+}
