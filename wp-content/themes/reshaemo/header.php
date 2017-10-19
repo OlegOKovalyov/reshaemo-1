@@ -32,22 +32,31 @@
 	            <div class="row">
                     <div class="col-2">	    
 		                <div class="site-branding">
-			                <?php
-			                the_custom_logo();
-			                if ( is_front_page() && is_home() ) : ?>
-				                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Дипломы<?php /*bloginfo( 'name' );*/ ?></a></h1>
-			                <?php else : ?>
-				                <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			                <?php
-			                endif;
 
-			                $description = get_bloginfo( 'description', 'display' );
-			                if ( $description || is_customize_preview() ) : ?>
-				                <p class="site-description">Гознаки, Аттестаты, Справки, Документы<?php /*echo $description;*/ /* WPCS: xss ok. */ ?></p>
-			                <?php
-			                endif; ?>
+
+<div class="card"">
+    <div class="card-body">
+        <p class="card-text">dipgood.com@gmail.com</p>
+        <p class="card-text">+7 (800) 200-69-81</p>
+        <p class="card-text">+7 (800) 200-69-81</p>
+        <h4 class="card-title"><a href="#" class="card-link">Дипломы</a></h4>
+        <h6 class="card-subtitle mb-2">Гознаки, Аттестаты, Справки, Документы</h6>
+        <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>-->
+    </div>
+</div>
+
+
+
+
+
+
+
 		                </div><!-- .site-branding -->
 		            </div><!-- .col-2 -->
+
+
                     <div id="triangle-left"></div>   		            
 		            <div class="col toplarge-menu">
 		                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

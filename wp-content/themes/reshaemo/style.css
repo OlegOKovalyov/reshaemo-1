@@ -4311,7 +4311,8 @@ body {
           -ms-flex-item-align: stretch;
               align-self: stretch;
           background: #E9F8FF;
-          margin-left: 0.2em; }
+          /* margin-left: 0.2em; */
+          margin-left: 0; }
     .site-header .toplarge-menu ul li {
       margin-bottom: -23px;
       background-color: #BFE0F1;
@@ -4324,6 +4325,29 @@ body {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
+
+.site-branding {
+  color: #fff;
+  margin-top: 5px;
+  margin-left: -22px; }
+  .site-branding .card-body {
+    text-align: center; }
+  .site-branding h6 {
+    color: #fff;
+    margin-top: 10px;
+    text-transform: uppercase; }
+  .site-branding p {
+    line-height: 1.4;
+    margin-bottom: 4px; }
+  .site-branding h4.card-title {
+    border-top: 4px solid #E9F8FF;
+    border-bottom: 4px solid #E9F8FF;
+    font-size: 1.8rem;
+    text-transform: uppercase; }
+    .site-branding h4.card-title a {
+      color: #fff; }
+      .site-branding h4.card-title a:hover {
+        text-decoration: none; }
 
 .topnarrow-menu {
   -webkit-box-shadow: 2px 3px 5px #888;
