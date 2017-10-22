@@ -10,12 +10,13 @@
  */
 
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
@@ -27,70 +28,79 @@
 
 	<header id="masthead" class="site-header">
 	    <div class="container">
-	    
-	        <div class="top-wrap">
-	            <div class="row">
-                    <div class="col-2">	    
-		                <div class="site-branding">
-
-
-<div class="card"">
-    <div class="card-body">
-        <p class="card-text">dipgood.com@gmail.com</p>
-        <p class="card-text">+7 (800) 200-69-81</p>
-        <p class="card-text">+7 (800) 200-69-81</p>
-        <h4 class="card-title"><a href="#" class="card-link">Дипломы</a></h4>
-        <h6 class="card-subtitle mb-2">Гознаки, Аттестаты, Справки, Документы</h6>
-        <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>-->
-    </div>
-</div>
-
-
-
-
-
-
-
-		                </div><!-- .site-branding -->
-		            </div><!-- .col-2 -->
-
-
-                    <div id="triangle-left"></div>   		            
-		            <div class="col toplarge-menu">
-		                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="top-wrap">
+                <div class="row">
+                    <div class="col-2">     
+                        <div class="site-branding">
+                            <div class="brand-card">
+                                <div class="brand-card-body">
+                                    <p class="brand-card-text">dipgood.com@gmail.com</p>
+                                    <p class="brand-card-tel1">+7 (800) 200-69-81</p>
+                                    <p class="brand-card-tel2">+7 (800) 200-69-81</p>
+                                    <h4 class="brand-card-title"><a href="#" class="brand-card-link">Дипломы</a></h4>
+                                    <h6 class="brand-card-subtitle mb-2">Гознаки, Аттестаты, Справки, Документы</h6>
+                                </div><!-- .brand-card-body -->
+                            </div><!-- .brand-card -->
+                        </div><!-- .site-branding -->
+                    </div><!-- .col-2 -->
+                    <div class="triangle-left"></div>                      
+                    <div class="col toplarge-menu">
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                             <!--<a class="navbar-brand" href="#">Navbar</a>-->
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavTop" aria-controls="navbarNavTop" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Дипломы о высшем образовании <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Дипломы о среднем образовании</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Дипломы ПТУ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Аттестаты</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Другие справки и документы</a>
-                                </li>                            
-                            </ul>
+                            <div class="collapse navbar-collapse" id="navbarNavTop">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item active">
+                                        <div class="nav-card">
+                                            <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu1.png" alt="Card image cap">
+                                            <div class="nav-card-body">
+                                                <a href="#" class="nav-link">Дипломы<br /> о высшем образовании <span class="sr-only">(current)</span></a>
+                                            </div><!-- .nav-card-body -->
+                                        </div><!-- .nav-card -->
+                                    </li>
+                                    <li class="nav-item">                                
+                                        <div class="nav-card">
+                                            <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu2.png" alt="Card image cap">
+                                            <div class="nav-card-body">
+                                                <a href="#" class="nav-link">Дипломы<br /> о среднем образовании <span class="sr-only">(current)</span></a>
+                                            </div><!-- .nav-card-body -->
+                                        </div><!-- .nav-card -->        
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="nav-card">
+                                            <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu3.png" alt="Card image cap">
+                                            <div class="nav-card-body">
+                                                <a href="#" class="nav-link">Дипломы<br /> ПТУ <span class="sr-only">(current)</span></a>
+                                            </div><!-- .nav-card-body -->
+                                        </div><!-- .nav-card -->
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="nav-card">
+                                            <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu4.png" alt="Card image cap">
+                                            <div class="nav-card-body">
+                                                <a href="#" class="nav-link">Аттестаты <span class="sr-only">(current)</span></a>
+                                            </div><!-- .nav-card-body -->
+                                        </div><!-- .nav-card -->
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="nav-card">
+                                            <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu5.png" alt="Card image cap">
+                                            <div class="nav-card-body">
+                                                <a href="#" class="nav-link">Другие справки<br /> и документы <span class="sr-only">(current)</span></a>
+                                            </div><!-- .nav-card-body -->
+                                        </div><!-- .nav-card -->
+                                    </li>                            
+                                </ul>
                             </div>
                         </nav>
                     </div><!-- .col -->
-                    <div id="triangle-right"></div>   	                    
-		        </div><!-- .row -->                    
-            </div><!-- .top-wrap -->    
-
+                    <div class="triangle-right"></div>                         
+                </div><!-- .row -->                    
+            </div><!-- .top-wrap --> 
         </div><!-- .container -->
-    </header><!-- #masthead -->
+    </header><!-- #masthead .site-header -->
 		
 	<nav class="navbar navbar-expand-lg navbar-light bg-light topnarrow-menu">
         <div class="container">
@@ -125,6 +135,109 @@
             </div>
         </div><!-- .container -->  
     </nav>
+
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h2 class="display-3">Дипломы и аттестаты в Москве</h2>
+    <p class="lead">Оригинальный бланк ГОЗНАК!<br />Бесплатная доставка<br />по всей России!</p>
+  </div>
+</div>
+
+
+<div class="gallery container-fluid">
+    <div class="container">
+        <h1>Cамые популярные дипломы, аттестаты и другие документы</h1>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
+                        <h4 class="card-title">18 000 руб.</h4>
+                        <a href="#" class="btn btn-primary">Заказать</a>
+                    </div><!-- .card-body -->
+                </div><!-- .card -->
+            </div><!-- .col -->
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
+                        <h4 class="card-title">18 000 руб.</h4>
+                        <a href="#" class="btn btn-primary">Заказать</a>
+                    </div><!-- .card-body -->
+                </div><!-- .card -->                
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
+                        <h4 class="card-title">18 000 руб.</h4>
+                        <a href="#" class="btn btn-primary">Заказать</a>
+                    </div><!-- .card-body -->
+                </div><!-- .card -->                
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
+                        <h4 class="card-title">18 000 руб.</h4>
+                        <a href="#" class="btn btn-primary">Заказать</a>
+                    </div><!-- .card-body -->
+                </div><!-- .card -->                
+            </div>
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
+                        <h4 class="card-title">18 000 руб.</h4>
+                        <a href="#" class="btn btn-primary">Заказать</a>
+                    </div><!-- .card-body -->
+                </div><!-- .card -->
+            </div><!-- .col -->
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
+                        <h4 class="card-title">18 000 руб.</h4>
+                        <a href="#" class="btn btn-primary">Заказать</a>
+                    </div><!-- .card-body -->
+                </div><!-- .card -->                
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
+                        <h4 class="card-title">18 000 руб.</h4>
+                        <a href="#" class="btn btn-primary">Заказать</a>
+                    </div><!-- .card-body -->
+                </div><!-- .card -->                
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
+                        <h4 class="card-title">18 000 руб.</h4>
+                        <a href="#" class="btn btn-primary">Заказать</a>
+                    </div><!-- .card-body -->
+                </div><!-- .card -->                
+            </div>
+        </div><!-- .row -->
+        
+    </div><!-- .container -->
+</div><!-- .gallery .container-fluid -->
+
 		
 
 	<nav id="site-navigation" class="main-navigation">
@@ -141,3 +254,6 @@
 
     <div class="container">
 	<div id="content" class="site-content">
+        <?php echo do_shortcode('[phone]'); ?>
+        <?php echo do_shortcode('[phone]'); ?>
+

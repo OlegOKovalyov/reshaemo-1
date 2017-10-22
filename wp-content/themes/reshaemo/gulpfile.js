@@ -44,6 +44,7 @@ gulp.task('watch', function() {
   gulp.watch('./sass/**/*.scss', ['sass', reload]);
   gulp.watch('./js/*.js', ['js', reload]);
   gulp.watch('images/src/*', ['images', reload]);
+  gulp.watch('./**/*.php', ['', reload]);
 });
 
 // Создаем JS-task для обработки файлов JavaScript
