@@ -16,41 +16,42 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+			<div class="blank-block"></div>
 
-		<?php
-		if ( have_posts() ) :
+			<div class="video-block container">
+				<div class="row">
+					<h2>Видеопрезентация компании</h2>					
+					<div class="col-7 video-links">
+						<nav class="nav flex-column">
+							<a class="nav-link" href="#">Диплом о высшем обрзовании с 2014 по 2017 год</a>
+							<a class="nav-link" href="#">Диплом о высшем обрзовании с 2014 по 2017 год</a>
+							<a class="nav-link" href="#">Диплом о высшем обрзовании с 2014 по 2017 год</a>
+							<a class="nav-link" href="#">Диплом о высшем обрзовании с 2014 по 2017 год</a>
+							<a class="nav-link" href="#">Диплом о высшем обрзовании с 2014 по 2017 год</a>
+						</nav>
+						<h4>Диплом, который вы решите приобрести у нас, содержит:</h4>
+						<p>твердую обложку;</p>
+						<p>сведения об определенной специальности и уровне квалификации;</p>
+						<p>специальный вкладыш, где представлены изученные дисциплины и полученные отметки по ним.</p>
+					</div>
+					<div class="col-5 monitor"></div>
+				</div>
+			</div>
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
 
-			<?php
-			endif;
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile;
 
-			the_posts_navigation();
 
-		else :
 
-			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+/*get_sidebar();*/
 get_footer();

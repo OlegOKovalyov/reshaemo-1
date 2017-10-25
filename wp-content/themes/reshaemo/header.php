@@ -24,7 +24,7 @@
 <body <?php body_class(); ?>>
 
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'reshaemo' ); ?></a>
+	<!-- <a class="skip-link screen-reader-text" href="#content"><?php /*esc_html_e( 'Skip to content', 'reshaemo' );*/ ?></a> -->
 
 	<header id="masthead" class="site-header">
 	    <div class="container">
@@ -45,7 +45,7 @@
                     </div><!-- .col-2 -->
                     <div class="triangle-left"></div>                      
                     <div class="col toplarge-menu">
-                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <nav class="navbar navbar-expand-lg navbar-topmenu bg-topmenu">
                             <!--<a class="navbar-brand" href="#">Navbar</a>-->
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavTop" aria-controls="navbarNavTop" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -72,7 +72,7 @@
                                         <div class="nav-card">
                                             <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu3.png" alt="Card image cap">
                                             <div class="nav-card-body">
-                                                <a href="#" class="nav-link">Дипломы<br /> ПТУ <span class="sr-only">(current)</span></a>
+                                                <a href="#" class="nav-link">Дипломы<br /> ПТУ<br /><br /><span class="sr-only">(current)</span></a>
                                             </div><!-- .nav-card-body -->
                                         </div><!-- .nav-card -->
                                     </li>
@@ -80,7 +80,7 @@
                                         <div class="nav-card">
                                             <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu4.png" alt="Card image cap">
                                             <div class="nav-card-body">
-                                                <a href="#" class="nav-link">Аттестаты <span class="sr-only">(current)</span></a>
+                                                <a href="#" class="nav-link">Аттестаты<br /><br /><br /><span class="sr-only">(current)</span></a>
                                             </div><!-- .nav-card-body -->
                                         </div><!-- .nav-card -->
                                     </li>
@@ -88,7 +88,7 @@
                                         <div class="nav-card">
                                             <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu5.png" alt="Card image cap">
                                             <div class="nav-card-body">
-                                                <a href="#" class="nav-link">Другие справки<br /> и документы <span class="sr-only">(current)</span></a>
+                                                <a href="#" class="nav-link">Другие справки<br /> и документы<br /><br /><span class="sr-only">(current)</span></a>
                                             </div><!-- .nav-card-body -->
                                         </div><!-- .nav-card -->
                                     </li>                            
@@ -102,7 +102,7 @@
         </div><!-- .container -->
     </header><!-- #masthead .site-header -->
 		
-	<nav class="navbar navbar-expand-lg navbar-light bg-light topnarrow-menu">
+	<nav class="navbar navbar-expand-lg navbar-mainmenu bg-mainmenu topnarrow-menu">
         <div class="container">
             <a class="navbar-brand" href="#">Выберите ваш город:</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -144,6 +144,7 @@
     <p class="lead">Оригинальный бланк ГОЗНАК!<br />Бесплатная доставка<br />по всей России!</p>
   </div>
 </div>
+<div class="jumb_grad"></div>
 
 
 <div class="gallery container-fluid">
@@ -156,17 +157,17 @@
                     <div class="card-body">
                         <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
                         <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-primary">Заказать</a>
+                        <a href="#" class="btn btn-order">Заказать</a>
                     </div><!-- .card-body -->
                 </div><!-- .card -->
             </div><!-- .col -->
             <div class="col">
-                <div class="card">
+                <div class="card card-vo">
                     <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
-                        <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-primary">Заказать</a>
+                        <p class="card-text"><span class="upcase">Диплом о высшем  оразовании</span><br /> с 2014 по 2017 годы<br /><span class="lcaseb">Бланк Гознак</span></p>
+                        <h4 class="card-title">20 000 руб.</h4>
+                        <a href="#" class="btn btn-order">Заказать</a>
                     </div><!-- .card-body -->
                 </div><!-- .card -->                
             </div>
@@ -176,17 +177,17 @@
                     <div class="card-body">
                         <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
                         <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-primary">Заказать</a>
+                        <a href="#" class="btn btn-order">Заказать</a>
                     </div><!-- .card-body -->
                 </div><!-- .card -->                
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card card-vo">
                     <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
-                        <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-primary">Заказать</a>
+                        <p class="card-text"><span class="upcase">Диплом о высшем  оразовании</span><br /> до 1996 года<br /><span class="lcaseb">Бланк Гознак</span></p>
+                        <h4 class="card-title">22 000 руб.</h4>
+                        <a href="#" class="btn btn-order">Заказать</a>
                     </div><!-- .card-body -->
                 </div><!-- .card -->                
             </div>
@@ -199,7 +200,7 @@
                     <div class="card-body">
                         <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
                         <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-primary">Заказать</a>
+                        <a href="#" class="btn btn-order">Заказать</a>
                     </div><!-- .card-body -->
                 </div><!-- .card -->
             </div><!-- .col -->
@@ -209,7 +210,7 @@
                     <div class="card-body">
                         <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
                         <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-primary">Заказать</a>
+                        <a href="#" class="btn btn-order">Заказать</a>
                     </div><!-- .card-body -->
                 </div><!-- .card -->                
             </div>
@@ -219,19 +220,19 @@
                     <div class="card-body">
                         <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
                         <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-primary">Заказать</a>
+                        <a href="#" class="btn btn-order">Заказать</a>
                     </div><!-- .card-body -->
                 </div><!-- .card -->                
             </div>
-            <div class="col">
-                <div class="card">
-                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
-                        <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-primary">Заказать</a>
-                    </div><!-- .card-body -->
-                </div><!-- .card -->                
+            <div class="col"><?php echo do_shortcode('[diplspec201417 price="35 000"][/diplspec201417]'); ?>
+<!--                 <div class="card">
+              <img class="card-img-top" src="<?php /*echo bloginfo('template_url');*/ ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
+              <div class="card-body">
+                  <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
+                  <h4 class="card-title">18 000 руб.</h4>
+                  <a href="#" class="btn btn-order">Заказать</a>
+              </div>.card-body
+          </div>.card       -->          
             </div>
         </div><!-- .row -->
         
@@ -240,20 +241,18 @@
 
 		
 
-	<nav id="site-navigation" class="main-navigation">
-	<div class="container">
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'reshaemo' ); ?></button>
-		<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-		?>
+	<!-- <nav id="site-navigation" class="main-navigation">
+    <div class="container">
+        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'reshaemo' ); ?></button>
+        <?php
+            wp_nav_menu( array(
+                'theme_location' => 'menu-1',
+                'menu_id'        => 'primary-menu',
+            ) );
+        ?> -->
     </div><!-- .container -->
 	</nav><!-- #site-navigation -->
 
-    <div class="container">
-	<div id="content" class="site-content">
-        <?php echo do_shortcode('[phone]'); ?>
-        <?php echo do_shortcode('[phone]'); ?>
+    <div class="container-fluid main-block">
+	<div id="content" class="site-content container">
 
