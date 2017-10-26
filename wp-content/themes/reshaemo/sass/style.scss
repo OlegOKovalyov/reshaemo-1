@@ -54,11 +54,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "../bower_components/bootstrap/scss/reboot";
 @import "../bower_components/bootstrap/scss/grid";
 //@import "../bower_components/bootstrap/scss/tables";
-//@import "../bower_components/bootstrap/scss/forms";
+@import "../bower_components/bootstrap/scss/forms";
 @import "../bower_components/bootstrap/scss/buttons";
 //@import "../bower_components/bootstrap/scss/transitions";
 //@import "../bower_components/bootstrap/scss/dropdown";
-//@import "../bower_components/bootstrap/scss/input-group";
+@import "../bower_components/bootstrap/scss/input-group";
 @import "../bower_components/bootstrap/scss/nav";
 @import "../bower_components/bootstrap/scss/navbar";
 @import "../bower_components/bootstrap/scss/card";
@@ -192,11 +192,14 @@ li.nav-item .nav-card {
     background:
         url(images/bg_jumb_leftsm.png) no-repeat left center,
         url(images/bg_jumb_rightsm.png) no-repeat right center,
-        url(images/jumb_mainimg.png) no-repeat center center;
+        url(images/jumb_mainimg.png) no-repeat 39% center;
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
     height: 534px;
     /* margin-bottom: 1px; */
     padding-top: 2rem;
+    .col-4 {
+        margin-left: -20px;
+    }
     h2 {
         color: rgb(47, 151, 13);        
         font-size: 2.3rem;
@@ -309,6 +312,9 @@ li.nav-item .nav-card {
 
 /* Video Block */
 .video-block {
+    .video-links {
+        margin-left: 30px;
+    }
     h2 {
         color: rgb(47, 151, 13);
         font-size: 2.3rem;
@@ -341,6 +347,7 @@ li.nav-item .nav-card {
         background: 
             url(images/i_playscreensm.png) no-repeat 34% 12%,        
             url(images/monitor_smm.png) no-repeat left top;
+        margin-left: -30px;
     }
     h4 {
         color: #3C5AAE;
@@ -367,6 +374,7 @@ li.nav-item .nav-card {
 }  
 
 
+
 /* Footer Заказать консультацию  */
 .order-consult {
     background: rgb(47, 151, 13);
@@ -386,7 +394,10 @@ li.nav-item .nav-card {
         border-radius: 10px;
         font-size: 1.5rem;
         font-weight: 500;
+        line-height: 1.094;        
+        padding: 0.5rem 1.1rem;
         text-transform: uppercase;
-        line-height: 1.094;
     }
 }
+
+

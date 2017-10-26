@@ -139,12 +139,40 @@
 
 
 <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h2 class="display-3">Дипломы и аттестаты в Москве</h2>
-    <p class="lead">Оригинальный бланк ГОЗНАК!<br />Бесплатная доставка<br />по всей России!</p>
-  </div>
-</div>
-<div class="jumb_grad"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h2 class="display-3">Дипломы и аттестаты в Москве</h2>
+                <p class="lead">Оригинальный бланк ГОЗНАК!<br />Бесплатная доставка<br />по всей России!</p>
+            </div><!-- .col-8 -->
+            <div class="col-4">
+                <form class="mainpf">
+                    <fieldset>
+                        <legend>Срочный<br />заказ диплома</legend>
+                        <div class="form-group">
+                            <!-- <label for="exampleFormControlInput1">Email address</label> -->
+                            <input type="text" class="form-control" id="fio" placeholder="Ф.И.О.">
+                            <input type="text" class="form-control" id="telnum" placeholder="номер телефона">
+                            <input type="email" class="form-control" id="email" placeholder="E-mail">
+                            <select class="form-control" id="typedoc">
+                                <option value="Выбрать тип документа">Выбрать тип документа</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div><!-- .form-group -->
+                        <p class="safety">Ваши контактные данные целиком и полностью в безопасности и не могут быть переданы третьим лицам.</p>
+                        <button type="submit" class="btn btn-outline-order">Заказать</button>
+                        <p>После отправки информации с вами свяжется менеджер для уточнения технических деталей</p>
+                    </fieldset>
+                </form>
+            </div><!-- .col-4 -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+</div><!-- .jumbotron .jumbotron-fluid -->
+<div class="jumb_grad">                                                                                                                                                                                                                     </div>
 
 
 <div class="gallery container-fluid">

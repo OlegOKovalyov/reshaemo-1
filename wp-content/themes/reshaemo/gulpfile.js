@@ -74,6 +74,6 @@ gulp.task('tinypng', function(cb) {
 });
 
 
-gulp.task('default', ['sass', 'js', /*'tinypng',*/ 'watch']);
+gulp.task('default', ['sass', 'js', 'tinypng', 'watch']);
 
 
