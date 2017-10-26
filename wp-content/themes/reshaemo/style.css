@@ -4948,6 +4948,7 @@ a.text-myglink:focus, a.text-myglink:hover {
 /*--------------------------------------------------------------
 # Reshaemo Theme 1.0.0 
 --------------------------------------------------------------*/
+/* Верхнее широкое меню */
 .site-header {
   background: #3C5BAE;
   -webkit-box-shadow: 2px 2px 3px #888;
@@ -5043,19 +5044,40 @@ a.text-myglink:focus, a.text-myglink:hover {
       .site-branding h4.brand-card-title a:hover {
         text-decoration: none; }
 
+/* Отдельный пункт верхнего меню */
+li.nav-item .nav-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch; }
+  li.nav-item .nav-card .nav-card-img-top {
+    display: block;
+    margin: 15px auto; }
+  li.nav-item .nav-card .nav-card-body {
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-top: 5px;
+    letter-spacing: -0.5px; }
+    li.nav-item .nav-card .nav-card-body a.nav-link {
+      color: #3C5BAE;
+      display: block; }
+    li.nav-item .nav-card .nav-card-body a.nav-link:hover {
+      text-decoration: none; }
+
+/* Верхнее главное узкое меню */
 .topnarrow-menu {
   -webkit-box-shadow: 2px 3px 5px #888;
           box-shadow: 2px 3px 5px #888;
-  padding: 0;
-  /* .nav-link {
-        padding: 12px 2px;
-        display: inline-block;
-        text-transform: lowercase;
-        &:hover {
-            text-decoration: none;
-            background-color: #FABA36;
-        }
-    } */ }
+  padding: 0; }
   .topnarrow-menu .navbar-brand {
     color: #654404;
     font-size: smaller;
@@ -5081,6 +5103,33 @@ a.text-myglink:focus, a.text-myglink:hover {
         .topnarrow-menu #navbarNav ul.navbar-nav li a.nav-link:hover {
           text-decoration: none;
           background-color: #FABA36; }
+
+/* Jumbotron */
+.jumbotron {
+  background: url(images/bg_jumb_leftsm.png) no-repeat left center, url(images/bg_jumb_rightsm.png) no-repeat right center, url(images/jumb_mainimg.png) no-repeat 39% center;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
+          box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
+  height: 534px;
+  /* margin-bottom: 1px; */
+  padding-top: 2rem; }
+  .jumbotron .col-4 {
+    margin-left: -20px; }
+  .jumbotron h2 {
+    color: #2f970d;
+    font-size: 2.3rem;
+    text-transform: uppercase; }
+  .jumbotron .lead {
+    color: #3c5aae;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    text-transform: uppercase; }
+
+.jumb_grad {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#707070));
+  background-image: linear-gradient(to bottom, #fff, #707070);
+  height: 7px; }
 
 /* Форма Срочный заказ диплома */
 form.mainpf {
@@ -5165,6 +5214,70 @@ form.mainpf {
     bottom: -10px;
     right: 15px; }
 
+/* Gallery */
+.gallery {
+  background: url(images/bg_glry1.png) fixed left center, url(images/bg_glry2.png) fixed right center;
+  height: auto;
+  padding-bottom: 25px; }
+  .gallery h1 {
+    border-bottom: 4px solid;
+    font-size: 2rem;
+    color: #3c5aae;
+    font-weight: 500;
+    line-height: 1.094;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+    text-transform: uppercase; }
+
+/* Card */
+.card {
+  background-color: #d5edf9;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
+          box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
+  margin-bottom: 35px; }
+  .card img.card-img-top {
+    padding: 5px; }
+  .card .card-body {
+    text-align: center; }
+    .card .card-body p span.upcase {
+      color: #535353;
+      font-size: 1.2rem;
+      letter-spacing: -1px;
+      text-transform: uppercase; }
+    .card .card-body p span.lcaseb {
+      text-transform: none;
+      font-weight: bold; }
+    .card .card-body h4 {
+      color: #2f970d;
+      font-size: 1.6rem; }
+
+.card-vo {
+  background-color: #D0F3EC; }
+
+/* Button ЗАКАЗАТЬ в карточке товара card */
+.card .card-body .btn-order {
+  border-radius: 10px;
+  font-size: 1.3rem;
+  /* font-family: "Roboto"; */
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1.094;
+  /* text-align: center; */
+  padding: 0.4rem 1.3rem; }
+
+/* Main content background*/
+.main-block {
+  background: url(images/cloud_smallsmm.png) no-repeat 4% 3%, url(images/cloud_smallsmm.png) no-repeat 98% 0, url(images/cloud_leftsmm.png) no-repeat -2% 19%, url(images/cloud_right_topsmm.png) no-repeat 100% 12%, url(images/cloud_right_btmsmm.png) no-repeat 100% 30%, url(images/tree_left_topsmm.png) no-repeat -1% 48%, url(images/tree_left_btmsmm.png) no-repeat -0.5% 97%, url(images/tree_right_topsmm.png) no-repeat 94% 55%, url(images/tree_right_btmsmm.png) no-repeat 88% 97%;
+  height: auto;
+  margin-top: -50px;
+  padding-bottom: 25px; }
+  .main-block .blank-block {
+    height: 80px; }
+
 .site-footer {
   background: #3C5BAE;
   padding: 40px 0; }
@@ -5234,128 +5347,6 @@ form.mainpf {
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-/* Отдельный пункт верхнего меню */
-li.nav-item .nav-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch; }
-  li.nav-item .nav-card .nav-card-img-top {
-    display: block;
-    margin: 15px auto; }
-  li.nav-item .nav-card .nav-card-body {
-    text-align: center;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    line-height: 1.2;
-    font-weight: 500;
-    margin-top: 5px;
-    letter-spacing: -0.5px; }
-    li.nav-item .nav-card .nav-card-body a.nav-link {
-      color: #3C5BAE;
-      display: block; }
-    li.nav-item .nav-card .nav-card-body a.nav-link:hover {
-      text-decoration: none; }
-
-/* Jumbotron */
-.jumbotron {
-  background: url(images/bg_jumb_leftsm.png) no-repeat left center, url(images/bg_jumb_rightsm.png) no-repeat right center, url(images/jumb_mainimg.png) no-repeat 39% center;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
-          box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
-  height: 534px;
-  /* margin-bottom: 1px; */
-  padding-top: 2rem; }
-  .jumbotron .col-4 {
-    margin-left: -20px; }
-  .jumbotron h2 {
-    color: #2f970d;
-    font-size: 2.3rem;
-    text-transform: uppercase; }
-  .jumbotron .lead {
-    color: #3c5aae;
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    line-height: 1.2;
-    text-transform: uppercase; }
-
-.jumb_grad {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#707070));
-  background-image: linear-gradient(to bottom, #fff, #707070);
-  height: 7px; }
-
-/* Gallery */
-.gallery {
-  background: url(images/bg_glry1.png) fixed left center, url(images/bg_glry2.png) fixed right center;
-  height: auto;
-  padding-bottom: 25px; }
-  .gallery .row {
-    /* margin-bottom: 35px; */ }
-  .gallery h1 {
-    border-bottom: 4px solid;
-    font-size: 2rem;
-    color: #3c5aae;
-    font-weight: 500;
-    line-height: 1.094;
-    margin-bottom: 30px;
-    padding-top: 30px;
-    text-align: center;
-    text-transform: uppercase; }
-
-/* Card */
-.card {
-  background-color: #d5edf9;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
-          box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
-  margin-bottom: 35px; }
-  .card img.card-img-top {
-    padding: 5px; }
-  .card .card-body {
-    text-align: center; }
-    .card .card-body p span.upcase {
-      color: #535353;
-      font-size: 1.2rem;
-      letter-spacing: -1px;
-      text-transform: uppercase; }
-    .card .card-body p span.lcaseb {
-      text-transform: none;
-      font-weight: bold; }
-    .card .card-body h4 {
-      color: #2f970d;
-      font-size: 1.6rem; }
-
-.card-vo {
-  background-color: #D0F3EC; }
-
-/* Button ЗАКАЗАТЬ в карточке товара card */
-.card .card-body .btn-order {
-  border-radius: 10px;
-  font-size: 1.3rem;
-  /* font-family: "Roboto"; */
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  line-height: 1.094;
-  /* text-align: center; */
-  padding: 0.4rem 1.3rem; }
-
-/* Main content */
-.main-block {
-  background: url(images/cloud_smallsmm.png) no-repeat 4% 3%, url(images/cloud_smallsmm.png) no-repeat 98% 0, url(images/cloud_leftsmm.png) no-repeat -2% 19%, url(images/cloud_right_topsmm.png) no-repeat 100% 12%, url(images/cloud_right_btmsmm.png) no-repeat 100% 30%, url(images/tree_left_topsmm.png) no-repeat -1% 48%, url(images/tree_left_btmsmm.png) no-repeat -0.5% 97%, url(images/tree_right_topsmm.png) no-repeat 94% 55%, url(images/tree_right_btmsmm.png) no-repeat 88% 97%;
-  height: auto;
-  margin-top: -50px;
-  padding-bottom: 25px; }
-  .main-block .blank-block {
-    height: 80px; }
-
 /* Video Block */
 .video-block .video-links {
   margin-left: 30px; }

@@ -172,7 +172,7 @@
         </div><!-- .row -->
     </div><!-- .container -->
 </div><!-- .jumbotron .jumbotron-fluid -->
-<div class="jumb_grad">                                                                                                                                                                                                                     </div>
+<div class="jumb_grad"></div>
 
 
 <div class="gallery container-fluid">

@@ -1,0 +1,24 @@
+/* Footer Заказать консультацию (верхний)  */
+.order-consult {
+    background: rgb(47, 151, 13);
+    box-shadow: 0 3px 5px #222;
+    margin-bottom: 7px;
+    text-align: center;
+    .wrap {
+        padding: 35px auto;
+    }
+    h3 {
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+    a {
+        border-radius: 10px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.094;        
+        padding: 0.5rem 1.1rem;
+        text-transform: uppercase;
+    }
+}
