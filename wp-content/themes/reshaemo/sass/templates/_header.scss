@@ -143,7 +143,7 @@ li.nav-item .nav-card {
         ul.navbar-nav {
             align-self: stretch;
             align-items: center;
-            li a.nav-link {
+            li a {
                 color: rgb(101, 68, 4);
                 line-height: 1.2;
                 padding: .8rem 1rem;
@@ -151,9 +151,16 @@ li.nav-item .nav-card {
                 text-transform: lowercase;
                 &:hover {
                     text-decoration: none;
-                    background-color: #FABA36;
+                    background-color: lighten(#88E769, 7.5%);
                 }                
             }
+        }
+    }
+    .current_page_item a {
+        text-decoration: none;
+        background-color: #FABA36;
+        &:hover {
+            background-color: #FABA36 !important;
         }
     }
 }

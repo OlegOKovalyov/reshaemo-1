@@ -11,8 +11,8 @@
 
 ?>
 
-	</div><!-- #content -->
-    </div><!-- .container-fluid -->
+	<!-- </div> --><!-- #content -->
+    <!-- </div> --><!-- .container-fluid -->
     <div class="container-fluid order-consult">
         <div class="container">
             <h3 class="pt-3">У вас трудности с выбором диплома?<br />Закажите индивидуальную консультацию!</h3>
@@ -39,10 +39,10 @@
 		?>
 	</div><!-- .site-info -->  
 
-</div><!-- #page -->
+</div><!-- #page .site -->
 
 <!-- JS -->
-<!-- <script src="js/app.min.js"></script> -->
+<script src="js/app.min.js"></script>
 
 <?php wp_footer(); ?>
 

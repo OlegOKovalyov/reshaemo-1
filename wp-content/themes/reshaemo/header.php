@@ -109,16 +109,40 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+
+
+                <?php 
+                  wp_nav_menu( array(
+                  'theme_location'=>'main-menu', // (string) Расположение меню в шаблоне.
+                                                // (указывается ключ которым было зарегистрировано меню в функции register_nav_menus)
+                  'main-menu' => 'Верхнее главное меню', // (string) Название выводимого меню (указывается в 
+                                // админке   при создании меню, приоритетнее 
+                                // чем указанное местоположение theme_location - если указано, то параметр theme_location игнорируется)
+                  //'container'       => 'div', // (string) Контейнер меню. Обворачиватель ul. 
+                                              // Указывается тег контейнера (по умолчанию в тег div)
+                  //'container_class' => 'collapse navbar-collapse',
+                  //'container_class' => 'collapse navbar-collapse',
+                  //'container_id'    => 'myNavbar',
+                  'menu_class'=>'nav navbar-nav', 
+                  
+                  'after'=>'',
+                  'container'=>''
+                  ) );
+                ?>
+
+
             <ul class="navbar-nav">
-                <li class="nav-item active">
+
+
+                <!-- <li class="nav-item active">
                     <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">Каталог</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Доставка</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">Гарантии</a>
                 </li>
@@ -137,150 +161,6 @@
     </nav>
 
 
-
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-8">
-                <h2 class="display-3">Дипломы и аттестаты в Москве</h2>
-                <p class="lead">Оригинальный бланк ГОЗНАК!<br />Бесплатная доставка<br />по всей России!</p>
-            </div><!-- .col-8 -->
-            <div class="col-4">
-                <form class="mainpf">
-                    <fieldset>
-                        <legend>Срочный<br />заказ диплома</legend>
-                        <div class="form-group">
-                            <!-- <label for="exampleFormControlInput1">Email address</label> -->
-                            <input type="text" class="form-control" id="fio" placeholder="Ф.И.О.">
-                            <input type="text" class="form-control" id="telnum" placeholder="номер телефона">
-                            <input type="email" class="form-control" id="email" placeholder="E-mail">
-                            <select class="form-control" id="typedoc">
-                                <option value="Выбрать тип документа">Выбрать тип документа</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div><!-- .form-group -->
-                        <p class="safety">Ваши контактные данные целиком и полностью в безопасности и не могут быть переданы третьим лицам.</p>
-                        <button type="submit" class="btn btn-outline-order">Заказать</button>
-                        <p>После отправки информации с вами свяжется менеджер для уточнения технических деталей</p>
-                    </fieldset>
-                </form>
-            </div><!-- .col-4 -->
-        </div><!-- .row -->
-    </div><!-- .container -->
-</div><!-- .jumbotron .jumbotron-fluid -->
-<div class="jumb_grad"></div>
-
-
-<div class="gallery container-fluid">
-    <div class="container">
-        <h1>Cамые популярные дипломы, аттестаты и другие документы</h1>
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
-                        <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-order">Заказать</a>
-                    </div><!-- .card-body -->
-                </div><!-- .card -->
-            </div><!-- .col -->
-            <div class="col">
-                <div class="card card-vo">
-                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text"><span class="upcase">Диплом о высшем  оразовании</span><br /> с 2014 по 2017 годы<br /><span class="lcaseb">Бланк Гознак</span></p>
-                        <h4 class="card-title">20 000 руб.</h4>
-                        <a href="#" class="btn btn-order">Заказать</a>
-                    </div><!-- .card-body -->
-                </div><!-- .card -->                
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
-                        <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-order">Заказать</a>
-                    </div><!-- .card-body -->
-                </div><!-- .card -->                
-            </div>
-            <div class="col">
-                <div class="card card-vo">
-                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text"><span class="upcase">Диплом о высшем  оразовании</span><br /> до 1996 года<br /><span class="lcaseb">Бланк Гознак</span></p>
-                        <h4 class="card-title">22 000 руб.</h4>
-                        <a href="#" class="btn btn-order">Заказать</a>
-                    </div><!-- .card-body -->
-                </div><!-- .card -->                
-            </div>
-        </div><!-- .row -->
-
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
-                        <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-order">Заказать</a>
-                    </div><!-- .card-body -->
-                </div><!-- .card -->
-            </div><!-- .col -->
-            <div class="col">
-                <div class="card">
-                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
-                        <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-order">Заказать</a>
-                    </div><!-- .card-body -->
-                </div><!-- .card -->                
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
-                        <h4 class="card-title">18 000 руб.</h4>
-                        <a href="#" class="btn btn-order">Заказать</a>
-                    </div><!-- .card-body -->
-                </div><!-- .card -->                
-            </div>
-            <div class="col"><?php echo do_shortcode('[diplspec201417 price="35 000"][/diplspec201417]'); ?>
-<!--                 <div class="card">
-              <img class="card-img-top" src="<?php /*echo bloginfo('template_url');*/ ?>/images/Diplom-2014-specialist.png" alt="Card image cap">
-              <div class="card-body">
-                  <p class="card-text"><span class="upcase">Диплом о среднем специальном оразовании</span><br /> с 2014 по 2017 годы</p>
-                  <h4 class="card-title">18 000 руб.</h4>
-                  <a href="#" class="btn btn-order">Заказать</a>
-              </div>.card-body
-          </div>.card       -->          
-            </div>
-        </div><!-- .row -->
-        
-    </div><!-- .container -->
-</div><!-- .gallery .container-fluid -->
-
-		
-
-	<!-- <nav id="site-navigation" class="main-navigation">
-    <div class="container">
-        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'reshaemo' ); ?></button>
-        <?php
-            wp_nav_menu( array(
-                'theme_location' => 'menu-1',
-                'menu_id'        => 'primary-menu',
-            ) );
-        ?> -->
-    </div><!-- .container -->
-	</nav><!-- #site-navigation -->
-
-    <div class="container-fluid main-block">
-	<div id="content" class="site-content container">
+    <!-- <div class="container-fluid main-block">
+        <div id="content" class="site-content container"> -->
 

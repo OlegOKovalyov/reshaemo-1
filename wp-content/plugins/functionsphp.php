@@ -148,3 +148,13 @@ function show_diplspec201417( $atts, $content, $tag ) {
 }	
 
 
+/**
+ * Регистрация одного или нескольких меню темы на сайте WordPress
+ */
+
+ if (function_exists('add_theme_support')) { add_theme_support('menus'); }
+
+register_nav_menus(array(
+	'main-menu'        => 'Верхнее главное меню',   
+   
+));

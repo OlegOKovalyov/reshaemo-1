@@ -119,7 +119,7 @@ $theme-colors: (
   order: $myorange,
   mainmenu: $mygreen,
   topmenu: $mylblue,
-  myglink: $myglink
+  callback: $myglink
 ) !default;
 
 // Set a specific jump point for requesting color jumps
@@ -174,7 +174,7 @@ $body-color:    $gray-900 !default;
 //
 // Style anchor elements.
 
-$link-color:            theme-color("myglink") !default;
+$link-color:            theme-color("callback") !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
