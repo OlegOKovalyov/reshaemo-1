@@ -45,7 +45,10 @@
                     </div><!-- .col-2 -->
                     <div class="triangle-left"></div>                      
                     <div class="col toplarge-menu">
-                        <nav class="navbar navbar-expand-lg navbar-topmenu bg-topmenu">
+                        <!-- <nav class="navbar navbar-expand-lg navbar-topmenu bg-topmenu"> -->
+                        <nav class="navbar navbar-expand-lg navbar-light bg-topmenu">
+                        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
+                        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #BFE0F1;"> -->
                             <!--<a class="navbar-brand" href="#">Navbar</a>-->
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavTop" aria-controls="navbarNavTop" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -96,18 +99,44 @@
                             </div>
                         </nav>
                     </div><!-- .col -->
+
                     <div class="triangle-right"></div>                         
+                        
                 </div><!-- .row -->                    
             </div><!-- .top-wrap --> 
         </div><!-- .container -->
     </header><!-- #masthead .site-header -->
 		
-	<nav class="navbar navbar-expand-lg navbar-mainmenu bg-mainmenu topnarrow-menu">
+    <!-- <nav class="navbar navbar-expand-lg navbar-mainmenu bg-mainmenu topnarrow-menu"> -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light topnarrow-menu"  style="background-color: #88E769;">
         <div class="container">
-            <a class="navbar-brand" href="#">Выберите ваш город:</a>
+
+
+<?php if ( is_front_page() ): ?>
+            <div class="col-4">
+                <a class="navbar-brand" href="#">Выберите ваш город:</a>
+            </div><!-- .col-4 -->
+<?php else: ?>
+            <div class="col-4 brdcrmb-wrap">
+
+                <img src="<?php echo bloginfo('template_url'); ?>/images/i_homem.png" alt="">
+
+<nav aria-label="breadcrumb" role="navigation" style="background-color: #88E769;">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+    <li class="breadcrumb-item active" aria-current="page">доставка ...</li>
+  </ol>
+</nav>
+
+                <!-- <a class="navbar-brand" href="#">Это не главная страница:</a> -->
+            </div><!-- .col-4 -->
+<?php endif; ?>
+
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
 
 
@@ -123,7 +152,7 @@
                   //'container_class' => 'collapse navbar-collapse',
                   //'container_class' => 'collapse navbar-collapse',
                   //'container_id'    => 'myNavbar',
-                  'menu_class'=>'nav navbar-nav', 
+                  'menu_class'=>'navbar-nav', 
                   
                   'after'=>'',
                   'container'=>''

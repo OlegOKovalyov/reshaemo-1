@@ -42,7 +42,7 @@
 </div><!-- #page .site -->
 
 <!-- JS -->
-<script src="js/app.min.js"></script>
+<!-- <script src="js/app.min.js"></script> -->
 
 <?php wp_footer(); ?>
 

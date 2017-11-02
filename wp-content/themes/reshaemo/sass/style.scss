@@ -52,21 +52,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "../bower_components/bootstrap/scss/variables";
 @import "../bower_components/bootstrap/scss/mixins";
 @import "../bower_components/bootstrap/scss/reboot";
+@import "../bower_components/bootstrap/scss/utilities";
 @import "../bower_components/bootstrap/scss/grid";
 //@import "../bower_components/bootstrap/scss/tables";
 @import "../bower_components/bootstrap/scss/forms";
 @import "../bower_components/bootstrap/scss/buttons";
-//@import "../bower_components/bootstrap/scss/transitions";
-//@import "../bower_components/bootstrap/scss/dropdown";
+@import "../bower_components/bootstrap/scss/dropdown";
 @import "../bower_components/bootstrap/scss/input-group";
 @import "../bower_components/bootstrap/scss/nav";
 @import "../bower_components/bootstrap/scss/navbar";
 @import "../bower_components/bootstrap/scss/card";
+@import "../bower_components/bootstrap/scss/transitions";
+@import "../bower_components/bootstrap/scss/breadcrumb";
 //@import "../bower_components/bootstrap/scss/pagination";
 //@import "../bower_components/bootstrap/scss/badge";
 //@import "../bower_components/bootstrap/scss/alert";
 //@import "../bower_components/bootstrap/scss/close";
-@import "../bower_components/bootstrap/scss/utilities";
 
 
 /*--------------------------------------------------------------
@@ -77,6 +78,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "templates/gallery";
 @import "templates/maincontent";
 @import "templates/videoblock";
+@import "templates/page-delivery";
 @import "templates/footertop";
 @import "templates/footerbtm";
 
@@ -164,122 +166,3 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 //@import "media/media";
 
-
-
-/* Delivery Page: page-delivery.php */
-.page-delivery {
-	background:
-        url(images/cloud_smallsmm.png) no-repeat 4% 15%, // змінено
-        url(images/cloud_smallsmm.png) no-repeat 98% 8%, // змінено
-        url(images/cloud_leftsmm.png) no-repeat -2% 25%, // змінено
-        url(images/cloud_right_topsmm.png) no-repeat 100% 17%, // змінено
-        url(images/cloud_right_btmsmm.png) no-repeat 104% 30%,
-        url(images/tree_left_topsmm.png) no-repeat -1% 48%,
-        url(images/tree_left_btmsmm.png) no-repeat -0.5% 97%,
-        url(images/tree_right_topsmm.png) no-repeat 100% 55%,
-        url(images/tree_right_btmsmm.png) no-repeat 99% 97%;
-	.blank-block {
-		height: 65px;
-	}
-	h1 {
-		color: rgb(60, 90, 174);		
-		font-size: 2.1rem;
-		font-weight: bold;
-		line-height: 0.972;
-		margin: 30px auto;	
-		text-align: center;			
-		text-transform: uppercase;		
-	}
-    h4 {
-        color: #3C5AAE;
-        font-size: 1.2rem;
-        line-height: 1.2;
-        margin-bottom: 25px;
-        margin-top: 15px;
-        text-transform: uppercase;    
-    }
-    .dlv-1col {
-    	    border-right: 4px solid #76C7FF;
-    	    .in-dlv-1col {
-    	    	margin: 0 7%;
-    	    }
-    } 
-    p {
-    	color: rgb(60, 90, 174);
-    	margin-bottom: .2rem;
-    	// padding-right: 30px;
-   	}
-    .lchd {
-    	margin-bottom: 30px;
-    }
-    img {
-    	display: block;
-    	margin: 0 auto;
-    }
-}
-.sfbtns-group {
-	input.form-control {
-		background-color: rgb(186, 239, 250);
-		background-image: url('images/i_searchm.png');   
-	    background-repeat: no-repeat;  
-	    background-position: 98%;   
-		border-color: rgb(186, 239, 250);
-		border-radius: .625rem;
-		color: #654404;
-		font-size: smaller;
-		outline: none; // убираем стандартную обводку браузера 
-		width: 54%;
-			&::-webkit-input-placeholder {color:rgb(60, 160, 183);}
-			&::-moz-placeholder {color:rgb(60, 160, 183);}Firefox 19+
-		 	&:-moz-placeholder {color:rgb(60, 160, 183);}Firefox 18-
-		 	&:-ms-input-placeholder {color:rgb(60, 160, 183);}
-	}	
-	&:focus {
-		background-color: lighten(rgb(186, 239, 250), 7.5%);
-	}
-	.extnd-srch {
-		display: flex;
-		justify-content: space-around;
-		flex-direction: column;
-		font-size: .9rem;
-		a {
-			// color: rgb(20, 88, 32);
-			text-decoration: underline;
-		}
-	}
-}
-
-.three-colms {
-	.row {
-		margin-bottom: 50px;
-	}
-}
-
-/* Button НАЙТИ ДОКУМЕНТЫ */
-.btn-outline-findoc {
-	border: 2px solid;
-	border-radius: 10px;
-    font-size: .9rem;
-    font-weight: 600;
-    line-height: 1.094;        
-    padding: 0.15rem .7rem;
-    text-transform: uppercase;
-}
-
-/* Button ОБРАТНЫЙ ЗВОНОК и ВИДЕО О ДИПЛОМАХ */
-.callbk-btn {
-	align-self: center;
-	.btn-outline-callback {
-		border: 2px solid;
-		border-radius: 10px;
-	    font-size: .9rem;
-	    font-weight: 600;
-	    line-height: 1.094;        
-	    padding: 0.15rem .7rem;
-	    text-transform: uppercase;
-	}
-}
-
-.bld_ltr {
-	font-weight: 600;
-}

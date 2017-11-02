@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/OlegOKovalyov/wpreshaemo.loc"
+    "url": "https://github.com/OlegOKovalyov/reshaemo-1"
   },
   "keywords": [
     "Keywords"
@@ -26,6 +26,7 @@
     "gulp-jsxhint": "0.0.1",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
     "gulp-sass": "^3.1.0",
     "gulp-tinypng-nokey": "^1.1.0",
     "gulp-uglify": "^3.0.0",

@@ -128,6 +128,10 @@ li.nav-item .nav-card {
     }
 }
 
+.bg-light {
+    /* background-color: #E9F8FF !important; */
+}   
+
 /* Верхнее главное узкое меню */
 .topnarrow-menu {
     box-shadow: 2px 3px 5px #888;
@@ -165,8 +169,36 @@ li.nav-item .nav-card {
     }
 }
 
+.bg-light {
+    background-color: #88E769 !important;
+}   
+
+.navbar-light .navbar-toggler:hover {
+    cursor: pointer;
+}
 
 .main-navigation {
     //background: #eee;
 }
 
+/* Bredcrumbs в главном узком меню */
+.brdcrmb-wrap {
+    align-items: flex-start;
+    display: flex;
+    margin-left: -25px;
+    img {
+        margin-top: 5px;
+    }
+    nav {
+        line-height: 0.1;
+        .breadcrumb {
+            background-color: #88E769;
+            font-size: .85rem;
+            margin-bottom: 0;
+            padding: 1.4rem 1rem 0.5rem;
+            li {
+
+            }
+        }
+    }
+}
