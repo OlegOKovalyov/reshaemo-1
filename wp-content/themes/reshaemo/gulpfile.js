@@ -39,7 +39,9 @@ gulp.task('sass', function() {
 // *** JAVASCRIPT ***
 // Создаем JS-task для обработки файлов JavaScript
 gulp.task('js', function() {
-  return gulp.src(['./js/src/*.js'])
+  //return gulp.src(['./js/src/*.js'])
+    gulp.src(['./js/src/main.js'])
+    .pipe(plumber())
     //.pipe(jshint())
     //.pipe(jshint.reporter('default'))
     .pipe(rigger())

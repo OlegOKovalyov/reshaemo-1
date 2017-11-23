@@ -103,7 +103,7 @@ add_action( 'after_setup_theme', 'reshaemo_content_width', 0 );
 function reshaemo_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'reshaemo' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sb-cat',
 		'description'   => esc_html__( 'Add widgets here.', 'reshaemo' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -113,15 +113,67 @@ function reshaemo_widgets_init() {
 }
 add_action( 'widgets_init', 'reshaemo_widgets_init' );
 
+
+/*function my_scripts_method(){
+	if ( !is_admin() ) { 
+		wp_enqueue_script( 'jquery' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'my_scripts_method' );*/
+
+// Remove themes old version of jQuery and load a compatible version
+/*function my_update_jquery () {
+	if ( !is_admin() ) { 
+	   wp_deregister_script('jquery');
+ 	   wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', false, false, true);
+	   wp_enqueue_script('jquery');
+	}
+}
+add_action('wp_enqueue_scripts', my_update_jquery);
+*/
 /**
  * Enqueue scripts and styles.
  */
 function reshaemo_scripts() {
-	wp_enqueue_style( 'reshaemo-style', get_stylesheet_uri() );
+
+	/* CSS */
+	wp_enqueue_style( 'reshaemo-style', get_stylesheet_uri() );	
+
+	/*wp_register_style( 'reshaemo_owl_carousel', get_template_directory_uri() . '/owlcarousel/dist/assets/owl.carousel.min.css', array(), '20151215', true );
+	wp_enqueue_style ( 'reshaemo_owl_carousel' );*/	
+
+	/******wp_register_style( 'reshaemo-owl-theme-default', get_template_directory_uri() . '/owlcarousel/dist/assets/owl.theme.default.min.css', array(), '20151215', true );
+	wp_enqueue_style ( 'reshaemo-owl-theme-default' );*****/
 
 	/*wp_enqueue_script( 'reshaemo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'reshaemo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );*/
+
+	/* JS */
+
+	/*<?php bloginfo('template_directory'); ?>/owlcarousel/dist/owl.carousel.min.js*/
+
+    /*if (!is_admin()) {
+        wp_enqueue_script('jquery');
+    }*/	
+
+	/*wp_enqueue_script( 'reshaemo-owl-carousel-js', get_template_directory_uri() . '/owlcarousel/dist/owl.carousel.min.js', array(), '20151215', true );*/
+/* Подключаем наш js-файл скриптов common.js */
+/*wp_register_script('common_my', get_template_directory_uri() . '/js/common.js', array ('jquery'), null, false);
+wp_enqueue_script('common_my');*/
+
+	/*wp_register_script( 'reshaemo_owl_carousel_js', get_template_directory_uri() . '/owlcarousel/assets/owl.carousel.min.js' );
+	wp_enqueue_script( 'reshaemo_owl_carousel_js' );*/
+
+/* https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous */	
+
+/*wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', false, false, true);
+wp_enqueue_script('jquery'); */
+
+	/* wp_register_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous', array(), '20151215', false, false, true );
+	wp_enqueue_script('popper'); - worked code */
+
+	/* wp_enqueue_script( 'reshaemo-owl_carousel', get_template_directory_uri() . '/owlcarousel/dist/owl.carousel.min.js', array(), '20151215', true ); - worked code */
 
 	wp_enqueue_script( 'reshaemo-javascript', get_template_directory_uri() . '/js/app.min.js', array(), '20151215', true );
 
@@ -157,3 +209,7 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/* Изменение длины анонса записи Отрывка */
+add_filter('excerpt_length', 'my_excerpt_length');
+function my_excerpt_length($len) { return 75; }

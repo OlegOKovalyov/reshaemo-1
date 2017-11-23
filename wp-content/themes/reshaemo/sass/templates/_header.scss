@@ -1,3 +1,7 @@
+body {
+    font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 /* Верхнее широкое меню */
 .site-header {
     background: #3C5BAE;
@@ -40,6 +44,12 @@
                 background: #E9F8FF; 
                 /* margin-left: 0.2em; */
                 margin-left: 0;
+                a {
+                    padding-top: 110px;
+                    padding-bottom: 35px;
+                    margin-top: -110px;
+                    margin-bottom: -35px;
+                }
                 a:hover {
                     color: #fff;
                 }
@@ -160,7 +170,8 @@ li.nav-item .nav-card {
             }
         }
     }
-    .current_page_item a {
+    .current_page_item a,
+    .current-page-ancestor a {
         text-decoration: none;
         background-color: #FABA36;
         &:hover {
@@ -181,7 +192,7 @@ li.nav-item .nav-card {
     //background: #eee;
 }
 
-/* Bredcrumbs в главном узком меню */
+/* Bredcrumbs в главном узком меню - можно удалить */
 .brdcrmb-wrap {
     align-items: flex-start;
     display: flex;
@@ -195,10 +206,46 @@ li.nav-item .nav-card {
             background-color: #88E769;
             font-size: .85rem;
             margin-bottom: 0;
-            padding: 1.4rem 1rem 0.5rem;
+            padding: 1.2rem 1rem 0.5rem;
             li {
 
             }
+        }
+    }
+}
+
+/* Dimox Bredcrumbs в главном узком меню */
+.brdcrmb-wrap {
+    align-items: flex-start;
+    display: flex;
+    margin-left: -25px;  
+    img {
+        align-self: center;
+    }    
+    .breadcrumbs {
+        background-color: #88E769;
+        font-size: .85rem;
+        margin-bottom: 0;
+        padding: 1.2rem 1rem 0.3rem;
+        .current {
+            text-transform: lowercase; 
+            &:after {
+                content: ' ...';
+            }           
+        }
+    }
+}
+
+/* Выберите ваш город: */
+.choose-city {
+    display: flex;
+    margin-left: -20px;
+    select {
+        background: #88E769;
+        border-radius: .6rem;
+        font-size: 0.7rem;
+        &:last-child {
+            font-size: 0.8rem;
         }
     }
 }

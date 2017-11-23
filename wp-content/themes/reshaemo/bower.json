@@ -3,7 +3,21 @@
   "description": "Buy Diploma WordPress Site",
   "author": "Oleg Kovalyov",
   "devDependencies": {
-  	"jquery": "^3.2.1",
+    "jquery": "^3.2.1",
     "bootstrap": "v4.0.0-beta"
-  }
+  },
+  "homepage": "https://github.com/OlegOKovalyov/reshaemo-1",
+  "authors": [
+    "Oleg Kovalyov <koa2003@ukr.net>"
+  ],
+  "main": "index.php",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower_components/",
+    "test",
+    "tests"
+  ]
 }

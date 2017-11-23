@@ -12,6 +12,32 @@
  * @package WP-Reshaemo
  */
 
+require_once('city.php'); // подключаем список с городами
+
+$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
+
+// возвращаем список городов
+if ($action == 'getCity')
+{
+    if (isset($city[$_GET['region']]))
+    {
+        echo json_encode($city[$_GET['region']]); // возвраащем данные в JSON формате;
+    }
+    else
+    {
+        echo json_encode(array('Выберите область'));
+    }
+
+    exit;
+}
+
+// выводим пришедшие данные
+if ($action == 'postResult')
+{
+    echo '<pre>' . htmlspecialchars(print_r($_POST, true)) . '</pre>';
+    exit;
+}
+
 get_header(); ?>
 
 

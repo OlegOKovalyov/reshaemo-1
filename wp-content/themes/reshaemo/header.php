@@ -9,7 +9,24 @@
  * @package WP-Reshaemo
  */
 
+require_once('city.php');
+ 
+if (isset($_GET['action']) && $_GET['action'] == 'getCity')
+{
+    if (isset($city[$_GET['region']]))
+    {
+        echo json_encode($city[$_GET['region']]); // возвращаем данные в JSON формате;
+    }
+    else
+    {
+        echo json_encode(array('Выберите область'));
+    }
+ 
+    exit;
+}
+
 ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -18,14 +35,37 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 
+    <script type="text/javascript">
+    // <![CDATA[
+        function loadCity(select)
+        {
+            var citySelect = $('select[name="city"]');
+            citySelect.attr('disabled', 'disabled'); // делаем список городов не активным
+            
+            // послыаем AJAX запрос, который вернёт список городов для выбранной области
+            $.getJSON('index.php', {action:'getCity', region:select.value}, function(cityList){
+                
+                citySelect.html(''); // очищаем список городов
+                
+                // заполняем список городов новыми пришедшими данными
+                $.each(cityList, function(i){
+                    citySelect.append('<option value="' + i + '">' + this + '</option>');
+                });
+                
+                citySelect.removeAttr('disabled'); // делаем список городов активным
+                
+            });
+        }
+    // ]]>
+    </script>    
+
 	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
 
 <div id="page" class="site">
-	<!-- <a class="skip-link screen-reader-text" href="#content"><?php /*esc_html_e( 'Skip to content', 'reshaemo' );*/ ?></a> -->
-
 	<header id="masthead" class="site-header">
 	    <div class="container">
             <div class="top-wrap">
@@ -113,32 +153,39 @@
 
 
 <?php if ( is_front_page() ): ?>
-            <div class="col-4">
-                <a class="navbar-brand" href="#">Выберите ваш город:</a>
-            </div><!-- .col-4 -->
+    <div class="col-5 choose-city">
+        <a class="navbar-brand" href="#">Выберите ваш город:</a>
+        <select name="region" onchange="loadCity(this)">
+            <option>Выберите область</option>
+         
+            <?php // заполняем список областей
+                foreach ($city as $region => $cityList)
+                {
+                    echo '<option value="' . $region . '">' . $region . '</option>' . "\n";
+                }
+            ?>
+         
+        </select>
+        <select name="city" disabled="disabled">
+            <option>Выберите город</option>
+        </select>
+    </div><!-- .col-5 .choose-city -->
 <?php else: ?>
-            <div class="col-4 brdcrmb-wrap">
+    <div class="col-5 brdcrmb-wrap">
 
-                <img src="<?php echo bloginfo('template_url'); ?>/images/i_homem.png" alt="">
+        <img src="<?php echo bloginfo('template_url'); ?>/images/i_homem.png" alt="">
 
-<nav aria-label="breadcrumb" role="navigation" style="background-color: #88E769;">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Главная</a></li>
-    <li class="breadcrumb-item active" aria-current="page">доставка ...</li>
-  </ol>
-</nav>
+<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
 
-                <!-- <a class="navbar-brand" href="#">Это не главная страница:</a> -->
-            </div><!-- .col-4 -->
+    </div><!-- .col-5 .brdcrmb-wrap -->
+
 <?php endif; ?>
-
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-
 
                 <?php 
                   wp_nav_menu( array(
@@ -159,31 +206,30 @@
                   ) );
                 ?>
 
-
             <ul class="navbar-nav">
 
 
                 <!-- <li class="nav-item active">
                     <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
                 </li> -->
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Каталог</a>
-                </li>
+                </li> -->
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Доставка</a>
                 </li> -->
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Гарантии</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">FAQ</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Отзывы</a>
-                </li>                    
-                <li class="nav-item">
+                </li> -->                    
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Контакты</a>
-                </li>
+                </li> -->
             </ul>
             </div>
         </div><!-- .container -->  
