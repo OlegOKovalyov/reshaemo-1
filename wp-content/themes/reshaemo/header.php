@@ -35,7 +35,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'getCity')
 	<link rel="profile" href="http://gmpg.org/xfn/11">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 
-    <script type="text/javascript">
+    <script>
     // <![CDATA[
         function loadCity(select)
         {
@@ -68,118 +68,49 @@ if (isset($_GET['action']) && $_GET['action'] == 'getCity')
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
 	    <div class="container">
-            <div class="top-wrap">
-                <div class="row">
-                    <div class="col-2">     
-                        <div class="site-branding">
-                            <div class="brand-card">
-                                <div class="brand-card-body">
-                                    <p class="brand-card-text">dipgood.com@gmail.com</p>
-                                    <p class="brand-card-tel1">+7 (800) 200-69-81</p>
-                                    <p class="brand-card-tel2">+7 (800) 200-69-81</p>
-                                    <h4 class="brand-card-title"><a href="#" class="brand-card-link">Дипломы</a></h4>
-                                    <h6 class="brand-card-subtitle mb-2">Гознаки, Аттестаты, Справки, Документы</h6>
-                                </div><!-- .brand-card-body -->
-                            </div><!-- .brand-card -->
-                        </div><!-- .site-branding -->
-                    </div><!-- .col-2 -->
-                    <div class="triangle-left"></div>                      
-                    <div class="col toplarge-menu">
-                        <!-- <nav class="navbar navbar-expand-lg navbar-topmenu bg-topmenu"> -->
-                        <nav class="navbar navbar-expand-lg navbar-light bg-topmenu">
-                        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
-                        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #BFE0F1;"> -->
-                            <!--<a class="navbar-brand" href="#">Navbar</a>-->
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavTop" aria-controls="navbarNavTop" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNavTop">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item active">
-                                        <div class="nav-card">
-                                            <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu1.png" alt="Card image cap">
-                                            <div class="nav-card-body">
-                                                <a href="#" class="nav-link">Дипломы<br /> о высшем образовании <span class="sr-only">(current)</span></a>
-                                            </div><!-- .nav-card-body -->
-                                        </div><!-- .nav-card -->
-                                    </li>
-                                    <li class="nav-item">                                
-                                        <div class="nav-card">
-                                            <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu2.png" alt="Card image cap">
-                                            <div class="nav-card-body">
-                                                <a href="#" class="nav-link">Дипломы<br /> о среднем образовании <span class="sr-only">(current)</span></a>
-                                            </div><!-- .nav-card-body -->
-                                        </div><!-- .nav-card -->        
-                                    </li>
-                                    <li class="nav-item">
-                                        <div class="nav-card">
-                                            <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu3.png" alt="Card image cap">
-                                            <div class="nav-card-body">
-                                                <a href="#" class="nav-link">Дипломы<br /> ПТУ<br /><br /><span class="sr-only">(current)</span></a>
-                                            </div><!-- .nav-card-body -->
-                                        </div><!-- .nav-card -->
-                                    </li>
-                                    <li class="nav-item">
-                                        <div class="nav-card">
-                                            <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu4.png" alt="Card image cap">
-                                            <div class="nav-card-body">
-                                                <a href="#" class="nav-link">Аттестаты<br /><br /><br /><span class="sr-only">(current)</span></a>
-                                            </div><!-- .nav-card-body -->
-                                        </div><!-- .nav-card -->
-                                    </li>
-                                    <li class="nav-item">
-                                        <div class="nav-card">
-                                            <img class="nav-card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/i_topmenu5.png" alt="Card image cap">
-                                            <div class="nav-card-body">
-                                                <a href="#" class="nav-link">Другие справки<br /> и документы<br /><br /><span class="sr-only">(current)</span></a>
-                                            </div><!-- .nav-card-body -->
-                                        </div><!-- .nav-card -->
-                                    </li>                            
-                                </ul>
-                            </div>
-                        </nav>
-                    </div><!-- .col -->
 
-                    <div class="triangle-right"></div>                         
-                        
-                </div><!-- .row -->                    
-            </div><!-- .top-wrap --> 
+
+<!-- <?php /*echo do_shortcode('[topmenubtm email="smartkoa2003@gmail.com" tel1="+380 50 322-7611" tel2="+380 98 222-1122"][/topmenubtm]');*/ ?> -->
+
+<?php echo do_shortcode('[topbtmlargemenu email="dipgood.com@gmail.com" tel1="+7(800)200-69-81" tel2="+7(800)200-69-81"][/topbtmlargemenu]'); ?>
+
+
+
         </div><!-- .container -->
     </header><!-- #masthead .site-header -->
 		
-    <!-- <nav class="navbar navbar-expand-lg navbar-mainmenu bg-mainmenu topnarrow-menu"> -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light topnarrow-menu"  style="background-color: #88E769;">
         <div class="container">
 
 
-<?php if ( is_front_page() ): ?>
-    <div class="col-5 choose-city">
-        <a class="navbar-brand" href="#">Выберите ваш город:</a>
-        <select name="region" onchange="loadCity(this)">
-            <option>Выберите область</option>
-         
-            <?php // заполняем список областей
-                foreach ($city as $region => $cityList)
-                {
-                    echo '<option value="' . $region . '">' . $region . '</option>' . "\n";
-                }
-            ?>
-         
-        </select>
-        <select name="city" disabled="disabled">
-            <option>Выберите город</option>
-        </select>
-    </div><!-- .col-5 .choose-city -->
-<?php else: ?>
-    <div class="col-5 brdcrmb-wrap">
+            <?php if ( is_front_page() ): ?>
+                <div class="col-5 choose-city">
+                    <a class="navbar-brand" href="#">Выберите ваш город:</a>
+                    <select name="region" onchange="loadCity(this)">
+                        <option>Выберите область</option>
+                     
+                        <?php // заполняем список областей
+                            foreach ($city as $region => $cityList)
+                            {
+                                echo '<option value="' . $region . '">' . $region . '</option>' . "\n";
+                            }
+                        ?>
+                     
+                    </select>
+                    <select name="city" disabled="disabled">
+                        <option>Выберите город</option>
+                    </select>
+                </div><!-- .col-5 .choose-city -->
+            <?php else: ?>
+                <div class="col-5 brdcrmb-wrap">
 
-        <img src="<?php echo bloginfo('template_url'); ?>/images/i_homem.png" alt="">
+                    <img src="<?php echo bloginfo('template_url'); ?>/images/i_homem.png" alt="">
 
-<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+            <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
 
-    </div><!-- .col-5 .brdcrmb-wrap -->
+                </div><!-- .col-5 .brdcrmb-wrap -->
 
-<?php endif; ?>
+            <?php endif; ?>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -221,9 +152,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'getCity')
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Гарантии</a>
                 </li> -->
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">FAQ</a>
-                </li>
+                </li> -->
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Отзывы</a>
                 </li> -->                    

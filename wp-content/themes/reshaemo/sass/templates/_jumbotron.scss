@@ -1,8 +1,8 @@
 /* Jumbotron */
 .jumbotron {
     background:
-        url(images/bg_jumb_leftsmmm.png) no-repeat left center,
-        url(images/bg_jumb_rightsmmm.png) no-repeat right center,
+        url(images/bg_jumb_leftsmms.png) repeat-y left center,
+        url(images/bg_jumb_rightsmms.png) repeat-y right center,
         url(images/jumb_mainimg.png) no-repeat 39% center;
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
     height: 534px;
@@ -108,7 +108,7 @@ form.mainpf {
         width: 25px;                               
         position: absolute;
         z-index: 0;
-        bottom: -10px;
+        top: 454px;
         right: 15px;
     }    
 }

@@ -43,7 +43,10 @@ wp-content/themes/*
 .*
 ~*
 
-# ignore node dependency directories (used by grunt)
+# ignore all files ending with ~
+*.~ 
+
+# ignore node dependency directories (used by gulp)
 node_modules/
 
 # ignore OS generated files
@@ -104,5 +107,5 @@ Thumbs.db
 #!wp-content/mu-plugins/example-mu-plugin/
 !wp-content/plugins/functionsphp.php
 !wp-content/themes/reshaemo/
-!wp-content/themes/reshaemo/sass/
-!wp-content/themes/reshaemo/sass/templates/
+!wp-content/themes/reshaemo/sass/*.scss
+!wp-content/themes/reshaemo/sass/templates/*.scss

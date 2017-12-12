@@ -1,0 +1,19 @@
+/* Шаблон поиска по сайту search.php */
+.search-template {
+	h1.page-title {
+		color: rgb(60, 90, 174);		
+		font-size: 1.7rem;
+		font-weight: bold;
+		line-height: 0.972;
+		margin: 30px auto;	
+		text-align: center;			
+		text-transform: uppercase;		
+	}
+	h2.entry-title {
+		font-size: 1.2rem;
+		text-align-last: left;
+	}
+	.search-rez {
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,114 @@
+/* Шаблоны левого вертикального меню Каталога */
+/* page-cat-diplprofmsk.php */
+.sb-catlg {
+	h2 {
+	text-align: left;
+	margin: 2rem 4rem 2rem 1rem;
+	padding-bottom: 2rem;
+	}
+	.alpha-index {
+		display: flex;
+		justify-content: flex-end;
+		list-style-type: none;
+		margin-top: -3.5rem;
+		padding-bottom: 1rem;
+		width: 100%;
+		li > a {
+			background: #CDE8FB;
+			border-radius: 100%;
+			color: #0941D5;
+			font-size: 1.2rem;
+			font-weight: 600;
+			margin-right: .13rem;
+			padding: 3px 8px;
+			&:hover {
+				background-color: #75C6FE;
+				color: #fff;											
+				text-decoration: none;		
+			}
+		}
+		ul {
+			flex-basis: 100%;
+		}
+	}
+	section {
+		ul.fletter {
+			margin-top: .5rem;
+			justify-content: flex-start;
+			padding-left: 2rem;
+			& > li {
+				flex-basis: 100%;
+				margin-left: -2rem;
+				max-width: 100% !important;
+				& > a {
+					color: #0941D5;
+					&:hover {
+						cursor: default;
+						text-decoration: none;
+					}
+					&:before {
+						content: '«';
+					}
+					&:after {
+						content: '»';
+					}
+				}
+				ul.children {
+					flex-direction: column;	
+					margin-bottom: .4rem;
+					li {
+						max-width: 100%;						
+						a {
+							color: #0941D5;
+							padding: .24rem .2rem;
+							text-decoration: underline;
+							&:hover {
+								background-color: #D8F5FF;								
+								text-decoration: none;
+								cursor: pointer;
+							}
+							&:visited {
+								color: #75C6FE;
+							}
+						}
+					}
+				}					
+			}
+		}
+	}
+}
+
+/* Catalogue Sidebar Dipl po Prof Msk Menu Page Template page-cat-diplprofmsk.php  */
+.cat-diplprofmsk {
+	h2 {
+		padding-bottom: 0;
+	}
+	ul.diplprofmsk {
+		display: flex;
+		flex-direction: column;
+		li {
+			margin-bottom: 4px;
+			max-width: 100%;
+			padding: 0 3px;
+			& > a {
+				color: #0941D5;
+				padding: .24rem .2rem;
+				/* text-decoration: underline; */
+				&:hover {
+					background-color: #D8F5FF;
+					text-decoration: none;
+					cursor: pointer;
+				}
+				&::before {
+					content: "\f054"; 
+					font-family: FontAwesome;
+					margin-right: 10px;
+					text-decoration: none;
+					&:hover {
+
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+/* Category Top Large Menu Page Template page-categorymenu.php  */
+.page-categorymenu {
+	background: 
+		url(images/bg_jumb_leftsmms.png) repeat-y left top,
+	 	url(images/bg_jumb_rightsmms.png) repeat-y right top;
+	 h1 {
+		color: rgb(60, 90, 174);		
+		font-size: 1.7rem;
+		font-weight: bold;
+		line-height: 0.972;
+		margin: 30px auto;	
+		text-align: center;			
+		text-transform: uppercase;		
+	 }
+	 .monitor {
+		/* background: url(images/i_playscreensm.png) no-repeat 50% 50%, url(images/monitor_smm.png) no-repeat center center;
+		height: 200px; */
+	 }
+	 h2 {
+	 	margin-top: 2rem;
+	 	text-align: center;
+	 }
+	 .video-block {
+	 	/* background: url(images/i_playscreensm.png) no-repeat 50% 50%, url(images/monitor_smm.png) no-repeat center center; */
+	 	img:nth-child(3) {
+	 		height: 100%;
+	 		width: 100%;
+	 	}
+	 }
+	.video-links {
+		border-left: 3px solid #BFE0F1; 
+		nav {
+			& > a {
+				line-height: 1.3;
+			}
+		}
+	}
+}

@@ -105,8 +105,8 @@ function reshaemo_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'reshaemo' ),
 		'id'            => 'sb-cat',
 		'description'   => esc_html__( 'Add widgets here.', 'reshaemo' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );

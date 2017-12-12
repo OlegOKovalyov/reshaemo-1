@@ -23,7 +23,10 @@
 	<footer id="colophon" class="site-footer">
 
 		<div class="container">
-        	<?php echo do_shortcode('[topmenubtm email="smartkoa2003@gmail.com" tel1="+380 50 322-7611" tel2="+380 98 222-1122"][/topmenubtm]'); ?>
+        	<?php /*echo do_shortcode('[topmenubtm email="smartkoa2003@gmail.com" tel1="+380 50 322-7611" tel2="+380 98 222-1122"][/topmenubtm]');*/ ?>
+			<?php /*echo do_shortcode('[topbtmlargemenu email="smartkoa2003@gmail.com" tel1="+380 50 322-7611" tel2="+380 98 222-1122"][/topbtmlargemenu]');*/ ?>
+			<?php /*echo do_shortcode('[topbtmlargemenu email="dipgood.com@gmail.com" tel1="+7 (800) 200-69-81" tel2="+7 (800) 200-69-81"][/topbtmlargemenu]');*/ ?>
+			<?php echo do_shortcode('[topbtmlargemenu2 email="dipgood.com@gmail.com" tel1="+7(800)200-69-81" tel2="+7(800)200-69-81"][/topbtmlargemenu2]'); ?>
         </div><!-- .container -->         		
 	</footer><!-- #colophon -->
 
@@ -40,6 +43,19 @@
 	</div><!-- .site-info -->  
 
 </div><!-- #page .site -->
+
+<script>
+/**
+ * Прокрутка списка подстраниц страницы Видеопрезентация компании.
+ *
+ */	
+let list = (e) => {
+  let list = e.children[1], step = list.clientHeight;
+  [...list_1.querySelectorAll("[data-scroll]")].forEach(e => e.addEventListener("click", () => list.scrollTop += Number(e.dataset.scroll) ? step : -step));
+}
+
+list(list_1);
+</script>   
 
 <!-- JS -->
 <!-- <script src="js/app.min.js"></script> -->

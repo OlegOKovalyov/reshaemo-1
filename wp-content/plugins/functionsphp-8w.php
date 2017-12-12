@@ -13,13 +13,12 @@ function functionsphp_head_info(){
 add_action('wp_head', 'functionsphp_head_info');
 
 
-
-// ЭКСПЕРИМЕНТЫ ЭКСПЕРИМЕНТЫ ЭКСПЕРИМЕНТЫ 
 /*Самый простой шорткод - тестовый вариант */
 add_shortcode( 'phone', 'show_phone');
 function show_phone () {
 	return '+380 50 322-7611' ;
 }
+
 
 /*Шорткод, который грузится из файла - не выполняется php-код.
 Будет работать, если в файле будет находиться чистый HTML - тестовый вариант */
@@ -29,6 +28,7 @@ function show_topmenu( $atts, $content, $tag ) {
     $output .= file_get_contents('wp-content/themes/reshaemo/shortcodes/ftopmenu.php');
     return $output;
 }
+
 
 /*Шорткод, который грузится из файла - не выполняется php-код.
 Будет работать, если в файле будет находиться чистый HTML - тестовый вариант */
@@ -43,11 +43,8 @@ function show_topmenuftr( $atts, $content, $tag ) {
     $output .= file_get_contents('wp-content/themes/reshaemo/shortcodes/ftopmenu.php');
     return $output;
 }
-// /ЭКСПЕРИМЕНТЫ ЭКСПЕРИМЕНТЫ ЭКСПЕРИМЕНТЫ 
 
 
-
-// ВЕРХНЕЕ И НИЖНЕЕ ШИРОКОЕ МЕНЮ ВЕРХНЕЕ И НИЖНЕЕ ШИРОКОЕ МЕНЮ ВЕРХНЕЕ И НИЖНЕЕ ШИРОКОЕ МЕНЮ  
 /**
  * Нижнее широкое меню - первый рабочий вариант.
  * Полностью рабочий шорткод. Грузится из буфера обмена, что ускоряет его  работу.
@@ -134,199 +131,8 @@ function show_topmenubtm( $atts, $content, $tag ) {
             </div><!-- .top-wrap --> 
 	<?php 
 	return ob_get_clean();
-}
+}	
 
-
-/**
- * Верхнее широкое меню - второй рабочий улучшенный вариант.
- * Полностью рабочий шорткод. Грузится из буфера обмена, что ускоряет его  работу.
- * Может конфликтовать с другими плагинами, которые также используют буфер обмена,
- * если объема памяти буфера станет недостаточно.*/
-add_shortcode( 'topbtmlargemenu', 'show_topbtmlargemenu');
-function show_topbtmlargemenu( $atts, $content, $tag ) {
-    $brand_email = empty($atts['email']) ? 'dipgood.com@gmail.com' : esc_html($atts['email']);
-    $brand_tel1 = empty($atts['tel1']) ? '+7(800)200-69-81' : esc_html($atts['tel1']);
-    $brand_tel2 = empty($atts['tel2']) ? '+7(800)200-69-81' : esc_html($atts['tel2']);
-
-    ob_start();
-    ?>
-        <div class="top-wrap">
-            <div class="row">
-                <div class="col-2">     
-                    <div class="site-branding">
-                        <div class="brand-card">
-                            <div class="brand-card-body">
-                                <p class="brand-card-text"><a href="mailto:<?php echo esc_html( $atts['email'] ); ?>"><?php echo esc_html( $atts['email'] ); ?></a></p>
-                                <p class="brand-card-tel1"><a href="tel:<?php echo esc_html( $atts['tel1'] ); ?>"><?php echo esc_html( $atts['tel1'] ); ?></a></p>
-                                <p class="brand-card-tel2"><a href="tel:<?php echo esc_html( $atts['tel2'] ); ?>"><?php echo esc_html( $atts['tel2'] ); ?></a></p>
-                                <h4 class="brand-card-title"><a href="<?php echo bloginfo('home'); ?>" class="brand-card-link">Дипломы</a></h4>
-                                <h6 class="brand-card-subtitle mb-2">Гознаки, Аттестаты, Справки, Документы</h6>
-                            </div><!-- .brand-card-body -->
-                        </div><!-- .brand-card -->
-                    </div><!-- .site-branding -->
-                </div><!-- .col-2 -->
-                <div class="triangle-left"></div>                      
-                <div class="col toplarge-menu">
-                    <!-- <nav class="navbar navbar-expand-lg navbar-topmenu bg-topmenu"> -->
-                    <nav class="navbar navbar-expand-lg navbar-light bg-topmenu">
-                    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
-                    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #BFE0F1;"> -->
-                        <!--<a class="navbar-brand" href="#">Navbar</a>-->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavTop" aria-controls="navbarNavTop" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavTop">
-                            <div class="navbar-nav">
-                                <?php 
-                                  wp_nav_menu( array(
-                                  'theme_location'=>'top-large-menu', // (string) Расположение меню в шаблоне.
-                                                                // (указывается ключ которым было зарегистрировано меню в функции register_nav_menus)
-                                  'top-large-menu' => 'Верхнее широкое меню', // (string) Название выводимого меню (указывается в 
-                                                // админке   при создании меню, приоритетнее 
-                                                // чем указанное местоположение theme_location - если указано, то параметр theme_location игнорируется)
-                                  //'container'       => 'nav', // (string) Контейнер меню. Обворачиватель ul. 
-                                                              // Указывается тег контейнера (по умолчанию в тег div)
-                                  //'container_class' => 'navbar navbar-expand-lg navbar-light bg-topmenu',
-                                  //'container_id'    => 'navbarNavTop',
-                                  //'menu_class'=>'navbar navbar-expand-lg navbar-light bg-topmenu', 
-                                  'menu_class' => 'navbar-nav',
-                                  'before' => '',
-                                  'after'=>'',
-                                  'container'=>''
-                                  ) );
-                                ?>
-                    
-                            </div>
-                        </div>
-                    </nav>
-                    <div class="triangle-right"></div> 
-                </div><!-- .col -->
-            </div><!-- .row -->                    
-        </div><!-- .top-wrap --> 
-    <?php 
-    return ob_get_clean();
-}  
-
-/**
- * Нижнее широкое меню (чтобы не было конфликта id=navbarNavTop и id=navbarNavBtm.
- * Полностью рабочий шорткод. Грузится из буфера обмена, что ускоряет его  работу.
- * Может конфликтовать с другими плагинами, которые также используют буфер обмена,
- * если объема памяти буфера станет недостаточно.*/
-add_shortcode( 'topbtmlargemenu2', 'show_topbtmlargemenu2');
-function show_topbtmlargemenu2( $atts, $content, $tag ) {
-    $brand_email = empty($atts['email']) ? 'dipgood.com@gmail.com' : esc_html($atts['email']);
-    $brand_tel1 = empty($atts['tel1']) ? '+7(800)200-69-81' : esc_html($atts['tel1']);
-    $brand_tel2 = empty($atts['tel2']) ? '+7(800)200-69-81' : esc_html($atts['tel2']);
-
-    ob_start();
-    ?>
-        <div class="top-wrap">
-            <div class="row">
-                <div class="col-2">     
-                    <div class="site-branding">
-                        <div class="brand-card">
-                            <div class="brand-card-body">
-                                <p class="brand-card-text"><a href="mailto:<?php echo esc_html( $atts['email'] ); ?>"><?php echo esc_html( $atts['email'] ); ?></a></p>
-                                <p class="brand-card-tel1"><a href="tel:<?php echo esc_html( $atts['tel1'] ); ?>"><?php echo esc_html( $atts['tel1'] ); ?></a></p>
-                                <p class="brand-card-tel2"><a href="tel:<?php echo esc_html( $atts['tel2'] ); ?>"><?php echo esc_html( $atts['tel2'] ); ?></a></p>
-                                <h4 class="brand-card-title"><a href="<?php echo bloginfo('home'); ?>" class="brand-card-link">Дипломы</a></h4>
-                                <h6 class="brand-card-subtitle mb-2">Гознаки, Аттестаты, Справки, Документы</h6>
-                            </div><!-- .brand-card-body -->
-                        </div><!-- .brand-card -->
-                    </div><!-- .site-branding -->
-                </div><!-- .col-2 -->
-                <div class="triangle-left"></div>                      
-                <div class="col toplarge-menu">
-                    <!-- <nav class="navbar navbar-expand-lg navbar-topmenu bg-topmenu"> -->
-                    <nav class="navbar navbar-expand-lg navbar-light bg-topmenu">
-                    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
-                    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #BFE0F1;"> -->
-                        <!--<a class="navbar-brand" href="#">Navbar</a>-->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavBtm" aria-controls="navbarNavBtm" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavBtm">
-                            <div class="navbar-nav">
-                                <?php 
-                                  wp_nav_menu( array(
-                                  'theme_location'=>'top-large-menu', // (string) Расположение меню в шаблоне.
-                                                                // (указывается ключ которым было зарегистрировано меню в функции register_nav_menus)
-                                  'top-large-menu' => 'Верхнее широкое меню', // (string) Название выводимого меню (указывается в 
-                                                // админке   при создании меню, приоритетнее 
-                                                // чем указанное местоположение theme_location - если указано, то параметр theme_location игнорируется)
-                                  //'container'       => 'nav', // (string) Контейнер меню. Обворачиватель ul. 
-                                                              // Указывается тег контейнера (по умолчанию в тег div)
-                                  //'container_class' => 'navbar navbar-expand-lg navbar-light bg-topmenu',
-                                  //'container_id'    => 'navbarNavBtm',
-                                  //'menu_class'=>'navbar navbar-expand-lg navbar-light bg-topmenu', 
-                                  'menu_class' => 'navbar-nav',
-                                  'before' => '',
-                                  'after'=>'',
-                                  'container'=>''
-                                  ) );
-                                ?>
-                    
-                            </div>
-                        </div>
-                    </nav>
-                    <div class="triangle-right"></div> 
-                </div><!-- .col -->
-            </div><!-- .row -->                    
-        </div><!-- .top-wrap --> 
-    <?php 
-    return ob_get_clean();
-}  
-
-// /ВЕРХНЕЕ И НИЖНЕЕ ШИРОКОЕ МЕНЮ ВЕРХНЕЕ И НИЖНЕЕ ШИРОКОЕ МЕНЮ ВЕРХНЕЕ И НИЖНЕЕ ШИРОКОЕ МЕНЮ 
-
-
-// БЛОК ОТЗЫВОВ БЛОК ОТЗЫВОВ БЛОК ОТЗЫВОВ БЛОК ОТЗЫВОВ БЛОК ОТЗЫВОВ БЛОК ОТЗЫВОВ 
-
-/**
- * Нижний блок Отзывы, Диплом содержит на фоне облаков и деревьев - первый вариант.
- * Полностью рабочий шорткод. Грузится из буфера обмена, что ускоряет его  работу.
- * Может конфликтовать с другими плагинами, которые также используют буфер обмена,
- * если объема памяти буфера станет недостаточно.*/
-add_shortcode( 'recentcomm', 'show_recentcomm');
-function show_recentcomm( $atts, $content, $tag ) {
-    /*$dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);*/
-
-    ob_start();
-    ?>
-
-        <div id="primary" class="content-area page-delivery recent_comments">
-            <main id="main" class="site-main">
-                <!-- <div class="blank-block"></div> -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <!-- Выводим последние ОТЗЫВЫ -->
-                            <div class="comment-respond">
-                                <h4 class="py-4">Отзывы</h4>
-                                    <?php recent_comments_remak (3); ?>
-                                    <p class="with_btn"><a href="<?php echo bloginfo('home'); ?>/otzyvy/" class="btn btn-default" role="button">смотреть все отзывы о документах</a></p>
-                            </div><!-- .comment-respond -->  
-                            <div class="dipl_contains">
-                                <h4>Диплом, который вы решите приобрести у нас, содержит:</h4>
-                                <p>твердую обложку;</p>
-                                <p>сведения об определенной специальности и уровне квалификации;</p>
-                                <p>специальный вкладыш, где представлены изученные дисциплины и полученные отметки по ним.</p>
-                            </div><!-- .dipl_contains -->          
-                        </div><!-- .col -->
-                    </div><!-- .row -->
-                </div><!-- .container -->
-            </main><!-- #main .site-main -->
-        </div><!-- #primary --> 
-
-    <?php 
-    return ob_get_clean();
-}   
-
-// //БЛОК ОТЗЫВОВ БЛОК ОТЗЫВОВ БЛОК ОТЗЫВОВ БЛОК ОТЗЫВОВ БЛОК ОТЗЫВОВ БЛОК ОТЗЫВОВ 
-
-
-
-// КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА 
 
 /* Шорткод для карточки товара Диплом специалиста 2014 - 2017гг. Бланк Гознак */
 add_shortcode( 'diplspec201417', 'show_diplspec201417');
@@ -339,7 +145,7 @@ function show_diplspec201417( $atts, $content, $tag ) {
 	    <div class="card card-vo">
 	        <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/diplom-2014-spec-300x210.jpg" alt="Card image cap">
 	        <div class="card-body">
-	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 2014 по 2017 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
+	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 2014 по 2017 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
 	            <a href="#" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
@@ -361,7 +167,7 @@ function show_diplspecdo1996( $atts, $content, $tag ) {
         <div class="card card-vo">
             <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/diplom-vuza-do-1996-640x449-210x147.jpg" alt="Card image cap">
             <div class="card-body">
-                <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> до 1996 года - СССР<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
+                <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> до 1996 года - СССР<br /><span class="lcaseb">Бланк Гознак</span><br /></p></p>
                 <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
                 <a href="#" class="btn btn-order">Заказать</a>
             </div><!-- .card-body -->
@@ -404,7 +210,7 @@ function show_diplbaklvr201417( $atts, $content, $tag ) {
         <div class="card card-vo">
             <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/diplom-2014-spec-300x210.jpg" alt="Card image cap">
             <div class="card-body">
-                <p class="card-text"><span class="upcase">Диплом бакалавра</span><br /> с 2014 по 2017 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
+                <p class="card-text"><span class="upcase">Диплом бакалавра</span><br /> с 2014 по 2017 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p></p>
                 <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
                 <a href="#" class="btn btn-order">Заказать</a>
             </div><!-- .card-body -->
@@ -414,99 +220,6 @@ function show_diplbaklvr201417( $atts, $content, $tag ) {
     return ob_get_clean();
 }
 
-
-/* Шорткод для карточки товара Кандидат наук от 2012 года Бланк Гознак */
-add_shortcode( 'kandnaukot2012', 'show_kandnaukot2012');
-function show_kandnaukot2012( $atts, $content, $tag ) {
-    $dipl_price = empty($atts['price']) ? '25 000' : esc_html($atts['price']);
-
-    ob_start();
-    ?>
-
-        <div class="card card-vo">
-            <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/kandnaukot2012-210x70.jpg" alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text"><span class="upcase">Диплом<br /> кандидата наук</span><br /> с 2012 года<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
-                <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-                <a href="#" class="btn btn-order">Заказать</a>
-            </div><!-- .card-body -->
-        </div><!-- .card -->      
-
-    <?php 
-    return ob_get_clean();
-}   
-
-
-/* Шорткод для карточки товара Техникум/колледж до 1996 года Бланк Гознак */
-add_shortcode( 'tehndo1996', 'show_tehndo1996');
-function show_tehndo1996( $atts, $content, $tag ) {
-    $dipl_price = empty($atts['price']) ? '18 000' : esc_html($atts['price']);
-
-    ob_start();
-    ?>
-
-        <div class="card card-vo">
-            <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/tehndo1996-210x70.jpg" alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text"><span class="upcase">Диплом<br /> техникума - колледжа</span><br /> до 1996 года<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
-                <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-                <a href="#" class="btn btn-order">Заказать</a>
-            </div><!-- .card-body -->
-        </div><!-- .card -->      
-
-    <?php 
-    return ob_get_clean();
-}   
-
-
-/* Шорткод для карточки товара Аттестат школы за 11 класс до 1994 года Бланк Гознак */
-add_shortcode( 'att11do1994', 'show_att11do1994');
-function show_att11do1994( $atts, $content, $tag ) {
-    $dipl_price = empty($atts['price']) ? '18 000' : esc_html($atts['price']);
-
-    ob_start();
-    ?>
-
-        <div class="card card-vo">
-            <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/att11do1994-210x149.jpg" alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text"><span class="upcase">Аттестат<br /> школы за 11 класс</span><br /> до 1994 года<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
-                <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-                <a href="#" class="btn btn-order">Заказать</a>
-            </div><!-- .card-body -->
-        </div><!-- .card -->      
-
-    <?php 
-    return ob_get_clean();
-}   
-
-
-/* Шорткод для карточки товара Аттестат школы за 9 класс 2010-2013гг. года Бланк Гознак */
-add_shortcode( 'att9do201013', 'show_att9do201013');
-function show_att9do201013( $atts, $content, $tag ) {
-    $dipl_price = empty($atts['price']) ? '18 000' : esc_html($atts['price']);
-
-    ob_start();
-    ?>
-
-        <div class="card card-vo">
-            <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/att9201013-210x149.jpg" alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text"><span class="upcase">Аттестат<br /> школы за 9 класс</span><br /> 2010 - 2013гг.<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
-                <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-                <a href="#" class="btn btn-order">Заказать</a>
-            </div><!-- .card-body -->
-        </div><!-- .card -->      
-
-    <?php 
-    return ob_get_clean();
-}   
-
-// /КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА 
-
-
-
-// СТРОКА С ПОИСКОВОЙ ФОРМОЙ И ДВУМЯ КНОПКАМИ СТРОКА С ПОИСКОВОЙ ФОРМОЙ И ДВУМЯ КНОПКАМИ 
 
 /** Шорткод для поисковой формы и кнопок Найти документы, Видео о дипломах, Обратный
  * звонок, а также ссылки Расширенный поиск под главным узким меню сайта
@@ -542,16 +255,8 @@ function show_sfbtnsgroup( $atts, $content, $tag ) {
     return ob_get_clean();
 }
 
-// /СТРОКА С ПОИСКОВОЙ ФОРМОЙ И ДВУМЯ КНОПКАМИ СТРОКА С ПОИСКОВОЙ ФОРМОЙ И ДВУМЯ КНОПКАМИ 
 
-
-
-// ТАБЫ СТРАНИЦЫ КАТАЛОГ ТАБЫ СТРАНИЦЫ КАТАЛОГ ТАБЫ СТРАНИЦЫ КАТАЛОГ
-
-/**
- * Шорткод для таба Высшее образование в меню Каталог, который выводит 
- * карточки товара дочерних страниц. - Первый вариант - можно удалить.
- */
+/* Шорткод для страницы Высшее образование, которая выводит карточки товара дочерних страниц */
 add_shortcode( 'vyshobrz', 'show_vyshobrz');
 function show_vyshobrz( $atts, $content, $tag ) {
     /*$dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);
@@ -649,10 +354,7 @@ function show_vyshobrz( $atts, $content, $tag ) {
 }
 
 
-/**
- * Шорткод для таба Высшее образование в меню Каталог, который выводит 
- * карточки товара дочерних страниц. - Второй вариант - можно удалить.
- */
+/* Шорткод для страницы Каталог (Высшее образование), которая выводит карточки товара дочерних страниц */
 add_shortcode( 'catalogue', 'show_catalogue');
 function show_catalogue( $atts, $content, $tag ) {
     /*$dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);
@@ -750,288 +452,6 @@ echo 'The Products post type exists';
     return ob_get_clean();
 }
 
-
-/**
- * Шорткод для таба Высшее образование в меню Каталог, который выводит 
- * карточки товара дочерних страниц. - Третий рабочий вариант.
- */
-add_shortcode( 'tabvyshobrz', 'show_tabvyshobrz');
-function show_tabvyshobrz( $atts, $content, $tag ) {
-    /*$dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);
-*/
-    ob_start();
-    ?>
-
-<div class="container-fluid">
-    <div class="container">
-
-        <?php $child_pages = array( "291", "317", "331" ); ?>
-
-        <div class="row">
-            <div class="col-12">
-
-                <?php foreach( $child_pages as $child_page ) { ?>
-
-                    <h2><?php echo get_the_title($child_page); ?></h2>
-                    <div class="row">
-                        <!-- Выводим карточки товаров по 4 шт. в строку (карусель) -->
-                        <div class="owl-carousel owl-theme gallery-certs">
-
-                            <?php
-                            $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                            foreach( $mypages as $page ) {      
-                                $content = $page->post_content;
-                                // пропустим страницу без контента
-                                if ( ! $content ) continue;
-                                $content = apply_filters( 'the_content', $content );
-                                ?>
-                                
-                                <div class="entry"><?php echo $content; ?></div>
-
-                                <?php
-                            } ?>
-
-                        </div><!-- .gallery-certs -->
-                        <!-- /Выводим карточки товаров по 4 шт. в строку (карусель) -->
-                    </div><!-- .row (inner) -->
-
-                <?php } ?>
-
-            </div><!-- .col-12 -->
-        </div><!-- .row --> 
-    </div><!-- .container -->
-</div><!-- .gallery .container-fluid -->
-
-    <?php 
-    return ob_get_clean();
-}
-
-
-/**
- * Шорткод для таба После-дипломное образование в меню Каталог, который выводит 
- * карточки товара дочерних страниц. - Первый вариант.
- */
-add_shortcode( 'tabposdipobrz', 'show_tabposdipobrz');
-function show_tabposdipobrz( $atts, $content, $tag ) {
-    /*$dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);
-*/
-    ob_start();
-    ?>
-
-<div class="container-fluid">
-    <div class="container">
-
-        <?php $child_pages = array( "451" ); ?>
-
-        <div class="row">
-            <div class="col-12">
-
-                <?php foreach( $child_pages as $child_page ) { ?>
-
-                    <h2><?php echo get_the_title($child_page); ?></h2>
-                    <div class="row">
-                        <!-- Выводим карточки товаров по 4 шт. в строку (карусель) -->
-                        <div class="owl-carousel owl-theme gallery-certs">
-
-                            <?php
-                            $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                            foreach( $mypages as $page ) {      
-                                $content = $page->post_content;
-                                // пропустим страницу без контента
-                                if ( ! $content ) continue;
-                                $content = apply_filters( 'the_content', $content );
-                                ?>
-                                
-                                <div class="entry"><?php echo $content; ?></div>
-
-                                <?php
-                            } ?>
-
-                        </div><!-- .gallery-certs -->
-                        <!-- /Выводим карточки товаров по 4 шт. в строку (карусель) -->
-                    </div><!-- .row (inner) -->
-
-                <?php } ?>
-
-            </div><!-- .col-12 -->
-        </div><!-- .row --> 
-    </div><!-- .container -->
-</div><!-- .gallery .container-fluid -->
-
-    <?php 
-    return ob_get_clean();
-}
-
-
-/**
- * Шорткод для таба Средне-специальное образование в меню Каталог, который выводит 
- * карточки товара дочерних страниц. - Первый вариант.
- */
-add_shortcode( 'tabsrspecobrz', 'show_tabsrspecobrz');
-function show_tabsrspecobrz( $atts, $content, $tag ) {
-    $dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);
-    ob_start();
-    ?>
-
-<div class="container-fluid">
-    <div class="container">
-
-        <?php $child_pages = array( "470" ); ?>
-
-        <div class="row">
-            <div class="col-12">
-
-                <?php foreach( $child_pages as $child_page ) { ?>
-
-                    <h2><?php echo get_the_title($child_page); ?></h2>
-                    <div class="row">
-                        <!-- Выводим карточки товаров по 4 шт. в строку (карусель) -->
-                        <div class="owl-carousel owl-theme gallery-certs">
-
-                            <?php
-                            $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                            foreach( $mypages as $page ) {      
-                                $content = $page->post_content;
-                                // пропустим страницу без контента
-                                if ( ! $content ) continue;
-                                $content = apply_filters( 'the_content', $content );
-                                ?>
-                                
-                                <div class="entry"><?php echo $content; ?></div>
-
-                                <?php
-                            } ?>
-
-                        </div><!-- .gallery-certs -->
-                        <!-- /Выводим карточки товаров по 4 шт. в строку (карусель) -->
-                    </div><!-- .row (inner) -->
-
-                <?php } ?>
-
-            </div><!-- .col-12 -->
-        </div><!-- .row --> 
-    </div><!-- .container -->
-</div><!-- .gallery .container-fluid -->
-
-    <?php 
-    return ob_get_clean();
-}
-
-
-/**
- * Шорткод для таба Аттестаты школ в меню Каталог, который выводит 
- * карточки товара дочерних страниц. - Первый вариант.
- */
-add_shortcode( 'attschool', 'show_attschool');
-function show_attschool( $atts, $content, $tag ) {
-    $dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);
-    ob_start();
-    ?>
-
-<div class="container-fluid">
-    <div class="container">
-
-        <?php $child_pages = array( "485", "501" ); ?>
-
-        <div class="row">
-            <div class="col-12">
-
-                <?php foreach( $child_pages as $child_page ) { ?>
-
-                    <h2><?php echo get_the_title($child_page); ?></h2>
-                    <div class="row">
-                        <!-- Выводим карточки товаров по 4 шт. в строку (карусель) -->
-                        <div class="owl-carousel owl-theme gallery-certs">
-
-                            <?php
-                            $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                            foreach( $mypages as $page ) {      
-                                $content = $page->post_content;
-                                // пропустим страницу без контента
-                                if ( ! $content ) continue;
-                                $content = apply_filters( 'the_content', $content );
-                                ?>
-                                
-                                <div class="entry"><?php echo $content; ?></div>
-
-                                <?php
-                            } ?>
-
-                        </div><!-- .gallery-certs -->
-                        <!-- /Выводим карточки товаров по 4 шт. в строку (карусель) -->
-                    </div><!-- .row (inner) -->
-
-                <?php } ?>
-
-            </div><!-- .col-12 -->
-        </div><!-- .row --> 
-    </div><!-- .container -->
-</div><!-- .gallery .container-fluid -->
-
-    <?php 
-    return ob_get_clean();
-}
-
-
-/**
- * Шорткод для таба Справки и Свидетельства в меню Каталог, который выводит 
- * карточки товара дочерних страниц. - Первый вариант.
- */
-add_shortcode( 'sprsva', 'show_sprsva');
-function show_sprsva( $atts, $content, $tag ) {
-    $dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);
-    ob_start();
-    ?>
-
-<div class="container-fluid">
-    <div class="container">
-
-        <?php $child_pages = array( "511" ); ?>
-
-        <div class="row">
-            <div class="col-12">
-
-                <?php foreach( $child_pages as $child_page ) { ?>
-
-                    <h2><?php echo get_the_title($child_page); ?></h2>
-                    <div class="row">
-                        <!-- Выводим карточки товаров по 4 шт. в строку (карусель) -->
-                        <div class="owl-carousel owl-theme gallery-certs">
-
-                            <?php
-                            $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                            foreach( $mypages as $page ) {      
-                                $content = $page->post_content;
-                                // пропустим страницу без контента
-                                if ( ! $content ) continue;
-                                $content = apply_filters( 'the_content', $content );
-                                ?>
-                                
-                                <div class="entry"><?php echo $content; ?></div>
-
-                                <?php
-                            } ?>
-
-                        </div><!-- .gallery-certs -->
-                        <!-- /Выводим карточки товаров по 4 шт. в строку (карусель) -->
-                    </div><!-- .row (inner) -->
-
-                <?php } ?>
-
-            </div><!-- .col-12 -->
-        </div><!-- .row --> 
-    </div><!-- .container -->
-</div><!-- .gallery .container-fluid -->
-
-    <?php 
-    return ob_get_clean();
-}
-
-// /ТАБЫ СТРАНИЦЫ КАТАЛОГ ТАБЫ СТРАНИЦЫ КАТАЛОГ ТАБЫ СТРАНИЦЫ КАТАЛОГ
-
-
-// ВСЕ МЕНЮ САЙТА ВСЕ МЕНЮ САЙТА ВСЕ МЕНЮ САЙТА ВСЕ МЕНЮ САЙТА ВСЕ МЕНЮ САЙТА ВСЕ МЕНЮ САЙТА ВСЕ 
-
 /**
  * Регистрация одного или нескольких меню темы на сайте WordPress
  */
@@ -1046,11 +466,7 @@ register_nav_menus(array(
    
 )); 
 
-// /ВСЕ МЕНЮ САЙТА ВСЕ МЕНЮ САЙТА ВСЕ МЕНЮ САЙТА ВСЕ МЕНЮ САЙТА ВСЕ МЕНЮ САЙТА ВСЕ МЕНЮ САЙТА ВСЕ
 
-
-
-// ЭКСПЕРИМЕНТЫ ЭКСПЕРИМЕНТЫ ЭКСПЕРИМЕНТЫ 
 /**
  * Создание индивидуальных таксономий пользовательского типа записей Products
  */
@@ -1120,11 +536,6 @@ function reshaemo_register_my_post_types() {
     );
 }    
 
-// /ЭКСПЕРИМЕНТЫ ЭКСПЕРИМЕНТЫ ЭКСПЕРИМЕНТЫ 
-
-
-
-// НАСТРОЙКА КОММЕНТАРИЕВ САЙТА НАСТРОЙКА КОММЕНТАРИЕВ САЙТА НАСТРОЙКА КОММЕНТАРИЕВ САЙТА 
 
 /* Настройка комментариев для темы reshaemo */
 function mytheme_comment($comment, $args, $depth)
@@ -1326,11 +737,6 @@ function my_pagenavi() {
 // Теперь, где нужно вывести пагинацию используем 
 // my_pagenavi();
 
-// /НАСТРОЙКА КОММЕНТАРИЕВ САЙТА НАСТРОЙКА КОММЕНТАРИЕВ САЙТА НАСТРОЙКА КОММЕНТАРИЕВ САЙТА 
-
-
-
-// ПАГИНАЦИЯ ДОЧЕРНИХ СТРАНИЦ ПАГИНАЦИЯ ДОЧЕРНИХ СТРАНИЦ ПАГИНАЦИЯ ДОЧЕРНИХ СТРАНИЦ 
 
 /* Функция пагинации для дочерних страниц ВУЗы Москвы - не используется */
 // numbered pagination
@@ -1369,11 +775,8 @@ function pagination($pages = '', $range = 4)
          if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>Last &raquo;</a>";
          echo "</div></div>\n";
      }
-}   
+}                                                                                                                     
 
-// /ПАГИНАЦИЯ ДОЧЕРНИХ СТРАНИЦ ПАГИНАЦИЯ ДОЧЕРНИХ СТРАНИЦ ПАГИНАЦИЯ ДОЧЕРНИХ СТРАНИЦ                                                                                                                   
-
-// ХЛЕБНЫЕ КРОШКИ САЙТА ХЛЕБНЫЕ КРОШКИ САЙТА ХЛЕБНЫЕ КРОШКИ САЙТА 
 
 /**
  * "Хлебные крошки" для WordPress
@@ -1564,11 +967,7 @@ function dimox_breadcrumbs() {
   }
 } // end of dimox_breadcrumbs()
 
-// /ХЛЕБНЫЕ КРОШКИ САЙТА ХЛЕБНЫЕ КРОШКИ САЙТА ХЛЕБНЫЕ КРОШКИ САЙТА 
 
-
-
-// ВЫВОД СПИСКА ДОЧЕРНИХ СТРАНИЦ С РОДИТЕЛЬСКОЙ СТРАНИЦЫ
 
 /**
  * Выводим список дочерних страниц WordPress для их родительской. 
@@ -1597,59 +996,29 @@ return $string;
 
 add_shortcode('devise_childpages', 'devise_list_child_pages');
 
-// /ВЫВОД СПИСКА ДОЧЕРНИХ СТРАНИЦ С РОДИТЕЛЬСКОЙ СТРАНИЦЫ
-
-
-
-// ВЫВОД СПИСКА ПОСЛЕДНИХ КОММЕНТАРИЕВ ВЫВОД СПИСКА ПОСЛЕДНИХ КОММЕНТАРИЕВ 
 
 /**
 * Вывод списка последних комментариев
 * $number - количество выводимых комментариев,
 * $length - количество символов для обрезки текста комментариев
 */
-function recent_comments_remak_sample ($number=3, $length=280) { // Исходная функция
-    $args = array (
-        'number' => $number,
-        'status' => 'approve',
-    );
-    $comments = get_comments($args);
-    echo '<div class="sb_reviews">' . '<ul>';
-    foreach($comments as $comment) :
-        $comment_content_short = strip_tags($comment->comment_content);
-        $comment_content_short = substr($comment_content_short, 0, $length);
-        //echo '<p class="author">' . $comment->comment_author . '</p>';
-        //echo '<p class="date">' . comment_date('j.m.Y в H:i', $comment) . '</p>';
-        echo '<li class="recentcomments">' 
-                    . '<a href="' . get_comment_link($comment->comment_ID) .  '">' 
-                    //. $comment->comment_author . ' | ' . $comment->comment_date 
-                    . $comment->comment_author . ' | ' . $comment->comment_date
-                    . /*comment_date('j.m.Y в H:i', $comment) .*/ '</a>' 
-                    . '<p>' . substr($comment_content_short, 0, $length /*strrpos($comment_content_short, ' ') исходный вариант */) . '.<span>"</span>' 
-                    .'</p>' 
-                . '</li>';
-        //echo '<li class="anglerev"></li>';
-        //echo comment_date('j.m.Y в H:i', $comment);
-    endforeach;
-    echo '</ul>' . '</div>';
-}
-
 function recent_comments_remak ($number=3, $length=280) {
-    $args = array (
-        'number' => $number,
-        'status' => 'approve',
-    );
-    $comments = get_comments($args);
-    echo '<div class="sb_reviews">' . '<ul>';
-    foreach($comments as $comment) :
-        $comment_content_short = strip_tags($comment->comment_content);
-        $comment_content_short = substr($comment_content_short, 0, $length);
-        echo '<li class="recentcomments"><span class="author">' . $comment->comment_author . '</span><pre> | </pre>';
-        echo '<span class="date">' . comment_date('j.m.Y', $comment) . '</span>';
-        echo '<p>' . $comment_content_short . '</p>' . '</li>';
-    endforeach;
-    echo '</ul>' . '</div>';
+        $args = array (
+            'number' => $number,
+            'status' => 'approve',
+        );
+        $comments = get_comments($args);
+        echo '<div class="sb_reviews">' . '<ul>';
+        foreach($comments as $comment) :
+            $comment_content_short = strip_tags($comment->comment_content);
+            $comment_content_short = substr($comment_content_short, 0, $length);
+            //echo '<p class="author">' . $comment->comment_author . '</p>';
+            //echo '<p class="date">' . comment_date('j.m.Y в H:i', $comment) . '</p>';
+            echo '<li class="recentcomments">' . '<a href="' . get_comment_link($comment->comment_ID) .  '">' . $comment->comment_author . ':' /*. $comment->comment_date . comment_date('j.m.Y в H:i', $comment)*/ . '</a>' . '<p>' . substr($comment_content_short, 0, $length /*strrpos($comment_content_short, ' ') исходный вариант */) . '.<span>"</span>' .'</p>' . '</li>';
+            echo '<li class="anglerev"></li>';
+            //echo comment_date('j.m.Y в H:i', $comment);
+        endforeach;
+        echo '</ul>' . '</div>';
 }
 
-// /ВЫВОД СПИСКА ПОСЛЕДНИХ КОММЕНТАРИЕВ ВЫВОД СПИСКА ПОСЛЕДНИХ КОММЕНТАРИЕВ 
 
