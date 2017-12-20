@@ -5,6 +5,14 @@
         url(images/bg_glry2.png) fixed right center;
     height: auto;
     padding-bottom: 25px;
+    .wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        .gitem {
+            max-width: 225px;
+        }
+    }
     .row {
         /* margin-bottom: 35px; */
     }

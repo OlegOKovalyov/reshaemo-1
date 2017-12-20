@@ -111,8 +111,63 @@ function reshaemo_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'reshaemo_widgets_init' );
+    // Добавляем виджеты в сайдбар страницы Высшее образование меню
+    register_sidebar( array(
+        'name'          => 'Cat Menu Vysh Obrz Sidebar',
+        'id'            => 'catmenu_vyshobrz_sb',
+        'description'   => 'Левая колонка: Высшее образование меню',
+        'class'         => '',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3 class="list-group-item active head_lgri">',
+        'after_title'   => '</h3>',
+      ) );
+    // Добавляем виджеты в сайдбар страницы Последипломное образование меню
+    register_sidebar( array(
+        'name'          => 'Cat Menu PosleDipl Obrz Sidebar',
+        'id'            => 'catmenu_pdobrz_sb',
+        'description'   => 'Левая колонка: Последипломное образование статьи',
+        'class'         => '',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3 class="list-group-item active head_lgri">',
+        'after_title'   => '</h3>',
+      ) );
+    // Добавляем виджеты в сайдбар страницы Средне-специальное образование меню
+    register_sidebar( array(
+        'name'          => 'Cat Menu SrednSpec Obrz Sidebar',
+        'id'            => 'catmenu_srspobrz_sb',
+        'description'   => 'Левая колонка: Средне-специальное образование статьи',
+        'class'         => '',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3 class="list-group-item active head_lgri">',
+        'after_title'   => '</h3>',
+      ) ); 
+    // Добавляем виджеты в сайдбар страницы Аттестаты школы меню
+    register_sidebar( array(
+        'name'          => 'Cat Menu AttSchool Sidebar',
+        'id'            => 'catmenu_attschool_sb',
+        'description'   => 'Левая колонка: Аттестаты школы статьи',
+        'class'         => '',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3 class="list-group-item active head_lgri">',
+        'after_title'   => '</h3>',
+      ) );        
+    // Добавляем виджеты в сайдбар страницы Справки и свидетельства меню
+    register_sidebar( array(
+        'name'          => 'Cat Menu SprSva Sidebar',
+        'id'            => 'catmenu_sprsva_sb',
+        'description'   => 'Левая колонка: Справки и свидетельства статьи',
+        'class'         => '',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3 class="list-group-item active head_lgri">',
+        'after_title'   => '</h3>',
+      ) );                  
 
+add_action( 'widgets_init', 'reshaemo_widgets_init' );
 
 /*function my_scripts_method(){
 	if ( !is_admin() ) { 

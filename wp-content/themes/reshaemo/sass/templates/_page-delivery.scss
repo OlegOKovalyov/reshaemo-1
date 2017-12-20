@@ -40,6 +40,7 @@
     	color: rgb(60, 90, 174);
     	margin-bottom: .2rem;
     	// padding-right: 30px;
+    	z-index: 1;
    	}
     .lchd {
     	margin-bottom: 30px;
@@ -49,6 +50,7 @@
     	margin: 0 auto;
     }
 }
+
 .sfbtns-group {
 	input.form-control {
 		background-color: rgb(186, 239, 250);
@@ -79,6 +81,10 @@
 			text-decoration: underline;
 		}
 	}
+	.ml-auto {
+		display: flex;
+		justify-content: flex-end;
+	}
 }
 
 .three-colms {
@@ -107,7 +113,8 @@
 		border-radius: 10px;
 	    font-size: .9rem;
 	    font-weight: 600;
-	    line-height: 1.094;        
+	    line-height: 1.094;  
+	    margin-left: .5rem;      
 	    /* padding: 0.15rem .7rem; */
 	    padding: 0.25rem 0.7rem 0.15rem 0.7rem;
 	    text-transform: uppercase;

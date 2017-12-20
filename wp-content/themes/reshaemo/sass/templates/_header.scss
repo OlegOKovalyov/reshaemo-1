@@ -48,10 +48,10 @@ body {
                     margin-left: 0;
                     height: 180px;
                     a {
-                        padding-top: 100px;
+                        /* padding-top: 100px;
                         padding-bottom: 35px;
                         margin-top: -100px;
-                        margin-bottom: -35px;
+                        margin-bottom: -35px; */
                     }
                     a:hover {
                         color: #fff;
@@ -239,8 +239,8 @@ li.nav-item .nav-card {
                 color: #3C5BAE;
                 display: block;
                 margin: 0;
-                margin-bottom: 10px !important;
-                margin-top: 30px;
+                margin-bottom: 35px !important;
+                /* margin-top: 30px; */
                 padding-right: .5rem;
                 padding-left: .5rem;
                 max-width: 150px; // меняем от 135px до 150px
@@ -329,7 +329,8 @@ li.nav-item .nav-card {
 .brdcrmb-wrap {
     align-items: flex-start;
     display: flex;
-    margin-left: -25px;  
+    /* margin-left: -25px; */ 
+    margin-left: -5%; 
     img {
         align-self: center;
     }    
@@ -358,6 +359,7 @@ li.nav-item .nav-card {
         border-radius: .6rem;
         font-size: 0.7rem;
         width: 95%;
+        height: 2.1rem;
         &:last-child {
             font-size: 0.8rem;
         }

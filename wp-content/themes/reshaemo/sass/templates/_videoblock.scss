@@ -15,7 +15,7 @@
         a.nav-link {
             font-size: .9rem;
             /* margin-left: 50px; */
-            line-height: 2.5;
+            line-height: 1.5;
             margin-top: .3rem;
             padding: 0.5rem 0 .5rem 1.3rem;
             text-decoration: underline;            
@@ -36,10 +36,10 @@
         } 
     }
     .monitor {
-        background: 
+        /* background: 
             url(images/i_playscreensm.png) no-repeat 34% 12%,        
             url(images/monitor_smm.png) no-repeat left top;
-        margin-left: -30px;
+        margin-left: -30px; */
     }
 }
 
@@ -132,11 +132,14 @@
         }
     }
     .monitor {
-        background: 
-            url(images/i_playscreensm.png) no-repeat 34% 12%,        
-            url(images/monitor_smm.png) no-repeat left top;
-        margin-left: -30px;
-        position: relative;        
+        /* background:  */
+            /* url(images/i_playscreensm.png) no-repeat 34% 12%, */        
+            /* url(images/mntr-play.png) no-repeat left top; */
+        margin-left: -1rem;
+        position: relative;
+        img {
+            width: 100%;
+        }        
     }
 }
 
@@ -155,8 +158,11 @@
     } 
     p {
         color: #3C5AAE;
+        font-size: .9rem;
         height: 2.1rem;
+        line-height: 1;
         margin-bottom: .1rem;
+        z-index: 1;
     } 
     p::before {
         background:url(images/i_star.png) no-repeat;                

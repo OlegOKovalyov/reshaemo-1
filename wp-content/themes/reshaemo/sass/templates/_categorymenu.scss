@@ -3,35 +3,90 @@
 	background: 
 		url(images/bg_jumb_leftsmms.png) repeat-y left top,
 	 	url(images/bg_jumb_rightsmms.png) repeat-y right top;
+	padding-top: .01rem;
 	 h1 {
+	 	border-bottom: 3px solid #B2D6F0;
 		color: rgb(60, 90, 174);		
 		font-size: 1.7rem;
 		font-weight: bold;
 		line-height: 0.972;
-		margin: 30px auto;	
+		margin: 15px auto;
+		margin-right: -2rem;
+		padding-bottom: .85rem;	
 		text-align: center;			
 		text-transform: uppercase;		
 	 }
-	 .monitor {
+    form.mainpf, 
+    form.wpcf7-form {
+    	/* margin-left: 3rem; */
+		margin-right: -3rem;
+        &::before,
+        &::after {
+            display: none;
+        }
+        legend {
+        	font-size: 1.3rem;
+        }
+        p.safety,
+        p.lastp {
+			display: none;
+        }
+    }	 
+	.monitor {
 		/* background: url(images/i_playscreensm.png) no-repeat 50% 50%, url(images/monitor_smm.png) no-repeat center center;
 		height: 200px; */
 	 }
-	 h2 {
+	h2 {
+	 	font-size: 1.5rem;
+	 	margin-left: 3rem;
+		margin-right: -1rem;
 	 	margin-top: 2rem;
 	 	text-align: center;
 	 }
-	 .video-block {
+	.video-block {
 	 	/* background: url(images/i_playscreensm.png) no-repeat 50% 50%, url(images/monitor_smm.png) no-repeat center center; */
 	 	img:nth-child(3) {
 	 		height: 100%;
 	 		width: 100%;
+	 		margin-left: 3rem;
+			margin-right: -3rem;
+	 	}
+	 	div.list {
+	 		margin-left: 3rem;
+			margin-right: -3rem;
+			ul li a {
+				font-size: .75rem;
+				display: inline-block;
+				margin: .5rem;
+				padding: 0;
+				&::before {
+					display: none;
+		 		}
+		 	}
 	 	}
 	 }
 	.video-links {
 		border-left: 3px solid #BFE0F1; 
 		nav {
+			margin: .1rem 0;
 			& > a {
 				line-height: 1.3;
+			}
+		}
+		a.see-video {
+			letter-spacing: -.6px;
+		}
+	}
+}
+
+/* Левый сайдбар для страниц дипломов, аттестатов, справок ... */
+.page-categorymenu {
+	.aside-catalogue {
+		ul {
+			margin-left: -.1rem;
+			padding-left: 0;
+			li {
+				list-style-type: none;
 			}
 		}
 	}

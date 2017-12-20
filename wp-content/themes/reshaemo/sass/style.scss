@@ -107,6 +107,9 @@ $fa-font-path:"node_modules/font-awesome/fonts";
 @import "templates/categorymenu";
 @import "templates/lastreviews";
 @import "templates/warranties";
+@import "layout/responsive-min";
+@import "layout/responsive-max";
+@import "layout/responsive";
 
 
 /*@import "../bower_components/bootstrap/scss/bootstrap-reboot";

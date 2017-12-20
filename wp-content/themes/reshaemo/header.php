@@ -58,6 +58,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'getCity')
         }
     // ]]>
     </script>    
+    <!--[if lt IE 9]>
+        <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
 
 	<?php wp_head(); ?>
 
@@ -84,7 +87,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'getCity')
 
 
             <?php if ( is_front_page() ): ?>
-                <div class="col-5 choose-city">
+                <div class="col-lg-5 col-sm-11 choose-city">
                     <a class="navbar-brand" href="#">Выберите ваш город:</a>
                     <select name="region" onchange="loadCity(this)">
                         <option>Выберите область</option>
@@ -102,7 +105,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'getCity')
                     </select>
                 </div><!-- .col-5 .choose-city -->
             <?php else: ?>
-                <div class="col-5 brdcrmb-wrap">
+                <div class="col-lg-6 col-md-11 col-sm-10 brdcrmb-wrap">
 
                     <img src="<?php echo bloginfo('template_url'); ?>/images/i_homem.png" alt="">
 

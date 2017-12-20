@@ -152,7 +152,7 @@ function show_topbtmlargemenu( $atts, $content, $tag ) {
     ?>
         <div class="top-wrap">
             <div class="row">
-                <div class="col-2">     
+                <div class="col-lg-2">     
                     <div class="site-branding">
                         <div class="brand-card">
                             <div class="brand-card-body">
@@ -166,7 +166,10 @@ function show_topbtmlargemenu( $atts, $content, $tag ) {
                     </div><!-- .site-branding -->
                 </div><!-- .col-2 -->
                 <div class="triangle-left"></div>                      
-                <div class="col toplarge-menu">
+                <div class="col-lg-10 col-md-12 toplarge-menu">
+                    <!-- <span>Дипломы: </span><span> гознаки, аттестаты. справки. документы</span> -->
+                    <h6 class="brand-card-subtitle mb-2"> Гознаки, Аттестаты, Справки, Документы</h6>
+                    <h4 class="brand-card-title"><a href="<?php echo bloginfo('home'); ?>" class="brand-card-link">Дипломы</a></h4>
                     <!-- <nav class="navbar navbar-expand-lg navbar-topmenu bg-topmenu"> -->
                     <nav class="navbar navbar-expand-lg navbar-light bg-topmenu">
                     <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
@@ -222,7 +225,7 @@ function show_topbtmlargemenu2( $atts, $content, $tag ) {
     ?>
         <div class="top-wrap">
             <div class="row">
-                <div class="col-2">     
+                <div class="col-lg-2">     
                     <div class="site-branding">
                         <div class="brand-card">
                             <div class="brand-card-body">
@@ -518,23 +521,20 @@ function show_sfbtnsgroup( $atts, $content, $tag ) {
     ob_start();
     ?>
 
-            <div class="sfbtns-group container py-3">
-                <div class="row">
-                    <div class="col-5">
+            <div class="sfbtns-group container mt-5 mb-3">
+                <div class="row justify-content-between">
+                    <div class="col-12 col-sm-6">
                         <form class="form-inline my-2 my-lg-0" action="<?php echo bloginfo('home'); ?>">
                                 <input class="form-control mr-sm-2" type="search" placeholder="введите слова поиска" aria-label="Search" value="" name="s" id="s">
                             <button class="btn btn-outline-order btn-outline-findoc my-2 my-sm-0" type="submit">Найти документы</button>
                         </form>
-                    </div><!-- .col-5 -->
-                    <div class="col-2 extnd-srch">
-                        <!-- <a href="#">расширенный поиск</a> -->
-                    </div><!-- .col-2 .extnd-srch -->
-                    <div class="ml-auto col-2 callbk-btn">
+                    </div><!-- .col-12 .col-sm-6 -->
+                    <div class="ml-auto col-sm-6 callbk-btn">
                         <a class="btn btn-outline-callback" href="#">Видео о дипломах</a>
-                    </div><!-- .col-2 .callbk-btn -->
-                    <div class="col-2 callbk-btn">
+                    <!-- </div> --><!-- .col-2 .callbk-btn -->
+                    <!-- <div class="col-2 callbk-btn"> -->
                         <a class="btn btn-outline-callback" href="#">Обратный звонок</a>
-                    </div><!-- .col-2 .callbk-btn -->
+                    </div><!-- .col-sm-6 .callbk-btn -->
                 </div><!-- .row -->
             </div><!-- .sfbtns-group -->           
 
@@ -1039,10 +1039,15 @@ function show_sprsva( $atts, $content, $tag ) {
  if (function_exists('add_theme_support')) { add_theme_support('menus'); }
 
 register_nav_menus(array(
-    'top-large-menu'    => 'Верхнее широкое меню',
-    'main-menu'         => 'Верхнее главное меню', 
-    'sb-cat-menu'       => 'Меню левого сайдбара',
-    'cat-top-menu'      => 'Верхнее меню страницы Каталог',              
+    'top-large-menu'        => 'Верхнее широкое меню',
+    'main-menu'             => 'Верхнее главное меню', 
+    'sb-cat-menu'           => 'Меню левого сайдбара',
+    'cat-top-menu'          => 'Верхнее меню страницы Каталог', 
+    'sb-cat-vyshobrz-menu'  => 'Меню левого сайдбара страницы Высшее образование',
+    'sb-cat-pdobrz-menu'    => 'Меню левого сайдбара страницы После-дипломное образование',
+    'sb-cat-srspobrz-menu'  => 'Меню левого сайдбара страницы Средне-специальное образование',
+    'sb-cat-attschool-menu' => 'Меню левого сайдбара страницы Аттестаты школы',
+    'sb-cat-sprsva-menu'    => 'Меню левого сайдбара страницы Справки и свидетельства',            
    
 )); 
 
