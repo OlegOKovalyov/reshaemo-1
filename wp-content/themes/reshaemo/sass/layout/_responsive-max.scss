@@ -1,0 +1,298 @@
+    /* xl-размер (>=1200px) */
+    /* CSS для >=1200px */
+     
+/* lg-размер (<=1199px) */
+@media (max-width: 1199px) {
+  /* CSS для ширины от 992px до 1199px */
+    .triangle-left,
+    .triangle-right {
+        display: none;
+    }
+    form.mainpf, 
+    form.wpcf7-form {
+        legend {
+            font-size: 1.5rem;
+            padding-top: .5rem;
+        }        
+    }
+}
+     
+/* md-размер (<=991px) */
+@media (max-width: 991px) {
+  /* CSS для ширины от 768px до 991px */
+    .site-branding {
+        display: none;
+    }
+    .top-wrap .toplarge-menu {
+        flex-direction: row-reverse;
+        justify-content: end;
+        h4 {
+            border-top: 4px solid #E9F8FF;
+            border-bottom: 4px solid #E9F8FF;
+            font-size: 1.3rem;
+            margin-left: .7rem;
+            margin-top: 1px;
+            position: absolute;
+            left: 70px;
+            text-transform: uppercase;
+            a {
+                color: #fff;
+            }
+        }
+        h6 {
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: normal;
+            margin-top: 1px;
+            position: absolute;
+            left: 200px;
+            text-transform: uppercase;
+            width: 150px;
+        }
+        nav.navbar {
+            background-color: rgba(191, 224, 241, 0.6) !important;
+            margin-bottom: 0;
+            z-index: 2;
+            #navbarNavTop ul.navbar-nav {
+                height: auto;
+            }
+        }
+    }
+    #masthead.site-header {
+        height: 42px;
+        .top-wrap .row .col-2 {
+            display: none;
+        }
+    }
+    #navbarNavTop,
+    #navbarNavBtm {
+        width: 20rem;
+    }
+    #navbarNavTop ul.navbar-nav,
+    #navbarNavBtm ul.navbar-nav {
+        /* height: auto; */
+        & > li {
+            /* background-color: rgba(191, 224, 241, 0.6) !important; */
+            height: 60px; //45px;
+            margin-bottom: 2px; // 0;
+            padding: 10px;
+            z-index: 1;
+            .current-menu-item {
+                background-color: #ADD4E7;
+            }
+            a {
+                display: contents;
+                margin: 0 !important;
+                padding: 0 !important;
+                max-width: 100%;
+                height: 4rem;
+                text-align: left;
+            }
+            & > a::before {
+                display: none;
+            }
+        }
+    }
+    .topnarrow-menu {
+        background: rgba(136, 231, 105, 0.9) !important;
+        margin-left: 2%;
+        position: absolute;
+        width: 96%;
+        z-index: 1;
+    }
+    #navbarNav > ul > li.menu-item {
+        width: 100%;
+        a {
+            text-align: center;
+            width: 100%;
+        }
+    }
+    .jumbotron {
+        padding-top: 3rem;
+    }
+    .sfbtns-group input.form-control {
+        margin-bottom: .5rem;
+        width: 100%;
+    } 
+    .page-categorymenu, 
+    .page-categorymenu {
+        .video-block {
+            margin-left: -2rem;            
+            h2, img {
+                display: none;
+            }
+        }
+        form.wpcf7-form,
+        form.mainpf {
+            margin: 2rem 0;
+        }
+        div.list > ul li {
+            width: 100%;
+        }
+    }
+    .aside-catalogue ul {
+        margin-left: -1rem;
+        li a {
+            font-size: .6rem;
+            padding: .3rem 0 .2rem .5rem;        
+        }
+    }
+    .site-footer {
+        padding: 0;
+    }
+}
+     
+/* sm-размер (<=768px) */
+@media (max-width: 767px) { 
+  /* CSS для ширины от 576px до 767px */
+    .jumbotron {
+        background: 
+            url(images/bg_jumb_leftsmms.png) repeat-y left center, 
+            url(images/bg_jumb_rightsmms.png) repeat-y right center, 
+            url(images/jumb_mainimg.png) no-repeat 31.5% center; 
+        h2 {
+            font-size: 1.3rem;
+        }
+        .lead {
+            font-size: 1rem;
+            line-height: 1;
+        } 
+    } 
+    form.mainpf, 
+    form.wpcf7-form { 
+        background: transparent;
+        margin-top: 120px;
+        &::before,
+        &::after {
+            display: none;
+        }
+        legend {
+            display: none;
+        }
+        .form-control {
+            background: rgba(136, 231, 105, 0.5);
+        }
+        p.safety,
+        p.lastp {
+            display: none;
+        }
+    }
+    .video-block .monitor {
+        display: none;
+    }
+    .dipl_contains {
+        font-size: .75rem;
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+    .order-consult {
+        h3, a {
+            font-size: 1.2rem;
+        }
+        a {
+            padding: 0.2rem .6rem;
+        }
+    }
+}
+     
+/* xs-размер (<=575px) */
+@media (max-width: 575px) {
+  /* CSS для ширины до 575px (включительно) */
+    .top-wrap .toplarge-menu nav.navbar {
+        margin-left: -15px;
+    }
+    .top-wrap .toplarge-menu h4 {
+        margin-left: 0;
+    }
+    .brdcrmb-wrap {
+        display: none;
+    }
+    .choose-city {
+        display: none;
+    }
+    .jumbotron {
+        background: 
+            url(images/jumb_mainimg.png) no-repeat 31.5% center;         
+        h2 {
+            letter-spacing: -1.3px;
+        } 
+    }   
+    .sfbtns-group { 
+        .form-inline {
+            justify-content: center;
+        }
+        .ml-auto {
+            display: none;
+        }
+    }
+    h1 {
+        font-size: 1.2rem !important;
+    }
+    .gallery h1 {
+        border-bottom: 2px solid !important;
+    } 
+    .content-area {
+        background: none;
+    }
+    .video-block {
+        h2 {
+            font-size: 1.1rem;
+        }
+        .video-links {
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-top: 0;
+            a.nav-link {
+                padding: 0 auto;
+            }
+            .dipl_contains {
+                margin-bottom: 0;
+                h4 {
+                    font-size: .9rem;
+                    letter-spacing: -.2px;
+                    margin-bottom: 1rem;
+                    padding: 1.1rem 1rem 1rem 1rem;
+                }
+            }
+        }
+    }
+    .page-categorymenu {
+        background: none;
+        h1 {
+            margin: 0;
+        }
+    }
+    .page-delivery {
+        background: none;
+    } 
+    .aside-catalogue {
+        border: none;
+        order: 1;
+        margin-top: 1rem;
+        .blank-block-top,
+        .blank-block-btm {
+            display: none;
+        }
+    }
+    .right-sb {
+        order: 1;   
+    }  
+    .page-content {
+        order: 0;
+    }
+}
+
+/* размер (<=448px) */
+@media (max-width: 448px) {
+  /* CSS для ширины до 448px (включительно) */
+    .jumbotron {
+        background: 
+            url(images/jumb_mainimg.png) no-repeat 31.5% center; 
+    }
+    .order-consult {
+        h3 {
+            font-size: 1rem;
+        }
+    }    
+}  

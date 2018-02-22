@@ -1,0 +1,85 @@
+    /* xs (<=543px) */
+    @media (max-width: 575px) {  }
+     
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .sfbtns-group .ml-auto {
+        flex-direction: column;
+    }
+    .callbk-btn .btn-outline-callback {
+        margin-bottom: .5rem;
+    }
+    h1 {
+        font-size: 1.2rem !important;
+    } 
+    .gallery h1 {
+        border-bottom: 2.5px solid !important;
+    } 
+    .page-categorymenu .aside-catalogue {
+        margin-top: 48px;
+        ul li {
+            margin-left: -1.8rem;
+        }
+    }  
+}
+     
+/* md (>=768 и <=991) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .sfbtns-group input.form-control {
+       /*  margin-bottom: .5rem;
+       width: 100%; */
+    }
+    .jumbotron h2 {
+        font-size: 1.6rem;
+        line-height: 1.1;
+    }
+    form.mainpf, 
+    form.wpcf7-form {
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+    h1 {
+        font-size: 1.7rem !important;
+    }
+    .gallery h1 {
+        border-bottom: 3px solid !important;
+    } 
+    .aside-catalogue li a {
+        font-size: .6rem;
+        padding: .3rem 0 .2rem .5rem;
+    }            
+}
+     
+    /* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .top-wrap .toplarge-menu ul li {
+        padding: 0;
+    }
+    .site-branding h4.brand-card-title {
+        font-size: 2rem;
+    }
+    .brand-card-body {
+        font-size: .9rem;
+    } 
+    ul#menu-main-menu > li.menu-item {
+        font-size: .9rem;
+    } 
+    .topnarrow-menu #navbarNav ul.navbar-nav li a {
+        padding: .8rem .8rem;
+    } 
+    form.mainpf, 
+    form.wpcf7-form {
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+    .page-categorymenu h2 {
+        font-size: 1.2rem;
+    }       
+}
+     
+    /* xl (>=1200) */
+    @media (min-width: 1200px) {  }

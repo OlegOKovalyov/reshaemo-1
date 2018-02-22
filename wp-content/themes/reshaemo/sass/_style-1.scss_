@@ -1,0 +1,349 @@
+/*!
+Theme Name: WP-Reshaemo
+Theme URI: http://underscores.me/
+Author: Oleg Kovalyov
+Author URI: http://www.smartinet.com.ua/
+Description: Buy Diploma WordPress Site
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: reshaemo
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+WP-Reshaemo is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+//@import "variables-site/variables-site";
+@import "variables-site/variables";
+//@import "mixins/mixins-master";*/
+
+/*--------------------------------------------------------------
+# Bootstrap 4 Beta 2.0.0
+--------------------------------------------------------------*/
+// Required
+@import "../bower_components/bootstrap/scss/functions";
+@import "../bower_components/bootstrap/scss/variables";
+@import "../bower_components/bootstrap/scss/mixins";
+// Optional
+@import "../bower_components/bootstrap/scss/reboot";
+//@import "../bower_components/bootstrap/scss/type";
+//@import "../bower_components/bootstrap/scss/images";
+//@import "../bower_components/bootstrap/scss/code";
+@import "../bower_components/bootstrap/scss/grid";
+// Мои добавления
+@import "../bower_components/bootstrap/scss/utilities";
+//@import "../bower_components/bootstrap/scss/tables";
+@import "../bower_components/bootstrap/scss/forms";
+@import "../bower_components/bootstrap/scss/buttons";
+@import "../bower_components/bootstrap/scss/dropdown";
+@import "../bower_components/bootstrap/scss/input-group";
+@import "../bower_components/bootstrap/scss/nav";
+@import "../bower_components/bootstrap/scss/navbar";
+@import "../bower_components/bootstrap/scss/card";
+@import "../bower_components/bootstrap/scss/transitions";
+@import "../bower_components/bootstrap/scss/breadcrumb";
+//@import "../bower_components/bootstrap/scss/pagination";
+//@import "../bower_components/bootstrap/scss/badge";
+//@import "../bower_components/bootstrap/scss/alert";
+//@import "../bower_components/bootstrap/scss/close";
+
+/*--------------------------------------------------------------
+# Reshaemo Font Awesome 4.7.0 
+--------------------------------------------------------------*/
+$fa-font-path:"node_modules/font-awesome/fonts";
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+/*--------------------------------------------------------------
+# Reshaemo OwlCarousel 2-2.2.1 
+--------------------------------------------------------------*/
+@import "../owlcarousel/src/scss/core";
+@import "../owlcarousel/src/scss/theme.default";
+
+/*--------------------------------------------------------------
+# Reshaemo Theme 1.0.0 
+--------------------------------------------------------------*/
+@import "templates/header";
+@import "templates/jumbotron";
+@import "templates/gallery";
+@import "templates/maincontent";
+@import "templates/videoblock";
+@import "templates/page-delivery";
+@import "templates/footertop";
+@import "templates/footerbtm";
+
+
+/*@import "../bower_components/bootstrap/scss/bootstrap-reboot";
+
+@import "../bower_components/bootstrap/scss/utilities";
+@import "variables-site/variables-site";
+@import "../bower_components/bootstrap/scss/grid";
+@import "../bower_components/bootstrap/scss/card";
+@import "../bower_components/bootstrap/scss/navbar";
+@import "../bower_components/bootstrap/scss/jumbotron";
+@import "../bower_components/bootstrap/scss/buttons";
+
+
+//@import "../bower_components/bootstrap/scss/alert";
+//@import "../bower_components/bootstrap/scss/badge";
+//@import "../bower_components/bootstrap/scss/tooltip";
+//@import "../bower_components/bootstrap/scss/popover";
+//@import "../bower_components/bootstrap/scss/transitions";
+
+//@import "../bower_components/bootstrap/scss/variables";
+//@import "variables-site/variables-site";
+@import "mixins/mixins-master";*/
+
+
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+//@import "normalize";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+//@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+//@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+//@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+//@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+//@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+//@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+//@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+//@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+//@import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+//@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+//@import "media/media";
+
+/* Catalogue Page: page-catalogue.php */
+.page-catalogue {
+	/* margin-top: 50px; */
+	background: 
+		url(images/bg_jumb_leftsmmm.png) repeat-y left top,
+	 	url(images/bg_jumb_rightsmmm.png) repeat-y right top;
+	.sfbtns-group form {
+		margin-left: -30px;
+	} 	
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		padding-left: 0;
+		li {
+    		list-style-type: none;
+    		max-width: 23%;
+		}
+	}
+	h2 {
+		color: #3C5AAE;
+		font-size: 1.5rem;
+		margin-bottom: 25px;
+		margin-top: 15px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+/* Верхние табы (tabs) страницы Каталог */
+.main-catlg {
+	#myTab.nav-tabs {
+		border-bottom: 3px solid #B2D6F0;
+		justify-content: flex-end;
+	}
+	li.menu-item {
+		margin-right: 3px;
+		a {
+			background-color: #B2D6F0;
+			border-top-left-radius: .5rem;
+			border-top-right-radius: .5rem;
+			color: #3C5AAE;
+			font-size: 0.8rem;
+			font-weight: 500;
+			line-height: 1.1;
+			margin-right: 3px;
+			padding: 0.5rem 1rem 0.3rem;
+			text-transform: uppercase;
+			text-decoration: none;
+			/* &.active {
+				background-color: #75C6FE;
+				border-bottom-color: #75C6FE;
+				font-weight: 500;
+				color: #0941D5;
+				&:hover {
+					background-color: #75C6FE;
+					color: #0941D5;
+				}
+			} */
+			&:hover {
+				background-color: lighten(#B2D6F0, 7.5%);
+				/* color: lighten(#0941D5, 7.5%); */
+				color: #fff;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	li.current-menu-item a {
+		background-color: #75C6FE;
+		border-bottom-color: #75C6FE;
+		font-weight: 500;
+		color: #0941D5;
+		&:hover {
+			background-color: #75C6FE;
+			color: #0941D5;
+		}		
+	}
+	li.menu-item:last-child {
+		margin-right: 0;
+	}	
+}
+
+.gallery-certs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	padding-left: 0;	
+	.card {
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+}
+
+.mscwhei_lst {
+	max-width: 25%;
+}
+
+.owl-carousel {
+	.owl-stage {
+		margin-bottom: 10px;
+		.entry .col {
+			padding-left: 3.5px;
+			padding-right: 3.5px;
+		}
+	}
+}
+
+/* Меню левого сайдбара страницы Каталог */
+.aside-catalogue {
+	border-top: 3px solid #B2D6F0;
+	margin-right: -15px;
+	margin-top: 24px; //42px;
+	.blank-block {
+		border-right: 3px solid #B2D6F0;
+		border-top-right-radius: 45px;
+		border-top: 3px solid #B2D6F0;
+		height: 45px;
+		margin-top: -3px;
+	}	
+	ul {
+	    border-right: 3px solid #B2D6F0;
+	}
+	li {
+		min-width: 100%;
+		background-color: #B2D6F0;
+		border-top-left-radius: .5rem;
+		border-bottom-left-radius: .5rem;
+		color: #3C5AAE;
+		font-size: 0.8rem;
+		font-weight: 500;
+		line-height: 1.3;
+		margin-bottom: 3px;
+		padding: 0.6rem 1rem;
+		text-transform: uppercase;
+		&.current-menu-item {
+			background-color: #75C6FE;
+			border-bottom-color: #75C6FE;
+			font-weight: 500;
+			color: #0941D5;
+			&:hover {
+				background-color: #75C6FE;
+			}
+		}
+		&:hover {
+			background-color: lighten(#B2D6F0, 7.5%);
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		a {
+			color: #0941D5;
+			&:hover {
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+	}
+}
+
+
+

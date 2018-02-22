@@ -1,0 +1,25 @@
+//$body-bg:       #f8f8f8 !default;
+//$pagination-color: #000 !default;
+//$pagination-active-bg: theme-color("danger") !default;
+//$pagination-active-border-color: theme-color("danger") !default;
+//$pagination-active-bg: red !default;
+//$pagination-active-border-color: red !default;
+
+$myorange:#FABA36;
+$mygreen: #88E769;
+$mylblue: #BFE0F1;
+$myglink:  #04970D;
+
+$colors: (
+  myorange: $myorange,
+  mygreen: $mygreen,
+  mylblue: $mylblue,
+  myglink: $myglink
+);
+
+$theme-colors: (
+  order: $myorange,
+  mainmenu: $mygreen,
+  topmenu: $mylblue,
+  callback: $myglink
+);

@@ -1,0 +1,45 @@
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: royalblue;
+$color__link-visited: purple;
+$color__link-hover: midnightblue;
+$color__text-main: #404040;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+
+/* $top_menu_color: #BFE0F1; */
+
+
+/* $main_menu_color: #88E769;
+$navbar-light-color:                rgba($main_menu_color,.5);
+$navbar-light-hover-color:          rgba($main_menu_color,.7);
+$navbar-light-active-color:         rgba($main_menu_color,.9);
+$navbar-light-disabled-color:       rgba($main_menu_color,.3);
+$navbar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-light-toggler-border-color: rgba($main_menu_color,.1);
+ */
+
+
+
+
+.bg-light {
+    background-color: #88E769 !important; }
+  
+.bg-dark {
+    background-color: #BFE0F1 !important; }
+
+$blue:    #FABA36;
+

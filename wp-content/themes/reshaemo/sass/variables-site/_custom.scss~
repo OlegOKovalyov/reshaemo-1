@@ -1,0 +1,29 @@
+//$body-bg:       #f8f8f8 !default;
+//$pagination-color: #000 !default;
+//$pagination-active-bg: theme-color("danger") !default;
+//$pagination-active-border-color: theme-color("danger") !default;
+//$pagination-active-bg: red !default;
+//$pagination-active-border-color: red !default;
+
+// Navbar light-theme становится light-green-theme
+$navbar-light-color:                rgba(green,.5);
+$navbar-light-hover-color:          rgba(green,.7);
+$navbar-light-active-color:         rgba(green,.9);
+$navbar-light-disabled-color:       rgba(green,.3);
+$navbar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-light-toggler-border-color: rgba(green,.1);
+
+$theme-colors: (
+  //primary: $blue,
+  //secondary: $gray-600,
+  //success: $green,
+  //info: $cyan,
+  //warning: $yellow,
+  //danger: $red,
+  //light: $gray-100,
+  light: $green,
+  //dark: $gray-800
+);
+
+//.bg-light {
+//  background-color: green !important; }

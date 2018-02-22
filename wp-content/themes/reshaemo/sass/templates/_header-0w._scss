@@ -1,0 +1,265 @@
+body {
+    font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Верхнее широкое меню */
+.site-header {
+    background: #3C5BAE;
+    box-shadow: 2px 2px 3px #888;
+    margin-bottom: 6px;
+}
+
+.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 105px solid transparent;
+    border-right: 10px solid #BFE0F1;
+    border-bottom: 105px solid transparent;
+    margin-right: -15px;
+}
+
+.triangle-right {
+    width: 0;
+    width: 0;
+    height: 0;
+    border-top: 105px solid transparent;
+    border-left: 10px solid #BFE0F1;
+    border-bottom: 105px solid transparent;
+    /* margin-left: -15px; */
+}
+
+.top-wrap {
+    .toplarge-menu {
+        display: flex;
+        /* margin-bottom: 25px; */
+        nav.navbar {
+            align-self: stretch;
+            background: #343a40;
+            margin-bottom: 25px;
+            padding: 0;
+            #navbarNavTop,
+            #navbarNavBtm,
+            #navbarNavBtm2 {
+                align-self: stretch;
+                ul.navbar-nav {
+                    align-self: stretch;
+                    background: #E9F8FF; 
+                    /* margin-left: 0.2em; */
+                    margin-left: 0;
+                    height: 180px;
+                    a {
+                        padding-top: 100px;
+                        padding-bottom: 35px;
+                        margin-top: -100px;
+                        margin-bottom: -35px;
+                    }
+                    a:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        ul li {
+            box-shadow: 0 8px 7px -7px #222;
+            margin-bottom: -22px;
+            background-color: #BFE0F1;
+            padding: 0 13px;
+            margin-right: 5px;
+            width: 20%;
+        }
+        & ul li:last-child {
+            margin-right: 0;
+        }
+        .navbar-expand-lg {
+            display: flex;
+        }    
+    }  
+}  
+
+.site-branding {
+    color: #fff;
+    margin-top: 5px;
+    margin-left: -22px;
+    .brand-card-body {
+        text-align: center;
+        a {
+            color: #fff;
+            &:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+    h6 {
+        color: #fff;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: normal;
+    }
+    p {
+        line-height: 1.4;
+        margin-bottom: 4px;
+        &.brand-card-tel1 {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+        &.brand-card-tel2 {
+            font-size: 1.1rem;
+        }
+    }
+    h4.brand-card-title {
+        border-top: 4px solid #E9F8FF;
+        border-bottom: 4px solid #E9F8FF;
+        font-size: 2.15rem;
+        text-transform: uppercase;
+        a {
+            color: #fff;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* Отдельный пункт верхнего меню */
+li.nav-item .nav-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    & .nav-card-img-top {
+        display: block;
+        margin: 15px auto;
+    }
+    & .nav-card-body {
+        text-align: center;
+        font-size: 1.21rem;
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-top: 5px;
+        letter-spacing: -0.5px;
+        a.nav-link {
+            color: #3C5BAE;
+            display: block;
+        }
+        a.nav-link:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.bg-light {
+    /* background-color: #E9F8FF !important; */
+}   
+
+/* Верхнее главное узкое меню */
+.topnarrow-menu {
+    box-shadow: 2px 3px 5px #888;
+    padding: 0;
+    .navbar-brand {
+        color: rgb(101, 68, 4);
+        font-size: smaller;
+        line-height: 1.2;
+    }
+    & #navbarNav {
+        align-self: stretch;
+        justify-content: flex-end;
+        ul.navbar-nav {
+            align-self: stretch;
+            align-items: center;
+            li a {
+                color: rgb(101, 68, 4);
+                line-height: 1.2;
+                padding: .8rem 1rem;
+                display: inline-block;
+                text-transform: lowercase;
+                &:hover {
+                    text-decoration: none;
+                    background-color: lighten(#88E769, 7.5%);
+                }                
+            }
+        }
+    }
+    .current_page_item a,
+    .current-page-ancestor a {
+        text-decoration: none;
+        background-color: #FABA36;
+        &:hover {
+            background-color: #FABA36 !important;
+        }
+    }
+}
+
+.bg-light {
+    background-color: #88E769 !important;
+}   
+
+.navbar-light .navbar-toggler:hover {
+    cursor: pointer;
+}
+
+.main-navigation {
+    //background: #eee;
+}
+
+/* Bredcrumbs в главном узком меню - можно удалить */
+/* .brdcrmb-wrap {
+    align-items: flex-start;
+    display: flex;
+    margin-left: -25px;
+    img {
+        margin-top: 5px;
+    }
+    nav {
+        line-height: 0.1;
+        .breadcrumb {
+            background-color: #88E769;
+            font-size: .85rem;
+            margin-bottom: 0;
+            padding: 1.2rem 1rem 0.5rem;
+            li {
+
+            }
+        }
+    }
+}
+ */
+/* Dimox Bredcrumbs в главном узком меню */
+.brdcrmb-wrap {
+    align-items: flex-start;
+    display: flex;
+    margin-left: -25px;  
+    img {
+        align-self: center;
+    }    
+    .breadcrumbs {
+        background-color: #88E769;
+        font-size: .85rem;
+        margin-bottom: 0;
+        margin-left: .3rem;
+        /* padding: 1.2rem 1rem 0.3rem; */
+        padding: 0;
+        .current {
+            text-transform: lowercase; 
+            &:after {
+                content: ' ...';
+            }           
+        }
+    }
+}
+
+/* Выберите ваш город: */
+.choose-city {
+    display: flex;
+    margin-left: -20px;
+    select {
+        background: #88E769;
+        border-radius: .6rem;
+        font-size: 0.7rem;
+        width: 95%;
+        &:last-child {
+            font-size: 0.8rem;
+        }
+    }
+}

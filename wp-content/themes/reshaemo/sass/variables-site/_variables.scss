@@ -1,0 +1,38 @@
+$font__main: 'Roboto', sans-serif;
+// Кнопки Заказать, Заказать консультацию, Найти документы 
+$myorange:#FABA36;
+// Главное меню сайта узкое
+$mygreen: #88E769;
+// Верхнее меню сайта широкое
+$mylblue: #BFE0F1;
+// Зеленые ссылки, h2 на главной, кнопки Видео о дипломах, Обратный звонок
+$myglink:  #04970D;
+
+$colors: (
+  myorange: $myorange,
+  mygreen: $mygreen,
+  mylblue: $mylblue,
+  myglink: $myglink
+);
+
+$theme-colors: (
+  // Тема для кнопок Заказать, Заказать консультацию	
+  order: $myorange,
+  // Тема для главного меню сайта узкого
+  mainmenu: $mygreen,
+  // Тема для верхнего меню сайта широкого
+  topmenu: $mylblue,
+  // Тема для кнопок Видео о дипломах и Обратный звонок
+  callback: $myglink
+);
+
+// Цвет ссылки в breadcrambs
+$link-color:            #04970D;
+$link-decoration:       none;
+$link-hover-color:      darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+// Фон для полей input и select формы на главной Срочный заказ диплома
+$input-bg: $mygreen;
+
+$input-placeholder-color: $myglink;
