@@ -45,12 +45,15 @@ wp-content/plugins/*
 wp-content/themes/twentyfifteen/*
 wp-content/themes/twentyseventeen/*
 wp-content/themes/twentysixteen/*
-wp-content/themes/bestdiploms/tmp/*
+wp-content/themes/reshaemo/tmp/*
 wp-content/plugins/hello.php
-wp-content/themes/bestdiploms/LICENSE
-wp-content/themes/bestdiploms/bower-sample.json_
-wp-content/themes/bestdiploms/owlcarousel-old/*
-wp-content/themes/bestdiploms/tmp/*
+wp-content/themes/reshaemo/LICENSE
+wp-content/themes/reshaemo/bower-sample.json_
+wp-content/themes/reshaemo/owlcarousel-old/*
+wp-content/themes/reshaemo/tmp/*
+wp-content/themes/reshaemo/bower_components-load-not-work/*
+wp-content/themes/reshaemo/js-old/*
+wp-content/themes/reshaemo/owlcarousel-old/*
 
 
 # ignore all files starting with . or ~ 
@@ -124,19 +127,18 @@ Thumbs.db
 # track these mu-plugins, plugins, and themes
 # add your own entries here
 #!wp-content/mu-plugins/example-mu-plugin/
-#!wp-content/plugins/functionsphp.php
-!wp-content/themes/bestdiploms/*.php
-!wp-content/themes/bestdiploms/sass/
-!wp-content/themes/bestdiploms/sass/bestdiploms/
-!wp-content/themes/bestdiploms/functions/
-!wp-content/themes/bestdiploms/inc/
-!wp-content/themes/bestdiploms/js/
-!wp-content/themes/bestdiploms/js/src/
-!wp-content/themes/bestdiploms/template-parts/
-!wp-content/themes/bestdiploms/style.css
-!wp-content/themes/bestdiploms/package.json
-!wp-content/themes/bestdiploms/gulpfile.js
-!wp-content/themes/bestdiploms/fonts/
-!wp-content/themes/bestdiploms/bower.json
-!wp-content/themes/bestdiploms/README.md
+!wp-content/plugins/functionsphp.php
+!wp-content/themes/reshaemo/*.php
+!wp-content/themes/reshaemo/sass/
+!wp-content/themes/reshaemo/functions/
+!wp-content/themes/reshaemo/inc/
+!wp-content/themes/reshaemo/js/
+!wp-content/themes/reshaemo/js/src/
+!wp-content/themes/reshaemo/template-parts/
+!wp-content/themes/reshaemo/style.css
+!wp-content/themes/reshaemo/package.json
+!wp-content/themes/reshaemo/gulpfile.js
+!wp-content/themes/reshaemo/fonts/
+!wp-content/themes/reshaemo/bower.json
+!wp-content/themes/reshaemo/README.md
 !README.md
