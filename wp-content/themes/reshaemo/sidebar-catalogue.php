@@ -5,5 +5,4 @@
 	        dynamic_sidebar('sb-cat');
     ?>
     <div class="blank-block-btm"></div>
-
 <!-- /Sidebar for page-catalogue.php -->

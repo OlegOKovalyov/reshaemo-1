@@ -52,7 +52,7 @@
         nav.navbar {
             background-color: rgba(191, 224, 241, 0.6) !important;
             margin-bottom: 0;
-            z-index: 2;
+            z-index: 3;
             #navbarNavTop ul.navbar-nav {
                 height: auto;
             }
@@ -98,7 +98,7 @@
         margin-left: 2%;
         position: absolute;
         width: 96%;
-        z-index: 1;
+        z-index: 2;
     }
     #navbarNav > ul > li.menu-item {
         width: 100%;
@@ -158,6 +158,30 @@
             line-height: 1;
         } 
     } 
+    .page-catalogue {
+        .aside-catalogue {
+            order: 2;
+        }
+    }
+    .page-catalogue .main-catlg ul#myTab.nav-tabs {
+        justify-content: center;
+        &>li {
+            max-width: 20%;
+            a {
+                padding-left: .5rem;
+                padding-right: .5rem;
+            }
+        }
+    }    
+    .aside-catalogue {
+        border: none;
+        order: 1;
+        margin-top: 1rem;
+        .blank-block-top,
+        .blank-block-btm {
+            display: none;
+        }
+    }    
     form.mainpf, 
     form.wpcf7-form { 
         background: transparent;
@@ -266,21 +290,20 @@
     .page-delivery {
         background: none;
     } 
-    .aside-catalogue {
-        border: none;
-        order: 1;
-        margin-top: 1rem;
-        .blank-block-top,
-        .blank-block-btm {
-            display: none;
-        }
-    }
     .right-sb {
         order: 1;   
     }  
     .page-content {
         order: 0;
     }
+}
+
+/* размер (<=500px) */
+@media (max-width: 500px) {
+  /* CSS для ширины до 500px (включительно) */
+    .page-catalogue .main-catlg ul#myTab.nav-tabs {
+        display: none;
+    } 
 }
 
 /* размер (<=448px) */

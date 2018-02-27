@@ -50,28 +50,6 @@ get_header(); ?>
             <div class="col-12 col-lg-3 right-sb">
                 <!-- <form class="mainpf"> -->
                     <?php echo do_shortcode('[contact-form-7 id="578" title="Срочный заказ диплома"]'); ?>
-                    <!--<fieldset>
-                        <legend>Срочный<br />заказ диплома</legend>
-                        <div class="form-group">-->
-                            <!-- <label for="exampleFormControlInput1">Email address</label> -->
-                            <!--<input type="text" class="form-control" id="fio" placeholder="Ф.И.О.">
-                            <input type="text" class="form-control" id="telnum" placeholder="номер телефона">
-                            <input type="email" class="form-control" id="email" placeholder="E-mail">
-                            <select class="form-control" id="typedoc">
-                                <option value="Выбрать тип документа">Выбрать тип документа</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>--><!-- .form-group -->
-                        <!--<p class="safety">Ваши контактные данные целиком и полностью в безопасности и не могут быть переданы третьим лицам.</p>
-                        <button type="submit" class="btn btn-outline-order">Заказать</button>
-                        <p>После отправки информации с вами свяжется менеджер для уточнения технических деталей</p>
-                    </fieldset>-->
-                <!-- </form> -->
-
                 <div class="video-block container">
                     <div class="row">
                         <h2>Видеопрезентация компании</h2> 
@@ -97,9 +75,8 @@ get_header(); ?>
                       
                     </div><!-- .row -->
                 </div><!-- .video-block .container --> 
-                <!-- <?php /*echo do_shortcode('[contact-form-7 id="569" title="Срочный заказ диплома"]');*/ ?> --> 
 
-            </div><!-- .col-4 -->
+            </div><!-- .col-12 .col-lg-3 .right-sb -->
 
         </div><!-- .row --> 
         

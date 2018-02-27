@@ -239,6 +239,11 @@ wp_enqueue_script('jquery'); */
 add_action( 'wp_enqueue_scripts', 'reshaemo_scripts' );
 
 /**
+ * Implement Shortcodes for Galleries on the Prices Page (Цены).
+ */
+require get_template_directory() . '/inc/shortcodes.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

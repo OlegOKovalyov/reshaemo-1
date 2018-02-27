@@ -270,10 +270,10 @@ li.nav-item .nav-card {
             align-items: center;
             li a {
                 color: rgb(101, 68, 4);
+                font-size: .85rem;
                 line-height: 1.2;
                 padding: .8rem 1rem;
                 display: inline-block;
-                text-transform: lowercase;
                 &:hover {
                     text-decoration: none;
                     background-color: lighten(#88E769, 7.5%);

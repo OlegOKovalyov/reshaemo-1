@@ -1,0 +1,9 @@
+{
+  "name": "reshaemo",
+  "description": "Buy Diploma WordPress Site",
+  "author": "Oleg Kovalyov",
+  "devDependencies": {
+  	"jquery": "^3.2.1",
+    "bootstrap": "v4.0.0-beta"
+  }
+}

@@ -503,6 +503,28 @@ function show_att9do201013( $atts, $content, $tag ) {
 
     <?php 
     return ob_get_clean();
+}
+
+
+/* Шорткод для карточки товара Академическая справка Бланк Гознак */
+add_shortcode( 'akadsprv', 'show_akadsprv');
+function show_akadsprv( $atts, $content, $tag ) {
+    $dipl_price = empty($atts['price']) ? '18 000' : esc_html($atts['price']);
+
+    ob_start();
+    ?>
+
+        <div class="card card-vo">
+            <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/akademspavka-369x517-106x149.jpg" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text"><span class="upcase">Академическая<br />справка</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
+                <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
+                <a href="#" class="btn btn-order">Заказать</a>
+            </div><!-- .card-body -->
+        </div><!-- .card -->      
+
+    <?php 
+    return ob_get_clean();
 }   
 
 // /КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА 
@@ -753,7 +775,7 @@ echo 'The Products post type exists';
 
 /**
  * Шорткод для таба Высшее образование в меню Каталог, который выводит 
- * карточки товара дочерних страниц. - Третий рабочий вариант.
+ * карточки товара дочерних страниц (карусель). - Третий рабочий вариант.
  */
 add_shortcode( 'tabvyshobrz', 'show_tabvyshobrz');
 function show_tabvyshobrz( $atts, $content, $tag ) {
@@ -987,6 +1009,7 @@ function show_sprsva( $atts, $content, $tag ) {
     <div class="container">
 
         <?php $child_pages = array( "511" ); ?>
+        <?php //$child_pages = array( "667" ); ?>
 
         <div class="row">
             <div class="col-12">

@@ -7970,10 +7970,10 @@ li.nav-item .nav-card {
               align-items: center; }
       .topnarrow-menu #navbarNav ul.navbar-nav li a {
         color: #654404;
+        font-size: .85rem;
         line-height: 1.2;
         padding: .8rem 1rem;
-        display: inline-block;
-        text-transform: lowercase; }
+        display: inline-block; }
         .topnarrow-menu #navbarNav ul.navbar-nav li a:hover {
           text-decoration: none;
           background-color: #a2ec8a; }
@@ -8296,15 +8296,14 @@ form.wpcf7-form {
 /* Button ЗАКАЗАТЬ в карточке товара card */
 .card .card-body .btn-order {
   border-radius: 10px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   /* font-family: "Roboto"; */
   color: #fff;
   font-weight: bold;
-  letter-spacing: 0.5px;
   text-transform: uppercase;
   line-height: 1.094;
   /* text-align: center; */
-  padding: 0.4rem 1.3rem; }
+  padding: 0.4rem .9rem; }
 
 /* Main content background*/
 .content-area {
@@ -8630,7 +8629,7 @@ form.wpcf7-form {
     border-top-right-radius: .5rem;
     color: #3C5AAE;
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     font-weight: 500;
     height: 100%;
     line-height: 1.1;
@@ -8674,6 +8673,7 @@ form.wpcf7-form {
 .mscwhei_lst {
   max-width: 25%; }
 
+/* OWl-carousel */
 .owl-carousel .owl-stage-outer {
   margin-left: -5px;
   margin-right: -5px;
@@ -8686,11 +8686,42 @@ form.wpcf7-form {
     padding-left: 3.5px;
     padding-right: 3.5px; }
 
+.owl-nav {
+  display: block !important;
+  position: relative;
+  top: -60%; }
+  .owl-nav .owl-prev {
+    left: -25px;
+    position: absolute; }
+  .owl-nav .owl-next {
+    position: absolute;
+    right: -25px; }
+
+.owl-theme .owl-nav [class*="owl-"] {
+  background: #B2D6F0;
+  color: #42b1fe; }
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background-color: #75C6FE; }
+
+/* Галереи всех документов на странице Цены */
+.gallery-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .gallery-row .entry {
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px; }
+
 /* Меню левого сайдбара страницы Каталог */
 .aside-catalogue {
   border-top: 3px solid #B2D6F0;
   margin-right: -15px;
-  margin-top: 55px; }
+  margin-top: 47px; }
   .aside-catalogue .blank-block-top {
     border-right: 3px solid #B2D6F0;
     border-top-right-radius: 45px;
@@ -9089,7 +9120,7 @@ form.cntcspf {
 		height: 200px; */ }
   .page-categorymenu h2 {
     font-size: 1.5rem;
-    margin-left: 3rem;
+    margin-left: -3rem;
     margin-right: -1rem;
     margin-top: 2rem;
     text-align: center; }
@@ -9362,7 +9393,7 @@ form.cntcspf {
     .top-wrap .toplarge-menu nav.navbar {
       background-color: rgba(191, 224, 241, 0.6) !important;
       margin-bottom: 0;
-      z-index: 2; }
+      z-index: 3; }
       .top-wrap .toplarge-menu nav.navbar #navbarNavTop ul.navbar-nav {
         height: auto; }
   #masthead.site-header {
@@ -9401,7 +9432,7 @@ form.cntcspf {
     margin-left: 2%;
     position: absolute;
     width: 96%;
-    z-index: 1; }
+    z-index: 2; }
   #navbarNav > ul > li.menu-item {
     width: 100%; }
     #navbarNav > ul > li.menu-item a {
@@ -9445,6 +9476,28 @@ form.cntcspf {
     .jumbotron .lead {
       font-size: 1rem;
       line-height: 1; }
+  .page-catalogue .aside-catalogue {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+  .page-catalogue .main-catlg ul#myTab.nav-tabs {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .page-catalogue .main-catlg ul#myTab.nav-tabs > li {
+      max-width: 20%; }
+      .page-catalogue .main-catlg ul#myTab.nav-tabs > li a {
+        padding-left: .5rem;
+        padding-right: .5rem; }
+  .aside-catalogue {
+    border: none;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 1rem; }
+    .aside-catalogue .blank-block-top,
+    .aside-catalogue .blank-block-btm {
+      display: none; }
   form.mainpf,
   form.wpcf7-form {
     background: transparent;
@@ -9523,15 +9576,6 @@ form.cntcspf {
       margin: 0; }
   .page-delivery {
     background: none; }
-  .aside-catalogue {
-    border: none;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    margin-top: 1rem; }
-    .aside-catalogue .blank-block-top,
-    .aside-catalogue .blank-block-btm {
-      display: none; }
   .right-sb {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -9540,6 +9584,12 @@ form.cntcspf {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0; } }
+
+/* размер (<=500px) */
+@media (max-width: 500px) {
+  /* CSS для ширины до 500px (включительно) */
+  .page-catalogue .main-catlg ul#myTab.nav-tabs {
+    display: none; } }
 
 /* размер (<=448px) */
 @media (max-width: 448px) {

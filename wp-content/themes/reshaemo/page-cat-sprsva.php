@@ -20,7 +20,7 @@ get_header(); ?>
         <?php echo do_shortcode('[sfbtnsgroup]'); ?>
 
         <div class="row">
-            <div class="col-10 order-1 main-catlg">
+            <div class="col-sm-12 col-md-10 order-1 main-catlg">
 
                 <?php 
                   wp_nav_menu( array(
@@ -56,7 +56,7 @@ get_header(); ?>
                 </section>
 
             </div><!-- .col-10 -->
-            <div class="col-12 col-sm-2 aside-catalogue">
+            <div class="col-sm-12 col-md-2 aside-catalogue">
               <div class="blank-block-top"></div>            
 
               <?php get_sidebar('catalogue'); ?>

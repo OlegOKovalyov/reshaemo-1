@@ -20,7 +20,7 @@ get_header(); ?>
         <?php echo do_shortcode('[sfbtnsgroup]'); ?>
 
         <div class="row">
-            <div class="col-10 order-1 main-catlg">
+            <div class="col-sm-12 col-md-10 order-1 main-catlg">
 
                 <?php 
                   wp_nav_menu( array(
@@ -47,8 +47,70 @@ get_header(); ?>
                                 <div class="row">
                                     <div class="col-12">
                                      
-                                        <?php /*echo do_shortcode('[shortcode id="304"]');*/ ?>
-                                        <?php echo do_shortcode('[tabvyshobrz]'); ?>
+                                      <div class="container-fluid">
+                                          <div class="container">
+                                              <div class="row">
+                                                  <div class="col-12">
+
+                                                    <?php echo do_shortcode('[galvyshobrz]'); ?>
+
+                                                  </div><!-- .col-12 -->
+                                              </div><!-- .row --> 
+                                          </div><!-- .container -->
+                                      </div><!-- .gallery .container-fluid -->
+
+                                      <div class="container-fluid">
+                                          <div class="container">
+                                              <div class="row">
+                                                  <div class="col-12">
+
+                                                    <?php echo do_shortcode('[galposdipobrz]'); ?>
+
+                                                  </div><!-- .col-12 -->
+                                              </div><!-- .row --> 
+                                          </div><!-- .container -->
+                                      </div><!-- .gallery .container-fluid -->
+
+                                      <div class="container-fluid">
+                                          <div class="container">
+                                              <div class="row">
+                                                  <div class="col-12">
+
+                                                    <?php echo do_shortcode('[galsrspecobrz]'); ?>
+
+                                                  </div><!-- .col-12 -->
+                                              </div><!-- .row --> 
+                                          </div><!-- .container -->
+                                      </div><!-- .gallery .container-fluid -->                                                                      
+                                      <div class="container-fluid">
+                                          <div class="container">
+                                              <div class="row">
+                                                  <div class="col-12">
+
+                                                    <?php echo do_shortcode('[galattschool]'); ?>
+
+                                                  </div><!-- .col-12 -->
+                                              </div><!-- .row --> 
+                                          </div><!-- .container -->
+                                      </div><!-- .gallery .container-fluid -->
+
+                                      <div class="container-fluid">
+                                          <div class="container">
+                                              <div class="row">
+                                                  <div class="col-12">
+
+                                                    <?php echo do_shortcode('[galsprsva]'); ?>
+
+                                                  </div><!-- .col-12 -->
+                                              </div><!-- .row --> 
+                                          </div><!-- .container -->
+                                      </div><!-- .gallery .container-fluid -->                                      
+
+                                        <?php //echo do_shortcode('[tabvyshobrz]'); ?>
+                                        <?php //echo do_shortcode('[tabposdipobrz]'); ?>
+                                        <?php //echo do_shortcode('[tabsrspecobrz]'); ?>
+                                        <?php //echo do_shortcode('[attschool]'); ?>
+                                        <?php //echo do_shortcode('[sprsva]'); ?>
                                         
                                     </div><!-- .col-12 -->
 
@@ -64,7 +126,7 @@ get_header(); ?>
                 </div>
 
             </div><!-- .col-10 -->
-            <div class="col-12 col-sm-2 aside-catalogue">
+            <div class="col-sm-12 col-md-2 aside-catalogue">
               <div class="blank-block-top"></div>
 
               <?php get_sidebar('catalogue'); ?> 
@@ -78,11 +140,4 @@ get_header(); ?>
 
 <?php echo do_shortcode('[recentcomm]'); ?>
 
-<!-- <div id="primary" class="content-area page-catalogue">
-    <main id="main" class="site-main">
-
-    </main> --><!-- #main -->
-<!-- </div> --><!-- #primary -->
-
-<?php
-get_footer();
+<?php get_footer();

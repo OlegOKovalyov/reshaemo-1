@@ -78,7 +78,12 @@ $letter_upp = mb_strtoupper($letter, 'UTF-8'); ?>
 
             </div><!-- .col-10 -->
 
-            <?php get_sidebar('catalogue'); ?> 
+            <div class="col-12 col-sm-2 aside-catalogue">
+              <div class="blank-block-top"></div>
+
+              <?php get_sidebar('catalogue'); ?> 
+
+            </div><!-- .col-2 .aside-catalogue -->
 
         </div><!-- .row --> 
         
