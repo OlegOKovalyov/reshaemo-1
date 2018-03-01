@@ -13,9 +13,6 @@
             max-width: 225px;
         }
     }
-    .row {
-        /* margin-bottom: 35px; */
-    }
     h1 {
         border-bottom: 4px solid;
         font-size: 2rem;
@@ -34,7 +31,6 @@
     background-color: rgb(213, 237, 249);
     border-radius: 10px;
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
-    /* height: 430px; */
     margin-bottom: 35px;
     img.card-img-top {
         padding: 5px;
@@ -66,15 +62,10 @@
 /* Button ЗАКАЗАТЬ в карточке товара card */
 .card .card-body .btn-order {
     border-radius: 10px;
-    //font-size: 1.3rem;
     font-size: 1rem;
-    /* font-family: "Roboto"; */
     color: #fff;
     font-weight: bold;
-    //letter-spacing: 0.5px;
     text-transform: uppercase;
     line-height: 1.094;
-    /* text-align: center; */
-    //padding: 0.4rem 1.3rem;
     padding: 0.4rem .9rem;
 }

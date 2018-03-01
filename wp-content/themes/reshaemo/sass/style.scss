@@ -1,8 +1,8 @@
 /*!
 Theme Name: WP-Reshaemo
 Theme URI: http://underscores.me/
-Author: Oleg Kovalyov
-Author URI: http://www.smartinet.com.ua/
+Author: OK
+Author URI: 
 Description: Buy Diploma WordPress Site
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -20,31 +20,7 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
-//@import "variables-site/variables-site";
 @import "variables-site/variables";
-//@import "mixins/mixins-master";*/
 
 /*--------------------------------------------------------------
 # Bootstrap 4 Beta 2.0.0
@@ -55,13 +31,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "../bower_components/bootstrap/scss/mixins";
 // Optional
 @import "../bower_components/bootstrap/scss/reboot";
-//@import "../bower_components/bootstrap/scss/type";
-//@import "../bower_components/bootstrap/scss/images";
-//@import "../bower_components/bootstrap/scss/code";
 @import "../bower_components/bootstrap/scss/grid";
 // Мои добавления
 @import "../bower_components/bootstrap/scss/utilities";
-//@import "../bower_components/bootstrap/scss/tables";
 @import "../bower_components/bootstrap/scss/forms";
 @import "../bower_components/bootstrap/scss/buttons";
 @import "../bower_components/bootstrap/scss/dropdown";
@@ -71,10 +43,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "../bower_components/bootstrap/scss/card";
 @import "../bower_components/bootstrap/scss/transitions";
 @import "../bower_components/bootstrap/scss/breadcrumb";
-//@import "../bower_components/bootstrap/scss/pagination";
-//@import "../bower_components/bootstrap/scss/badge";
-//@import "../bower_components/bootstrap/scss/alert";
-//@import "../bower_components/bootstrap/scss/close";
 
 /*--------------------------------------------------------------
 # Reshaemo Font Awesome 4.7.0 
@@ -110,89 +78,3 @@ $fa-font-path:"node_modules/font-awesome/fonts";
 @import "layout/responsive-min";
 @import "layout/responsive-max";
 @import "layout/responsive";
-
-
-/*@import "../bower_components/bootstrap/scss/bootstrap-reboot";
-
-@import "../bower_components/bootstrap/scss/utilities";
-@import "variables-site/variables-site";
-@import "../bower_components/bootstrap/scss/grid";
-@import "../bower_components/bootstrap/scss/card";
-@import "../bower_components/bootstrap/scss/navbar";
-@import "../bower_components/bootstrap/scss/jumbotron";
-@import "../bower_components/bootstrap/scss/buttons";
-
-
-//@import "../bower_components/bootstrap/scss/alert";
-//@import "../bower_components/bootstrap/scss/badge";
-//@import "../bower_components/bootstrap/scss/tooltip";
-//@import "../bower_components/bootstrap/scss/popover";
-//@import "../bower_components/bootstrap/scss/transitions";
-
-//@import "../bower_components/bootstrap/scss/variables";
-//@import "variables-site/variables-site";
-@import "mixins/mixins-master";*/
-
-
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-//@import "normalize";
-
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-//@import "typography/typography";
-
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-//@import "elements/elements";
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-//@import "forms/forms";
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-//@import "navigation/navigation";
-
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-//@import "modules/accessibility";
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-//@import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-//@import "modules/clearings";
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-//@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-//@import "site/site";
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-//@import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-//@import "media/media";
-
-

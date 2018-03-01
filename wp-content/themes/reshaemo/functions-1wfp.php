@@ -25,7 +25,7 @@ if ( ! function_exists( 'reshaemo_setup' ) ) :
 		load_theme_textdomain( 'reshaemo', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
-		//add_theme_support( 'automatic-feed-links' );
+		add_theme_support( 'automatic-feed-links' );
 
 		/*
 		 * Let WordPress manage the document title.
@@ -169,6 +169,23 @@ function reshaemo_widgets_init() {
 
 add_action( 'widgets_init', 'reshaemo_widgets_init' );
 
+/*function my_scripts_method(){
+	if ( !is_admin() ) { 
+		wp_enqueue_script( 'jquery' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'my_scripts_method' );*/
+
+// Remove themes old version of jQuery and load a compatible version
+/*function my_update_jquery () {
+	if ( !is_admin() ) { 
+	   wp_deregister_script('jquery');
+ 	   wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', false, false, true);
+	   wp_enqueue_script('jquery');
+	}
+}
+add_action('wp_enqueue_scripts', my_update_jquery);
+*/
 /**
  * Enqueue scripts and styles.
  */
@@ -176,6 +193,42 @@ function reshaemo_scripts() {
 
 	/* CSS */
 	wp_enqueue_style( 'reshaemo-style', get_stylesheet_uri() );	
+
+	/*wp_register_style( 'reshaemo_owl_carousel', get_template_directory_uri() . '/owlcarousel/dist/assets/owl.carousel.min.css', array(), '20151215', true );
+	wp_enqueue_style ( 'reshaemo_owl_carousel' );*/	
+
+	/******wp_register_style( 'reshaemo-owl-theme-default', get_template_directory_uri() . '/owlcarousel/dist/assets/owl.theme.default.min.css', array(), '20151215', true );
+	wp_enqueue_style ( 'reshaemo-owl-theme-default' );*****/
+
+	/*wp_enqueue_script( 'reshaemo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'reshaemo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );*/
+
+	/* JS */
+
+	/*<?php bloginfo('template_directory'); ?>/owlcarousel/dist/owl.carousel.min.js*/
+
+    /*if (!is_admin()) {
+        wp_enqueue_script('jquery');
+    }*/	
+
+	/*wp_enqueue_script( 'reshaemo-owl-carousel-js', get_template_directory_uri() . '/owlcarousel/dist/owl.carousel.min.js', array(), '20151215', true );*/
+/* Подключаем наш js-файл скриптов common.js */
+/*wp_register_script('common_my', get_template_directory_uri() . '/js/common.js', array ('jquery'), null, false);
+wp_enqueue_script('common_my');*/
+
+	/*wp_register_script( 'reshaemo_owl_carousel_js', get_template_directory_uri() . '/owlcarousel/assets/owl.carousel.min.js' );
+	wp_enqueue_script( 'reshaemo_owl_carousel_js' );*/
+
+/* https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous */	
+
+/*wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', false, false, true);
+wp_enqueue_script('jquery'); */
+
+	/* wp_register_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous', array(), '20151215', false, false, true );
+	wp_enqueue_script('popper'); - worked code */
+
+	/* wp_enqueue_script( 'reshaemo-owl_carousel', get_template_directory_uri() . '/owlcarousel/dist/owl.carousel.min.js', array(), '20151215', true ); - worked code */
 
 	wp_enqueue_script( 'reshaemo-javascript', get_template_directory_uri() . '/js/app.min.js', array(), '20151215', true );
 

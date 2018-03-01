@@ -7,14 +7,20 @@
 	 h1 {
 	 	border-bottom: 3px solid #B2D6F0;
 		color: rgb(60, 90, 174);		
-		font-size: 1.7rem;
+		font-size: 1.3rem;
 		font-weight: bold;
 		line-height: 0.972;
 		margin: 15px auto;
 		margin-right: -2rem;
-		padding-bottom: .85rem;	
+		padding-bottom: .7rem; // .35rem; //.85rem;	
 		text-align: center;			
 		text-transform: uppercase;		
+	 }
+	 .page-content  {
+	 	color: #3c5aae;
+	 	p {
+            margin-left: 1rem;
+        }
 	 }
     form.mainpf, 
     form.wpcf7-form {
@@ -32,20 +38,18 @@
 			display: none;
         }
     }	 
-	.monitor {
-		/* background: url(images/i_playscreensm.png) no-repeat 50% 50%, url(images/monitor_smm.png) no-repeat center center;
-		height: 200px; */
-	 }
 	h2 {
-	 	font-size: 1.5rem;
-	 	//margin-left: 3rem;
 	 	margin-left: -3rem;
 		margin-right: -1rem;
 	 	margin-top: 2rem;
 	 	text-align: center;
+	 	color: #3C5AAE;
+        font-size: 1.1rem;
+        line-height: 1.2;
+        margin: 2rem 0 1rem 0;
+        text-transform: uppercase;
 	 }
 	.video-block {
-	 	/* background: url(images/i_playscreensm.png) no-repeat 50% 50%, url(images/monitor_smm.png) no-repeat center center; */
 	 	img:nth-child(3) {
 	 		height: 100%;
 	 		width: 100%;

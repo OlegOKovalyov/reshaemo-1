@@ -20,20 +20,23 @@ get_header(); ?>
         <?php echo do_shortcode('[sfbtnsgroup]'); ?>
 
         <div class="row">
+            <div class="col-12 col-sm-2 aside-catalogue">
 
-        <?php
-            if ( is_page( 'vysshee-obrazovanie-menu' ) || '390' == $post->post_ID ) {    
-                get_sidebar('catmenu-vyshobrz');
-            }
-            elseif ( is_page( 'posle-diplomnoe-obrazovanie-menu' ) || '393' == $post->post_ID ) {    
-                get_sidebar('catmenu-pdobrz');
+                <?php
+                    if ( is_page( 'vysshee-obrazovanie-menu' ) || '390' == $post->post_ID ) {    
+                        get_sidebar('catmenu-vyshobrz');
+                    }
+                    elseif ( is_page( 'posle-diplomnoe-obrazovanie-menu' ) || '393' == $post->post_ID ) {    
+                        get_sidebar('catmenu-pdobrz');
 
-            }
-            elseif ( is_page( 'admissions' ) || '15' == $post->post_parent ) { 
-                $bannerimg = 'admissions.jpg';
+                    }
+                    elseif ( is_page( 'admissions' ) || '15' == $post->post_parent ) { 
+                        $bannerimg = 'admissions.jpg';
 
-            }
-        ?>
+                    }
+                ?>
+
+            </div><!-- .col-2 .aside-catalogue -->
 
             <?php /*get_sidebar('catmenu-vyshobrz');*/ ?>
             <div class="col-12 col-sm-10 col-lg-7 page-content">
@@ -46,14 +49,36 @@ get_header(); ?>
             </div><!-- .col-8 -->
 
             <div class="col-12 col-lg-3 right-sb">
-
+                <!-- <form class="mainpf"> -->
                     <?php echo do_shortcode('[contact-form-7 id="578" title="Срочный заказ диплома"]'); ?>
+                    <!--<fieldset>
+                        <legend>Срочный<br />заказ диплома</legend>
+                        <div class="form-group">-->
+                            <!-- <label for="exampleFormControlInput1">Email address</label> -->
+                            <!--<input type="text" class="form-control" id="fio" placeholder="Ф.И.О.">
+                            <input type="text" class="form-control" id="telnum" placeholder="номер телефона">
+                            <input type="email" class="form-control" id="email" placeholder="E-mail">
+                            <select class="form-control" id="typedoc">
+                                <option value="Выбрать тип документа">Выбрать тип документа</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>--><!-- .form-group -->
+                        <!--<p class="safety">Ваши контактные данные целиком и полностью в безопасности и не могут быть переданы третьим лицам.</p>
+                        <button type="submit" class="btn btn-outline-order">Заказать</button>
+                        <p>После отправки информации с вами свяжется менеджер для уточнения технических деталей</p>
+                    </fieldset>-->
+                <!-- </form> -->
 
                 <div class="video-block container">
                     <div class="row">
                         <h2>Видеопрезентация компании</h2> 
                         <div class="monitor"></div>  
                         <img src="<?php bloginfo('template_url'); ?>/images/mntr-play.png" alt="Монтитор компьютера"> 
+                        <!-- <img src="<?php bloginfo('template_url'); ?>/images/i_playscreensm.png" alt=""> -->      
 
                         <div class="video-links list" id="list_1">
                             <span id="up-marker" data-scroll="0"></span>
@@ -73,6 +98,7 @@ get_header(); ?>
                       
                     </div><!-- .row -->
                 </div><!-- .video-block .container --> 
+                <!-- <?php /*echo do_shortcode('[contact-form-7 id="569" title="Срочный заказ диплома"]');*/ ?> --> 
 
             </div><!-- .col-4 -->
 

@@ -46,7 +46,7 @@ form.wpcf7-form {
             justify-content: center;
         }
         p.lastp {
-            /* margin-bottom: 0; */
+            // margin-bottom: 0;
         }          
     }
     legend {
@@ -82,7 +82,6 @@ form.wpcf7-form {
         margin-right: 10%;
     }
     p.safety {
-        /* margin-bottom: .2rem; */
         &::before {
             background:url(images/i_lock.png) no-repeat;                
             content: "";

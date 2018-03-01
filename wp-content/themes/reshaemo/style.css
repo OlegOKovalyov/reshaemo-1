@@ -2,8 +2,8 @@
 /*!
 Theme Name: WP-Reshaemo
 Theme URI: http://underscores.me/
-Author: Oleg Kovalyov
-Author URI: http://www.smartinet.com.ua/
+Author: OK
+Author URI: 
 Description: Buy Diploma WordPress Site
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -20,28 +20,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Bootstrap 4 Beta 2.0.0
 --------------------------------------------------------------*/
@@ -7718,6 +7696,13 @@ tbody.collapse.show {
 body {
   font-family: Roboto, "Helvetica Neue", Arial, sans-serif; }
 
+/* Убираем рамку FireFox */
+* {
+  outline: 0 !important; }
+
+section {
+  color: #3c5aae; }
+
 /* Верхнее широкое меню */
 .site-header {
   background: #3C5BAE;
@@ -7739,14 +7724,12 @@ body {
   height: 0;
   border-top: 105px solid transparent;
   border-left: 10px solid #BFE0F1;
-  border-bottom: 105px solid transparent;
-  /* margin-left: -15px; */ }
+  border-bottom: 105px solid transparent; }
 
 .top-wrap .toplarge-menu {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  /* margin-bottom: 25px; */ }
+  display: flex; }
   .top-wrap .toplarge-menu nav.navbar {
     -ms-flex-item-align: stretch;
         align-self: stretch;
@@ -7764,16 +7747,8 @@ body {
         -ms-flex-item-align: stretch;
             align-self: stretch;
         background: #E9F8FF;
-        /* margin-left: 0.2em; */
         margin-left: 0;
         height: 180px; }
-        .top-wrap .toplarge-menu nav.navbar #navbarNavTop ul.navbar-nav a,
-        .top-wrap .toplarge-menu nav.navbar #navbarNavBtm ul.navbar-nav a,
-        .top-wrap .toplarge-menu nav.navbar #navbarNavBtm2 ul.navbar-nav a {
-          /* padding-top: 100px;
-                        padding-bottom: 35px;
-                        margin-top: -100px;
-                        margin-bottom: -35px; */ }
         .top-wrap .toplarge-menu nav.navbar #navbarNavTop ul.navbar-nav a:hover,
         .top-wrap .toplarge-menu nav.navbar #navbarNavBtm ul.navbar-nav a:hover,
         .top-wrap .toplarge-menu nav.navbar #navbarNavBtm2 ul.navbar-nav a:hover {
@@ -7939,7 +7914,6 @@ li.nav-item .nav-card {
     display: block;
     margin: 0;
     margin-bottom: 35px !important;
-    /* margin-top: 30px; */
     padding-right: .5rem;
     padding-left: .5rem;
     max-width: 150px; }
@@ -7991,28 +7965,6 @@ li.nav-item .nav-card {
 .navbar-light .navbar-toggler:hover {
   cursor: pointer; }
 
-/* Bredcrumbs в главном узком меню - можно удалить */
-/* .brdcrmb-wrap {
-    align-items: flex-start;
-    display: flex;
-    margin-left: -25px;
-    img {
-        margin-top: 5px;
-    }
-    nav {
-        line-height: 0.1;
-        .breadcrumb {
-            background-color: #88E769;
-            font-size: .85rem;
-            margin-bottom: 0;
-            padding: 1.2rem 1rem 0.5rem;
-            li {
-
-            }
-        }
-    }
-}
- */
 /* Dimox Bredcrumbs в главном узком меню */
 .brdcrmb-wrap {
   -webkit-box-align: start;
@@ -8021,7 +7973,6 @@ li.nav-item .nav-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* margin-left: -25px; */
   margin-left: -5%; }
   .brdcrmb-wrap img {
     -ms-flex-item-align: center;
@@ -8031,7 +7982,6 @@ li.nav-item .nav-card {
     font-size: .85rem;
     margin-bottom: 0;
     margin-left: .3rem;
-    /* padding: 1.2rem 1rem 0.3rem; */
     padding: 0; }
     .brdcrmb-wrap .breadcrumbs .current {
       text-transform: lowercase; }
@@ -8105,9 +8055,6 @@ form.wpcf7-form {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
-    form.mainpf fieldset p.lastp,
-    form.wpcf7-form fieldset p.lastp {
-      /* margin-bottom: 0; */ }
   form.mainpf legend,
   form.wpcf7-form legend {
     color: #fff;
@@ -8152,19 +8099,16 @@ form.wpcf7-form {
     line-height: 1.2;
     margin-left: 10%;
     margin-right: 10%; }
-  form.mainpf p.safety,
-  form.wpcf7-form p.safety {
-    /* margin-bottom: .2rem; */ }
-    form.mainpf p.safety::before,
-    form.wpcf7-form p.safety::before {
-      background: url(images/i_lock.png) no-repeat;
-      content: "";
-      float: left;
-      margin-right: 15px;
-      height: 47px;
-      width: 47px;
-      position: relative;
-      z-index: 0; }
+  form.mainpf p.safety::before,
+  form.wpcf7-form p.safety::before {
+    background: url(images/i_lock.png) no-repeat;
+    content: "";
+    float: left;
+    margin-right: 15px;
+    height: 47px;
+    width: 47px;
+    position: relative;
+    z-index: 0; }
   form.mainpf button.btn-outline-order,
   form.wpcf7-form button.btn-outline-order {
     border-radius: 10px;
@@ -8253,8 +8197,6 @@ form.wpcf7-form {
         justify-content: space-around; }
     .gallery .wrapper .gitem {
       max-width: 225px; }
-  .gallery .row {
-    /* margin-bottom: 35px; */ }
   .gallery h1 {
     border-bottom: 4px solid;
     font-size: 2rem;
@@ -8272,7 +8214,6 @@ form.wpcf7-form {
   border-radius: 10px;
   -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
           box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
-  /* height: 430px; */
   margin-bottom: 35px; }
   .card img.card-img-top {
     padding: 5px; }
@@ -8297,12 +8238,10 @@ form.wpcf7-form {
 .card .card-body .btn-order {
   border-radius: 10px;
   font-size: 1rem;
-  /* font-family: "Roboto"; */
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.094;
-  /* text-align: center; */
   padding: 0.4rem .9rem; }
 
 /* Main content background*/
@@ -8314,44 +8253,22 @@ form.wpcf7-form {
   .content-area .blank-block {
     height: 80px; }
 
+p.p-first {
+  margin-top: 2rem; }
+
+p.p-last {
+  margin-bottom: 2rem; }
+
 /* Video Block */
-.video-block .video-links {
-  margin-bottom: 1rem; }
-
-.video-block h2 {
-  color: #2f970d;
-  font-size: 1.9rem;
-  /* text-align: center; */
-  margin-left: 2%;
-  text-transform: uppercase; }
-
-.video-block nav {
-  /* border-bottom: 3px solid #3C5AAE; */ }
-  .video-block nav a.nav-link {
-    font-size: .9rem;
-    /* margin-left: 50px; */
-    line-height: 1.5;
-    margin-top: .3rem;
-    padding: 0.5rem 0 .5rem 1.3rem;
-    text-decoration: underline; }
-    .video-block nav a.nav-link:last-child {
-      /* margin-bottom: 45px; */ }
-    .video-block nav a.nav-link::before {
-      background: url(images/i_playsm.png) no-repeat;
-      content: "";
-      float: left;
-      margin-right: 30px;
-      margin-top: 5px;
-      height: 38px;
-      width: 38px;
-      position: relative;
-      /* z-index: -1; */ }
-
-.video-block .monitor {
-  /* background: 
-            url(images/i_playscreensm.png) no-repeat 34% 12%,        
-            url(images/monitor_smm.png) no-repeat left top;
-        margin-left: -30px; */ }
+.video-block nav a.nav-link::before {
+  background: url(images/i_playsm.png) no-repeat;
+  content: "";
+  float: left;
+  margin-right: 30px;
+  margin-top: 5px;
+  height: 38px;
+  width: 38px;
+  position: relative; }
 
 .video-block .row {
   -webkit-box-pack: center;
@@ -8373,8 +8290,7 @@ form.wpcf7-form {
     top: 0;
     position: relative;
     height: 30px;
-    width: 30px;
-    /* z-index: 1; */ }
+    width: 30px; }
   .video-block .video-links span#down-marker {
     background: url(images/i_down_marker.png) no-repeat;
     content: "";
@@ -8405,12 +8321,9 @@ form.wpcf7-form {
     background-color: rgba(0, 0, 0, 0.05);
     -webkit-user-select: none; }
   .video-block div.list > ul {
-    /* max-height: 240px; */
     height: 180px;
-    /* min-width: 350px; */
     min-width: 100%;
-    overflow: auto;
-    /* overflow: hidden; */ }
+    overflow: auto; }
     .video-block div.list > ul li {
       margin-bottom: .8rem; }
       .video-block div.list > ul li a {
@@ -8432,9 +8345,6 @@ form.wpcf7-form {
           z-index: -1; }
 
 .video-block .monitor {
-  /* background:  */
-  /* url(images/i_playscreensm.png) no-repeat 34% 12%, */
-  /* url(images/mntr-play.png) no-repeat left top; */
   margin-left: -1rem;
   position: relative; }
   .video-block .monitor img {
@@ -8565,7 +8475,6 @@ form.wpcf7-form {
   font-size: .9rem;
   font-weight: 600;
   line-height: 1.094;
-  /* padding: 0.15rem .7rem; */
   padding: 0.25rem 0.7rem 0.15rem 0.7rem;
   text-transform: uppercase; }
 
@@ -8580,7 +8489,6 @@ form.wpcf7-form {
     font-weight: 600;
     line-height: 1.094;
     margin-left: .5rem;
-    /* padding: 0.15rem .7rem; */
     padding: 0.25rem 0.7rem 0.15rem 0.7rem;
     text-transform: uppercase; }
 
@@ -8771,7 +8679,7 @@ form.wpcf7-form {
 /* page-cat-diplprofmsk.php */
 .sb-catlg h2 {
   text-align: left;
-  margin: 2rem 4rem 2rem 1rem;
+  margin: 2rem 4rem 3rem 1rem;
   padding-bottom: 2rem; }
 
 .sb-catlg .alpha-index {
@@ -8782,7 +8690,7 @@ form.wpcf7-form {
       -ms-flex-pack: end;
           justify-content: flex-end;
   list-style-type: none;
-  margin-top: -3.5rem;
+  margin-top: -6rem;
   padding-bottom: 1rem;
   width: 100%; }
   .sb-catlg .alpha-index li > a {
@@ -8801,43 +8709,44 @@ form.wpcf7-form {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%; }
 
-.sb-catlg section ul.fletter {
+.sb-catlg ul.fletter {
   margin-top: .5rem;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding-left: 2rem; }
-  .sb-catlg section ul.fletter > li {
+  .sb-catlg ul.fletter > li {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-left: -2rem;
     max-width: 100% !important; }
-    .sb-catlg section ul.fletter > li > a {
-      color: #0941D5; }
-      .sb-catlg section ul.fletter > li > a:hover {
-        cursor: default;
+    .sb-catlg ul.fletter > li > a {
+      color: #0941D5;
+      text-decoration: underline; }
+      .sb-catlg ul.fletter > li > a:hover {
+        background-color: #D8F5FF;
         text-decoration: none; }
-      .sb-catlg section ul.fletter > li > a:before {
+      .sb-catlg ul.fletter > li > a:before {
         content: '«'; }
-      .sb-catlg section ul.fletter > li > a:after {
+      .sb-catlg ul.fletter > li > a:after {
         content: '»'; }
-    .sb-catlg section ul.fletter > li ul.children {
+    .sb-catlg ul.fletter > li ul.children {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
       margin-bottom: .4rem; }
-      .sb-catlg section ul.fletter > li ul.children li {
+      .sb-catlg ul.fletter > li ul.children li {
         max-width: 100%; }
-        .sb-catlg section ul.fletter > li ul.children li a {
+        .sb-catlg ul.fletter > li ul.children li a {
           color: #0941D5;
           padding: .24rem .2rem;
           text-decoration: underline; }
-          .sb-catlg section ul.fletter > li ul.children li a:hover {
+          .sb-catlg ul.fletter > li ul.children li a:hover {
             background-color: #D8F5FF;
             text-decoration: none;
             cursor: pointer; }
-          .sb-catlg section ul.fletter > li ul.children li a:visited {
+          .sb-catlg ul.fletter > li ul.children li a:visited {
             color: #75C6FE; }
 
 /* Catalogue Sidebar Dipl po Prof Msk Menu Page Template page-cat-diplprofmsk.php  */
@@ -8973,20 +8882,17 @@ form.cntcspf {
   background: #3c5aae;
   border-top-left-radius: .6rem;
   border-top-right-radius: .6rem;
-  /* box-shadow: 0 3px 5px #222; */
   -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
           box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
   color: #fff;
   font-size: 1.6rem;
   font-weight: 600;
-  margin: 1.5rem 0 .5rem 0;
-  /* padding: 30px 0; */ }
+  margin: 1.5rem 0 .5rem 0; }
 
 .page-reviews .comments-area .comment {
   background-color: #3C5AAE;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
           box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
-  /* display: flex; */
   font-weight: 500;
   margin: .48rem 0;
   padding: 1.5rem 2rem; }
@@ -9091,14 +8997,18 @@ form.cntcspf {
   .page-categorymenu h1 {
     border-bottom: 3px solid #B2D6F0;
     color: #3c5aae;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     font-weight: bold;
     line-height: 0.972;
     margin: 15px auto;
     margin-right: -2rem;
-    padding-bottom: .85rem;
+    padding-bottom: .7rem;
     text-align: center;
     text-transform: uppercase; }
+  .page-categorymenu .page-content {
+    color: #3c5aae; }
+    .page-categorymenu .page-content p {
+      margin-left: 1rem; }
   .page-categorymenu form.mainpf,
   .page-categorymenu form.wpcf7-form {
     /* margin-left: 3rem; */
@@ -9115,32 +9025,31 @@ form.cntcspf {
     .page-categorymenu form.wpcf7-form p.safety,
     .page-categorymenu form.wpcf7-form p.lastp {
       display: none; }
-  .page-categorymenu .monitor {
-    /* background: url(images/i_playscreensm.png) no-repeat 50% 50%, url(images/monitor_smm.png) no-repeat center center;
-		height: 200px; */ }
   .page-categorymenu h2 {
-    font-size: 1.5rem;
     margin-left: -3rem;
     margin-right: -1rem;
     margin-top: 2rem;
-    text-align: center; }
-  .page-categorymenu .video-block {
-    /* background: url(images/i_playscreensm.png) no-repeat 50% 50%, url(images/monitor_smm.png) no-repeat center center; */ }
-    .page-categorymenu .video-block img:nth-child(3) {
-      height: 100%;
-      width: 100%;
-      margin-left: 3rem;
-      margin-right: -3rem; }
-    .page-categorymenu .video-block div.list {
-      margin-left: 3rem;
-      margin-right: -3rem; }
-      .page-categorymenu .video-block div.list ul li a {
-        font-size: .75rem;
-        display: inline-block;
-        margin: .5rem;
-        padding: 0; }
-        .page-categorymenu .video-block div.list ul li a::before {
-          display: none; }
+    text-align: center;
+    color: #3C5AAE;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    margin: 2rem 0 1rem 0;
+    text-transform: uppercase; }
+  .page-categorymenu .video-block img:nth-child(3) {
+    height: 100%;
+    width: 100%;
+    margin-left: 3rem;
+    margin-right: -3rem; }
+  .page-categorymenu .video-block div.list {
+    margin-left: 3rem;
+    margin-right: -3rem; }
+    .page-categorymenu .video-block div.list ul li a {
+      font-size: .75rem;
+      display: inline-block;
+      margin: .5rem;
+      padding: 0; }
+      .page-categorymenu .video-block div.list ul li a::before {
+        display: none; }
   .page-categorymenu .video-links {
     border-left: 3px solid #BFE0F1; }
     .page-categorymenu .video-links nav {
@@ -9208,7 +9117,6 @@ form.cntcspf {
   text-align: center; }
   .comment-respond p.with_btn a {
     color: #fff;
-    /* font-weight: 600; */
     text-decoration: underline; }
     .comment-respond p.with_btn a:hover {
       text-decoration: none; }
@@ -9287,19 +9195,7 @@ form.cntcspf {
     width: 38%; }
     .page-faq div.for-form form .form-control {
       border-radius: 0.6rem; }
-  .page-faq div.for-form #fields p input#email {
-    /* background-color: #88E769;
-				background-image: none;
-				background-clip: padding-box;
-				border: 1px solid #ced4da;
-				border-radius: 0.6rem;
-				color: #495057;
-				display: block;
-				font-size: 1rem;
-				line-height: 1.5;
-				padding: 0.375rem 0.75rem;
-				width: 100%; */ }
-  .page-faq div.for-form #fields button#submit.go {
+  .page-faq div.for-form #fields p input#email button#submit.go {
     -ms-flex-item-align: center;
         align-self: center;
     border: 2px solid;
@@ -9312,7 +9208,7 @@ form.cntcspf {
     text-transform: uppercase;
     padding: 10px 20px;
     width: 100%; }
-  .page-faq div.for-form #fields #email {
+  .page-faq div.for-form #fields p input#email #email {
     margin-bottom: .65rem; }
 
 /* xs - устройства (до 576px) */
@@ -9620,9 +9516,6 @@ form.cntcspf {
 
 /* md (>=768 и <=991) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .sfbtns-group input.form-control {
-    /*  margin-bottom: .5rem;
-       width: 100%; */ }
   .jumbotron h2 {
     font-size: 1.6rem;
     line-height: 1.1; }
@@ -9658,59 +9551,3 @@ form.cntcspf {
     font-size: 1.2rem; } }
 
 /* xl (>=1200) */
-/*@import "../bower_components/bootstrap/scss/bootstrap-reboot";
-
-@import "../bower_components/bootstrap/scss/utilities";
-@import "variables-site/variables-site";
-@import "../bower_components/bootstrap/scss/grid";
-@import "../bower_components/bootstrap/scss/card";
-@import "../bower_components/bootstrap/scss/navbar";
-@import "../bower_components/bootstrap/scss/jumbotron";
-@import "../bower_components/bootstrap/scss/buttons";
-
-
-//@import "../bower_components/bootstrap/scss/alert";
-//@import "../bower_components/bootstrap/scss/badge";
-//@import "../bower_components/bootstrap/scss/tooltip";
-//@import "../bower_components/bootstrap/scss/popover";
-//@import "../bower_components/bootstrap/scss/transitions";
-
-//@import "../bower_components/bootstrap/scss/variables";
-//@import "variables-site/variables-site";
-@import "mixins/mixins-master";*/
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/

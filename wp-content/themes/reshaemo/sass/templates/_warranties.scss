@@ -3,7 +3,6 @@
 	padding: 0 4rem;
 }
 
-
 /* FAQ Page Template page-faq.php */
 .page-faq {
 	h1 {
@@ -80,33 +79,22 @@
 		}
 		#fields {
 			 p input#email {
-				/* background-color: #88E769;
-				background-image: none;
-				background-clip: padding-box;
-				border: 1px solid #ced4da;
-				border-radius: 0.6rem;
-				color: #495057;
-				display: block;
-				font-size: 1rem;
-				line-height: 1.5;
-				padding: 0.375rem 0.75rem;
-				width: 100%; */
-			}
-			button#submit.go {
-				align-self: center;
-				border: 2px solid;
-				border-radius: 0.65rem;
-				font-size: 1.5rem;
-				font-weight: 500;
-				line-height: 1.094;
-				margin-top: 0.7rem;
-				text-align: center;
-				text-transform: uppercase;
-				padding: 10px 20px;
-				width: 100%;
-			}
-			#email {
-				margin-bottom: .65rem;
+				button#submit.go {
+					align-self: center;
+					border: 2px solid;
+					border-radius: 0.65rem;
+					font-size: 1.5rem;
+					font-weight: 500;
+					line-height: 1.094;
+					margin-top: 0.7rem;
+					text-align: center;
+					text-transform: uppercase;
+					padding: 10px 20px;
+					width: 100%;
+				}
+				#email {
+					margin-bottom: .65rem;
+				}
 			}
 		}
 	}

@@ -43,79 +43,73 @@ get_header(); ?>
 
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-one" role="tabpanel"> <!-- был еще один атрибут: aria-labelledby="nav-one-tab" -->
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                     
-                                      <div class="container-fluid">
-                                          <div class="container">
-                                              <div class="row">
-                                                  <div class="col-12">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                 
+                                  <div class="container-fluid">
+                                      <div class="container">
+                                          <div class="row">
+                                              <div class="col-12">
 
-                                                    <?php echo do_shortcode('[galvyshobrz]'); ?>
+                                                <?php echo do_shortcode('[galvyshobrz]'); ?>
 
-                                                  </div><!-- .col-12 -->
-                                              </div><!-- .row --> 
-                                          </div><!-- .container -->
-                                      </div><!-- .gallery .container-fluid -->
+                                              </div><!-- .col-12 -->
+                                          </div><!-- .row --> 
+                                      </div><!-- .container -->
+                                  </div><!-- .gallery .container-fluid -->
 
-                                      <div class="container-fluid">
-                                          <div class="container">
-                                              <div class="row">
-                                                  <div class="col-12">
+                                  <div class="container-fluid">
+                                      <div class="container">
+                                          <div class="row">
+                                              <div class="col-12">
 
-                                                    <?php echo do_shortcode('[galposdipobrz]'); ?>
+                                                <?php echo do_shortcode('[galposdipobrz]'); ?>
 
-                                                  </div><!-- .col-12 -->
-                                              </div><!-- .row --> 
-                                          </div><!-- .container -->
-                                      </div><!-- .gallery .container-fluid -->
+                                              </div><!-- .col-12 -->
+                                          </div><!-- .row --> 
+                                      </div><!-- .container -->
+                                  </div><!-- .gallery .container-fluid -->
 
-                                      <div class="container-fluid">
-                                          <div class="container">
-                                              <div class="row">
-                                                  <div class="col-12">
+                                  <div class="container-fluid">
+                                      <div class="container">
+                                          <div class="row">
+                                              <div class="col-12">
 
-                                                    <?php echo do_shortcode('[galsrspecobrz]'); ?>
+                                                <?php echo do_shortcode('[galsrspecobrz]'); ?>
 
-                                                  </div><!-- .col-12 -->
-                                              </div><!-- .row --> 
-                                          </div><!-- .container -->
-                                      </div><!-- .gallery .container-fluid -->                                                                      
-                                      <div class="container-fluid">
-                                          <div class="container">
-                                              <div class="row">
-                                                  <div class="col-12">
+                                              </div><!-- .col-12 -->
+                                          </div><!-- .row --> 
+                                      </div><!-- .container -->
+                                  </div><!-- .gallery .container-fluid -->                                                                      
+                                  <div class="container-fluid">
+                                      <div class="container">
+                                          <div class="row">
+                                              <div class="col-12">
 
-                                                    <?php echo do_shortcode('[galattschool]'); ?>
+                                                <?php echo do_shortcode('[galattschool]'); ?>
 
-                                                  </div><!-- .col-12 -->
-                                              </div><!-- .row --> 
-                                          </div><!-- .container -->
-                                      </div><!-- .gallery .container-fluid -->
+                                              </div><!-- .col-12 -->
+                                          </div><!-- .row --> 
+                                      </div><!-- .container -->
+                                  </div><!-- .gallery .container-fluid -->
 
-                                      <div class="container-fluid">
-                                          <div class="container">
-                                              <div class="row">
-                                                  <div class="col-12">
+                                  <div class="container-fluid">
+                                      <div class="container">
+                                          <div class="row">
+                                              <div class="col-12">
 
-                                                    <?php echo do_shortcode('[galsprsva]'); ?>
+                                                <?php echo do_shortcode('[galsprsva]'); ?>
 
-                                                  </div><!-- .col-12 -->
-                                              </div><!-- .row --> 
-                                          </div><!-- .container -->
-                                      </div><!-- .gallery .container-fluid -->                                      
+                                              </div><!-- .col-12 -->
+                                          </div><!-- .row --> 
+                                      </div><!-- .container -->
+                                  </div><!-- .gallery .container-fluid -->                                      
+                                    
+                                </div><!-- .col-12 -->
 
-                                        <?php //echo do_shortcode('[tabvyshobrz]'); ?>
-                                        <?php //echo do_shortcode('[tabposdipobrz]'); ?>
-                                        <?php //echo do_shortcode('[tabsrspecobrz]'); ?>
-                                        <?php //echo do_shortcode('[attschool]'); ?>
-                                        <?php //echo do_shortcode('[sprsva]'); ?>
-                                        
-                                    </div><!-- .col-12 -->
-
-                                </div><!-- .row --> 
-                            </div><!-- .container -->
+                            </div><!-- .row --> 
+                        </div><!-- .container -->
                     </div><!-- .tab-pane -->
                 </div>
 

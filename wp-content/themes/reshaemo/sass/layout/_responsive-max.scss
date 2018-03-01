@@ -1,5 +1,5 @@
-    /* xl-размер (>=1200px) */
-    /* CSS для >=1200px */
+/* xl-размер (>=1200px) */
+/* CSS для >=1200px */
      
 /* lg-размер (<=1199px) */
 @media (max-width: 1199px) {
@@ -19,7 +19,7 @@
      
 /* md-размер (<=991px) */
 @media (max-width: 991px) {
-  /* CSS для ширины от 768px до 991px */
+/* CSS для ширины от 768px до 991px */
     .site-branding {
         display: none;
     }
@@ -144,7 +144,7 @@
      
 /* sm-размер (<=768px) */
 @media (max-width: 767px) { 
-  /* CSS для ширины от 576px до 767px */
+/* CSS для ширины от 576px до 767px */
     .jumbotron {
         background: 
             url(images/bg_jumb_leftsmms.png) repeat-y left center, 
@@ -222,7 +222,7 @@
      
 /* xs-размер (<=575px) */
 @media (max-width: 575px) {
-  /* CSS для ширины до 575px (включительно) */
+/* CSS для ширины до 575px (включительно) */
     .top-wrap .toplarge-menu nav.navbar {
         margin-left: -15px;
     }
@@ -300,7 +300,7 @@
 
 /* размер (<=500px) */
 @media (max-width: 500px) {
-  /* CSS для ширины до 500px (включительно) */
+/* CSS для ширины до 500px (включительно) */
     .page-catalogue .main-catlg ul#myTab.nav-tabs {
         display: none;
     } 

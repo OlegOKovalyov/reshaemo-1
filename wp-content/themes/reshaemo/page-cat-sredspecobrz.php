@@ -39,7 +39,6 @@ get_header(); ?>
                                 <div class="row">
                                     <div class="col-12">
                                      
-                                        <!--<?php /*echo do_shortcode('[shortcode id="304"]');*/ ?>-->
                                         <?php echo do_shortcode('[tabsrspecobrz]'); ?>
                                         
                                     </div><!-- .col-12 -->
