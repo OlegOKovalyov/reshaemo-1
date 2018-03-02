@@ -33,7 +33,11 @@
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
     margin-bottom: 35px;
     img.card-img-top {
-        padding: 5px;
+        box-shadow: 0 10px 10px -10px #2B3B62;
+        padding: 5px 5px 0 5px;
+        &:hover {
+            box-shadow: none;
+        }
     }
     .card-body {
         text-align: center;

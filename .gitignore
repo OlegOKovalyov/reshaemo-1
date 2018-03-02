@@ -129,7 +129,9 @@ Thumbs.db
 #!wp-content/mu-plugins/example-mu-plugin/
 !wp-content/plugins/functionsphp.php
 !wp-content/themes/reshaemo/*.php
-!wp-content/themes/reshaemo/sass/
+!wp-content/themes/reshaemo/sass/*.scss
+!wp-content/themes/reshaemo/images/**/*
+!wp-content/themes/reshaemo/shortcodes/*.php
 !wp-content/themes/reshaemo/functions/
 !wp-content/themes/reshaemo/inc/
 !wp-content/themes/reshaemo/js/

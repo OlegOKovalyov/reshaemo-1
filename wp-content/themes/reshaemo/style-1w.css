@@ -2,8 +2,8 @@
 /*!
 Theme Name: WP-Reshaemo
 Theme URI: http://underscores.me/
-Author: OK
-Author URI: 
+Author: Oleg Kovalyov
+Author URI: http://www.smartinet.com.ua/
 Description: Buy Diploma WordPress Site
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -20,6 +20,28 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Bootstrap 4 Beta 2.0.0
 --------------------------------------------------------------*/
@@ -7696,13 +7718,6 @@ tbody.collapse.show {
 body {
   font-family: Roboto, "Helvetica Neue", Arial, sans-serif; }
 
-/* Убираем рамку FireFox */
-* {
-  outline: 0 !important; }
-
-section {
-  color: #3c5aae; }
-
 /* Верхнее широкое меню */
 .site-header {
   background: #3C5BAE;
@@ -7724,12 +7739,14 @@ section {
   height: 0;
   border-top: 105px solid transparent;
   border-left: 10px solid #BFE0F1;
-  border-bottom: 105px solid transparent; }
+  border-bottom: 105px solid transparent;
+  /* margin-left: -15px; */ }
 
 .top-wrap .toplarge-menu {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  /* margin-bottom: 25px; */ }
   .top-wrap .toplarge-menu nav.navbar {
     -ms-flex-item-align: stretch;
         align-self: stretch;
@@ -7747,8 +7764,15 @@ section {
         -ms-flex-item-align: stretch;
             align-self: stretch;
         background: #E9F8FF;
-        margin-left: 0;
-        height: 180px; }
+        /* margin-left: 0.2em; */
+        margin-left: 0; }
+        .top-wrap .toplarge-menu nav.navbar #navbarNavTop ul.navbar-nav a,
+        .top-wrap .toplarge-menu nav.navbar #navbarNavBtm ul.navbar-nav a,
+        .top-wrap .toplarge-menu nav.navbar #navbarNavBtm2 ul.navbar-nav a {
+          padding-top: 100px;
+          padding-bottom: 35px;
+          margin-top: -100px;
+          margin-bottom: -35px; }
         .top-wrap .toplarge-menu nav.navbar #navbarNavTop ul.navbar-nav a:hover,
         .top-wrap .toplarge-menu nav.navbar #navbarNavBtm ul.navbar-nav a:hover,
         .top-wrap .toplarge-menu nav.navbar #navbarNavBtm2 ul.navbar-nav a:hover {
@@ -7832,94 +7856,8 @@ li.nav-item .nav-card {
     li.nav-item .nav-card .nav-card-body a.nav-link:hover {
       text-decoration: none; }
 
-/* Внедряем верхнее широкое меню в WordPress: top-large-menu */
-#navbarNavTop ul.navbar-nav > li,
-#navbarNavBtm ul.navbar-nav > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-right: 4px;
-  width: 100%; }
-  #navbarNavTop ul.navbar-nav > li:last-child,
-  #navbarNavBtm ul.navbar-nav > li:last-child {
-    margin-right: 0;
-    /* padding-right: 22px; */ }
-  #navbarNavTop ul.navbar-nav > li.current-menu-item,
-  #navbarNavBtm ul.navbar-nav > li.current-menu-item {
-    background-color: #b2daee; }
-    #navbarNavTop ul.navbar-nav > li.current-menu-item > a,
-    #navbarNavBtm ul.navbar-nav > li.current-menu-item > a {
-      color: #fff; }
-  #navbarNavTop ul.navbar-nav > li.menu-item-392 > a:before,
-  #navbarNavBtm ul.navbar-nav > li.menu-item-392 > a:before {
-    content: "";
-    position: absolute;
-    top: 13px;
-    left: 6%;
-    background: url(images/i_topmenu1.png);
-    width: 70px;
-    height: 70px; }
-  #navbarNavTop ul.navbar-nav > li.menu-item-395 > a:before,
-  #navbarNavBtm ul.navbar-nav > li.menu-item-395 > a:before {
-    content: "";
-    position: absolute;
-    top: 25px;
-    left: 26%;
-    width: 70px;
-    height: 70px;
-    background: url(images/i_topmenu2.png); }
-  #navbarNavTop ul.navbar-nav > li.menu-item-400 > a:before,
-  #navbarNavBtm ul.navbar-nav > li.menu-item-400 > a:before {
-    content: "";
-    position: absolute;
-    top: 18px;
-    left: 46%;
-    width: 70px;
-    height: 70px;
-    background: url(images/i_topmenu3.png); }
-  #navbarNavTop ul.navbar-nav > li.menu-item-403 > a:before,
-  #navbarNavBtm ul.navbar-nav > li.menu-item-403 > a:before {
-    content: "";
-    position: absolute;
-    top: 22px;
-    left: 66%;
-    width: 70px;
-    height: 70px;
-    background: url(images/i_topmenu4.png); }
-  #navbarNavTop ul.navbar-nav > li.menu-item-406 > a:before,
-  #navbarNavBtm ul.navbar-nav > li.menu-item-406 > a:before {
-    content: "";
-    position: absolute;
-    top: 18px;
-    left: 86%;
-    width: 70px;
-    height: 70px;
-    background: url(images/i_topmenu5.png); }
-  #navbarNavTop ul.navbar-nav > li > a,
-  #navbarNavBtm ul.navbar-nav > li > a {
-    text-align: center;
-    font-size: 1rem;
-    text-transform: uppercase;
-    line-height: 1.2;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    color: #3C5BAE;
-    display: block;
-    margin: 0;
-    margin-bottom: 35px !important;
-    padding-right: .5rem;
-    padding-left: .5rem;
-    max-width: 150px; }
-    #navbarNavTop ul.navbar-nav > li > a:hover,
-    #navbarNavBtm ul.navbar-nav > li > a:hover {
-      text-decoration: none; }
+.bg-light {
+  /* background-color: #E9F8FF !important; */ }
 
 /* Верхнее главное узкое меню */
 .topnarrow-menu {
@@ -7944,10 +7882,10 @@ li.nav-item .nav-card {
               align-items: center; }
       .topnarrow-menu #navbarNav ul.navbar-nav li a {
         color: #654404;
-        font-size: .85rem;
         line-height: 1.2;
         padding: .8rem 1rem;
-        display: inline-block; }
+        display: inline-block;
+        text-transform: lowercase; }
         .topnarrow-menu #navbarNav ul.navbar-nav li a:hover {
           text-decoration: none;
           background-color: #a2ec8a; }
@@ -7965,6 +7903,28 @@ li.nav-item .nav-card {
 .navbar-light .navbar-toggler:hover {
   cursor: pointer; }
 
+/* Bredcrumbs в главном узком меню - можно удалить */
+/* .brdcrmb-wrap {
+    align-items: flex-start;
+    display: flex;
+    margin-left: -25px;
+    img {
+        margin-top: 5px;
+    }
+    nav {
+        line-height: 0.1;
+        .breadcrumb {
+            background-color: #88E769;
+            font-size: .85rem;
+            margin-bottom: 0;
+            padding: 1.2rem 1rem 0.5rem;
+            li {
+
+            }
+        }
+    }
+}
+ */
 /* Dimox Bredcrumbs в главном узком меню */
 .brdcrmb-wrap {
   -webkit-box-align: start;
@@ -7973,7 +7933,7 @@ li.nav-item .nav-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: -5%; }
+  margin-left: -25px; }
   .brdcrmb-wrap img {
     -ms-flex-item-align: center;
         align-self: center; }
@@ -7982,6 +7942,7 @@ li.nav-item .nav-card {
     font-size: .85rem;
     margin-bottom: 0;
     margin-left: .3rem;
+    /* padding: 1.2rem 1rem 0.3rem; */
     padding: 0; }
     .brdcrmb-wrap .breadcrumbs .current {
       text-transform: lowercase; }
@@ -7998,8 +7959,7 @@ li.nav-item .nav-card {
     background: #88E769;
     border-radius: .6rem;
     font-size: 0.7rem;
-    width: 95%;
-    height: 2.1rem; }
+    width: 95%; }
     .choose-city select:last-child {
       font-size: 0.8rem; }
 
@@ -8010,7 +7970,7 @@ li.nav-item .nav-card {
           box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
   height: 534px;
   margin-bottom: 0;
-  padding-top: 1.5rem; }
+  padding-top: 2rem; }
   .jumbotron .col-4 {
     margin-left: -20px; }
   .jumbotron h2 {
@@ -8031,15 +7991,13 @@ li.nav-item .nav-card {
   height: 7px; }
 
 /* Форма Срочный заказ диплома */
-form.mainpf,
-form.wpcf7-form {
+form.mainpf {
   background: #2f970d;
   border-radius: 10px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   margin-top: 3px; }
-  form.mainpf fieldset,
-  form.wpcf7-form fieldset {
+  form.mainpf fieldset {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -8047,16 +8005,7 @@ form.wpcf7-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    form.mainpf fieldset p:nth-child(4),
-    form.wpcf7-form fieldset p:nth-child(4) {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-  form.mainpf legend,
-  form.wpcf7-form legend {
+  form.mainpf legend {
     color: #fff;
     font-size: 1.7rem;
     font-weight: 600;
@@ -8064,15 +8013,12 @@ form.wpcf7-form {
     text-align: center;
     text-transform: uppercase; }
   form.mainpf input.form-control,
-  form.mainpf select.form-control,
-  form.wpcf7-form input.form-control,
-  form.wpcf7-form select.form-control {
+  form.mainpf select.form-control {
     border-radius: 0.6rem;
     font-size: 0.9rem;
     margin-bottom: 7px;
     width: 85%; }
-  form.mainpf .form-group,
-  form.wpcf7-form .form-group {
+  form.mainpf .form-group {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -8083,24 +8029,13 @@ form.wpcf7-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    form.mainpf .form-group span,
-    form.wpcf7-form .form-group span {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      width: 100%; }
-  form.mainpf p,
-  form.wpcf7-form p {
+  form.mainpf p {
     color: #88E769;
     font-size: 0.75rem;
     line-height: 1.2;
     margin-left: 10%;
     margin-right: 10%; }
-  form.mainpf p.safety::before,
-  form.wpcf7-form p.safety::before {
+  form.mainpf p.safety::before {
     background: url(images/i_lock.png) no-repeat;
     content: "";
     float: left;
@@ -8109,8 +8044,7 @@ form.wpcf7-form {
     width: 47px;
     position: relative;
     z-index: 0; }
-  form.mainpf button.btn-outline-order,
-  form.wpcf7-form button.btn-outline-order {
+  form.mainpf button.btn-outline-order {
     border-radius: 10px;
     font-size: 1.5rem;
     font-weight: 500;
@@ -8118,15 +8052,7 @@ form.wpcf7-form {
     text-align: center;
     text-transform: uppercase;
     line-height: 1.094; }
-  form.mainpf #idsubmbtn,
-  form.wpcf7-form #idsubmbtn {
-    font-size: 1.4rem;
-    font-weight: 600;
-    border-radius: 10px;
-    padding: .1rem 2rem;
-    text-transform: uppercase; }
-  form.mainpf::before,
-  form.wpcf7-form::before {
+  form.mainpf::before {
     background: url(images/i_topballsmm.png) no-repeat;
     content: "";
     float: right;
@@ -8135,8 +8061,7 @@ form.wpcf7-form {
     width: 25px;
     position: relative;
     z-index: 0; }
-  form.mainpf::after,
-  form.wpcf7-form::after {
+  form.mainpf::after {
     background: url(images/i_btmballsmm.png) no-repeat;
     content: "";
     float: right;
@@ -8145,58 +8070,16 @@ form.wpcf7-form {
     width: 25px;
     position: absolute;
     z-index: 0;
-    top: 479px;
-    right: -17px; }
-  form.mainpf span.wpcf7-form-control-wrap,
-  form.wpcf7-form span.wpcf7-form-control-wrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-  form.mainpf input.wpcf7-form-control,
-  form.mainpf select.wpcf7-form-control,
-  form.wpcf7-form input.wpcf7-form-control,
-  form.wpcf7-form select.wpcf7-form-control {
-    -ms-flex-item-align: center;
-        align-self: center; }
-  form.mainpf span.wpcf7-not-valid-tip,
-  form.wpcf7-form span.wpcf7-not-valid-tip {
-    -webkit-box-orient: unset;
-    -webkit-box-direction: unset;
-        -ms-flex-direction: unset;
-            flex-direction: unset;
-    position: absolute;
-    top: 18px; }
-  form.mainpf div.wpcf7-response-output,
-  form.wpcf7-form div.wpcf7-response-output {
-    position: absolute;
-    left: 0; }
-  form.mainpf div.wpcf7-mail-sent-ok,
-  form.wpcf7-form div.wpcf7-mail-sent-ok {
-    background-color: #398f14;
-    top: 450px; }
-  form.mainpf .wpcf7-validation-errors,
-  form.wpcf7-form .wpcf7-validation-errors {
-    background-color: #f7e700;
-    top: 437px; }
+    top: 454px;
+    right: 15px; }
 
 /* Gallery */
 .gallery {
   background: url(images/bg_glry1.png) fixed left center, url(images/bg_glry2.png) fixed right center;
   height: auto;
   padding-bottom: 25px; }
-  .gallery .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
-    .gallery .wrapper .gitem {
-      max-width: 225px; }
+  .gallery .row {
+    margin-bottom: 35px; }
   .gallery h1 {
     border-bottom: 4px solid;
     font-size: 2rem;
@@ -8214,14 +8097,10 @@ form.wpcf7-form {
   border-radius: 10px;
   -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
           box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.62);
+  height: 430px;
   margin-bottom: 35px; }
   .card img.card-img-top {
-    -webkit-box-shadow: 0 10px 10px -10px #2B3B62;
-            box-shadow: 0 10px 10px -10px #2B3B62;
-    padding: 5px 5px 0 5px; }
-    .card img.card-img-top:hover {
-      -webkit-box-shadow: none;
-              box-shadow: none; }
+    padding: 5px; }
   .card .card-body {
     text-align: center; }
     .card .card-body p span.upcase {
@@ -8242,12 +8121,15 @@ form.wpcf7-form {
 /* Button ЗАКАЗАТЬ в карточке товара card */
 .card .card-body .btn-order {
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  /* font-family: "Roboto"; */
   color: #fff;
   font-weight: bold;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   line-height: 1.094;
-  padding: 0.4rem .9rem; }
+  /* text-align: center; */
+  padding: 0.4rem 1.3rem; }
 
 /* Main content background*/
 .content-area {
@@ -8258,29 +8140,44 @@ form.wpcf7-form {
   .content-area .blank-block {
     height: 80px; }
 
-p.p-first {
-  margin-top: 2rem; }
-
-p.p-last {
-  margin-bottom: 2rem; }
-
 /* Video Block */
-.video-block nav a.nav-link::before {
-  background: url(images/i_playsm.png) no-repeat;
-  content: "";
-  float: left;
-  margin-right: 30px;
-  margin-top: 5px;
-  height: 38px;
-  width: 38px;
-  position: relative; }
+.video-block .video-links {
+  margin-bottom: 1rem; }
 
-.video-block .row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+.video-block h2 {
+  color: #2f970d;
+  font-size: 1.9rem;
+  /* text-align: center; */
+  margin-left: 2%;
+  text-transform: uppercase; }
 
-.video-block img:nth-child(4) {
+.video-block nav {
+  /* border-bottom: 3px solid #3C5AAE; */ }
+  .video-block nav a.nav-link {
+    font-size: .9rem;
+    /* margin-left: 50px; */
+    line-height: 2.5;
+    margin-top: .3rem;
+    padding: 0.5rem 0 .5rem 1.3rem;
+    text-decoration: underline; }
+    .video-block nav a.nav-link:last-child {
+      /* margin-bottom: 45px; */ }
+    .video-block nav a.nav-link::before {
+      background: url(images/i_playsm.png) no-repeat;
+      content: "";
+      float: left;
+      margin-right: 30px;
+      margin-top: 5px;
+      height: 38px;
+      width: 38px;
+      position: relative;
+      /* z-index: -1; */ }
+
+.video-block .monitor {
+  background: url(images/i_playscreensm.png) no-repeat 34% 12%, url(images/monitor_smm.png) no-repeat left top;
+  margin-left: -30px; }
+
+.video-block .row img:nth-child(4) {
   position: absolute;
   top: 56%;
   left: 38%; }
@@ -8295,7 +8192,8 @@ p.p-last {
     top: 0;
     position: relative;
     height: 30px;
-    width: 30px; }
+    width: 30px;
+    /* z-index: 1; */ }
   .video-block .video-links span#down-marker {
     background: url(images/i_down_marker.png) no-repeat;
     content: "";
@@ -8326,9 +8224,12 @@ p.p-last {
     background-color: rgba(0, 0, 0, 0.05);
     -webkit-user-select: none; }
   .video-block div.list > ul {
+    /* max-height: 240px; */
     height: 180px;
+    /* min-width: 350px; */
     min-width: 100%;
-    overflow: auto; }
+    overflow: auto;
+    /* overflow: hidden; */ }
     .video-block div.list > ul li {
       margin-bottom: .8rem; }
       .video-block div.list > ul li a {
@@ -8350,10 +8251,9 @@ p.p-last {
           z-index: -1; }
 
 .video-block .monitor {
-  margin-left: -1rem;
+  background: url(images/i_playscreensm.png) no-repeat 34% 12%, url(images/monitor_smm.png) no-repeat left top;
+  margin-left: -30px;
   position: relative; }
-  .video-block .monitor img {
-    width: 100%; }
 
 .dipl_contains {
   display: -webkit-box;
@@ -8374,11 +8274,8 @@ p.p-last {
     text-transform: uppercase; }
   .dipl_contains p {
     color: #3C5AAE;
-    font-size: .9rem;
     height: 2.1rem;
-    line-height: 1;
-    margin-bottom: .1rem;
-    z-index: 1; }
+    margin-bottom: .1rem; }
   .dipl_contains p::before {
     background: url(images/i_star.png) no-repeat;
     content: "";
@@ -8417,8 +8314,7 @@ p.p-last {
       margin: 0 7%; }
   .page-delivery p {
     color: #3c5aae;
-    margin-bottom: .2rem;
-    z-index: 1; }
+    margin-bottom: .2rem; }
   .page-delivery .lchd {
     margin-bottom: 30px; }
   .page-delivery img {
@@ -8462,14 +8358,6 @@ p.p-last {
   .sfbtns-group .extnd-srch a {
     text-decoration: underline; }
 
-.sfbtns-group .ml-auto {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
-
 .three-colms .row {
   margin-bottom: 50px; }
 
@@ -8480,6 +8368,7 @@ p.p-last {
   font-size: .9rem;
   font-weight: 600;
   line-height: 1.094;
+  /* padding: 0.15rem .7rem; */
   padding: 0.25rem 0.7rem 0.15rem 0.7rem;
   text-transform: uppercase; }
 
@@ -8493,7 +8382,7 @@ p.p-last {
     font-size: .9rem;
     font-weight: 600;
     line-height: 1.094;
-    margin-left: .5rem;
+    /* padding: 0.15rem .7rem; */
     padding: 0.25rem 0.7rem 0.15rem 0.7rem;
     text-transform: uppercase; }
 
@@ -8502,8 +8391,7 @@ p.p-last {
 
 /* Catalogue Page Template: page-catalogue.php */
 .page-catalogue {
-  background: url(images/bg_jumb_leftsmms.png) repeat-y left top, url(images/bg_jumb_rightsmms.png) repeat-y right top;
-  padding-top: .01rem; }
+  background: url(images/bg_jumb_leftsmms.png) repeat-y left top, url(images/bg_jumb_rightsmms.png) repeat-y right top; }
   .page-catalogue .sfbtns-group form {
     margin-left: -30px; }
   .page-catalogue ul {
@@ -8542,7 +8430,7 @@ p.p-last {
     border-top-right-radius: .5rem;
     color: #3C5AAE;
     display: block;
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     font-weight: 500;
     height: 100%;
     line-height: 1.1;
@@ -8586,7 +8474,6 @@ p.p-last {
 .mscwhei_lst {
   max-width: 25%; }
 
-/* OWl-carousel */
 .owl-carousel .owl-stage-outer {
   margin-left: -5px;
   margin-right: -5px;
@@ -8599,42 +8486,11 @@ p.p-last {
     padding-left: 3.5px;
     padding-right: 3.5px; }
 
-.owl-nav {
-  display: block !important;
-  position: relative;
-  top: -60%; }
-  .owl-nav .owl-prev {
-    left: -25px;
-    position: absolute; }
-  .owl-nav .owl-next {
-    position: absolute;
-    right: -25px; }
-
-.owl-theme .owl-nav [class*="owl-"] {
-  background: #B2D6F0;
-  color: #42b1fe; }
-
-.owl-theme .owl-nav [class*="owl-"]:hover {
-  background-color: #75C6FE; }
-
-/* Галереи всех документов на странице Цены */
-.gallery-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
-  .gallery-row .entry {
-    -ms-flex-preferred-size: 200px;
-        flex-basis: 200px; }
-
 /* Меню левого сайдбара страницы Каталог */
 .aside-catalogue {
   border-top: 3px solid #B2D6F0;
   margin-right: -15px;
-  margin-top: 47px; }
+  margin-top: 55px; }
   .aside-catalogue .blank-block-top {
     border-right: 3px solid #B2D6F0;
     border-top-right-radius: 45px;
@@ -8684,7 +8540,7 @@ p.p-last {
 /* page-cat-diplprofmsk.php */
 .sb-catlg h2 {
   text-align: left;
-  margin: 2rem 4rem 3rem 1rem;
+  margin: 2rem 4rem 2rem 1rem;
   padding-bottom: 2rem; }
 
 .sb-catlg .alpha-index {
@@ -8695,7 +8551,7 @@ p.p-last {
       -ms-flex-pack: end;
           justify-content: flex-end;
   list-style-type: none;
-  margin-top: -6rem;
+  margin-top: -3.5rem;
   padding-bottom: 1rem;
   width: 100%; }
   .sb-catlg .alpha-index li > a {
@@ -8714,75 +8570,44 @@ p.p-last {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%; }
 
-.sb-catlg ul.fletter {
+.sb-catlg section ul.fletter {
   margin-top: .5rem;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding-left: 2rem; }
-  .sb-catlg ul.fletter > li {
+  .sb-catlg section ul.fletter > li {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-left: -2rem;
     max-width: 100% !important; }
-    .sb-catlg ul.fletter > li > a {
-      color: #0941D5;
-      text-decoration: underline; }
-      .sb-catlg ul.fletter > li > a:hover {
-        background-color: #D8F5FF;
+    .sb-catlg section ul.fletter > li > a {
+      color: #0941D5; }
+      .sb-catlg section ul.fletter > li > a:hover {
+        cursor: default;
         text-decoration: none; }
-      .sb-catlg ul.fletter > li > a:before {
+      .sb-catlg section ul.fletter > li > a:before {
         content: '«'; }
-      .sb-catlg ul.fletter > li > a:after {
+      .sb-catlg section ul.fletter > li > a:after {
         content: '»'; }
-    .sb-catlg ul.fletter > li ul.children {
+    .sb-catlg section ul.fletter > li ul.children {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
       margin-bottom: .4rem; }
-      .sb-catlg ul.fletter > li ul.children li {
+      .sb-catlg section ul.fletter > li ul.children li {
         max-width: 100%; }
-        .sb-catlg ul.fletter > li ul.children li a {
+        .sb-catlg section ul.fletter > li ul.children li a {
           color: #0941D5;
           padding: .24rem .2rem;
           text-decoration: underline; }
-          .sb-catlg ul.fletter > li ul.children li a:hover {
+          .sb-catlg section ul.fletter > li ul.children li a:hover {
             background-color: #D8F5FF;
             text-decoration: none;
             cursor: pointer; }
-          .sb-catlg ul.fletter > li ul.children li a:visited {
+          .sb-catlg section ul.fletter > li ul.children li a:visited {
             color: #75C6FE; }
-
-/* Catalogue Sidebar Dipl po Prof Msk Menu Page Template page-cat-diplprofmsk.php  */
-.cat-diplprofmsk h2 {
-  padding-bottom: 0; }
-
-.cat-diplprofmsk ul.diplprofmsk {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  .cat-diplprofmsk ul.diplprofmsk li {
-    margin-bottom: 4px;
-    max-width: 100%;
-    padding: 0 3px; }
-    .cat-diplprofmsk ul.diplprofmsk li > a {
-      color: #0941D5;
-      padding: .24rem .2rem;
-      /* text-decoration: underline; */ }
-      .cat-diplprofmsk ul.diplprofmsk li > a:hover {
-        background-color: #D8F5FF;
-        text-decoration: none;
-        cursor: pointer; }
-      .cat-diplprofmsk ul.diplprofmsk li > a::before {
-        content: "\f054";
-        font-family: FontAwesome;
-        margin-right: 10px;
-        text-decoration: none; }
 
 /* Contacts Page: page-contacts.php */
 .page-contacts .three-colms .in-dlv-1col:last-child a {
@@ -8887,17 +8712,20 @@ form.cntcspf {
   background: #3c5aae;
   border-top-left-radius: .6rem;
   border-top-right-radius: .6rem;
+  /* box-shadow: 0 3px 5px #222; */
   -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
           box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
   color: #fff;
   font-size: 1.6rem;
   font-weight: 600;
-  margin: 1.5rem 0 .5rem 0; }
+  margin: 1.5rem 0 .5rem 0;
+  /* padding: 30px 0; */ }
 
 .page-reviews .comments-area .comment {
   background-color: #3C5AAE;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
           box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
+  /* display: flex; */
   font-weight: 500;
   margin: .48rem 0;
   padding: 1.5rem 2rem; }
@@ -8975,6 +8803,62 @@ form.cntcspf {
       -ms-flex-pack: center;
           justify-content: center; }
 
+/*@import "../bower_components/bootstrap/scss/bootstrap-reboot";
+
+@import "../bower_components/bootstrap/scss/utilities";
+@import "variables-site/variables-site";
+@import "../bower_components/bootstrap/scss/grid";
+@import "../bower_components/bootstrap/scss/card";
+@import "../bower_components/bootstrap/scss/navbar";
+@import "../bower_components/bootstrap/scss/jumbotron";
+@import "../bower_components/bootstrap/scss/buttons";
+
+
+//@import "../bower_components/bootstrap/scss/alert";
+//@import "../bower_components/bootstrap/scss/badge";
+//@import "../bower_components/bootstrap/scss/tooltip";
+//@import "../bower_components/bootstrap/scss/popover";
+//@import "../bower_components/bootstrap/scss/transitions";
+
+//@import "../bower_components/bootstrap/scss/variables";
+//@import "variables-site/variables-site";
+@import "mixins/mixins-master";*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
 /* Шаблон поиска по сайту search.php */
 .search-template h1.page-title {
   color: #3c5aae;
@@ -8989,92 +8873,110 @@ form.cntcspf {
   font-size: 1.2rem;
   text-align-last: left; }
 
-.search-template .search-rez {
+/* Внедряем верхнее широкое меню в WordPress: top-large-menu */
+#navbarNavTop ul.navbar-nav > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 4px;
+  width: 100%; }
+  #navbarNavTop ul.navbar-nav > li:last-child {
+    margin-right: 0;
+    /* padding-right: 22px; */ }
+  #navbarNavTop ul.navbar-nav > li.current-menu-item {
+    background-color: #b2daee; }
+    #navbarNavTop ul.navbar-nav > li.current-menu-item > a {
+      color: #fff; }
+  #navbarNavTop ul.navbar-nav > li.menu-item-392 > a:before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 6%;
+    background: url(images/i_topmenu1.png);
+    width: 70px;
+    height: 70px; }
+  #navbarNavTop ul.navbar-nav > li.menu-item-395 > a:before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 26%;
+    width: 70px;
+    height: 70px;
+    background: url(images/i_topmenu2.png); }
+  #navbarNavTop ul.navbar-nav > li.menu-item-400 > a:before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 46%;
+    width: 70px;
+    height: 70px;
+    background: url(images/i_topmenu3.png); }
+  #navbarNavTop ul.navbar-nav > li.menu-item-403 > a:before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 66%;
+    width: 70px;
+    height: 70px;
+    background: url(images/i_topmenu4.png); }
+  #navbarNavTop ul.navbar-nav > li.menu-item-406 > a:before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 86%;
+    width: 70px;
+    height: 70px;
+    background: url(images/i_topmenu5.png); }
+  #navbarNavTop ul.navbar-nav > li > a {
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: #3C5BAE;
+    display: block;
+    margin: 0;
+    margin-bottom: 10px !important;
+    margin-top: 30px;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    width: 150px; }
+    #navbarNavTop ul.navbar-nav > li > a:hover {
+      text-decoration: none; }
 
 /* Category Top Large Menu Page Template page-categorymenu.php  */
 .page-categorymenu {
-  background: url(images/bg_jumb_leftsmms.png) repeat-y left top, url(images/bg_jumb_rightsmms.png) repeat-y right top;
-  padding-top: .01rem; }
+  background: url(images/bg_jumb_leftsmms.png) repeat-y left top, url(images/bg_jumb_rightsmms.png) repeat-y right top; }
   .page-categorymenu h1 {
-    border-bottom: 3px solid #B2D6F0;
     color: #3c5aae;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: bold;
     line-height: 0.972;
-    margin: 15px auto;
-    margin-right: -2rem;
-    padding-bottom: .7rem;
+    margin: 30px auto;
     text-align: center;
     text-transform: uppercase; }
-  .page-categorymenu .page-content {
-    color: #3c5aae; }
-    .page-categorymenu .page-content p {
-      margin-left: 1rem; }
-  .page-categorymenu form.mainpf,
-  .page-categorymenu form.wpcf7-form {
-    /* margin-left: 3rem; */
-    margin-right: -3rem; }
-    .page-categorymenu form.mainpf::before, .page-categorymenu form.mainpf::after,
-    .page-categorymenu form.wpcf7-form::before,
-    .page-categorymenu form.wpcf7-form::after {
-      display: none; }
-    .page-categorymenu form.mainpf legend,
-    .page-categorymenu form.wpcf7-form legend {
-      font-size: 1.3rem; }
-    .page-categorymenu form.mainpf p.safety,
-    .page-categorymenu form.mainpf p.lastp,
-    .page-categorymenu form.wpcf7-form p.safety,
-    .page-categorymenu form.wpcf7-form p.lastp {
-      display: none; }
+  .page-categorymenu .monitor {
+    /* background: url(images/i_playscreensm.png) no-repeat 50% 50%, url(images/monitor_smm.png) no-repeat center center;
+		height: 200px; */ }
   .page-categorymenu h2 {
-    margin-left: -3rem;
-    margin-right: -1rem;
     margin-top: 2rem;
-    text-align: center;
-    color: #3C5AAE;
-    font-size: 1.1rem;
-    line-height: 1.2;
-    margin: 2rem 0 1rem 0;
-    text-transform: uppercase; }
-  .page-categorymenu .video-block img:nth-child(3) {
-    height: 100%;
-    width: 100%;
-    margin-left: 3rem;
-    margin-right: -3rem; }
-  .page-categorymenu .video-block div.list {
-    margin-left: 3rem;
-    margin-right: -3rem; }
-    .page-categorymenu .video-block div.list ul li a {
-      font-size: .75rem;
-      display: inline-block;
-      margin: .5rem;
-      padding: 0; }
-      .page-categorymenu .video-block div.list ul li a::before {
-        display: none; }
+    text-align: center; }
+  .page-categorymenu .video-block {
+    /* background: url(images/i_playscreensm.png) no-repeat 50% 50%, url(images/monitor_smm.png) no-repeat center center; */ }
   .page-categorymenu .video-links {
     border-left: 3px solid #BFE0F1; }
-    .page-categorymenu .video-links nav {
-      margin: .1rem 0; }
-      .page-categorymenu .video-links nav > a {
-        line-height: 1.3; }
-    .page-categorymenu .video-links a.see-video {
-      letter-spacing: -.6px; }
-
-/* Левый сайдбар для страниц дипломов, аттестатов, справок ... */
-.page-categorymenu .aside-catalogue ul {
-  margin-left: -.1rem;
-  padding-left: 0; }
-  .page-categorymenu .aside-catalogue ul li {
-    list-style-type: none; }
+    .page-categorymenu .video-links nav > a {
+      line-height: 1.3; }
 
 /* Последние отзывы */
-.recent_comments {
-  margin-top: 0; }
-
 .comment-respond h4 {
   background: #3c5aae;
   border-top-left-radius: .6rem;
@@ -9122,9 +9024,40 @@ form.cntcspf {
   text-align: center; }
   .comment-respond p.with_btn a {
     color: #fff;
+    /* font-weight: 600; */
     text-decoration: underline; }
     .comment-respond p.with_btn a:hover {
       text-decoration: none; }
+
+/* Catalogue Sidebar Dipl po Prof Msk Menu Page Template page-cat-diplprofmsk.php  */
+.cat-diplprofmsk h2 {
+  padding-bottom: 0; }
+
+.cat-diplprofmsk ul.diplprofmsk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .cat-diplprofmsk ul.diplprofmsk li {
+    margin-bottom: 4px;
+    max-width: 100%;
+    padding: 0 3px; }
+    .cat-diplprofmsk ul.diplprofmsk li > a {
+      color: #0941D5;
+      padding: .24rem .2rem;
+      /* text-decoration: underline; */ }
+      .cat-diplprofmsk ul.diplprofmsk li > a:hover {
+        background-color: #D8F5FF;
+        text-decoration: none;
+        cursor: pointer; }
+      .cat-diplprofmsk ul.diplprofmsk li > a::before {
+        content: "\f054";
+        font-family: FontAwesome;
+        margin-right: 10px;
+        text-decoration: none; }
 
 /* Warranties Page Template page-warranties.php */
 .warranties .three-colms .row {
@@ -9200,7 +9133,19 @@ form.cntcspf {
     width: 38%; }
     .page-faq div.for-form form .form-control {
       border-radius: 0.6rem; }
-  .page-faq div.for-form #fields p input#email button#submit.go {
+  .page-faq div.for-form #fields p input#email {
+    /* background-color: #88E769;
+				background-image: none;
+				background-clip: padding-box;
+				border: 1px solid #ced4da;
+				border-radius: 0.6rem;
+				color: #495057;
+				display: block;
+				font-size: 1rem;
+				line-height: 1.5;
+				padding: 0.375rem 0.75rem;
+				width: 100%; */ }
+  .page-faq div.for-form #fields button#submit.go {
     -ms-flex-item-align: center;
         align-self: center;
     border: 2px solid;
@@ -9213,358 +9158,5 @@ form.cntcspf {
     text-transform: uppercase;
     padding: 10px 20px;
     width: 100%; }
-  .page-faq div.for-form #fields p input#email #email {
+  .page-faq div.for-form #fields #email {
     margin-bottom: .65rem; }
-
-/* xs - устройства (до 576px) */
-/* CSS для ширины, которая меньше 575px (включительно) */
-/* sm-устройства (больше или равно 576px) */
-@media (min-width: 576px) {
-  /* CSS для: 576px <= ширины <= 767px */ }
-
-/* md-устройства (больше или равно 768px) */
-@media (min-width: 768px) {
-  /* CSS для: 768px <= ширины <= 991px */
-  form.mainpf,
-  form.wpcf7-form {
-    margin-left: 3rem;
-    margin-right: -2rem; } }
-
-/* lg-устройства (больше или равно 992px) */
-@media (min-width: 992px) {
-  /* CSS для: 992px <= ширины <= 1119px */
-  .top-wrap .toplarge-menu h4, .top-wrap .toplarge-menu h6 {
-    display: none; }
-  .video-block .monitor {
-    margin-left: -8rem;
-    position: relative; }
-    .video-block .monitor img {
-      width: 80%; } }
-
-/* xl-устройства (больше или равно 1200px) */
-@media (min-width: 1200px) {
-  /* CSS для: ширины >= 1200px */ }
-
-/* xl-размер (>=1200px) */
-/* CSS для >=1200px */
-/* lg-размер (<=1199px) */
-@media (max-width: 1199px) {
-  /* CSS для ширины от 992px до 1199px */
-  .triangle-left,
-  .triangle-right {
-    display: none; }
-  form.mainpf legend,
-  form.wpcf7-form legend {
-    font-size: 1.5rem;
-    padding-top: .5rem; } }
-
-/* md-размер (<=991px) */
-@media (max-width: 991px) {
-  /* CSS для ширины от 768px до 991px */
-  .site-branding {
-    display: none; }
-  .top-wrap .toplarge-menu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end; }
-    .top-wrap .toplarge-menu h4 {
-      border-top: 4px solid #E9F8FF;
-      border-bottom: 4px solid #E9F8FF;
-      font-size: 1.3rem;
-      margin-left: .7rem;
-      margin-top: 1px;
-      position: absolute;
-      left: 70px;
-      text-transform: uppercase; }
-      .top-wrap .toplarge-menu h4 a {
-        color: #fff; }
-    .top-wrap .toplarge-menu h6 {
-      color: #fff;
-      font-size: 0.8rem;
-      font-weight: normal;
-      margin-top: 1px;
-      position: absolute;
-      left: 200px;
-      text-transform: uppercase;
-      width: 150px; }
-    .top-wrap .toplarge-menu nav.navbar {
-      background-color: rgba(191, 224, 241, 0.6) !important;
-      margin-bottom: 0;
-      z-index: 3; }
-      .top-wrap .toplarge-menu nav.navbar #navbarNavTop ul.navbar-nav {
-        height: auto; }
-  #masthead.site-header {
-    height: 42px; }
-    #masthead.site-header .top-wrap .row .col-2 {
-      display: none; }
-  #navbarNavTop,
-  #navbarNavBtm {
-    width: 20rem; }
-  #navbarNavTop ul.navbar-nav,
-  #navbarNavBtm ul.navbar-nav {
-    /* height: auto; */ }
-    #navbarNavTop ul.navbar-nav > li,
-    #navbarNavBtm ul.navbar-nav > li {
-      /* background-color: rgba(191, 224, 241, 0.6) !important; */
-      height: 60px;
-      margin-bottom: 2px;
-      padding: 10px;
-      z-index: 1; }
-      #navbarNavTop ul.navbar-nav > li .current-menu-item,
-      #navbarNavBtm ul.navbar-nav > li .current-menu-item {
-        background-color: #ADD4E7; }
-      #navbarNavTop ul.navbar-nav > li a,
-      #navbarNavBtm ul.navbar-nav > li a {
-        display: contents;
-        margin: 0 !important;
-        padding: 0 !important;
-        max-width: 100%;
-        height: 4rem;
-        text-align: left; }
-      #navbarNavTop ul.navbar-nav > li > a::before,
-      #navbarNavBtm ul.navbar-nav > li > a::before {
-        display: none; }
-  .topnarrow-menu {
-    background: rgba(136, 231, 105, 0.9) !important;
-    margin-left: 2%;
-    position: absolute;
-    width: 96%;
-    z-index: 2; }
-  #navbarNav > ul > li.menu-item {
-    width: 100%; }
-    #navbarNav > ul > li.menu-item a {
-      text-align: center;
-      width: 100%; }
-  .jumbotron {
-    padding-top: 3rem; }
-  .sfbtns-group input.form-control {
-    margin-bottom: .5rem;
-    width: 100%; }
-  .page-categorymenu .video-block,
-  .page-categorymenu .video-block {
-    margin-left: -2rem; }
-    .page-categorymenu .video-block h2, .page-categorymenu .video-block img,
-    .page-categorymenu .video-block h2,
-    .page-categorymenu .video-block img {
-      display: none; }
-  .page-categorymenu form.wpcf7-form,
-  .page-categorymenu form.mainpf,
-  .page-categorymenu form.wpcf7-form,
-  .page-categorymenu form.mainpf {
-    margin: 2rem 0; }
-  .page-categorymenu div.list > ul li,
-  .page-categorymenu div.list > ul li {
-    width: 100%; }
-  .aside-catalogue ul {
-    margin-left: -1rem; }
-    .aside-catalogue ul li a {
-      font-size: .6rem;
-      padding: .3rem 0 .2rem .5rem; }
-  .site-footer {
-    padding: 0; } }
-
-/* sm-размер (<=768px) */
-@media (max-width: 767px) {
-  /* CSS для ширины от 576px до 767px */
-  .jumbotron {
-    background: url(images/bg_jumb_leftsmms.png) repeat-y left center, url(images/bg_jumb_rightsmms.png) repeat-y right center, url(images/jumb_mainimg.png) no-repeat 31.5% center; }
-    .jumbotron h2 {
-      font-size: 1.3rem; }
-    .jumbotron .lead {
-      font-size: 1rem;
-      line-height: 1; }
-  .page-catalogue .aside-catalogue {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2; }
-  .page-catalogue .main-catlg ul#myTab.nav-tabs {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    .page-catalogue .main-catlg ul#myTab.nav-tabs > li {
-      max-width: 20%; }
-      .page-catalogue .main-catlg ul#myTab.nav-tabs > li a {
-        padding-left: .5rem;
-        padding-right: .5rem; }
-  .aside-catalogue {
-    border: none;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    margin-top: 1rem; }
-    .aside-catalogue .blank-block-top,
-    .aside-catalogue .blank-block-btm {
-      display: none; }
-  form.mainpf,
-  form.wpcf7-form {
-    background: transparent;
-    margin-top: 120px; }
-    form.mainpf::before, form.mainpf::after,
-    form.wpcf7-form::before,
-    form.wpcf7-form::after {
-      display: none; }
-    form.mainpf legend,
-    form.wpcf7-form legend {
-      display: none; }
-    form.mainpf .form-control,
-    form.wpcf7-form .form-control {
-      background: rgba(136, 231, 105, 0.5); }
-    form.mainpf p.safety,
-    form.mainpf p.lastp,
-    form.wpcf7-form p.safety,
-    form.wpcf7-form p.lastp {
-      display: none; }
-  .video-block .monitor {
-    display: none; }
-  .page-categorymenu {
-    margin-bottom: 2rem; }
-  .page-categorymenu .video-block div.list {
-    margin-left: 0;
-    margin-right: 0; }
-  .page-categorymenu .video-block {
-    margin-left: 0; }
-  .page-categorymenu .video-block div.list ul li a {
-    display: block;
-    text-align: center; }
-  .dipl_contains {
-    font-size: .75rem; }
-    .dipl_contains p {
-      margin-bottom: 1rem; }
-  .order-consult h3, .order-consult a {
-    font-size: 1.2rem; }
-  .order-consult a {
-    padding: 0.2rem .6rem; } }
-
-/* xs-размер (<=575px) */
-@media (max-width: 575px) {
-  /* CSS для ширины до 575px (включительно) */
-  .top-wrap .toplarge-menu nav.navbar {
-    margin-left: -15px; }
-  .top-wrap .toplarge-menu h4 {
-    margin-left: 0; }
-  .brdcrmb-wrap {
-    display: none; }
-  .choose-city {
-    display: none; }
-  .jumbotron {
-    background: url(images/jumb_mainimg.png) no-repeat 31.5% center; }
-    .jumbotron h2 {
-      letter-spacing: -1.3px; }
-  .sfbtns-group .form-inline {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-  .sfbtns-group .ml-auto {
-    display: none; }
-  h1 {
-    font-size: 1.2rem !important; }
-  .gallery h1 {
-    border-bottom: 2px solid !important; }
-  .content-area {
-    background: none; }
-  .video-block h2 {
-    font-size: 1.1rem; }
-  .video-block .video-links {
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-top: 0; }
-    .video-block .video-links a.nav-link {
-      padding: 0 auto; }
-    .video-block .video-links .dipl_contains {
-      margin-bottom: 0; }
-      .video-block .video-links .dipl_contains h4 {
-        font-size: .9rem;
-        letter-spacing: -.2px;
-        margin-bottom: 1rem;
-        padding: 1.1rem 1rem 1rem 1rem; }
-  .page-categorymenu {
-    background: none; }
-    .page-categorymenu h1 {
-      margin: 0; }
-  .page-delivery {
-    background: none; }
-  .right-sb {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1; }
-  .page-content {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0; } }
-
-/* размер (<=500px) */
-@media (max-width: 500px) {
-  /* CSS для ширины до 500px (включительно) */
-  .page-catalogue .main-catlg ul#myTab.nav-tabs {
-    display: none; } }
-
-/* размер (<=448px) */
-@media (max-width: 448px) {
-  /* CSS для ширины до 448px (включительно) */
-  .jumbotron {
-    background: url(images/jumb_mainimg.png) no-repeat 31.5% center; }
-  .order-consult h3 {
-    font-size: 1rem; } }
-
-/* xs (<=543px) */
-/* sm (>=576 и <=767) */
-@media (min-width: 576px) and (max-width: 767px) {
-  .sfbtns-group .ml-auto {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-  .callbk-btn .btn-outline-callback {
-    margin-bottom: .5rem; }
-  h1 {
-    font-size: 1.2rem !important; }
-  .gallery h1 {
-    border-bottom: 2.5px solid !important; }
-  .page-categorymenu .aside-catalogue {
-    margin-top: 48px; } }
-
-/* md (>=768 и <=991) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .jumbotron h2 {
-    font-size: 1.6rem;
-    line-height: 1.1; }
-  form.mainpf::before, form.mainpf::after,
-  form.wpcf7-form::before,
-  form.wpcf7-form::after {
-    display: none; }
-  h1 {
-    font-size: 1.29rem !important; }
-  .gallery h1 {
-    border-bottom: 3px solid !important; }
-  .aside-catalogue li a {
-    font-size: .6rem;
-    padding: .3rem 0 .2rem .5rem; }
-  form.mainpf #idsubmbtn, form.wpcf7-form #idsubmbtn {
-    padding: .1rem .4rem; } }
-
-/* lg (>=992 и <=1199) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .top-wrap .toplarge-menu ul li {
-    padding: 0; }
-  .site-branding h4.brand-card-title {
-    font-size: 2rem; }
-  .brand-card-body {
-    font-size: .9rem; }
-  ul#menu-main-menu > li.menu-item {
-    font-size: .9rem; }
-  .topnarrow-menu #navbarNav ul.navbar-nav li a {
-    padding: .8rem .8rem; }
-  h1 {
-    font-size: 1.3rem !important; }
-  form.mainpf::before, form.mainpf::after,
-  form.wpcf7-form::before,
-  form.wpcf7-form::after {
-    display: none; }
-  .page-categorymenu h2 {
-    font-size: 1.2rem; } }
-
-/* xl (>=1200) */

@@ -331,48 +331,7 @@ function show_recentcomm( $atts, $content, $tag ) {
 
 // КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА КАРТОЧКИ ТОВАРА 
 
-/* Шорткод для карточки товара Диплом специалиста 2014 - 2017гг. Бланк Гознак */
-add_shortcode( 'diplspec201417', 'show_diplspec201417');
-function show_diplspec201417( $atts, $content, $tag ) {
-	$dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);
 
-	ob_start();
-	?>
-
-	    <div class="card card-vo">
-	        <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/diplom-2014-spec-300x210.jpg" alt="Card image cap">
-	        <div class="card-body">
-	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 2014 по 2017 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
-	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
-	        </div><!-- .card-body -->
-	    </div><!-- .card -->      
-
-	<?php 
-	return ob_get_clean();
-}	
-
-
-/* Шорткод для карточки товара Диплом специалиста до 1996 года - СССР Бланк Гознак */
-add_shortcode( 'diplspecdo1996', 'show_diplspecdo1996');
-function show_diplspecdo1996( $atts, $content, $tag ) {
-    $dipl_price = empty($atts['price']) ? '18 888' : esc_html($atts['price']);
-
-    ob_start();
-    ?>
-
-        <div class="card card-vo">
-            <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/diplom-vuza-do-1996-640x449-210x147.jpg" alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> до 1996 года - СССР<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
-                <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-                <a href="#" class="btn btn-order">Заказать</a>
-            </div><!-- .card-body -->
-        </div><!-- .card -->      
-
-    <?php 
-    return ob_get_clean();
-}   
 
 
 /* Шорткод для карточки товара Диплом о среднем специальном образовании 2014 - 2017гг. */
@@ -396,26 +355,7 @@ function show_diplsrsobr201417( $atts, $content, $tag ) {
     return ob_get_clean();
 }   
 
-/* Шорткод для карточки товара Диплом бакалвра 2014 - 2017гг. Бланк Гознак */
-add_shortcode( 'diplbaklvr201417', 'show_diplbaklvr201417');
-function show_diplbaklvr201417( $atts, $content, $tag ) {
-    $dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);
 
-    ob_start();
-    ?>
-
-        <div class="card card-vo">
-            <img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/diplom-2014-spec-300x210.jpg" alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text"><span class="upcase">Диплом бакалавра</span><br /> с 2014 по 2017 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
-                <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-                <a href="#" class="btn btn-order">Заказать</a>
-            </div><!-- .card-body -->
-        </div><!-- .card -->      
-
-    <?php 
-    return ob_get_clean();
-}
 
 
 /* Шорткод для карточки товара Кандидат наук от 2012 года Бланк Гознак */
@@ -787,7 +727,7 @@ function show_tabvyshobrz( $atts, $content, $tag ) {
 <div class="container-fluid">
     <div class="container">
 
-        <?php $child_pages = array( "291", "317", "331" ); ?>
+        <?php $child_pages = array( "317", "291", "331" ); ?>
 
         <div class="row">
             <div class="col-12">

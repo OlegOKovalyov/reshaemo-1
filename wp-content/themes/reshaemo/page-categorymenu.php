@@ -20,7 +20,7 @@ get_header(); ?>
         <?php echo do_shortcode('[sfbtnsgroup]'); ?>
 
         <div class="row">
-            <div class="col-12 col-sm-2 aside-catalogue">
+            <div class="col-xs-12 col-md-2 aside-catalogue">
 
                 <?php
                     $cur_postid = get_the_ID();
@@ -38,7 +38,7 @@ get_header(); ?>
             </div><!-- .col-2 .aside-catalogue -->
 
             <?php /*get_sidebar('catmenu-vyshobrz');*/ ?>
-            <div class="col-12 col-sm-10 col-lg-7 page-content">
+            <div class="col-xs-12 col-md-7 page-content">
                 <section>
                     <h1><?php the_title(); ?></h1>
                     <?php while (have_posts()): the_post();?>
@@ -47,7 +47,7 @@ get_header(); ?>
                 </section>
             </div><!-- .col-8 -->
 
-            <div class="col-12 col-lg-3 right-sb">
+            <div class="col-xs-12 col-md-3 right-sb">
                 <!-- <form class="mainpf"> -->
                     <?php echo do_shortcode('[contact-form-7 id="578" title="Срочный заказ диплома"]'); ?>
                 <div class="video-block container">

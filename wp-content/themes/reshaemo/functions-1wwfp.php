@@ -175,13 +175,9 @@ add_action( 'widgets_init', 'reshaemo_widgets_init' );
 function reshaemo_scripts() {
 
 	/* CSS */
-	wp_enqueue_style( 'reshaemo-style', get_stylesheet_uri() );
-
-	wp_enqueue_style( 'reshaemo-fancybox3', get_template_directory_uri() . '/fancybox/dist/jquery.fancybox.min.css' );
+	wp_enqueue_style( 'reshaemo-style', get_stylesheet_uri() );	
 
 	wp_enqueue_script( 'reshaemo-javascript', get_template_directory_uri() . '/js/app.min.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'reshaemo-fancybox3', get_template_directory_uri() . '/fancybox/dist/jquery.fancybox.min.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -196,11 +192,9 @@ add_action( 'wp_enqueue_scripts', 'reshaemo_scripts' );
 include('shortcodes/galleries.php');
 
 /**
- * Implement Shortcodes for All Cards.
+ * Implement Shortcodes for Vysshee Obrazovanie Cards.
  */
-include('shortcodes/cards-specs.php');
-include('shortcodes/cards-baklvr.php');
-include('shortcodes/cards-magstr.php');
+include('shortcodes/cards-vyshobrz.php');
 
 /**
  * Implement the Custom Header feature.

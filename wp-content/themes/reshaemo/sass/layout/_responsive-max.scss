@@ -204,6 +204,20 @@
     .video-block .monitor {
         display: none;
     }
+    .page-categorymenu {
+        margin-bottom: 2rem;
+    }
+    .page-categorymenu .video-block div.list {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .page-categorymenu .video-block {
+        margin-left: 0;
+    }
+    .page-categorymenu .video-block div.list ul li a {
+        display: block;
+        text-align: center;
+    }
     .dipl_contains {
         font-size: .75rem;
         p {
