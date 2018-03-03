@@ -1,6 +1,6 @@
 <?php
 
-/**
+/** Кажется этот код уже перенесен в файл shortcodes/galleris.php. Значит этот файл можно удалить.************
  * Галерея документов Высшее образование для страницы Цены. Использование:
  * - в админке WordPress:
  * [galvyshobrz]
@@ -163,7 +163,7 @@ add_shortcode( 'galsprsva', 'show_galsprsva');
 function show_galsprsva( $atts, $content, $tag ) {
 
     ob_start();
-        $child_pages = array( "511" ); ?>
+        $child_pages = array( "511", "812" ); ?>
 
         <?php foreach( $child_pages as $child_page ) { ?>
 

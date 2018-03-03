@@ -163,7 +163,7 @@ add_shortcode( 'galsprsva', 'show_galsprsva');
 function show_galsprsva( $atts, $content, $tag ) {
 
     ob_start();
-        $child_pages = array( "511" ); ?>
+        $child_pages = array( "511", "812" ); ?>
 
         <?php foreach( $child_pages as $child_page ) { ?>
 

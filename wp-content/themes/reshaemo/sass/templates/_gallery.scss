@@ -34,7 +34,10 @@
     margin-bottom: 35px;
     img.card-img-top {
         box-shadow: 0 10px 10px -10px #2B3B62;
-        padding: 5px 5px 0 5px;
+        display: block;
+        margin: 0 auto;
+        padding: 1rem 5px 0 5px;
+        width: 50%;
         &:hover {
             box-shadow: none;
         }
@@ -43,7 +46,7 @@
         text-align: center;
         p span.upcase {
             color: rgb(83, 83, 83);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             letter-spacing: -1px;
             text-transform: uppercase;
         }

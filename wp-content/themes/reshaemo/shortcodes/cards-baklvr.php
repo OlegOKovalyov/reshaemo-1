@@ -3,12 +3,12 @@
 /**
  * Диплом бакалавра 2014 - 2018гг. Бланк Гознак. Использование:
  * - в админке WordPress:
- * [diplbaklvr201417 price="<цена-число>"][/diplbaklvr201417]
+ * [diplbaklvr201418 price="<цена-число>"][/diplbaklvr201418]
  * - в шаблоне WordPress:
- * <?php echo do_shortcode('[diplbaklvr201417 price="<цена-число>"][/diplbaklvr201417]'); ?>
+ * <?php echo do_shortcode('[diplbaklvr201418 price="<цена-число>"][/diplbaklvr201418]'); ?>
  */
-add_shortcode( 'diplbaklvr201417', 'show_diplbaklvr201417');
-function show_diplbaklvr201417( $atts, $content, $tag ) {
+add_shortcode( 'diplbaklvr201418', 'show_diplbaklvr201418');
+function show_diplbaklvr201418( $atts, $content, $tag ) {
 	$dipl_price = empty($atts['price']) ? '20 000' : esc_html($atts['price']);
 
 	ob_start();

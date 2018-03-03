@@ -201,6 +201,11 @@ include('shortcodes/galleries.php');
 include('shortcodes/cards-specs.php');
 include('shortcodes/cards-baklvr.php');
 include('shortcodes/cards-magstr.php');
+include('shortcodes/cards-kdnauk.php');
+include('shortcodes/cards-techclg.php');
+include('shortcodes/cards-attst.php');
+include('shortcodes/cards-sprvk.php');
+include('shortcodes/cards-svidva.php');
 
 /**
  * Implement the Custom Header feature.
