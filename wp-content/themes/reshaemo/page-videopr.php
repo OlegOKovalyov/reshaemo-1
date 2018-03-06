@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Cat Vuzy Moskvy Page Template page-cat-vuzymsk.php 
+ * Template Name: Video Presentation Page Template page-videopr.php 
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -25,13 +25,12 @@ $letter_upp = mb_strtoupper($letter, 'UTF-8'); ?>
 <!-- /Алфавитный указатель -->
 
 
-<div class="gallery container-fluid page-catalogue">
+<div class="gallery container-fluid page-catalogue cat-diplprofmsk">
     <div class="container">
 
         <?php echo do_shortcode('[sfbtnsgroup]'); ?>
 
         <div class="row">
-            <!-- <div class="col-10 order-1 main-catlg sb-catlg"> -->
             <div class="col-sm-12 col-md-10 order-1 main-catlg sb-catlg">
 
                 <?php 
@@ -54,30 +53,16 @@ $letter_upp = mb_strtoupper($letter, 'UTF-8'); ?>
                 ?>                
 
                 <section>
-                    <h2><?php the_title(); ?></h2>
-                    <div class="alpha-index">
-                        <?php
-                            $children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0'.'&depth=1');
-                            $ancestors = get_post_ancestors( $post->ID ); // получаем ID всех родительских страниц текущей страницы
-                            if ($children && count($ancestors) == 1 ) { ?>
-                                <ul class="nav nav-pills nav-stacked">
-                                    <?php echo $children; ?>
-                                </ul>
-                        <?php } ?>         
-                    </div><!-- .alpha-index -->
-                    <div class="container">
-                        <?php
-                            $children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
-                            if ($children) { ?>
-                                <ul class="nav nav-pills nav-stacked fletter">
-                                    <?php echo $children; ?>
-                                </ul>
-                        <?php } ?>            
-                    </div><!-- .container -->
 
+                    <h2 class="text-center"><?php the_title(); ?></h2>
+
+                    <div class="container">
+           
                     <?php while (have_posts()): the_post();?>
                         <?php the_content();?>
                     <?php endwhile; ?>
+
+                    </div><!-- .container -->                    
 
                 </section>
 

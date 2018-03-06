@@ -157,7 +157,17 @@
             font-size: 1rem;
             line-height: 1;
         } 
-    } 
+    }
+    .sb-catlg h2 {
+        margin: 2rem 0 3rem 0;
+        text-align: center;
+    }
+    .cat-diplprofmsk ul.diplprofmsk li > a {
+        margin-left: 3rem;
+    }
+    .sb-catlg .alpha-index ul {
+        justify-content: center;
+    }
     .page-catalogue {
         .aside-catalogue {
             order: 2;
@@ -179,8 +189,14 @@
         margin-top: 1rem;
         .blank-block-top,
         .blank-block-btm {
-            display: none;
+            height: 2rem;
         }
+        ul li {
+            margin-bottom: .5rem;
+            a {
+                padding: .5rem 0 .5rem 1rem;
+            }
+        } 
     }    
     form.mainpf, 
     form.wpcf7-form { 
@@ -317,7 +333,15 @@
 /* CSS для ширины до 500px (включительно) */
     .page-catalogue .main-catlg ul#myTab.nav-tabs {
         display: none;
-    } 
+    }
+    .cat-diplprofmsk ul.diplprofmsk li > a {
+        font-size: .75rem;
+        margin-left: 0;
+    }
+    .sb-catlg ul.fletter > li ul.children li a {
+        font-size: .75rem;
+        margin-left: 3rem;
+    }   
 }
 
 /* размер (<=448px) */
@@ -331,5 +355,5 @@
         h3 {
             font-size: 1rem;
         }
-    }    
+    }
 }  

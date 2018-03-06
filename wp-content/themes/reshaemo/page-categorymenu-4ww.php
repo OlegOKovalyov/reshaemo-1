@@ -70,7 +70,7 @@ get_header(); ?>
                                     <?php } ?>
 
                             <span id="down-marker" data-scroll="1"></span>
-                            <a class="see-video" href="<?php echo home_url() . '/videoprezentacija-kompanii/' ?>">смотреть все видео о документах</a>
+                            <a class="see-video" href="#">смотреть все видео о документах</a>
                         </div><!-- .video-links -->                        
                       
                     </div><!-- .row -->

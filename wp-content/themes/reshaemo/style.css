@@ -8069,7 +8069,7 @@ form.wpcf7-form {
   form.wpcf7-form select.form-control {
     border-radius: 0.6rem;
     font-size: 0.9rem;
-    margin-bottom: 7px;
+    margin-bottom: -6px;
     width: 85%; }
   form.mainpf .form-group,
   form.wpcf7-form .form-group {
@@ -8180,6 +8180,16 @@ form.wpcf7-form {
     background-color: #f7e700;
     top: 437px; }
 
+/* Стили для Chrome*/
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  /* form.mainpf,
+    form.wpcf7-form {
+        select.form-control {
+            margin-bottom: -6px;
+        }
+    } */ }
+
+/* Стили для Mozila Firefox*/
 /* Gallery */
 .gallery {
   background: url(images/bg_glry1.png) fixed left center, url(images/bg_glry2.png) fixed right center;
@@ -8314,7 +8324,7 @@ p.p-last {
     text-align: center; }
 
 .video-block h2 {
-  color: #2f970d;
+  color: #2f970d !important;
   font-size: 1.9rem;
   margin-left: 2%;
   text-transform: uppercase; }
@@ -8389,7 +8399,7 @@ p.p-last {
     margin-top: 2px;
     margin-right: 25px;
     margin-left: 20px;
-    height: 38px;
+    height: 45px;
     width: 38px;
     position: relative;
     z-index: -1; }
@@ -8637,7 +8647,7 @@ p.p-last {
 .aside-catalogue {
   border-top: 3px solid #B2D6F0;
   margin-right: -15px;
-  margin-top: 47px; }
+  margin-top: 46px; }
   .aside-catalogue .blank-block-top {
     border-right: 3px solid #B2D6F0;
     border-top-right-radius: 45px;
@@ -8698,7 +8708,7 @@ p.p-last {
       -ms-flex-pack: end;
           justify-content: flex-end;
   list-style-type: none;
-  margin-top: -6rem;
+  margin-top: -3rem;
   padding-bottom: 1rem;
   width: 100%; }
   .sb-catlg .alpha-index li > a {
@@ -8942,6 +8952,20 @@ form.cntcspf {
     .comment-page-nav .page-numbers.current {
       font-size: 1.6rem; }
 
+/* FAQ Page Template: page-faq.php */
+.page-faq .for-form #submit {
+  -ms-flex-item-align: center;
+      align-self: center;
+  border: 2px solid;
+  border-radius: .6rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.094;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  width: 100%; }
+
 /* Footer Заказать консультацию (верхний)  */
 .order-consult {
   background: #2f970d;
@@ -9010,7 +9034,7 @@ form.cntcspf {
     line-height: 0.972;
     margin: 15px auto;
     margin-right: -2rem;
-    padding-bottom: .7rem;
+    padding-bottom: .75rem;
     text-align: center;
     text-transform: uppercase; }
   .page-categorymenu .page-content {
@@ -9380,6 +9404,15 @@ form.cntcspf {
     .jumbotron .lead {
       font-size: 1rem;
       line-height: 1; }
+  .sb-catlg h2 {
+    margin: 2rem 0 3rem 0;
+    text-align: center; }
+  .cat-diplprofmsk ul.diplprofmsk li > a {
+    margin-left: 3rem; }
+  .sb-catlg .alpha-index ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .page-catalogue .aside-catalogue {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -9401,7 +9434,11 @@ form.cntcspf {
     margin-top: 1rem; }
     .aside-catalogue .blank-block-top,
     .aside-catalogue .blank-block-btm {
-      display: none; }
+      height: 2rem; }
+    .aside-catalogue ul li {
+      margin-bottom: .5rem; }
+      .aside-catalogue ul li a {
+        padding: .5rem 0 .5rem 1rem; }
   form.mainpf,
   form.wpcf7-form {
     background: transparent;
@@ -9503,7 +9540,13 @@ form.cntcspf {
 @media (max-width: 500px) {
   /* CSS для ширины до 500px (включительно) */
   .page-catalogue .main-catlg ul#myTab.nav-tabs {
-    display: none; } }
+    display: none; }
+  .cat-diplprofmsk ul.diplprofmsk li > a {
+    font-size: .75rem;
+    margin-left: 0; }
+  .sb-catlg ul.fletter > li ul.children li a {
+    font-size: .75rem;
+    margin-left: 3rem; } }
 
 /* размер (<=448px) */
 @media (max-width: 448px) {

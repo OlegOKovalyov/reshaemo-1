@@ -44,24 +44,16 @@
 </div><!-- #page .site -->
 
 <script>
-	/**
-	 * Прокрутка списка подстраниц страницы Видеопрезентация компании.
-	 *
-	 */	
-	let list = (e) => {
-	  let list = e.children[1], step = list.clientHeight;
-	  [...list_1.querySelectorAll("[data-scroll]")].forEach(e => e.addEventListener("click", () => list.scrollTop += Number(e.dataset.scroll) ? step : -step));
-	}
-	list(list_1);
-</script>
-<script>
-	if(jQuery.browser.mozilla)
-	{
-	  // действия для браузера Mozilla Firefox
-	  jQuery('form.mainpf input.form-control').css('marginBottom', '11px');
-	  jQuery('form.wpcf7-form input.wpcf7-form-control').css('marginBottom', '11px');
-	  jQuery('.aside-catalogue').css('marginTop', '47px');
-	}
+/**
+ * Прокрутка списка подстраниц страницы Видеопрезентация компании.
+ *
+ */	
+let list = (e) => {
+  let list = e.children[1], step = list.clientHeight;
+  [...list_1.querySelectorAll("[data-scroll]")].forEach(e => e.addEventListener("click", () => list.scrollTop += Number(e.dataset.scroll) ? step : -step));
+}
+
+list(list_1);
 </script>
 
 <?php wp_footer(); ?>

@@ -188,10 +188,10 @@ function show_attst200709_9( $atts, $content, $tag ) {
 	?>
 
 	    <div class="card card-vo">
-			<a href="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-200709-640x450.jpg"  data-fancybox data-caption="Аттестат школы за 11 класс с 1994 по 2009 год">
+			<a href="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-200709-640x450.jpg"  data-fancybox data-caption="Аттестат школы за 9 класс с 2007 по 2009 год">
 				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-200709-640x450.jpg" alt="Card image cap"></a>	    	
 	        <div class="card-body">
-	            <p class="card-text"><span class="upcase">Аттестат школы за 11 класс</span><br /> с 1994 по 2009 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
+	            <p class="card-text"><span class="upcase">Аттестат школы за 9 класс</span><br /> с 2007 по 2009 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
 	            <a href="#" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->

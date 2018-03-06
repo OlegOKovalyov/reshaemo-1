@@ -349,7 +349,7 @@ function show_sfbtnsgroup( $atts, $content, $tag ) {
                         </form>
                     </div><!-- .col-12 .col-sm-6 -->
                     <div class="ml-auto col-sm-6 callbk-btn">
-                        <a class="btn btn-outline-callback" href="#">Видео о дипломах</a>
+                        <a class="btn btn-outline-callback" href="<?php echo home_url() . '/videoprezentacija-kompanii/' ?>">Видео о дипломах</a>
                     <!-- </div> --><!-- .col-2 .callbk-btn -->
                     <!-- <div class="col-2 callbk-btn"> -->
                         <a class="btn btn-outline-callback" href="#">Обратный звонок</a>

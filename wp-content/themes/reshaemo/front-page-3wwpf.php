@@ -24,7 +24,6 @@ get_header(); ?>
                 </div><!-- .col-md-8 -->
                 <div class="col-12 col-sm-12 col-md-5 col-lg-4">
                     <form class="mainpf">
-                        <?php //$ubr = user_browser($_SERVER['HTTP_USER_AGENT']); echo substr( $ubr, 0, 1 ); ?>
                         <?php echo do_shortcode('[contact-form-7 id="569" title="Срочный заказ диплома"]'); ?>
                     </form>
                 </div><!-- .col-md-4 -->
@@ -36,21 +35,17 @@ get_header(); ?>
     <div class="gallery container-fluid">
         <div class="container">
             <h1>Cамые популярные дипломы, аттестаты и другие документы</h1>
-                <div class="wrapper">
-                    <?php
-                    $mypages = get_pages( array( 'include' => array( "319", "321", "323", "325", "327", "329", "488", "490" ), 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                    foreach( $mypages as $page ) {      
-                        $content = $page->post_content;
-                        // пропустим страницу без контента
-                        if ( ! $content ) continue;
-                        $content = apply_filters( 'the_content', $content );
-                        ?>
-                        
-                        <div class="gitem"><?php echo $content; ?></div>
+<div class="wrapper">            
+    <div class="gitem"><?php echo do_shortcode('[diplspec201417 price="35 000"][/diplspec201417]'); ?></div>
+    <div class="gitem"><?php echo do_shortcode('[diplspec201417 price="35 000"][/diplspec201417]'); ?></div>
+    <div class="gitem"><?php echo do_shortcode('[diplspec201417 price="35 000"][/diplspec201417]'); ?></div>
+    <div class="gitem"><?php echo do_shortcode('[diplspec201417 price="35 000"][/diplspec201417]'); ?></div>
 
-                        <?php
-                    } ?>
-            </div><!-- .wrapper -->         
+    <div class="gitem"><?php echo do_shortcode('[diplspec201417 price="35 000"][/diplspec201417]'); ?></div>
+    <div class="gitem"><?php echo do_shortcode('[diplspec201417 price="35 000"][/diplspec201417]'); ?></div>
+    <div class="gitem"><?php echo do_shortcode('[diplspec201417 price="35 000"][/diplspec201417]'); ?></div>
+    <div class="gitem"><?php echo do_shortcode('[diplspec201417 price="35 000"][/diplspec201417]'); ?></div>
+</div><!-- .wrapper -->            
         </div><!-- .container -->
     </div><!-- .gallery .container-fluid -->
 

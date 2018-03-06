@@ -61,7 +61,8 @@ form.wpcf7-form {
     select.form-control {
         border-radius: 0.6rem;
         font-size: 0.9rem;
-        margin-bottom: 7px;
+        //margin-bottom: 7px;
+        margin-bottom: -6px;
         width: 85%;
     }
     .form-group {
@@ -156,3 +157,26 @@ form.wpcf7-form {
         top: 437px;
     }     
 }
+
+/* Стили для Chrome*/
+//@supports (-webkit-appearance:none) {
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {    
+    /* form.mainpf,
+    form.wpcf7-form {
+        select.form-control {
+            margin-bottom: -6px;
+        }
+    } */
+}
+
+/* Стили для Mozila Firefox*/
+//@-moz-document url-prefix() {
+//@supports (-moz-appearance:meterbar) and (list-style-type:japanese-formal) {
+@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {    
+   /*  form.mainpf,
+     form.wpcf7-form {
+         select.form-control {
+             margin-bottom: 7px;
+         }
+     }   */  
+}    
