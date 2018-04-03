@@ -1,0 +1,98 @@
+/* Order Form Page Template page-orderforms.php */
+/* Формы:
+ * Заказать диплом, 
+ * Заказать аттестат,
+ * Заказать справку,
+ * Заказать свидетельство
+ */
+.page-orderforms {
+	.page-content {
+		form.wpcf7-form {
+			background: transparent;
+			margin-top: 2rem;
+			textarea {
+				align-self: center;
+				height: 5rem;
+				width: 85%;
+			}
+			p {
+				margin-right: 1rem;
+				text-align: center;
+			}
+			.wpcf7-response-output {
+				margin: 0;
+				position: relative;
+				top: 0;
+			}
+			// /* div.wpcf7-mail-sent-ok {
+			// 	top: 820px;
+			// 	width: 100%;
+			// 	z-index: 1;
+			// }
+			// div.wpcf7-validation-errors {
+			// 	top: 820px;
+			// 	z-index: 1;
+			// } */
+		}
+	}
+	// #atts-form {
+	// 	div.wpcf7-mail-sent-ok {
+	// 		margin-left: 0;
+	// 		top: 755px;
+	// 	}
+	// 	div.wpcf7-validation-errors {
+	// 		top: 755px;
+	// 	}
+	// }
+	// #sprvk-form {
+	// 	div.wpcf7-mail-sent-ok {
+	// 		margin-left: 0;
+	// 		top: 430px;
+	// 	}
+	// 	div.wpcf7-validation-errors {
+	// 		top: 430px;
+	// 	}
+	// }
+	// #svvo-form {
+	// 	div.wpcf7-mail-sent-ok {
+	// 		margin-left: 0;
+	// 		top: 560px;
+	// 	}
+	// 	div.wpcf7-validation-errors {
+	// 		top: 560px;
+	// 	}
+	// }		
+}
+
+/* Форма Обратный звонок */
+#modal-callback,
+#modal-callback-2,
+#modal-conslt {
+	background-color: transparent;
+	width: 42%;
+	form.wpcf7-form {
+		background-color: transparent;
+		&:before,
+		&:after {
+			display: none;
+		}
+		.form-control {
+			width: 100%;
+		}
+		textarea {
+			height: 5rem;
+		}
+		fieldset {
+			p {
+				text-align: center;
+			}
+		}
+		.wpcf7-validation-errors,
+		.wpcf7-mail-sent-ok {
+			display: flex;
+			margin: 0;
+			position: relative;
+			top: 0;
+		}
+	}
+}

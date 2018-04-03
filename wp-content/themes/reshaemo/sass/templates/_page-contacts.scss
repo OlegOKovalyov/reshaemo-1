@@ -10,57 +10,77 @@
 	}
 }
 
-/* Форма обратной связи */
-form.cntcspf {
-    border-radius: 10px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-top: 3px;
-    fieldset {
-        flex-direction: column;
-        display: flex;
-    }
-    input.form-control {
-        border-radius: 0.6rem;
-        font-size: 0.9rem;
-        margin-bottom: 7px;
-        width: 110%;
-    }
-    .form-group {
-        align-items: center;
-        flex-direction: column;
-        display: flex;
-    }
-    p {
-        color: #88E769;
-        font-size: 0.75rem;
-        line-height: 1.2;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    p.safety {
-        &::before {
-            background:url(images/i_lock.png) no-repeat;                
-            content: "";
-            float: left;
-            margin-right: 15px;
-            height: 47px;
-            width: 47px;                               
-            position: relative;
-            z-index: 0;
-        }
-    }
-    button.btn-outline-order {
-		align-self: center; 
-		border: 2px solid;		   	
+/* Форма обратной связи Как с нами связаться? */
+.page-contacts {
+    div.cntcspf {
         border-radius: 10px;
-        font-size: 1.5rem;
-        font-weight: 500;
-        line-height: 1.094;         
-        margin: 0 23% 15px; 
-        text-align: center;
-        text-transform: uppercase;
-        padding: 10px 20px;
-		width: 65%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-top: 3px;
+        form {
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+        fieldset {
+            flex-direction: column;
+            display: flex;
+        }
+        input.form-control {
+            border-radius: 0.6rem;
+            font-size: 0.9rem;
+            margin-bottom: 7px;
+            width: 110%;
+        }
+        .form-group {
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+        }
+        p {
+            color: #88E769;
+            font-size: 0.75rem;
+            line-height: 1.2;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        p.safety {
+            &::before {
+                background:url(images/i_lock.png) no-repeat;                
+                content: "";
+                float: left;
+                margin-right: 15px;
+                height: 47px;
+                width: 47px;                               
+                position: relative;
+                z-index: 0;
+            }
+        }
+        button.btn-outline-order {
+            align-self: center; 
+            border: 2px solid;          
+            border-radius: 10px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.094;         
+            margin: 0 23% 15px; 
+            text-align: center;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            width: 65%;
+        }
+        //form.mainpf,
+        form.wpcf7-form {
+            background-color: transparent;
+        }
+        //form.mainpf div.wpcf7-mail-sent-ok, 
+        //form.wpcf7-form div.wpcf7-mail-sent-ok,
+        //form.mainpf div.wpcf7-response-output, 
+        form.wpcf7-form div.wpcf7-response-output {
+            margin: .1rem 0;
+            position: relative;
+            top: 0;
+        }
     }
 }

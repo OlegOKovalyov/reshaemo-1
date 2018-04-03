@@ -208,6 +208,7 @@ include('shortcodes/cards-techclg.php');
 include('shortcodes/cards-attst.php');
 include('shortcodes/cards-sprvk.php');
 include('shortcodes/cards-svidva.php');
+include('shortcodes/cards-uchptu.php');
 
 /**
  * Implement the Custom Header feature.

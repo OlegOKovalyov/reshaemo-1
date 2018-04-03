@@ -30,7 +30,7 @@ get_header(); ?>
                 <div class="row">
                     <div class="col dlv-1col">
                         <div class="in-dlv-1col">
-                            <h4>Доставка по Москве</h4>
+                            <h4>Доставка<br>по Москве</h4>
                             <p><span class="bld_ltr">Доставка: </span>курьером лично Вам в руки</p>
                             <p><span class="bld_ltr">Оплата: </span>курьеру в руки после осмотра документа</p>
                             <p><span class="bld_ltr">Место: </span>по договоренности</p>

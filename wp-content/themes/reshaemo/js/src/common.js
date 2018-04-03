@@ -22,7 +22,7 @@ $(document).ready(function(){
     responsiveClass:true,
     navText:["<i class='fa fa-angle-left fa-2x'></i>","<i class='fa fa-angle-right fa-2x'></i>"],
     responsive:{
-        0:{
+        /*0:{
             items:1,
             nav:true,
             loop: true
@@ -38,7 +38,32 @@ $(document).ready(function(){
             loop: true
         },
         992:{
+            items:3,
+            nav:true,
+            loop:true
+        },
+        1200:{
             items:4,
+            nav:true,
+            loop:true
+        }*/
+        0:{
+            items:1,
+            nav:true,
+            loop: true
+        },
+        576:{
+            items:2,
+            nav:true,
+            loop: true
+        },
+        768:{
+            items:2,
+            nav:true,
+            loop: true
+        },
+        992:{
+            items:3,
             nav:true,
             loop:true
         },

@@ -8145,7 +8145,7 @@ form.wpcf7-form {
     width: 25px;
     position: absolute;
     z-index: 0;
-    top: 479px;
+    top: 480px;
     right: -17px; }
   form.mainpf span.wpcf7-form-control-wrap,
   form.wpcf7-form span.wpcf7-form-control-wrap {
@@ -8165,31 +8165,39 @@ form.wpcf7-form {
     -webkit-box-direction: unset;
         -ms-flex-direction: unset;
             flex-direction: unset;
+    font-size: .85rem;
     position: absolute;
     top: 18px; }
+  form.mainpf .wpcf7-response-output,
+  form.mainpf .wpcf7-display-none,
+  form.mainpf .wpcf7-mail-sent-ok,
+  form.wpcf7-form .wpcf7-response-output,
+  form.wpcf7-form .wpcf7-display-none,
+  form.wpcf7-form .wpcf7-mail-sent-ok {
+    border: 2px solid #88E769;
+    border-radius: .6rem;
+    margin-left: 3rem;
+    margin-right: -2rem;
+    margin-top: 3rem; }
   form.mainpf div.wpcf7-response-output,
   form.wpcf7-form div.wpcf7-response-output {
-    position: absolute;
-    left: 0; }
+    left: 0;
+    position: absolute; }
   form.mainpf div.wpcf7-mail-sent-ok,
   form.wpcf7-form div.wpcf7-mail-sent-ok {
-    background-color: #398f14;
+    background-color: #88E769;
     top: 450px; }
   form.mainpf .wpcf7-validation-errors,
   form.wpcf7-form .wpcf7-validation-errors {
     background-color: #f7e700;
-    top: 437px; }
+    border-color: #f7e700;
+    top: 450px; }
 
-/* Стили для Chrome*/
-@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-  /* form.mainpf,
-    form.wpcf7-form {
-        select.form-control {
-            margin-bottom: -6px;
-        }
-    } */ }
+.right-sb form.wpcf7-form div.wpcf7-mail-sent-ok,
+.right-sb form.wpcf7-form .wpcf7-validation-errors {
+  left: 1rem;
+  top: 315px; }
 
-/* Стили для Mozila Firefox*/
 /* Gallery */
 .gallery {
   background: url(images/bg_glry1.png) fixed left center, url(images/bg_glry2.png) fixed right center;
@@ -8262,6 +8270,18 @@ form.wpcf7-form {
   line-height: 1.094;
   padding: 0.4rem .9rem; }
 
+/* Stand alone cards for inner Main Top Large pages */
+.card-vuz-ssuz .card {
+  width: 250px; }
+  .card-vuz-ssuz .card .card-img-top {
+    width: 100%; }
+
+.card-vuz-ssuz .card-body .card-text {
+  margin-left: 0; }
+
+.card-sprvk-svva .card {
+  width: 250px; }
+
 /* Main content background*/
 .content-area {
   background: url(images/cloud_smallsmm.png) no-repeat 4% 3%, url(images/cloud_smallsmm.png) no-repeat 98% 0, url(images/cloud_leftsmm.png) no-repeat -2% 19%, url(images/cloud_right_topsmm.png) no-repeat 100% 12%, url(images/cloud_right_btmsmm.png) no-repeat 100% 30%, url(images/tree_left_topsmm.png) no-repeat -1% 48%, url(images/tree_left_btmsmm.png) no-repeat -2.9% 97%, url(images/tree_right_topsmm.png) no-repeat 94% 55%, url(images/tree_right_btmsmm.png) no-repeat 88% 97%;
@@ -8276,6 +8296,12 @@ p.p-first {
 
 p.p-last {
   margin-bottom: 2rem; }
+
+.main-catlg section ul.profmsk {
+  margin-left: 1rem; }
+  .main-catlg section ul.profmsk > li {
+    list-style-type: inherit;
+    min-width: 100%; }
 
 /* Video Block */
 .video-block nav a.nav-link::before {
@@ -8292,6 +8318,9 @@ p.p-last {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  .video-block .row > a > img {
+    margin-left: 3rem;
+    width: 95%; }
 
 .video-block img:nth-child(4) {
   position: absolute;
@@ -8368,6 +8397,9 @@ p.p-last {
   .video-block .monitor img {
     width: 100%; }
 
+.right-sb .video-block .row h2 {
+  margin-left: 5rem; }
+
 .dipl_contains {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8421,8 +8453,8 @@ p.p-last {
     color: #3C5AAE;
     font-size: 1.2rem;
     line-height: 1.2;
-    margin-bottom: 25px;
-    margin-top: 15px;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
     text-transform: uppercase; }
   .page-delivery .dlv-1col {
     border-right: 4px solid #76C7FF; }
@@ -8436,7 +8468,8 @@ p.p-last {
     margin-bottom: 30px; }
   .page-delivery img {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 100%; }
 
 .sfbtns-group input.form-control {
   background-color: #baeffa;
@@ -8778,7 +8811,8 @@ p.p-last {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  list-style-type: none; }
   .cat-diplprofmsk ul.diplprofmsk li {
     margin-bottom: 4px;
     max-width: 100%;
@@ -8807,13 +8841,15 @@ p.p-last {
     color: #a4b3df;
     text-decoration: none; }
 
-/* Форма обратной связи */
-form.cntcspf {
+/* Форма обратной связи Как с нами связаться? */
+.page-contacts div.cntcspf {
   border-radius: 10px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   margin-top: 3px; }
-  form.cntcspf fieldset {
+  .page-contacts div.cntcspf form:before, .page-contacts div.cntcspf form:after {
+    display: none; }
+  .page-contacts div.cntcspf fieldset {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -8821,12 +8857,12 @@ form.cntcspf {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-  form.cntcspf input.form-control {
+  .page-contacts div.cntcspf input.form-control {
     border-radius: 0.6rem;
     font-size: 0.9rem;
     margin-bottom: 7px;
     width: 110%; }
-  form.cntcspf .form-group {
+  .page-contacts div.cntcspf .form-group {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -8837,13 +8873,13 @@ form.cntcspf {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-  form.cntcspf p {
+  .page-contacts div.cntcspf p {
     color: #88E769;
     font-size: 0.75rem;
     line-height: 1.2;
     margin-left: 10%;
     margin-right: 10%; }
-  form.cntcspf p.safety::before {
+  .page-contacts div.cntcspf p.safety::before {
     background: url(images/i_lock.png) no-repeat;
     content: "";
     float: left;
@@ -8852,7 +8888,7 @@ form.cntcspf {
     width: 47px;
     position: relative;
     z-index: 0; }
-  form.cntcspf button.btn-outline-order {
+  .page-contacts div.cntcspf button.btn-outline-order {
     -ms-flex-item-align: center;
         align-self: center;
     border: 2px solid;
@@ -8865,6 +8901,12 @@ form.cntcspf {
     text-transform: uppercase;
     padding: 10px 20px;
     width: 65%; }
+  .page-contacts div.cntcspf form.wpcf7-form {
+    background-color: transparent; }
+  .page-contacts div.cntcspf form.wpcf7-form div.wpcf7-response-output {
+    margin: .1rem 0;
+    position: relative;
+    top: 0; }
 
 /* Reviews Page Template: page-reviews.php */
 .page-reviews h2 {
@@ -8920,6 +8962,41 @@ form.cntcspf {
     display: -ms-flexbox;
     display: flex; }
 
+/* Форма обратной связи Оставить отзыв */
+.page-reviews form.mainpf,
+.page-reviews form.wpcf7-form {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .page-reviews form.mainpf:before, .page-reviews form.mainpf:after,
+  .page-reviews form.wpcf7-form:before,
+  .page-reviews form.wpcf7-form:after {
+    display: none; }
+  .page-reviews form.mainpf fieldset p:last-child,
+  .page-reviews form.wpcf7-form fieldset p:last-child {
+    text-align: center; }
+  .page-reviews form.mainpf #idsubmbtn,
+  .page-reviews form.wpcf7-form #idsubmbtn {
+    font-size: 1.1rem; }
+
+.page-reviews form.wpcf7-form div.wpcf7-response-output {
+  margin: 0;
+  top: 255px; }
+
+.page-reviews .wpcf7-textarea {
+  -ms-flex-item-align: center;
+      align-self: center;
+  border-radius: .6rem;
+  height: 5rem;
+  width: 85%; }
+
+.page-reviews #respond.comment-respond {
+  display: none; }
+
 .fn, .url {
   color: #fff;
   margin-right: .4rem; }
@@ -8965,6 +9042,192 @@ form.cntcspf {
   text-transform: uppercase;
   padding: 10px 20px;
   width: 100%; }
+
+/* FAQ Page Template page-faq.php */
+.page-faq h1 {
+  background: #3c5aae;
+  border-top-left-radius: .6rem;
+  border-top-right-radius: .6rem;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
+          box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: .5rem 0 .5rem 0;
+  width: 100%; }
+
+.page-faq h2 {
+  color: #3C5AAE;
+  text-align: center;
+  text-transform: uppercase; }
+
+.page-faq .three-colms .row {
+  margin-bottom: 0;
+  padding: 0 2.5rem; }
+
+.page-faq article.loop {
+  background-color: #3C5AAE;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
+          box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
+  color: #fff;
+  font-weight: 500;
+  margin: 0 0 .5rem;
+  padding: 1.5rem 2rem; }
+
+.page-faq h6 {
+  font-size: 1.4rem; }
+
+.page-faq p {
+  color: #fff;
+  font-size: .9rem;
+  line-height: 1.3;
+  margin-bottom: .5rem; }
+
+.page-faq nav.custom-pagination {
+  background: #3c5aae;
+  border-bottom-left-radius: .6rem;
+  border-bottom-right-radius: .6rem;
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin: 0 0 .5rem 0;
+  padding: 1.1rem 0;
+  text-align: center;
+  width: 100%; }
+  .page-faq nav.custom-pagination span.page-num {
+    display: none; }
+  .page-faq nav.custom-pagination span.page-numbers {
+    font-size: 1.6rem; }
+  .page-faq nav.custom-pagination a.page-numbers {
+    font-size: 1.5rem; }
+  .page-faq nav.custom-pagination .page-numbers {
+    margin: 0 .3rem; }
+
+.page-faq div.for-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
+  .page-faq div.for-form form .form-control {
+    border-radius: 0.6rem; }
+  .page-faq div.for-form #fields p input#email button#submit.go {
+    -ms-flex-item-align: center;
+        align-self: center;
+    border: 2px solid;
+    border-radius: 0.65rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.094;
+    margin-top: 0.7rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    width: 100%; }
+  .page-faq div.for-form #fields p input#email #email {
+    margin-bottom: .65rem; }
+
+/* Форма обратной связи Задать вопрос */
+.page-faq form.wpcf7-form {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .page-faq form.wpcf7-form:before, .page-faq form.wpcf7-form:after {
+    display: none; }
+  .page-faq form.wpcf7-form fieldset p:last-child {
+    text-align: center; }
+  .page-faq form.wpcf7-form input.form-control {
+    margin-top: 1rem;
+    width: 100%; }
+
+.page-faq .wpcf7-textarea {
+  -ms-flex-item-align: center;
+      align-self: center;
+  border-radius: .6rem;
+  height: 5rem; }
+
+.page-faq form.wpcf7-form div.wpcf7-response-output {
+  margin: 0;
+  position: relative;
+  top: 0;
+  margin: .1rem 0; }
+
+.page-faq form.wpcf7-form span.wpcf7-not-valid-tip {
+  top: 33px; }
+
+/* Order Form Page Template page-orderforms.php */
+/* Формы:
+ * Заказать диплом, 
+ * Заказать аттестат,
+ * Заказать справку,
+ * Заказать свидетельство
+ */
+.page-orderforms .page-content form.wpcf7-form {
+  background: transparent;
+  margin-top: 2rem; }
+  .page-orderforms .page-content form.wpcf7-form textarea {
+    -ms-flex-item-align: center;
+        align-self: center;
+    height: 5rem;
+    width: 85%; }
+  .page-orderforms .page-content form.wpcf7-form p {
+    margin-right: 1rem;
+    text-align: center; }
+  .page-orderforms .page-content form.wpcf7-form .wpcf7-response-output {
+    margin: 0;
+    position: relative;
+    top: 0; }
+
+/* Форма Обратный звонок */
+#modal-callback,
+#modal-callback-2,
+#modal-conslt {
+  background-color: transparent;
+  width: 42%; }
+  #modal-callback form.wpcf7-form,
+  #modal-callback-2 form.wpcf7-form,
+  #modal-conslt form.wpcf7-form {
+    background-color: transparent; }
+    #modal-callback form.wpcf7-form:before, #modal-callback form.wpcf7-form:after,
+    #modal-callback-2 form.wpcf7-form:before,
+    #modal-callback-2 form.wpcf7-form:after,
+    #modal-conslt form.wpcf7-form:before,
+    #modal-conslt form.wpcf7-form:after {
+      display: none; }
+    #modal-callback form.wpcf7-form .form-control,
+    #modal-callback-2 form.wpcf7-form .form-control,
+    #modal-conslt form.wpcf7-form .form-control {
+      width: 100%; }
+    #modal-callback form.wpcf7-form textarea,
+    #modal-callback-2 form.wpcf7-form textarea,
+    #modal-conslt form.wpcf7-form textarea {
+      height: 5rem; }
+    #modal-callback form.wpcf7-form fieldset p,
+    #modal-callback-2 form.wpcf7-form fieldset p,
+    #modal-conslt form.wpcf7-form fieldset p {
+      text-align: center; }
+    #modal-callback form.wpcf7-form .wpcf7-validation-errors,
+    #modal-callback form.wpcf7-form .wpcf7-mail-sent-ok,
+    #modal-callback-2 form.wpcf7-form .wpcf7-validation-errors,
+    #modal-callback-2 form.wpcf7-form .wpcf7-mail-sent-ok,
+    #modal-conslt form.wpcf7-form .wpcf7-validation-errors,
+    #modal-conslt form.wpcf7-form .wpcf7-mail-sent-ok {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0;
+      position: relative;
+      top: 0; }
 
 /* Footer Заказать консультацию (верхний)  */
 .order-consult {
@@ -9034,7 +9297,7 @@ form.cntcspf {
     line-height: 0.972;
     margin: 15px auto;
     margin-right: -2rem;
-    padding-bottom: .75rem;
+    padding-bottom: .7rem;
     text-align: center;
     text-transform: uppercase; }
   .page-categorymenu .page-content {
@@ -9157,92 +9420,6 @@ form.cntcspf {
 .warranties .three-colms .row {
   padding: 0 4rem; }
 
-/* FAQ Page Template page-faq.php */
-.page-faq h1 {
-  background: #3c5aae;
-  border-top-left-radius: .6rem;
-  border-top-right-radius: .6rem;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
-          box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin: .5rem 0 .5rem 0;
-  width: 100%; }
-
-.page-faq .three-colms .row {
-  padding: 0 2.5rem; }
-
-.page-faq article.loop {
-  background-color: #3C5AAE;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
-          box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.8);
-  color: #fff;
-  font-weight: 500;
-  margin: 0 0 .5rem;
-  padding: 1.5rem 2rem; }
-
-.page-faq h6 {
-  font-size: 1.4rem; }
-
-.page-faq p {
-  color: #fff;
-  font-size: .9rem;
-  line-height: 1.3;
-  margin-bottom: .5rem; }
-
-.page-faq nav.custom-pagination {
-  background: #3c5aae;
-  border-bottom-left-radius: .6rem;
-  border-bottom-right-radius: .6rem;
-  color: #fff;
-  font-size: 1.9rem;
-  font-weight: 500;
-  margin: 0 0 .5rem 0;
-  padding: 1.1rem 0;
-  text-align: center;
-  width: 100%; }
-  .page-faq nav.custom-pagination span.page-num {
-    display: none; }
-  .page-faq nav.custom-pagination span.page-numbers {
-    font-size: 1.6rem; }
-  .page-faq nav.custom-pagination a.page-numbers {
-    font-size: 1.5rem; }
-  .page-faq nav.custom-pagination .page-numbers {
-    margin: 0 .3rem; }
-
-.page-faq div.for-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%; }
-  .page-faq div.for-form h2 {
-    color: #3C5AAE;
-    text-align: center;
-    text-transform: uppercase; }
-  .page-faq div.for-form form {
-    width: 38%; }
-    .page-faq div.for-form form .form-control {
-      border-radius: 0.6rem; }
-  .page-faq div.for-form #fields p input#email button#submit.go {
-    -ms-flex-item-align: center;
-        align-self: center;
-    border: 2px solid;
-    border-radius: 0.65rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.094;
-    margin-top: 0.7rem;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    width: 100%; }
-  .page-faq div.for-form #fields p input#email #email {
-    margin-bottom: .65rem; }
-
 /* xs - устройства (до 576px) */
 /* CSS для ширины, которая меньше 575px (включительно) */
 /* sm-устройства (больше или равно 576px) */
@@ -9252,8 +9429,10 @@ form.cntcspf {
 /* md-устройства (больше или равно 768px) */
 @media (min-width: 768px) {
   /* CSS для: 768px <= ширины <= 991px */
-  form.mainpf,
-  form.wpcf7-form {
+  .jumbotron form.mainpf,
+  .jumbotron form.wpcf7-form,
+  .page-categorymenu form.mainpf,
+  .page-categorymenu form.wpcf7-form {
     margin-left: 3rem;
     margin-right: -2rem; } }
 
@@ -9262,15 +9441,26 @@ form.cntcspf {
   /* CSS для: 992px <= ширины <= 1119px */
   .top-wrap .toplarge-menu h4, .top-wrap .toplarge-menu h6 {
     display: none; }
+  .page-reviews form.wpcf7-form div.wpcf7-validation-errors {
+    margin-left: 6.6%; }
+  .page-reviews form.wpcf7-form div.wpcf7-mail-sent-ok {
+    margin-left: 26.3%; }
   .video-block .monitor {
     margin-left: -8rem;
     position: relative; }
     .video-block .monitor img {
-      width: 80%; } }
+      width: 80%; }
+  .page-orderforms #sprvk-form div.wpcf7-mail-sent-ok,
+  .page-orderforms #svvo-form div.wpcf7-mail-sent-ok {
+    margin-left: 2rem; } }
 
 /* xl-устройства (больше или равно 1200px) */
 @media (min-width: 1200px) {
-  /* CSS для: ширины >= 1200px */ }
+  /* CSS для: ширины >= 1200px */
+  .page-reviews form.wpcf7-form div.wpcf7-validation-errors {
+    margin-left: 13%; }
+  .page-reviews form.wpcf7-form div.wpcf7-mail-sent-ok {
+    margin-left: 29.5%; } }
 
 /* xl-размер (>=1200px) */
 /* CSS для >=1200px */
@@ -9283,7 +9473,11 @@ form.cntcspf {
   form.mainpf legend,
   form.wpcf7-form legend {
     font-size: 1.5rem;
-    padding-top: .5rem; } }
+    padding-top: .5rem; }
+  form.wpcf7-form.invalid .form-group span.wpcf7-not-valid-tip {
+    -ms-flex-item-align: center;
+        align-self: center;
+    font-size: .6rem; } }
 
 /* md-размер (<=991px) */
 @media (max-width: 991px) {
@@ -9336,7 +9530,6 @@ form.cntcspf {
     /* height: auto; */ }
     #navbarNavTop ul.navbar-nav > li,
     #navbarNavBtm ul.navbar-nav > li {
-      /* background-color: rgba(191, 224, 241, 0.6) !important; */
       height: 60px;
       margin-bottom: 2px;
       padding: 10px;
@@ -9386,11 +9579,18 @@ form.cntcspf {
   .page-categorymenu div.list > ul li,
   .page-categorymenu div.list > ul li {
     width: 100%; }
+  .page-reviews form.wpcf7-form div.wpcf7-mail-sent-ok {
+    width: 100%; }
   .aside-catalogue ul {
     margin-left: -1rem; }
     .aside-catalogue ul li a {
       font-size: .6rem;
       padding: .3rem 0 .2rem .5rem; }
+  .right-sb form.wpcf7-form div.wpcf7-mail-sent-ok,
+  .right-sb form.wpcf7-form .wpcf7-validation-errors {
+    left: 0;
+    z-index: 1;
+    margin: 0; }
   .site-footer {
     padding: 0; } }
 
@@ -9441,8 +9641,7 @@ form.cntcspf {
         padding: .5rem 0 .5rem 1rem; }
   form.mainpf,
   form.wpcf7-form {
-    background: transparent;
-    margin-top: 120px; }
+    background: transparent; }
     form.mainpf::before, form.mainpf::after,
     form.wpcf7-form::before,
     form.wpcf7-form::after {
@@ -9458,6 +9657,15 @@ form.cntcspf {
     form.wpcf7-form p.safety,
     form.wpcf7-form p.lastp {
       display: none; }
+  .right-sb form.wpcf7-form div.wpcf7-mail-sent-ok,
+  .right-sb form.wpcf7-form .wpcf7-validation-errors {
+    top: 265px;
+    width: 100%; }
+  form.mainpf .wpcf7-validation-errors,
+  form.wpcf7-form .wpcf7-validation-errors {
+    margin: 0;
+    top: 350px;
+    width: 100%; }
   .video-block .monitor {
     display: none; }
   .page-categorymenu {
@@ -9475,9 +9683,14 @@ form.cntcspf {
     .dipl_contains p {
       margin-bottom: 1rem; }
   .order-consult h3, .order-consult a {
-    font-size: 1.2rem; }
+    font-size: 1.1rem; }
   .order-consult a {
-    padding: 0.2rem .6rem; } }
+    padding: 0.2rem .6rem; }
+  .page-orderforms .page-content form.wpcf7-form {
+    margin-bottom: 0; }
+  #modal-callback .form-control,
+  #modal-conslt .form-control {
+    background-color: #88E769; } }
 
 /* xs-размер (<=575px) */
 @media (max-width: 575px) {
@@ -9534,7 +9747,16 @@ form.cntcspf {
   .page-content {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
-            order: 0; } }
+            order: 0; }
+  #modal-callback,
+  #modal-conslt {
+    width: 100%; }
+    #modal-callback p,
+    #modal-conslt p {
+      margin: 0; }
+      #modal-callback p #idsubmbtn,
+      #modal-conslt p #idsubmbtn {
+        font-size: 1.1rem; } }
 
 /* размер (<=500px) */
 @media (max-width: 500px) {
@@ -9548,14 +9770,29 @@ form.cntcspf {
     font-size: .75rem;
     margin-left: 3rem; } }
 
+/* размер (<=468px) */
+@media (max-width: 468px) {
+  /* CSS для ширины до 468px (включительно) */ }
+
 /* размер (<=448px) */
 @media (max-width: 448px) {
   /* CSS для ширины до 448px (включительно) */
   .jumbotron {
     background: url(images/jumb_mainimg.png) no-repeat 31.5% center; }
   .order-consult h3 {
-    font-size: 1rem; } }
+    font-size: 1rem; }
+  .page-reviews form.wpcf7-form div.wpcf7-response-output {
+    top: 260px; }
+  .page-reviews form.wpcf7-form #idsubmbtn {
+    font-size: 1.1rem;
+    padding: .3rem .5rem; }
+  .page-faq .three-colms .row {
+    padding: 0 3%; }
+  form.mainpf #idsubmbtn,
+  form.wpcf7-form #idsubmbtn {
+    padding: .1rem .5rem; } }
 
+/* (>=469 и <=767) */
 /* xs (<=543px) */
 /* sm (>=576 и <=767) */
 @media (min-width: 576px) and (max-width: 767px) {
@@ -9571,7 +9808,10 @@ form.cntcspf {
   .gallery h1 {
     border-bottom: 2.5px solid !important; }
   .page-categorymenu .aside-catalogue {
-    margin-top: 48px; } }
+    margin-top: 48px; }
+  #modal-callback,
+  #modal-conslt {
+    width: 85%; } }
 
 /* md (>=768 и <=991) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -9590,7 +9830,18 @@ form.cntcspf {
     font-size: .6rem;
     padding: .3rem 0 .2rem .5rem; }
   form.mainpf #idsubmbtn, form.wpcf7-form #idsubmbtn {
-    padding: .1rem .4rem; } }
+    padding: .1rem .4rem; }
+  form.mainpf div.wpcf7-response-output form.wpcf7-form div.wpcf7-mail-sent-ok,
+  form.mainpf div.wpcf7-response-output form.wpcf7-form .wpcf7-validation-errors,
+  .right-sb form.wpcf7-form div.wpcf7-mail-sent-ok,
+  .right-sb form.wpcf7-form .wpcf7-validation-errors {
+    left: 0;
+    top: 410px;
+    z-index: 1;
+    margin: 0; }
+  #modal-callback,
+  #modal-conslt {
+    width: 65%; } }
 
 /* lg (>=992 и <=1199) */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -9611,6 +9862,9 @@ form.cntcspf {
   form.wpcf7-form::after {
     display: none; }
   .page-categorymenu h2 {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem; }
+  #modal-callback,
+  #modal-conslt {
+    width: 45%; } }
 
 /* xl (>=1200) */

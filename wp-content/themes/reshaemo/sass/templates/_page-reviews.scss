@@ -51,6 +51,44 @@
 	}
 }
 
+/* Форма обратной связи Оставить отзыв */
+.page-reviews {
+    form.mainpf,
+    form.wpcf7-form {
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        &:before,
+        &:after {
+        	display: none;
+        }
+        fieldset {
+        	p:last-child {
+        		text-align: center;
+        	}
+        }
+        #idsubmbtn {
+        	font-size: 1.1rem;
+        }
+    }
+    //form.mainpf div.wpcf7-mail-sent-ok, 
+    //form.wpcf7-form div.wpcf7-mail-sent-ok,
+    //form.mainpf div.wpcf7-response-output, 
+    form.wpcf7-form div.wpcf7-response-output {
+        margin: 0;
+        top: 255px; //250px;
+    }
+    .wpcf7-textarea {
+		align-self: center;
+		border-radius: .6rem;
+		height: 5rem;
+		width: 85%;
+    }
+    #respond.comment-respond {
+    	display: none;
+    }
+}
+
 .fn, .url {
 	color: #fff;
 	margin-right: .4rem;

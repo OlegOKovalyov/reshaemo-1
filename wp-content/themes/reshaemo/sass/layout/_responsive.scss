@@ -1,3 +1,8 @@
+/* (>=469 и <=767) */
+@media (min-width: 469px) and (max-width: 767px) {
+
+}    
+
 /* xs (<=543px) */
 @media (max-width: 575px) {  }
      
@@ -20,7 +25,11 @@
         ul li {
             //margin-left: -1.8rem;
         }
-    }  
+    }
+    #modal-callback,
+    #modal-conslt {
+        width: 85%;
+    }      
 }
      
 /* md (>=768 и <=991) */
@@ -48,7 +57,23 @@
     }
     form.mainpf #idsubmbtn, form.wpcf7-form #idsubmbtn {
         padding: .1rem .4rem;
-    }          
+    }
+    form.mainpf div.wpcf7-response-output, 
+    .right-sb {
+        form.wpcf7-form {
+            div.wpcf7-mail-sent-ok,
+            .wpcf7-validation-errors {
+                left: 0;
+                top: 410px;
+                z-index: 1;
+                margin: 0;
+            }
+        }
+    }
+    #modal-callback,
+    #modal-conslt {
+        width: 65%;
+    }       
 }
      
 /* lg (>=992 и <=1199) */
@@ -80,7 +105,24 @@
     }
     .page-categorymenu h2 {
         font-size: 1.2rem;
-    }       
+    }
+    //div.page-faq {
+        //form.mainpf div.wpcf7-mail-sent-ok, 
+        //form.wpcf7-form div.wpcf7-mail-sent-ok {
+            //margin-left: 27.5%;
+            //top: 645px;
+        //}
+    //}
+    div.page-faq {
+        //form.mainpf div.wpcf7-validation-errors, 
+        form.wpcf7-form div.wpcf7-validation-errors {
+            //margin-left: 11.3%;
+        }
+    }
+    #modal-callback,
+    #modal-conslt {
+        width: 45%;
+    }          
 }
      
 /* xl (>=1200) */

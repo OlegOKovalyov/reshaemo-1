@@ -129,7 +129,7 @@ form.wpcf7-form {
         width: 25px;                               
         position: absolute;
         z-index: 0;
-        top: 479px; // 454px;
+        top: 480px; // 454px;
         right: -17px; // 15px;
     } 
     span.wpcf7-form-control-wrap {
@@ -141,42 +141,45 @@ form.wpcf7-form {
     }
     span.wpcf7-not-valid-tip {
         flex-direction: unset;
+        font-size: .85rem;
         position: absolute;
         top: 18px;
     }
+    .wpcf7-response-output,
+    .wpcf7-display-none,
+    .wpcf7-mail-sent-ok {
+        border: 2px solid #88E769;
+        border-radius: .6rem;
+        margin-left: 3rem;
+        margin-right: -2rem;
+        margin-top: 3rem;              
+    }
     div.wpcf7-response-output {
-        position: absolute;
+        //border: 2px solid #88E769;
+        //border-radius: 10px;
         left: 0;
+        //margin-left: 3rem;
+        //margin-right: -2rem;
+        //margin-top: 3rem;              
+        position: absolute;
     }  
     div.wpcf7-mail-sent-ok {
-        background-color: #398f14;
+        //background-color: lighten(#398f14, 15%) ;
+        background-color: $mygreen;
         top: 450px;
     }
     .wpcf7-validation-errors {
         background-color: #f7e700;
-        top: 437px;
+        border-color: #f7e700;
+        top: 450px;
     }     
 }
-
-/* Стили для Chrome*/
-//@supports (-webkit-appearance:none) {
-@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {    
-    /* form.mainpf,
+.right-sb {
     form.wpcf7-form {
-        select.form-control {
-            margin-bottom: -6px;
+        div.wpcf7-mail-sent-ok,
+        .wpcf7-validation-errors {
+            left: 1rem;
+            top: 315px;
         }
-    } */
-}
-
-/* Стили для Mozila Firefox*/
-//@-moz-document url-prefix() {
-//@supports (-moz-appearance:meterbar) and (list-style-type:japanese-formal) {
-@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {    
-   /*  form.mainpf,
-     form.wpcf7-form {
-         select.form-control {
-             margin-bottom: 7px;
-         }
-     }   */  
-}    
+    }
+} 

@@ -24,15 +24,9 @@ get_header(); ?>
 
             <div class="container three-colms">
                 <div class="row">    	
-                	<!-- <div class="col"> -->
+                	<div class="col">
                         <div class="row">
-                            <div class="col-12"><h2 class="pt-3">Задать вопрос</h2></div>
-                            <div class="for-form col-xs-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-
-                                <?php echo do_shortcode( '[contact-form-7 id="837" title="Задать вопрос"]' ) ?>
-
-                            </div><!-- .for-form -->                             
-                            <h1 class="py-4 mt-4"><?php the_title(); ?></h1>
+                            <h1 class="py-4"><?php the_title(); ?></h1>                            
 
                             <?php while (have_posts()): the_post();?>
                                 <?php the_content();?>
@@ -58,7 +52,7 @@ get_header(); ?>
 
                             <!-- begin of the loop -->
                             <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
-                                <article class="loop w-100">
+                                <article class="loop">
 
                                     <div class="contentpost">
                                         <h5><?php  the_time('j F Y'); ?></h5>
@@ -83,8 +77,21 @@ get_header(); ?>
                               <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                             <?php endif; ?>
 
+                            <!-- Форма обратной связи ЗАДАТЬ ВОПРОС -->  
+                            <div class="for-form">  
+                            <form id="contact" action="/wp-content/themes/zigzags.six/mail.php" method="post">
+                                <h2 class="py-3">Задать вопрос</h2>
+                                <div id="note"></div>
+                                <div id="fields">
+                                    <p><input class="form-control" type="text" name="name" id="email" placeholder="Телефон или e-mail" required></p>
+                                    <p><textarea class="form-control" name="message" cols="1" rows="3" id="comment" placeholder="Текст сообщения" required></textarea></p>
+                                    <p><button type="submit" id="submit" class="go  btn btn-outline-order">Отправить</button></p>
+                                </div><!-- .fields -->
+                            </form>  
+                            </div><!-- .for-form -->
+
                         </div><!-- .row -->
-                    <!-- </div> --><!-- .col -->
+                    </div><!-- .col -->
 
                 </div><!-- .row -->
             </div><!-- .container .three-colms -->

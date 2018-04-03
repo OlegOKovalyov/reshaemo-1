@@ -76,3 +76,23 @@
     line-height: 1.094;
     padding: 0.4rem .9rem;
 }
+
+/* Stand alone cards for inner Main Top Large pages */
+.card-vuz-ssuz {
+    .card {
+        width: 250px;
+        .card-img-top {
+            width: 100%;
+        }
+    }
+    .card-body {
+        .card-text {
+            margin-left: 0;
+        }
+    }
+}
+.card-sprvk-svva {
+    .card {
+        width: 250px;
+    }
+}

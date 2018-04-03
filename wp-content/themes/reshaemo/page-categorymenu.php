@@ -37,46 +37,14 @@ get_header(); ?>
 
             </div><!-- .col-2 .aside-catalogue -->
 
-            <?php /*get_sidebar('catmenu-vyshobrz');*/ ?>
-            <div class="col-xs-12 col-md-7 page-content">
+            <div class="col-xs-12 col-md-10 page-content">
                 <section>
                     <h1><?php the_title(); ?></h1>
                     <?php while (have_posts()): the_post();?>
                         <?php the_content(); ?>
                     <?php endwhile; ?>
                 </section>
-            </div><!-- .col-8 -->
-
-            <div class="col-xs-12 col-md-3 right-sb">
-                <!-- <form class="mainpf"> -->
-                    <?php echo do_shortcode('[contact-form-7 id="578" title="Срочный заказ диплома"]'); ?>
-                <div class="video-block container">
-                    <div class="row">
-                        <h2>Видеопрезентация компании</h2> 
-                        <div class="monitor"></div>  
-                        <img src="<?php bloginfo('template_url'); ?>/images/mntr-play.png" alt="Монтитор компьютера"> 
-                        <!-- <img src="<?php bloginfo('template_url'); ?>/images/i_playscreensm.png" alt=""> -->      
-
-                        <div class="video-links list" id="list_1">
-                            <span id="up-marker" data-scroll="0"></span>
-
-                                    <?php
-                                      $postid = '514';                                    
-                                      $children = wp_list_pages('title_li=&child_of='.$postid.'&echo=0'.'&depth=1');
-                                      if ($children) { ?>
-                                      <ul class="nav">
-                                      <?php echo $children; ?>
-                                      </ul>
-                                    <?php } ?>
-
-                            <span id="down-marker" data-scroll="1"></span>
-                            <a class="see-video" href="<?php echo home_url() . '/videoprezentacija-kompanii/' ?>">смотреть все видео о документах</a>
-                        </div><!-- .video-links -->                        
-                      
-                    </div><!-- .row -->
-                </div><!-- .video-block .container --> 
-
-            </div><!-- .col-12 .col-lg-3 .right-sb -->
+            </div><!-- .col-10 -->
 
         </div><!-- .row --> 
         

@@ -20,7 +20,7 @@ function show_diplkdnauk199718( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом кандидата наук</span><br />с 1997 по 2018 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -48,7 +48,7 @@ function show_diplkdnaukdo1996( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом кандидата наук</span><br />до 1996 года<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -76,7 +76,7 @@ function show_dipldknauk199718( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом доктора наук</span><br />с 1997 по 2018 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -104,7 +104,35 @@ function show_dipldnnaukdo1996( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом доктора наук</span><br />до 1996 года<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
+	        </div><!-- .card-body -->
+	    </div><!-- .card -->      
+
+	<?php 
+	return ob_get_clean();
+}
+
+/**
+ * Аттестат доцента. Бланк Гознак. Использование:
+ * - в админке WordPress:
+ * [attdotsenta price="<цена-число>"][/attdotsenta]
+ * - в шаблоне WordPress:
+ * <?php echo do_shortcode('[attdotsenta price="<цена-число>"][/attdotsenta]'); ?>
+ */
+add_shortcode( 'attdotsenta', 'show_attdotsenta');
+function show_attdotsenta( $atts, $content, $tag ) {
+	$dipl_price = empty($atts['price']) ? '23 000' : esc_html($atts['price']);
+
+	ob_start();
+	?>
+
+	    <div class="card card-vo">
+			<a href="<?php echo bloginfo('template_url'); ?>/images/kdnauk/attdotsenta-640x225.jpg"  data-fancybox data-caption="Аттестат доцента (Киржач)">
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/kdnauk/attdotsenta-640x225.jpg" alt="Card image cap"></a>
+	        <div class="card-body">
+	            <p class="card-text"><span class="upcase">Аттестат доцента</span><br />(Киржач)<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
+	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
+	            <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 

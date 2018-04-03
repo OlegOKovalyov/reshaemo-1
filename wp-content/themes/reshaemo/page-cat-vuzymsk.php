@@ -31,7 +31,6 @@ $letter_upp = mb_strtoupper($letter, 'UTF-8'); ?>
         <?php echo do_shortcode('[sfbtnsgroup]'); ?>
 
         <div class="row">
-            <!-- <div class="col-10 order-1 main-catlg sb-catlg"> -->
             <div class="col-sm-12 col-md-10 order-1 main-catlg sb-catlg">
 
                 <?php 
@@ -82,8 +81,7 @@ $letter_upp = mb_strtoupper($letter, 'UTF-8'); ?>
                 </section>
 
             </div><!-- .col-10 -->
-
-            <!-- <div class="col-12 col-sm-2 aside-catalogue"> -->
+            
             <div class="col-sm-12 col-md-2 aside-catalogue">
               <div class="blank-block-top"></div>
 

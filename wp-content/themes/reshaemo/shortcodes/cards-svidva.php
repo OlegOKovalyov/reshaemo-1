@@ -20,7 +20,7 @@ function show_borncertf( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство о рождении</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-svidetelstvo/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -48,7 +48,7 @@ function show_deathcertf( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство о сметри</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-svidetelstvo/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -76,7 +76,7 @@ function show_margcertf( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство о браке</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-svidetelstvo/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -104,7 +104,7 @@ function show_devrcertf( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство о разводе</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-svidetelstvo/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -132,7 +132,7 @@ function show_adoptcertf( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство об усыновлении</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-svidetelstvo/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -160,7 +160,7 @@ function show_fathrcertf( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство об отцовстве</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-svidetelstvo/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -188,7 +188,7 @@ function show_chngnmcertf( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство о перемене имени</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-svidetelstvo/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 

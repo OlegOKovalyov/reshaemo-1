@@ -19,6 +19,10 @@
 .video-block { // Новые стили ссылок видеоблока
     .row {
         justify-content: center;
+        & > a > img {
+            margin-left: 3rem;
+            width: 95%;
+        }
     }
     img:nth-child(4) {
         position: absolute;
@@ -106,6 +110,16 @@
         img {
             width: 100%;
         }        
+    }
+}
+
+.right-sb {
+    .video-block {
+        .row {
+            h2 {
+                margin-left: 5rem;
+            }
+        }
     }
 }
 

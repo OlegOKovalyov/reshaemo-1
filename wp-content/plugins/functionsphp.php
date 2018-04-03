@@ -335,24 +335,21 @@ function show_recentcomm( $atts, $content, $tag ) {
  */
 add_shortcode( 'sfbtnsgroup', 'show_sfbtnsgroup');
 function show_sfbtnsgroup( $atts, $content, $tag ) {
-    /*$dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);*/
 
     ob_start();
     ?>
 
             <div class="sfbtns-group container mt-5 mb-3">
                 <div class="row justify-content-between">
-                    <div class="col-12 col-sm-6">
+                    <div class="col-12 col-sm-5 col-md-5 col-lg-6">
                         <form class="form-inline my-2 my-lg-0" action="<?php echo bloginfo('home'); ?>">
                                 <input class="form-control mr-sm-2" type="search" placeholder="введите слова поиска" aria-label="Search" value="" name="s" id="s">
                             <button class="btn btn-outline-order btn-outline-findoc my-2 my-sm-0" type="submit">Найти документы</button>
                         </form>
                     </div><!-- .col-12 .col-sm-6 -->
-                    <div class="ml-auto col-sm-6 callbk-btn">
+                    <div class="ml-auto col-sm-7 col-md-5 col-lg-6 callbk-btn">
                         <a class="btn btn-outline-callback" href="<?php echo home_url() . '/videoprezentacija-kompanii/' ?>">Видео о дипломах</a>
-                    <!-- </div> --><!-- .col-2 .callbk-btn -->
-                    <!-- <div class="col-2 callbk-btn"> -->
-                        <a class="btn btn-outline-callback" href="#">Обратный звонок</a>
+                        <a data-fancybox data-src="#modal-callback" class="btn btn-outline-callback " href="javascript:;">Обратный звонок</a>
                     </div><!-- .col-sm-6 .callbk-btn -->
                 </div><!-- .row -->
             </div><!-- .sfbtns-group -->           
@@ -695,7 +692,7 @@ function show_tabsrspecobrz( $atts, $content, $tag ) {
 <div class="container-fluid">
     <div class="container">
 
-        <?php $child_pages = array( "470" ); ?>
+        <?php $child_pages = array( "470", "875" ); ?>
 
         <div class="row">
             <div class="col-12">
@@ -1067,7 +1064,7 @@ function wp_comments_corenavi() {
 }
 
 
-/* Advanced Pagination Function - не используется */
+/* Advanced Pagination Function */
 function custom_pagination($numpages = '', $pagerange = '', $paged='') {
 
   if (empty($pagerange)) {

@@ -3,7 +3,7 @@
      
 /* lg-размер (<=1199px) */
 @media (max-width: 1199px) {
-  /* CSS для ширины от 992px до 1199px */
+/* CSS для ширины от 992px до 1199px */
     .triangle-left,
     .triangle-right {
         display: none;
@@ -15,6 +15,15 @@
             padding-top: .5rem;
         }        
     }
+    form.wpcf7-form.invalid .form-group span.wpcf7-not-valid-tip {
+        // /* flex-direction: unset;
+        // font-size: .85rem;
+        // position: absolute;
+        // top: 18px; */
+        align-self: center;
+        font-size: .6rem;
+        //width: 140%;
+    }     
 }
      
 /* md-размер (<=991px) */
@@ -72,7 +81,6 @@
     #navbarNavBtm ul.navbar-nav {
         /* height: auto; */
         & > li {
-            /* background-color: rgba(191, 224, 241, 0.6) !important; */
             height: 60px; //45px;
             margin-bottom: 2px; // 0;
             padding: 10px;
@@ -130,6 +138,13 @@
             width: 100%;
         }
     }
+    .page-reviews {
+        form.wpcf7-form {
+            div.wpcf7-mail-sent-ok {
+                width: 100%;
+            }            
+        }
+    }    
     .aside-catalogue ul {
         margin-left: -1rem;
         li a {
@@ -137,9 +152,27 @@
             padding: .3rem 0 .2rem .5rem;        
         }
     }
+    .right-sb {
+        form.wpcf7-form {
+            div.wpcf7-mail-sent-ok,
+            .wpcf7-validation-errors {
+                left: 0;
+                z-index: 1;
+                margin: 0;
+            }
+        }
+    }
     .site-footer {
         padding: 0;
     }
+    //.page-faq form.wpcf7-form div.wpcf7-response-output {
+        //margin-left: 0;
+        //top: 490px;
+        //width: 100%;
+    //}
+    // /* div.page-faq form.wpcf7-form div.wpcf7-mail-sent-ok {
+    //     top: 490px;
+    // } */
 }
      
 /* sm-размер (<=768px) */
@@ -201,7 +234,6 @@
     form.mainpf, 
     form.wpcf7-form { 
         background: transparent;
-        margin-top: 120px;
         &::before,
         &::after {
             display: none;
@@ -217,6 +249,17 @@
             display: none;
         }
     }
+    .right-sb form.wpcf7-form div.wpcf7-mail-sent-ok, 
+    .right-sb form.wpcf7-form .wpcf7-validation-errors {
+        top: 265px;
+        width: 100%;
+    }
+    form.mainpf .wpcf7-validation-errors, 
+    form.wpcf7-form .wpcf7-validation-errors {
+        margin: 0;
+        top: 350px;
+        width: 100%;
+}
     .video-block .monitor {
         display: none;
     }
@@ -242,12 +285,33 @@
     }
     .order-consult {
         h3, a {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
         a {
             padding: 0.2rem .6rem;
         }
     }
+    .page-orderforms .page-content form.wpcf7-form {
+        margin-bottom: 0;
+    }
+    // .page-orderforms .page-content form.wpcf7-form div.wpcf7-validation-errors {
+    //     top: 860px;
+    // }
+    // .page-orderforms .page-content #atts-form form.wpcf7-form div.wpcf7-validation-errors {
+    //     top: 800px;
+    // }
+    // .page-orderforms .page-content #sprvk-form form.wpcf7-form div.wpcf7-validation-errors {
+    //     top: 470px;
+    // }
+    // .page-orderforms .page-content #svvo-form form.wpcf7-form div.wpcf7-validation-errors {
+    //     top: 610px;
+    // }
+    #modal-callback,
+    #modal-conslt {
+        .form-control {
+            background-color: $mygreen; // #88E769;
+        }
+    }       
 }
      
 /* xs-размер (<=575px) */
@@ -326,6 +390,16 @@
     .page-content {
         order: 0;
     }
+    #modal-callback,
+    #modal-conslt {
+        width: 100%;
+        p {
+            margin: 0;
+            #idsubmbtn {
+                font-size: 1.1rem;
+            }            
+        }
+    }     
 }
 
 /* размер (<=500px) */
@@ -344,9 +418,15 @@
     }   
 }
 
+/* размер (<=468px) */
+@media (max-width: 468px) {
+/* CSS для ширины до 468px (включительно) */
+
+}
+
 /* размер (<=448px) */
 @media (max-width: 448px) {
-  /* CSS для ширины до 448px (включительно) */
+/* CSS для ширины до 448px (включительно) */
     .jumbotron {
         background: 
             url(images/jumb_mainimg.png) no-repeat 31.5% center; 
@@ -355,5 +435,24 @@
         h3 {
             font-size: 1rem;
         }
+    }
+    .page-reviews {
+        //form.mainpf #idsubmbtn, 
+        form.wpcf7-form {
+            div.wpcf7-response-output {
+                top: 260px;
+            }
+             #idsubmbtn {
+                font-size: 1.1rem;
+                padding: .3rem .5rem;
+            }
+        }
+    }
+    .page-faq .three-colms .row {
+        padding: 0 3%;
+    }
+    form.mainpf #idsubmbtn, 
+    form.wpcf7-form #idsubmbtn {
+        padding: .1rem .5rem;
     }
 }  

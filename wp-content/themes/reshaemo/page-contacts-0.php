@@ -25,7 +25,7 @@ get_header(); ?>
 
             <div class="container three-colms">
                 <div class="row">
-                    <div class="col-xs-12 col-md-6 col-lg-4 dlv-1col">
+                    <div class="col dlv-1col">
                         <div class="in-dlv-1col">
                             <h4>Адрес в Москве</h4>
                             <p><span class="bld_ltr">Компания: "Dip-for"</span></p>
@@ -34,7 +34,7 @@ get_header(); ?>
                             <img src="<?php bloginfo('template_url'); ?>/images/map_moskwa.png" alt="Карта Москвы">
                         </div><!-- .in-dlv-1col -->
                     </div><!-- .col .dlv-1col -->
-                    <div class="col-xs-12 col-md-6 col-lg-4 dlv-1col">
+                    <div class="col dlv-1col">
                         <div class="in-dlv-1col">
                             <h4>Адрес в Санкт-Петербурге</h4>
                             <p><span class="bld_ltr">Компания: "Dip-for"</span></p>
@@ -43,21 +43,30 @@ get_header(); ?>
                             <img src="<?php bloginfo('template_url'); ?>/images/map_piter.png" alt="Карта Санкт-Петербурга">
                         </div><!-- .in-dlv-1col -->
                     </div><!-- .col .dlv-1col -->
-                    <div class="col-xs-12 col-md-12 col-lg-4 dlv-1col">
+                    <div class="col dlv-1col">
                         <div class="in-dlv-1col">
                             <h4>Другие способы связи</h4>
                             <p><span class="bld_ltr">Телефон: +7(495) 542-84-44</span></p>
                             <p><span class="bld_ltr">Телефон: 8(800) 200-69-81 (Бесплатный звонок по всей России)</span></p>
                             <p><span class="bld_ltr">Электронная почта:<br /> dip-for.com@gmail.com</span></p>
                             <p><span class="bld_ltr">Также для связи используйте форму</span></p>
-                            <!-- <a href="#">Заказать обратный звонок</a> -->
-                            <a data-fancybox data-src="#modal-callback-2" href="javascript:;">Заказать обратный звонок</a>
+                            <a href="#">Заказать обратный звонок</a>
                             <p class="pb-4"><span class="bld_ltr">Или же заполните форму ниже, и наш менеджер свяжется с Вами в ближайшее время</span></p>
 
-                            <div class="cntcspf">
-                                <?php echo do_shortcode( '[contact-form-7 id="835" title="Как с нами связаться?"]' )  ?>
-                            </div>
+                            <form class="cntcspf">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="fio" placeholder="Ф.И.О.">
+                                        <input type="text" class="form-control" id="telnum" placeholder="номер телефона">
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                    </div><!-- .form-group -->
+                                    <p class="safety pb-3">Ваши контактные данные целиком и полностью в безопасности и не могут быть переданы третьим лицам.</p>
+                                    <button type="submit" class="btn btn-outline-order">Заказать</button>
+                                </fieldset>
+                            </form>
 
+                            <!-- <p class="lchd"><span class="bld_ltr">Предоплата: </span>не требуется</p>
+                            <img src="<?php bloginfo('template_url'); ?>/images/map_regions.png" alt="Карта России"> -->
                         </div><!-- .in-dlv-1col -->
                     </div><!-- .col .dlv-1col -->
                 </div><!-- .row -->

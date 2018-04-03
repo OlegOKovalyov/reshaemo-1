@@ -20,7 +20,7 @@ function show_akademspvk( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Академическая справка</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-spravku/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -48,7 +48,7 @@ function show_archspvk( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Архивная<br /> справка</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-spravku/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -76,7 +76,7 @@ function show_svyzovspvk( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Справка-вызов<br /> на сессию</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-spravku/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -104,7 +104,7 @@ function show_obuchspvk( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Справка об обучении</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-spravku/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -132,7 +132,7 @@ function show_voenkomspvk( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Справка в военкомат</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-spravku/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -160,7 +160,7 @@ function show_vuzdiplpr( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Приложение к диплому ВУЗа</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-spravku/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -188,10 +188,146 @@ function show_ssuzdiplpr( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Приложение к диплому ССУЗа</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-spravku/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
 	<?php 
 	return ob_get_clean();
+}
+
+/**
+ * Диплом о неполном высшем образовании. Бланк Гознак. Использование:
+ * - в админке WordPress:
+ * [diplnepolnvysh price="<цена-число>"][/diplnepolnvysh]
+ * - в шаблоне WordPress:
+ * <?php echo do_shortcode('[diplnepolnvysh price="<цена-число>"][/diplnepolnvysh]'); ?>
+ */
+add_shortcode( 'diplnepolnvysh', 'show_diplnepolnvysh');
+function show_diplnepolnvysh( $atts, $content, $tag ) {
+    $dipl_price = empty($atts['price']) ? '16 000' : esc_html($atts['price']);
+
+    ob_start();
+    ?>
+
+        <div class="card card-vo">
+			<a href="<?php echo bloginfo('template_url'); ?>/images/sprvk/dipl-neplnvysh-357x517.jpg"  data-fancybox data-caption="Диплом о неполном высшем образовании">
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/dipl-neplnvysh-357x517.jpg" alt="Card image cap"></a>	            
+            <div class="card-body">
+                <p class="card-text"><span class="upcase">О неполном<br />высшем</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
+                <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
+                <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
+            </div><!-- .card-body -->
+        </div><!-- .card -->      
+
+    <?php 
+    return ob_get_clean();
+}
+
+/**
+ * Карусель "Справки" (левый сайдбар страницы "Справки и свидетельства")
+ */
+add_shortcode( 'carouselspravki', 'show_carouselspravki');
+function show_carouselspravki( $atts, $content, $tag ) {
+    /*$dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);
+*/
+    ob_start();
+    ?>
+
+<div class="container-fluid">
+    <div class="container">
+
+        <?php $child_pages = array( "511" ); ?>
+
+        <div class="row">
+            <div class="col-12">
+
+                <?php foreach( $child_pages as $child_page ) { ?>
+
+                    <h2 class="text-center"><?php echo get_the_title($child_page); ?></h2>
+                    <div class="row">
+                        <!-- Выводим карточки товаров по 4 шт. в строку (карусель) -->
+                        <div class="owl-carousel owl-theme gallery-certs">
+
+                            <?php
+                            $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
+                            foreach( $mypages as $page ) {      
+                                $content = $page->post_content;
+                                // пропустим страницу без контента
+                                if ( ! $content ) continue;
+                                $content = apply_filters( 'the_content', $content );
+                                ?>
+                                
+                                <div class="entry"><?php echo $content; ?></div>
+
+                                <?php
+                            } ?>
+
+                        </div><!-- .gallery-certs -->
+                        <!-- /Выводим карточки товаров по 4 шт. в строку (карусель) -->
+                    </div><!-- .row (inner) -->
+
+                <?php } ?>
+
+            </div><!-- .col-12 -->
+        </div><!-- .row --> 
+    </div><!-- .container -->
+</div><!-- .gallery .container-fluid -->
+
+    <?php 
+    return ob_get_clean();
+}
+
+/**
+ * Карусель "Свидетельства" (левый сайдбар страницы "Справки и свидетельства")
+ */
+add_shortcode( 'carouselsvva', 'show_carouselsvva');
+function show_carouselsvva( $atts, $content, $tag ) {
+    /*$dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);
+*/
+    ob_start();
+    ?>
+
+<div class="container-fluid">
+    <div class="container">
+
+        <?php $child_pages = array( "812" ); ?>
+
+        <div class="row">
+            <div class="col-12">
+
+                <?php foreach( $child_pages as $child_page ) { ?>
+
+                    <h2 class="text-center"><?php echo get_the_title($child_page); ?></h2>
+                    <div class="row">
+                        <!-- Выводим карточки товаров по 4 шт. в строку (карусель) -->
+                        <div class="owl-carousel owl-theme gallery-certs">
+
+                            <?php
+                            $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
+                            foreach( $mypages as $page ) {      
+                                $content = $page->post_content;
+                                // пропустим страницу без контента
+                                if ( ! $content ) continue;
+                                $content = apply_filters( 'the_content', $content );
+                                ?>
+                                
+                                <div class="entry"><?php echo $content; ?></div>
+
+                                <?php
+                            } ?>
+
+                        </div><!-- .gallery-certs -->
+                        <!-- /Выводим карточки товаров по 4 шт. в строку (карусель) -->
+                    </div><!-- .row (inner) -->
+
+                <?php } ?>
+
+            </div><!-- .col-12 -->
+        </div><!-- .row --> 
+    </div><!-- .container -->
+</div><!-- .gallery .container-fluid -->
+
+    <?php 
+    return ob_get_clean();
 }

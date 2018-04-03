@@ -18,15 +18,14 @@ get_header(); ?>
         <div class="container">
 
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-7 col-lg-8">
+                <div class="col-xs-12 col-md-7 col-lg-8">
                     <h2 class="display-3">Дипломы и аттестаты в Москве</h2>
                     <p class="lead">Оригинальный бланк ГОЗНАК!<br />Бесплатная доставка<br />по всей России!</p>
                 </div><!-- .col-md-8 -->
-                <div class="col-12 col-sm-12 col-md-5 col-lg-4">
-                    <form class="mainpf">
-                        <?php //$ubr = user_browser($_SERVER['HTTP_USER_AGENT']); echo substr( $ubr, 0, 1 ); ?>
-                        <?php echo do_shortcode('[contact-form-7 id="569" title="Срочный заказ диплома"]'); ?>
-                    </form>
+                <div class="col-xs-12 col-md-5 col-lg-4">
+                    <div class="mainpf">
+                        <?php echo do_shortcode('[contact-form-7 id="578" title="Срочный заказ диплома"]'); ?>
+                    </div>
                 </div><!-- .col-md-4 -->
             </div><!-- .row -->
         </div><!-- .container -->
@@ -76,7 +75,11 @@ get_header(); ?>
     						<p>специальный вкладыш, где представлены изученные дисциплины и полученные отметки по ним.</p>
                         </div><!-- .dipl_contains -->
 					</div>
-					<div class="col-5 monitor"><img src="<?php bloginfo('template_url'); ?>/images/mntr-play.png" alt="Монтитор компьютера"></div>
+					<div class="col-5 monitor">
+                        <a href="http://diplom-cena.com/videoprezentacija-kompanii/">
+                            <img src="<?php bloginfo('template_url'); ?>/images/mntr-play.png" alt="Монтитор компьютера">
+                        </a>
+                    </div>
 				</div>
 			</div>
 

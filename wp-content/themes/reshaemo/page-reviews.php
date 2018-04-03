@@ -25,6 +25,9 @@ get_header(); ?>
             <div class="container three-colms reviews-items">
                 <div class="row">
                     <div class="col">
+                        <!-- <div class="cntcspf"> -->
+                            <?php echo do_shortcode( '[contact-form-7 id="836" title="Оставить отзыв"]' ) ?>
+                        <!-- </div> -->
                         <?php while (have_posts()): the_post();?>
                             <?php the_content();?>
                             <?php

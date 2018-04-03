@@ -1,6 +1,6 @@
 <?php
 
-/**
+/** Кажется этот код уже перенесен в файл shortcodes/galleris.php. Значит этот файл можно удалить.************
  * Галерея документов Высшее образование для страницы Цены. Использование:
  * - в админке WordPress:
  * [galvyshobrz]
@@ -87,7 +87,7 @@ add_shortcode( 'galsrspecobrz', 'show_galsrspecobrz');
 function show_galsrspecobrz( $atts, $content, $tag ) {
 
     ob_start();
-        $child_pages = array( "470", "875" ); ?>
+        $child_pages = array( "470" ); ?>
 
         <?php foreach( $child_pages as $child_page ) { ?>
 
@@ -168,44 +168,6 @@ function show_galsprsva( $atts, $content, $tag ) {
         <?php foreach( $child_pages as $child_page ) { ?>
 
             <h2><?php echo get_the_title($child_page); ?></h2>
-            <div class="gallery-row">
-
-                    <?php
-                    $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                    foreach( $mypages as $page ) {      
-                        $content = $page->post_content;
-                        // пропустим страницу без контента
-                        if ( ! $content ) continue;
-                        $content = apply_filters( 'the_content', $content );
-                        ?>
-                        
-                        <div class="entry"><?php echo $content; ?></div>
-
-                        <?php
-                    } ?>
-
-            </div><!-- .row (inner) -->
-
-        <?php }
-    return ob_get_clean();
-}
-
-/**
- * Галерея документов "Диплом специалиста" для подстраниц страницы "Диплом в городах подмосковья". Использование:
- * - в админке WordPress:
- * [galdiplspec]
- * - в файле-шаблоне:
- * <?php echo do_shortcode('[galdiplspec]'); ?>
- */
-add_shortcode( 'galdiplspec', 'show_galdiplspec');
-function show_galdiplspec( $atts, $content, $tag ) {
-
-    ob_start();
-        $child_pages = array( "317" ); ?>
-
-        <?php foreach( $child_pages as $child_page ) { ?>
-
-            <h2 class="text-center"><?php echo get_the_title($child_page); ?></h2>
             <div class="gallery-row">
 
                     <?php

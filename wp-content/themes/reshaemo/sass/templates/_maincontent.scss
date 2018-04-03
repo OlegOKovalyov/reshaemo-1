@@ -23,3 +23,15 @@ p.p-first {
 p.p-last {
     margin-bottom: 2rem;
 } 
+
+.main-catlg {
+    section {
+        ul.profmsk {
+            margin-left: 1rem;
+            & > li {
+                list-style-type: inherit;
+                min-width: 100%;
+            }
+        }
+    }
+}

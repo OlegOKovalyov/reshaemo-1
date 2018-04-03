@@ -20,7 +20,7 @@ function show_diplspec201417( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 2014 по 2018 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -48,7 +48,7 @@ function show_diplspec201113( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 2011 по 2013 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -76,7 +76,7 @@ function show_diplspec200911( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 2009 по 2011 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -104,7 +104,7 @@ function show_diplspec200408( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 2004 по 2008 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -132,7 +132,7 @@ function show_diplspec199703( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 1997 по 2004 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
@@ -160,7 +160,7 @@ function show_diplspecdo1996( $atts, $content, $tag ) {
             <div class="card-body">
                 <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> до 1996 года - СССР<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
                 <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-                <a href="#" class="btn btn-order">Заказать</a>
+                <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
             </div><!-- .card-body -->
         </div><!-- .card -->      
 
@@ -188,7 +188,7 @@ function show_diplspecred201418( $atts, $content, $tag ) {
             <div class="card-body">
                 <p class="card-text"><span class="upcase">Диплом специалиста</span><br />с отличием<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
                 <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-                <a href="#" class="btn btn-order">Заказать</a>
+                <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
             </div><!-- .card-body -->
         </div><!-- .card -->      
 
@@ -216,10 +216,93 @@ function show_diplspecnew201417( $atts, $content, $tag ) {
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br />нового образца<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
-	            <a href="#" class="btn btn-order">Заказать</a>
+	            <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
 	        </div><!-- .card-body -->
 	    </div><!-- .card -->      
 
 	<?php 
 	return ob_get_clean();
+}
+
+/**
+ * Диплом ВУЗа. Настоящий Бланк Гознак. (Для страницы "Высшее образование")
+ * Использование:
+ * - в админке WordPress:
+ * [diplvuza price="<цена-число>"][/diplvuza]
+ * - в шаблоне WordPress:
+ * <?php echo do_shortcode('[diplvuza price="<цена-число>"][/diplvuza]'); ?>
+ */
+add_shortcode( 'diplvuza', 'show_diplvuza');
+function show_diplvuza( $atts, $content, $tag ) {
+	//$dipl_price = empty($atts['price']) ? '20 000' : esc_html($atts['price']);
+
+	ob_start();
+	?>
+	<div class="card-vuz-ssuz d-flex justify-content-center">
+	    <div class="card card-vo" style="width: 250px">
+			<a href="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-2014-spec-640x449.jpg"  data-fancybox data-caption="Диплом специалиста с 2014 по 2018 год">
+				<img class="card-img-top w-100" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-2014-spec-640x449.jpg" alt="Card image cap"></a>
+	        <div class="card-body">
+	            <p class="card-text"><span class="upcase">Диплом ВУЗа</span><br /><span class="lcaseb">Настоящий Бланк Гознак</span><br /></p>
+	            <!-- <h4 class="card-title"><?php //echo esc_html( $atts['price'] ); ?></h4> -->
+	            <a href="<?php echo home_url() . '/zakazat-diplom/' ?>" class="btn btn-order">Заказать</a>
+	        </div><!-- .card-body -->
+	    </div><!-- .card -->      
+	</div><!-- .card-vuz-ssuz -->
+	<?php 
+	return ob_get_clean();
+}
+
+/**
+ * Карусель "Диплом специалиста" для страницы "Купить диплом специалиста" (левый сайдбар страницы "Высшее образование")
+ */
+add_shortcode( 'carouselspec', 'show_carouselspec');
+function show_carouselspec( $atts, $content, $tag ) {
+    /*$dipl_price = empty($atts['price']) ? '22 000' : esc_html($atts['price']);
+*/
+    ob_start();
+    ?>
+
+<div class="container-fluid">
+    <div class="container">
+
+        <?php $child_pages = array( "317" ); ?>
+
+        <div class="row">
+            <div class="col-12">
+
+                <?php foreach( $child_pages as $child_page ) { ?>
+
+                    <h2 class="text-center"><?php echo get_the_title($child_page); ?></h2>
+                    <div class="row">
+                        <!-- Выводим карточки товаров по 4 шт. в строку (карусель) -->
+                        <div class="owl-carousel owl-theme gallery-certs">
+
+                            <?php
+                            $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
+                            foreach( $mypages as $page ) {      
+                                $content = $page->post_content;
+                                // пропустим страницу без контента
+                                if ( ! $content ) continue;
+                                $content = apply_filters( 'the_content', $content );
+                                ?>
+                                
+                                <div class="entry"><?php echo $content; ?></div>
+
+                                <?php
+                            } ?>
+
+                        </div><!-- .gallery-certs -->
+                        <!-- /Выводим карточки товаров по 4 шт. в строку (карусель) -->
+                    </div><!-- .row (inner) -->
+
+                <?php } ?>
+
+            </div><!-- .col-12 -->
+        </div><!-- .row --> 
+    </div><!-- .container -->
+</div><!-- .gallery .container-fluid -->
+
+    <?php 
+    return ob_get_clean();
 }
