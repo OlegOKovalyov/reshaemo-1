@@ -164,6 +164,23 @@
         background-color: #C6F3EC;
         margin-bottom: 2rem;
     }
+    .card-iframe {
+        background-color: transparent;
+        .video-container {
+            height: 0;
+            overflow: hidden;
+            padding-bottom: 44.25%;
+            padding-top: 30px;
+            position: relative;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
     h3 {
         font-weight: 500;
         text-transform: uppercase;

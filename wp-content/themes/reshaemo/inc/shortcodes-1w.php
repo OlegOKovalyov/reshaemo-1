@@ -93,18 +93,26 @@ function show_videoiframe( $atts, $content, $tag ) {
       <div class="card card-iframe">
         <div class="card-body">
             <h3 class="card-title"><?php echo esc_html( $atts['name1'] ); ?></h3>
-            <div class="video-container">
-              <iframe width="100%" height="220" src="<?php echo esc_html( $atts['src1'] ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>         
+          <!-- <iframe width="380" height="214" src="<?php //echo esc_html( $atts['src1'] ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+          <div class="video-container">
+            <iframe width="100%" height="220" src="<?php echo esc_html( $atts['src1'] ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>         
           </div>
+          <!-- <h3 class="card-title"><?php echo esc_html( $atts['doc1'] ); ?></h3>
+                <img class="card-img-top" src="/wp-content/uploads/2018/04/videoimage-300x168.jpg" alt="Card image cap">
+                <a href="<?php //echo esc_html( $atts['link1'] ); ?>" class="btn btn-outline-order mb-4">Смотреть</a> -->      
         </div>
       </div>
 
       <div class="card card-iframe">
         <div class="card-body">
             <h3 class="card-title"><?php echo esc_html( $atts['name2'] ); ?></h3>
-            <div class="video-container">
-              <iframe width="100%" height="220" src="<?php echo esc_html( $atts['src2'] ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>             
+          <!-- <iframe width="380" height="214" src="<?php //echo esc_html( $atts['src2'] ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+          <div class="video-container">
+            <iframe width="100%" height="220" src="<?php echo esc_html( $atts['src2'] ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>              
           </div>
+          <!-- <h3 class="card-title"><?php echo esc_html( $atts['doc2'] ); ?></h3>
+          <img class="card-img-top" src="/wp-content/uploads/2018/04/videoimage-300x168.jpg" alt="Card image cap">
+          <a href="<?php //echo esc_html( $atts['link2'] ); ?>" class="btn btn-outline-order mb-4">Смотреть</a> -->
         </div>
       </div>
 
