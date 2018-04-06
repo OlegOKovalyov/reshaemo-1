@@ -1,191 +1,72 @@
 <?php
 
-/** Кажется этот код уже перенесен в файл shortcodes/galleris.php. Значит этот файл можно удалить.************
- * Галерея документов Высшее образование для страницы Цены. Использование:
+/** 
+ * Блок ссылок на странице Видеообзор дипломов. Использование:
  * - в админке WordPress:
- * [galvyshobrz]
+ * [videodipls]
  * - в файле-шаблоне:
- * <?php echo do_shortcode('[galvyshobrz]'); ?>
+ * <?php echo do_shortcode('[videodipls]'); ?>
  */
-add_shortcode( 'galvyshobrz', 'show_galvyshobrz');
-function show_galvyshobrz( $atts, $content, $tag ) {
+add_shortcode( 'videodipls', 'show_videodipls');
+function show_videodipls( $atts, $content, $tag ) {
 
-	ob_start();
-        $child_pages = array( "317", "291", "331" ); ?>
+	ob_start(); ?>
+        <div class="col video-block row mt-5">
+            <div class="col-md-7">
+                <nav class="nav flex-column">
+                    <a class="nav-link" href="/videoobzor-diplomov-o-vysshem/">Видеообзор дипломов о высшем образовании</a>
+                    <a class="nav-link" href="/videoobzor-diplomov-o-srednem-obrazovanii/">Видеообзор дипломов о среднем образовании</a>
+                    <a class="nav-link" href="/videoobzor-diplomov-o-sredne-specialnom-obrazovanii/">Видеообзор дипломов средне-специальном образовании</a>
+                    <a class="nav-link" href="/videoobzor-spravok-svidetelstv/">Видеообзор справок и свидетельств</a>
+                </nav>
 
-        <?php foreach( $child_pages as $child_page ) { ?>
-
-            <h2><?php echo get_the_title($child_page); ?></h2>
-            <div class="gallery-row">
-
-                    <?php
-                    $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                    foreach( $mypages as $page ) {      
-                        $content = $page->post_content;
-                        // пропустим страницу без контента
-                        if ( ! $content ) continue;
-                        $content = apply_filters( 'the_content', $content );
-                        ?>
-                        
-                        <div class="entry"><?php echo $content; ?></div>
-
-                        <?php
-                    } ?>
-
-            </div><!-- .row (inner) -->
-
-        <?php }
-	return ob_get_clean();
-}
-
-/**
- * Галерея документов После-дипломное образование для страницы Цены. Использование:
- * - в админке WordPress:
- * [galposdipobrz]
- * - в файле-шаблоне:
- * <?php echo do_shortcode('[galposdipobrz]'); ?>
- */
-add_shortcode( 'galposdipobrz', 'show_galposdipobrz');
-function show_galposdipobrz( $atts, $content, $tag ) {
-
-    ob_start();
-        $child_pages = array( "451" ); ?>
-
-        <?php foreach( $child_pages as $child_page ) { ?>
-
-            <h2><?php echo get_the_title($child_page); ?></h2>
-            <div class="gallery-row">
-
-                    <?php
-                    $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                    foreach( $mypages as $page ) {      
-                        $content = $page->post_content;
-                        // пропустим страницу без контента
-                        if ( ! $content ) continue;
-                        $content = apply_filters( 'the_content', $content );
-                        ?>
-                        
-                        <div class="entry"><?php echo $content; ?></div>
-
-                        <?php
-                    } ?>
-
-            </div><!-- .row (inner) -->
-
-        <?php }
+            </div>
+            <div class="col-md-5">
+                <a href="#">
+                    <img src="/wp-content/themes/reshaemo/images/mntr-play.png" alt="Монтитор компьютера">
+                </a>
+            </div>
+        </div>
+<?php 
     return ob_get_clean();
 }
 
-/**
- * Галерея документов Средне-специальное образование для страницы Цены. Использование:
+/** 
+ * Блок из двух карточек на подстраницах страницы Видеообзор дипломов. Использование:
  * - в админке WordPress:
- * [galsrspecobrz]
+ * [videomiscdipls doc1="Название1" doc2="Название2" link1="/Slug страницы 1/" link2="/Slug страницы 2/"][/videomiscdipls]
  * - в файле-шаблоне:
- * <?php echo do_shortcode('[galsrspecobrz]'); ?>
+ * <?php echo do_shortcode('[videomiscdipls doc1="Название1" doc2="Название2" link1="/Slug страницы 1/" link2="/Slug страницы 2/"][/videomiscdipls][/videomiscdipls]'); ?>
  */
-add_shortcode( 'galsrspecobrz', 'show_galsrspecobrz');
-function show_galsrspecobrz( $atts, $content, $tag ) {
-
+add_shortcode( 'videomiscdipls', 'show_videomiscdipls');
+function show_videomiscdipls( $atts, $content, $tag ) {
+    $doc_1 = empty($atts['doc1']) ? 'Видео дипломов' : esc_html($atts['doc1']);
+    $doc_2 = empty($atts['doc2']) ? 'Видео дипломов' : esc_html($atts['doc2']);
+    $link_1 = empty($atts['link1']) ? '#' : esc_html($atts['link1']);
+    $link_2 = empty($atts['link2']) ? '#' : esc_html($atts['link2']);
     ob_start();
-        $child_pages = array( "470" ); ?>
+    ?>
 
-        <?php foreach( $child_pages as $child_page ) { ?>
+    <div class="card-deck video-card-deck">
+      
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title"><?php echo esc_html( $atts['doc1'] ); ?></h3>
+          <img class="card-img-top" src="/wp-content/uploads/2018/04/videoimage-300x168.jpg" alt="Card image cap">
+          <a href="<?php echo esc_html( $atts['link1'] ); ?>" class="btn btn-outline-order mb-4">Смотреть</a>      
+        </div>
+      </div>
 
-            <h2><?php echo get_the_title($child_page); ?></h2>
-            <div class="gallery-row">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title"><?php echo esc_html( $atts['doc2'] ); ?></h3>
+          <img class="card-img-top" src="/wp-content/uploads/2018/04/videoimage-300x168.jpg" alt="Card image cap">
+          <a href="<?php echo esc_html( $atts['link2'] ); ?>" class="btn btn-outline-order mb-4">Смотреть</a>
+        </div>
+      </div>
 
-                    <?php
-                    $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                    foreach( $mypages as $page ) {      
-                        $content = $page->post_content;
-                        // пропустим страницу без контента
-                        if ( ! $content ) continue;
-                        $content = apply_filters( 'the_content', $content );
-                        ?>
-                        
-                        <div class="entry"><?php echo $content; ?></div>
+    </div>
 
-                        <?php
-                    } ?>
-
-            </div><!-- .row (inner) -->
-
-        <?php }
-    return ob_get_clean();
-}
-
-/**
- * Галерея документов Аттестаты школы для страницы Цены. Использование:
- * - в админке WordPress:
- * [galattschool]
- * - в файле-шаблоне:
- * <?php echo do_shortcode('[galattschool]'); ?>
- */
-add_shortcode( 'galattschool', 'show_galattschool');
-function show_galattschool( $atts, $content, $tag ) {
-
-    ob_start();
-        $child_pages = array( "485", "501" ); ?>
-
-        <?php foreach( $child_pages as $child_page ) { ?>
-
-            <h2><?php echo get_the_title($child_page); ?></h2>
-            <div class="gallery-row">
-
-                    <?php
-                    $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                    foreach( $mypages as $page ) {      
-                        $content = $page->post_content;
-                        // пропустим страницу без контента
-                        if ( ! $content ) continue;
-                        $content = apply_filters( 'the_content', $content );
-                        ?>
-                        
-                        <div class="entry"><?php echo $content; ?></div>
-
-                        <?php
-                    } ?>
-
-            </div><!-- .row (inner) -->
-
-        <?php }
-    return ob_get_clean();
-}
-
-/**
- * Галерея документов Аттестаты школы для страницы Цены. Использование:
- * - в админке WordPress:
- * [galsprsva]
- * - в файле-шаблоне:
- * <?php echo do_shortcode('[galsprsva]'); ?>
- */
-add_shortcode( 'galsprsva', 'show_galsprsva');
-function show_galsprsva( $atts, $content, $tag ) {
-
-    ob_start();
-        $child_pages = array( "511", "812" ); ?>
-
-        <?php foreach( $child_pages as $child_page ) { ?>
-
-            <h2><?php echo get_the_title($child_page); ?></h2>
-            <div class="gallery-row">
-
-                    <?php
-                    $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                    foreach( $mypages as $page ) {      
-                        $content = $page->post_content;
-                        // пропустим страницу без контента
-                        if ( ! $content ) continue;
-                        $content = apply_filters( 'the_content', $content );
-                        ?>
-                        
-                        <div class="entry"><?php echo $content; ?></div>
-
-                        <?php
-                    } ?>
-
-            </div><!-- .row (inner) -->
-
-        <?php }
+    <?php 
     return ob_get_clean();
 }

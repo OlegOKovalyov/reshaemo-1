@@ -8436,6 +8436,25 @@ p.p-last {
     position: relative;
     z-index: -1; }
 
+/* Подстраницы страницы Видеообзор дипломов */
+.video-card-deck .card {
+  background-color: #C6F3EC;
+  margin-bottom: 2rem; }
+
+.video-card-deck h3 {
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.video-card-deck a {
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 1.094;
+  margin: 1rem auto;
+  padding: 0.5rem 1.1rem;
+  text-transform: uppercase; }
+
 /* Delivery Page: page-delivery.php */
 .page-delivery {
   background: url(images/cloud_smallsmm.png) no-repeat 4% 15%, url(images/cloud_smallsmm.png) no-repeat 98% 8%, url(images/cloud_leftsmm.png) no-repeat -2% 25%, url(images/cloud_right_topsmm.png) no-repeat 100% 17%, url(images/cloud_right_btmsmm.png) no-repeat 104% 30%, url(images/tree_left_topsmm.png) no-repeat -1% 48%, url(images/tree_left_btmsmm.png) no-repeat -1.7% 97%, url(images/tree_right_topsmm.png) no-repeat 100% 55%, url(images/tree_right_btmsmm.png) no-repeat 101% 97%; }

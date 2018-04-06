@@ -165,7 +165,18 @@ function reshaemo_widgets_init() {
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="list-group-item active head_lgri">',
         'after_title'   => '</h3>',
-      ) );                  
+      ) );
+    // Добавляем виджеты в сайдбар страницы Видеообзор дипломов
+    register_sidebar( array(
+        'name'          => 'Cat Menu Video Obzor Sidebar',
+        'id'            => 'catmenu_videobz_sb',
+        'description'   => 'Левая колонка: Видеообзор дипломов',
+        'class'         => '',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h3 class="list-group-item active head_lgri">',
+        'after_title'   => '</h3>',
+      ) );                    
 
 add_action( 'widgets_init', 'reshaemo_widgets_init' );
 
@@ -194,7 +205,7 @@ add_action( 'wp_enqueue_scripts', 'reshaemo_scripts' );
 /**
  * Implement Shortcodes for Galleries on the Prices Page (Цены).
  */
-//require get_template_directory() . '/inc/shortcodes.php';
+require get_template_directory() . '/inc/shortcodes.php';
 include('shortcodes/galleries.php');
 
 /**

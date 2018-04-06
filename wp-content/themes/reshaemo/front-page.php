@@ -76,7 +76,7 @@ get_header(); ?>
                         </div><!-- .dipl_contains -->
 					</div>
 					<div class="col-5 monitor">
-                        <a href="http://diplom-cena.com/videoprezentacija-kompanii/">
+                        <a href="/videoobzor-diplomov/">
                             <img src="<?php bloginfo('template_url'); ?>/images/mntr-play.png" alt="Монтитор компьютера">
                         </a>
                     </div>
