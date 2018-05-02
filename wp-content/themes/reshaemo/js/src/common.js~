@@ -22,6 +22,31 @@ $(document).ready(function(){
     responsiveClass:true,
     navText:["<i class='fa fa-angle-left fa-2x'></i>","<i class='fa fa-angle-right fa-2x'></i>"],
     responsive:{
+        /*0:{
+            items:1,
+            nav:true,
+            loop: true
+        },
+        480:{
+            items:2,
+            nav:true,
+            loop: true
+        },
+        767:{
+            items:3,
+            nav:true,
+            loop: true
+        },
+        992:{
+            items:3,
+            nav:true,
+            loop:true
+        },
+        1200:{
+            items:4,
+            nav:true,
+            loop:true
+        }*/
         0:{
             items:1,
             nav:true,
@@ -50,17 +75,31 @@ $(document).ready(function(){
     }
   });
 
-    var isFirefox = typeof InstallTrigger !== 'undefined';
-    console.log(isFirefox);
-    if (isFirefox)
-    {
-      // действия для браузера Mozilla Firefox (обеспечение кроссбраузерности)
-      jQuery('form.mainpf legend legend').css('paddingTop', '1rem');
-      jQuery('form.wpcf7-form legend').css('paddingTop', '1rem');     
-      jQuery('form.mainpf input.form-control').css('marginBottom', '11px');
-      jQuery('form.wpcf7-form input.wpcf7-form-control').css('marginBottom', '10.5px');
-      jQuery('.aside-catalogue').css('marginTop', '47px');
-    }
+
+/**
+ * Прокрутка списка подстраниц страницы Видеопрезентация компании.
+ *
+ */ 
+/*let list = (e) => {
+  let list = e.children[1], step = list.clientHeight;
+  [...list_1.querySelectorAll("[data-scroll]")].forEach(e => e.addEventListener("click", () => list.scrollTop += Number(e.dataset.scroll) ? step : -step));
+}
+list(list_1);*/
+
+
+if($.browser.mozilla)
+{
+  // действия для браузера Mozilla Firefox (обеспечение кроссбраузерности)
+  jQuery('form.mainpf legend legend').css('paddingTop', '1rem');
+  jQuery('form.wpcf7-form legend').css('paddingTop', '1rem');     
+  jQuery('form.mainpf input.form-control').css('marginBottom', '11px');
+  jQuery('form.wpcf7-form input.wpcf7-form-control').css('marginBottom', '11px');
+  jQuery('.aside-catalogue').css('marginTop', '47px');
+}
+
+
+
+
 
 
 });

@@ -142,7 +142,8 @@ form.wpcf7-form {
     input.wpcf7-form-control,
     select.wpcf7-form-control {
         align-self: center;
-        margin-bottom: .36rem;
+        //margin-bottom: .36rem;
+        margin-bottom: -.27rem;
     }
     span.wpcf7-not-valid-tip {
         flex-direction: unset;

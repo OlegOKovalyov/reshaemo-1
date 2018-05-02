@@ -22687,7 +22687,7 @@ $(document).ready(function(){
 list(list_1);*/
 
 
-if(jQuery.browser.mozilla)
+/*if(jQuery.browser.mozilla)
 {
   // действия для браузера Mozilla Firefox (обеспечение кроссбраузерности)
   jQuery('form.mainpf legend legend').css('paddingTop', '1rem');
@@ -22695,11 +22695,29 @@ if(jQuery.browser.mozilla)
   jQuery('form.mainpf input.form-control').css('marginBottom', '11px');
   jQuery('form.wpcf7-form input.wpcf7-form-control').css('marginBottom', '11px');
   jQuery('.aside-catalogue').css('marginTop', '47px');
-}
+}*/
 
+/*    if(navigator.appCodeName = 'Mozilla')
+    {
+      // действия для браузера Mozilla Firefox (обеспечение кроссбраузерности)
+      jQuery('form.mainpf legend legend').css('paddingTop', '1rem');
+      jQuery('form.wpcf7-form legend').css('paddingTop', '1rem');     
+      jQuery('form.mainpf input.form-control').css('marginBottom', '11px');
+      jQuery('form.wpcf7-form input.wpcf7-form-control').css('marginBottom', '11px');
+      jQuery('.aside-catalogue').css('marginTop', '47px');
+    }*/
 
-
-
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+    console.log(isFirefox);
+    if (isFirefox)
+    {
+      // действия для браузера Mozilla Firefox (обеспечение кроссбраузерности)
+      jQuery('form.mainpf legend legend').css('paddingTop', '1rem');
+      jQuery('form.wpcf7-form legend').css('paddingTop', '1rem');     
+      jQuery('form.mainpf input.form-control').css('marginBottom', '11px');
+      jQuery('form.wpcf7-form input.wpcf7-form-control').css('marginBottom', '10.5px');
+      jQuery('.aside-catalogue').css('marginTop', '47px');
+    }
 
 
 });
