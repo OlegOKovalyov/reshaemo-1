@@ -16,7 +16,7 @@ function show_diplbaklvr201418( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/baklvr/bakalavr-201418-640x449.jpg"  data-fancybox data-caption="Диплом бакалавра с 2014 по 2018 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/baklvr/bakalavr-201418-640x449.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/baklvr/bakalavr-201418-104x73.jpg" alt="Card image cap" width="104" height="73"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом бакалавра</span><br /> с 2014 по 2018 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -44,7 +44,7 @@ function show_diplbaklvr201013( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/baklvr/bakalavr-201013-640x449.jpg"  data-fancybox data-caption="Диплом бакалавра с 2010 по 2013 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/baklvr/bakalavr-201013-640x449.jpg" alt="Card image cap"></a>	    	
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/baklvr/bakalavr-201013-104x74.jpg" alt="Card image cap" width="104" height="73"></a>	    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом бакалавра</span><br /> с 2010 по 2013 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -73,7 +73,7 @@ function show_diplbaklvr200409( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/baklvr/bakalavr-200409-640x449.jpg"  data-fancybox data-caption="Диплом бакалавра с 2004 по 2009 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/baklvr/bakalavr-200409-640x449.jpg" alt="Card image cap"></a>	    	
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/baklvr/bakalavr-200409-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом бакалавра</span><br /> с 2004 по 2009 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -101,7 +101,7 @@ function show_diplbaklvr199703( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/baklvr/bakalavr-199703-640x449.jpg"  data-fancybox data-caption="Диплом бакалавра с 1997 по 2003 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/baklvr/bakalavr-199703-640x449.jpg" alt="Card image cap"></a>	    	
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/baklvr/bakalavr-199703-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом бакалавра</span><br /> с 1997 по 2003 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>

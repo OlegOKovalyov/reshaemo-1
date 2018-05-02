@@ -74,9 +74,9 @@ function show_videomiscdipls( $atts, $content, $tag ) {
 /** 
  * Блок из двух видео на подстраницах подстраниц страницы Видеообзор дипломов. Использование:
  * - в админке WordPress:
- * [videoiframe src1="Источник видео 1" src2="Источник видео 2"][/videoiframe]
+ * [videoiframe src1="Источник видео 1" src2="Источник видео 2" name1="Заголовок 1" name1="Заголовок 2"][/videoiframe]
  * - в файле-шаблоне:
- * <?php echo do_shortcode('[videoiframe src1="Источник видео 1" src2="Источник видео 2"][/videoiframe]'); ?>
+ * <?php echo do_shortcode('[videoiframe src1="Источник видео 1" src2="Источник видео 2" name1="Заголовок 1" name1="Заголовок 2"][/videoiframe]'); ?>
  */
 add_shortcode( 'videoiframe', 'show_videoiframe');
 function show_videoiframe( $atts, $content, $tag ) {

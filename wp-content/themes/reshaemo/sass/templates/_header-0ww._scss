@@ -1,0 +1,345 @@
+body {
+    font-family: "Roboto-Regular", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Roboto-Medium";
+}
+
+/* Убираем рамку FireFox */
+* {
+  outline: 0 !important;
+}
+
+section {
+    color: #3c5aae;
+}
+
+/* Верхнее широкое меню */
+.site-header {
+    background: #3C5BAE;
+    box-shadow: 2px 2px 3px #888;
+    margin-bottom: 6px;
+}
+
+.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 105px solid transparent;
+    border-right: 10px solid #BFE0F1;
+    border-bottom: 105px solid transparent;
+    margin-right: -15px;
+}
+
+.triangle-right {
+    width: 0;
+    width: 0;
+    height: 0;
+    border-top: 105px solid transparent;
+    border-left: 10px solid #BFE0F1;
+    border-bottom: 105px solid transparent;
+}
+
+.top-wrap {
+    .toplarge-menu {
+        display: flex;
+        nav.navbar {
+            align-self: stretch;
+            background: #343a40;
+            margin-bottom: 25px;
+            padding: 0;
+            #navbarNavTop,
+            #navbarNavBtm,
+            #navbarNavBtm2 {
+                align-self: stretch;
+                ul.navbar-nav {
+                    align-self: stretch;
+                    background: #E9F8FF; 
+                    margin-left: 0;
+                    height: 180px;
+                    a {
+                        font-family: "Roboto-Medium";
+                    }
+                    a:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        ul li {
+            box-shadow: 0 8px 7px -7px #222;
+            margin-bottom: -22px;
+            background-color: #BFE0F1;
+            padding: 0 13px;
+            margin-right: 5px;
+            width: 20%;
+        }
+        & ul li:last-child {
+            margin-right: 0;
+        }
+        .navbar-expand-lg {
+            display: flex;
+        }    
+    }  
+}  
+
+.site-branding {
+    color: #fff;
+    margin-top: 5px;
+    margin-left: -22px;
+    .brand-card-body {
+        text-align: center;
+        a {
+            color: #fff;
+            &:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+    h6 {
+        color: #fff;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: normal;
+    }
+    p {
+        line-height: 1.4;
+        margin-bottom: 4px;
+        &.brand-card-tel1 {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+        &.brand-card-tel2 {
+            font-size: 1.1rem;
+        }
+    }
+    h4.brand-card-title {
+        border-top: 4px solid #E9F8FF;
+        border-bottom: 4px solid #E9F8FF;
+        font-size: 2.15rem;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        a {
+            color: #fff;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* Отдельный пункт верхнего меню */
+li.nav-item .nav-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    & .nav-card-img-top {
+        display: block;
+        margin: 15px auto;
+    }
+    & .nav-card-body {
+        text-align: center;
+        font-size: 1.21rem;
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-top: 5px;
+        letter-spacing: -0.5px;
+        a.nav-link {
+            color: #3C5BAE;
+            display: block;
+        }
+        a.nav-link:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+/* Внедряем верхнее широкое меню в WordPress: top-large-menu */
+#navbarNavTop,
+#navbarNavBtm {
+    ul.navbar-nav {
+        & > li {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-right: 4px;
+            width: 100%;
+            &:last-child {
+                margin-right: 0;
+                /* padding-right: 22px; */
+            }
+            &.current-menu-item {
+                background-color: darken( #BFE0F1, 3% ); 
+                & > a {
+                    color: #fff;
+                }
+            }
+            &.menu-item-392 > a {
+                &:before {
+                    content: "";
+                    position: absolute;                     
+                    top: 13px;
+                    left: 6%; // 40px;
+                    background: url(images/i_topmenu1.png);
+                    width: 70px;
+                    height: 70px;                       
+                }
+            }
+            &.menu-item-395 > a {
+                &:before {
+                    content: "";
+                    position:absolute;
+                    //z-index: -1;
+                    top: 25px;
+                    left: 26%;
+                    width: 70px;
+                    height: 70px;
+                    background: url(images/i_topmenu2.png);
+                }
+            }
+            &.menu-item-400 > a {
+                &:before {
+                    content: "";
+                    position:absolute;
+                    //z-index: -1;
+                    top: 18px;
+                    left: 46%;
+                    width: 70px;
+                    height: 70px;
+                    background: url(images/i_topmenu3.png);
+                }
+            }
+            &.menu-item-403 > a {
+                &:before {
+                    content: "";
+                    position:absolute;
+                    //z-index: -1;
+                    top: 22px;
+                    left: 66%;
+                    width: 70px;
+                    height: 70px;
+                    background: url(images/i_topmenu4.png);
+                }
+            }   
+            &.menu-item-406 > a {
+                &:before {
+                    content: "";
+                    position:absolute;
+                    //z-index: -1;
+                    top: 18px;
+                    left: 86%;
+                    width: 70px;
+                    height: 70px;
+                    background: url(images/i_topmenu5.png);
+                }
+            }                                               
+            & > a {
+                text-align: center;
+                font-size: 1rem;
+                text-transform: uppercase;
+                line-height: 1.2;
+                font-weight: 500;
+                letter-spacing: -0.5px;
+                color: #3C5BAE;
+                display: block;
+                margin: 0;
+                margin-bottom: 35px !important;
+                padding-right: .5rem;
+                padding-left: .5rem;
+                max-width: 150px; // меняем от 135px до 150px
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+/* Верхнее главное узкое меню */
+.topnarrow-menu {
+    box-shadow: 2px 3px 5px #888;
+    padding: 0;
+    .navbar-brand {
+        color: rgb(101, 68, 4);
+        font-size: smaller;
+        line-height: 1.2;
+    }
+    & #navbarNav {
+        align-self: stretch;
+        justify-content: flex-end;
+        ul.navbar-nav {
+            align-self: stretch;
+            align-items: center;
+            li a {
+                color: rgb(101, 68, 4);
+                font-size: .85rem;
+                line-height: 1.2;
+                padding: .8rem 1rem;
+                display: inline-block;
+                &:hover {
+                    text-decoration: none;
+                    background-color: lighten(#88E769, 7.5%);
+                }                
+            }
+        }
+    }
+    .current_page_item a,
+    .current-page-ancestor a {
+        text-decoration: none;
+        background-color: #FABA36;
+        &:hover {
+            background-color: #FABA36 !important;
+        }
+    }
+}
+
+.bg-light {
+    background-color: #88E769 !important;
+}   
+
+.navbar-light .navbar-toggler:hover {
+    cursor: pointer;
+}
+
+/* Dimox Bredcrumbs в главном узком меню */
+.brdcrmb-wrap {
+    align-items: flex-start;
+    display: flex;
+    margin-left: -5%; 
+    img {
+        align-self: center;
+    }    
+    .breadcrumbs {
+        background-color: #88E769;
+        font-size: .85rem;
+        margin-bottom: 0;
+        margin-left: .3rem;
+        padding: 0;
+        .current {
+            text-transform: lowercase; 
+            &:after {
+                content: ' ...';
+            }           
+        }
+    }
+}
+
+/* Выберите ваш город: */
+.choose-city {
+    display: flex;
+    margin-left: -20px;
+    select {
+        background: #88E769;
+        border-radius: .6rem;
+        font-size: 0.7rem;
+        width: 95%;
+        height: 2.1rem;
+        &:last-child {
+            font-size: 0.8rem;
+        }
+    }
+}

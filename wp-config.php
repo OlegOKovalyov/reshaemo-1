@@ -78,6 +78,9 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 
+// Данное решение позволит сократить количество загружаемых языковых настроек только на нужные. В стандартном коде WordPress загружает много ненужных параметров:
+if (strpos($_SERVER['REQUEST_URI'], 'wp-admin')) define ('WPLANG', 'ru_RU'); else define ('WPLANG', 'ru_RU_lite');
+
 /* Это всё, дальше не редактируем. Успехов! */
 
 /** Абсолютный путь к директории WordPress. */

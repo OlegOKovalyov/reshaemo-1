@@ -62,11 +62,10 @@ get_header(); ?>
 					<h2>Видеопрезентация компании</h2>					
 					<div class="col-12 col-md-7 video-links">
 						<nav class="nav flex-column">
-							<a class="nav-link" href="#">Диплом о высшем обрзовании с 2014 по 2017 год</a>
-							<a class="nav-link" href="#">Диплом о высшем обрзовании с 2014 по 2017 год</a>
-							<a class="nav-link" href="#">Диплом о высшем обрзовании с 2014 по 2017 год</a>
-							<a class="nav-link" href="#">Диплом о высшем обрзовании с 2014 по 2017 год</a>
-							<a class="nav-link" href="#">Диплом о высшем обрзовании с 2014 по 2017 год</a>
+                            <a class="nav-link" href="/videoobzor-diplomov-o-vysshem/">Видеообзор дипломов о высшем образовании</a>
+                            <a class="nav-link" href="/videoobzor-diplomov-o-srednem-obrazovanii/">Видеообзор дипломов о среднем образовании</a>
+                            <a class="nav-link" href="/videoobzor-diplomov-o-sredne-specialnom-obrazovanii/">Видеообзор дипломов средне-специальном образовании</a>
+                            <a class="nav-link" href="/videoobzor-spravok-svidetelstv/">Видеообзор справок и свидетельств</a>
 						</nav>
                         <div class="dipl_contains">
     						<h4>Диплом, который вы решите приобрести у нас, содержит:</h4>

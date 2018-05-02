@@ -16,7 +16,7 @@ function show_dipluchptu201118( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/uchptu/uchptu-201118-640x449.jpg"  data-fancybox data-caption="Диплом училища-ПТУ с 2011 по 2018 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/uchptu/uchptu-201118-640x449.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/uchptu/uchptu-201118-104x73.jpg" alt="Card image cap" width="104" height="73"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом училища-ПТУ</span><br /> с 2011 по 2018 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -44,7 +44,7 @@ function show_dipluchptu200710( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/uchptu/uchptu-200710-640x449.jpg"  data-fancybox data-caption="Диплом училища-ПТУ с 2007 по 2010 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/uchptu/uchptu-200710-640x449.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/uchptu/uchptu-200710-104x73.jpg" alt="Card image cap" width="104" height="73"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом училища-ПТУ</span><br /> с 2007 по 2010 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -72,7 +72,7 @@ function show_dipluchptu199406( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/uchptu/uchptu-199406-640x449.jpg"  data-fancybox data-caption="Диплом училища-ПТУ с 1994 по 2006 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/uchptu/uchptu-199406-640x449.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/uchptu/uchptu-199406-104x73.jpg" alt="Card image cap" width="104" height="73"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом училища-ПТУ</span><br /> с 1994 по 2006 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -100,7 +100,7 @@ function show_dipluchptudo1994( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/uchptu/uchptu-do-1994-640x449.jpg"  data-fancybox data-caption="Диплом училища-ПТУ до 1994 года">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/uchptu/uchptu-do-1994-640x449.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/uchptu/uchptu-do-1994-104x73.jpg" alt="Card image cap" width="104" height="73"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом училища-ПТУ</span><br />до 1994 года<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>

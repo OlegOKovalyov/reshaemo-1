@@ -15,6 +15,12 @@
 /*! add owl.carousel.js */
 //= ../../owlcarousel/dist/owl.carousel.js
 
+/*! add contact-form-7.js */
+//= ../../../../plugins/contact-form-7/includes/js/scripts.js
+
+/*! add fancybox.js */
+//= ../../fancybox/dist/jquery.fancybox.js
+
 
 /*! add common.js */
 //= common.js

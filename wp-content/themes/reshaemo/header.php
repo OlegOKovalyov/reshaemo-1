@@ -18,7 +18,7 @@
   <meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"> -->
 
     <!--[if lt IE 9]>
         <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
@@ -46,7 +46,7 @@
             <?php else: ?>
                 <div class="col-lg-6 col-md-11 col-sm-10 brdcrmb-wrap">
 
-                    <img src="<?php echo bloginfo('template_url'); ?>/images/i_homem.png" alt="">
+                    <img src="<?php echo bloginfo('template_url'); ?>/images/i_homem.png" alt="Home-icon" width="30" height="27">
 
             <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
 

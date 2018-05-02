@@ -18,7 +18,7 @@ function show_attst201418( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/attst/attestat11-201418-640x451.jpg"  data-fancybox data-caption="Аттестат школы за 11 класс с 2014 по 2018 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat11-201418-640x451.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat11-201418-104x73.jpg" alt="Card image cap" width="104" height="73"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Аттестат школы за 11 класс</span><br /> с 2014 по 2018 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -45,8 +45,8 @@ function show_attst201013( $atts, $content, $tag ) {
 	?>
 
 	    <div class="card card-vo">
-			<a href="<?php echo bloginfo('template_url'); ?>/images/attst/attestat-201013-640x466.jpg"  data-fancybox data-caption="Аттестат школы за 11 класс с 2010 по 2013 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat-201013-640x466.jpg" alt="Card image cap"></a>	    	
+			<a href="<?php echo bloginfo('template_url'); ?>/images/attst/attestat11-201013-640x466.jpg"  data-fancybox data-caption="Аттестат школы за 11 класс с 2010 по 2013 год">
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat11-201013-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Аттестат школы за 11 класс</span><br /> с 2010 по 2013 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -75,7 +75,7 @@ function show_attst199409( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/attst/attestat-199409-640x454.jpg"  data-fancybox data-caption="Аттестат школы за 11 класс с 1994 по 2009 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat-199409-640x454.jpg" alt="Card image cap"></a>	    	
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat-199409-104x73.jpg" alt="Card image cap" width="104" height="73"></a>    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Аттестат школы за 11 класс</span><br /> с 1994 по 2009 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -103,7 +103,7 @@ function show_attstdo1994( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/attst/attestat-do-1994-640x451.jpg"  data-fancybox data-caption="Аттестат школы за 11 класс до 1994 года">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat-do-1994-640x451.jpg" alt="Card image cap"></a>	    	
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat-do-1994-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Аттестат школы за 11 класс</span><br />до 1994 года<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -133,7 +133,7 @@ function show_attst201418_9( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-201418-640x450.jpg"  data-fancybox data-caption="Аттестат школы за 9 класс с 2014 по 2018 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-201418-640x450.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-201418-104x73.jpg" alt="Card image cap" width="104" height="73"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Аттестат школы за 9 класс</span><br /> с 2014 по 2018 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -161,7 +161,7 @@ function show_attst201013_9( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-201013-640x450.jpg"  data-fancybox data-caption="Аттестат школы за 9 класс с 2010 по 2013 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-201013-640x450.jpg" alt="Card image cap"></a>	    	
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-201013-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Аттестат школы за 9 класс</span><br /> с 2010 по 2013 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -189,7 +189,7 @@ function show_attst200709_9( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-200709-640x450.jpg"  data-fancybox data-caption="Аттестат школы за 9 класс с 2007 по 2009 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-200709-640x450.jpg" alt="Card image cap"></a>	    	
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-200709-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Аттестат школы за 9 класс</span><br /> с 2007 по 2009 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -217,7 +217,7 @@ function show_attst199406_9( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-199406-640x450.jpg"  data-fancybox data-caption="Аттестат школы за 9 класс с 1994 по 1996 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-199406-640x450.jpg" alt="Card image cap"></a>	    	
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/attst/attestat9-199406-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Аттестат школы за 9 класс</span><br />с 1994 по 1996 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>

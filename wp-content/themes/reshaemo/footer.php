@@ -45,37 +45,14 @@
 
 <!-- jQuery Fancybox 3 -->
 <div style="display: none;" id="modal-callback">
-	<?php echo do_shortcode('[contact-form-7 id="857" title="Заказать звонок"]'); ?>
+	<?php echo do_shortcode('[contact-form-7 id="857" title="Заказать звонок"]'); // 1880 loc:857 ?>
 </div>
 <div style="display: none;" id="modal-callback-2">
-	<?php echo do_shortcode('[contact-form-7 id="857" title="Заказать звонок"]'); ?>
+	<?php echo do_shortcode('[contact-form-7 id="857" title="Заказать звонок"]'); // 1880 loc:857 ?>
 </div>
 <div style="display: none;" id="modal-conslt">
-	<?php echo do_shortcode('[contact-form-7 id="858" title="Заказать консультацию"]'); ?>
+	<?php echo do_shortcode('[contact-form-7 id="858" title="Заказать консультацию"]'); // 1881 loc:858 ?>
 </div>
-
-<script>
-	/**
-	 * Прокрутка списка подстраниц страницы Видеопрезентация компании.
-	 *
-	 */	
-	let list = (e) => {
-	  let list = e.children[1], step = list.clientHeight;
-	  [...list_1.querySelectorAll("[data-scroll]")].forEach(e => e.addEventListener("click", () => list.scrollTop += Number(e.dataset.scroll) ? step : -step));
-	}
-	list(list_1);
-</script>
-<script>
-	if(jQuery.browser.mozilla)
-	{
-	  // действия для браузера Mozilla Firefox (обеспечение кроссбраузерности)
-	  jQuery('form.mainpf legend legend').css('paddingTop', '1rem');
-	  jQuery('form.wpcf7-form legend').css('paddingTop', '1rem');	  
-	  jQuery('form.mainpf input.form-control').css('marginBottom', '11px');
-	  jQuery('form.wpcf7-form input.wpcf7-form-control').css('marginBottom', '11px');
-	  jQuery('.aside-catalogue').css('marginTop', '47px');
-	}
-</script>
 
 <?php wp_footer(); ?>
 

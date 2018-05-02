@@ -16,7 +16,7 @@ function show_diplspec201417( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-2014-spec-640x449.jpg"  data-fancybox data-caption="Диплом специалиста с 2014 по 2018 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-2014-spec-640x449.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-2014-spec-104x73.jpg" alt="Card image cap" width="104" height="73"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 2014 по 2018 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -44,7 +44,7 @@ function show_diplspec201113( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-201113-spec-640x449.jpg"  data-fancybox data-caption="Диплом специалиста с 2011 по 2013 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-201113-spec-640x449.jpg" alt="Card image cap"></a>	    	
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-201113-spec-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 2011 по 2013 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -72,7 +72,7 @@ function show_diplspec200911( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-200911-spec-640x449.jpg"  data-fancybox data-caption="Диплом специалиста с 2009 по 2011 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-200911-spec-640x449.jpg" alt="Card image cap"></a>	    	
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-200911-spec-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 2009 по 2011 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -100,7 +100,7 @@ function show_diplspec200408( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-20048-spec-640x449.jpg"  data-fancybox data-caption="Диплом специалиста с 2004 по 2008 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-20048-spec-640x449.jpg" alt="Card image cap"></a>	    	
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-20048-spec-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 2004 по 2008 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -128,7 +128,7 @@ function show_diplspec199703( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-199703-spec-640x449.jpg"  data-fancybox data-caption="Диплом специалиста с 1997 по 2003 год">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-199703-spec-640x449.jpg" alt="Card image cap"></a>	    	
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-199703-spec-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	    	
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> с 1997 по 2004 год<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -156,7 +156,7 @@ function show_diplspecdo1996( $atts, $content, $tag ) {
 
         <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-vuza-do-1996-640x449.jpg"  data-fancybox data-caption="Диплом специалиста до 1996 года СССР">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-vuza-do-1996-640x449.jpg" alt="Card image cap"></a>	            
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-vuza-do-1996-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	            
             <div class="card-body">
                 <p class="card-text"><span class="upcase">Диплом специалиста</span><br /> до 1996 года - СССР<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
                 <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -184,7 +184,7 @@ function show_diplspecred201418( $atts, $content, $tag ) {
 
         <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/specs/spec-red-640x450.jpg"  data-fancybox data-caption="Диплом специалиста с отличием 2014 - 2018 года">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/spec-red-640x450.jpg" alt="Card image cap"></a>	            
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/spec-red-104x73.jpg" alt="Card image cap" width="104" height="73"></a>	            
             <div class="card-body">
                 <p class="card-text"><span class="upcase">Диплом специалиста</span><br />с отличием<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
                 <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -212,7 +212,7 @@ function show_diplspecnew201417( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-2014-spec-640x449.jpg"  data-fancybox data-caption="Диплом специалиста с 2014 по 2018 год нового образца">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-2014-spec-640x449.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/specs/diplom-2014-spec-104x73.jpg" alt="Card image cap" width="104" height="73"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Диплом специалиста</span><br />нового образца<br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>

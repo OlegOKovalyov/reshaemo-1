@@ -18,19 +18,21 @@ function show_galvyshobrz( $atts, $content, $tag ) {
             <h2><?php echo get_the_title($child_page); ?></h2>
             <div class="gallery-row">
 
-                    <?php
-                    $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                    foreach( $mypages as $page ) {      
-                        $content = $page->post_content;
-                        // пропустим страницу без контента
-                        if ( ! $content ) continue;
-                        $content = apply_filters( 'the_content', $content );
-                        ?>
-                        
-                        <div class="entry"><?php echo $content; ?></div>
+                <?php
+                $args = reshaemo_is_mobile( $child_page, 1 );
+                //$mypages = get_pages( array( 'parent' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc', 'hierarchical' => false, 'number' => 1 ) );
+                $mypages = get_pages( $args ); 
+                foreach( $mypages as $page ) {      
+                    $content = $page->post_content;
+                    // пропустим страницу без контента
+                    if ( ! $content ) continue;
+                    $content = apply_filters( 'the_content', $content );
+                    ?>
+                    
+                    <div class="entry"><?php echo $content; ?></div>
 
-                        <?php
-                    } ?>
+                    <?php
+                } ?>
 
             </div><!-- .row (inner) -->
 
@@ -56,19 +58,21 @@ function show_galposdipobrz( $atts, $content, $tag ) {
             <h2><?php echo get_the_title($child_page); ?></h2>
             <div class="gallery-row">
 
-                    <?php
-                    $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                    foreach( $mypages as $page ) {      
-                        $content = $page->post_content;
-                        // пропустим страницу без контента
-                        if ( ! $content ) continue;
-                        $content = apply_filters( 'the_content', $content );
-                        ?>
-                        
-                        <div class="entry"><?php echo $content; ?></div>
+                <?php
+                $args = reshaemo_is_mobile( $child_page, 1 );
+                //$mypages = get_pages( array( 'parent' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc', 'hierarchical' => false, 'number' => 1 ) );
+                $mypages = get_pages( $args ); 
+                foreach( $mypages as $page ) {      
+                    $content = $page->post_content;
+                    // пропустим страницу без контента
+                    if ( ! $content ) continue;
+                    $content = apply_filters( 'the_content', $content );
+                    ?>
+                    
+                    <div class="entry"><?php echo $content; ?></div>
 
-                        <?php
-                    } ?>
+                    <?php
+                } ?>
 
             </div><!-- .row (inner) -->
 
@@ -87,26 +91,28 @@ add_shortcode( 'galsrspecobrz', 'show_galsrspecobrz');
 function show_galsrspecobrz( $atts, $content, $tag ) {
 
     ob_start();
-        $child_pages = array( "470", "875" ); ?>
+        $child_pages = array( "470", "875" ); // 1928 ?>
 
         <?php foreach( $child_pages as $child_page ) { ?>
 
             <h2><?php echo get_the_title($child_page); ?></h2>
             <div class="gallery-row">
 
-                    <?php
-                    $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                    foreach( $mypages as $page ) {      
-                        $content = $page->post_content;
-                        // пропустим страницу без контента
-                        if ( ! $content ) continue;
-                        $content = apply_filters( 'the_content', $content );
-                        ?>
-                        
-                        <div class="entry"><?php echo $content; ?></div>
+                <?php
+                $args = reshaemo_is_mobile( $child_page, 1 );
+                //$mypages = get_pages( array( 'parent' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc', 'hierarchical' => false, 'number' => 1 ) );
+                $mypages = get_pages( $args );
+                foreach( $mypages as $page ) {      
+                    $content = $page->post_content;
+                    // пропустим страницу без контента
+                    if ( ! $content ) continue;
+                    $content = apply_filters( 'the_content', $content );
+                    ?>
+                    
+                    <div class="entry"><?php echo $content; ?></div>
 
-                        <?php
-                    } ?>
+                    <?php
+                } ?>
 
             </div><!-- .row (inner) -->
 
@@ -132,19 +138,21 @@ function show_galattschool( $atts, $content, $tag ) {
             <h2><?php echo get_the_title($child_page); ?></h2>
             <div class="gallery-row">
 
-                    <?php
-                    $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                    foreach( $mypages as $page ) {      
-                        $content = $page->post_content;
-                        // пропустим страницу без контента
-                        if ( ! $content ) continue;
-                        $content = apply_filters( 'the_content', $content );
-                        ?>
-                        
-                        <div class="entry"><?php echo $content; ?></div>
+                <?php
+                $args = reshaemo_is_mobile( $child_page, 1 );
+                //$mypages = get_pages( array( 'parent' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc', 'hierarchical' => false, 'number' => 1 ) );
+                $mypages = get_pages( $args );                    
+                foreach( $mypages as $page ) {      
+                    $content = $page->post_content;
+                    // пропустим страницу без контента
+                    if ( ! $content ) continue;
+                    $content = apply_filters( 'the_content', $content );
+                    ?>
+                    
+                    <div class="entry"><?php echo $content; ?></div>
 
-                        <?php
-                    } ?>
+                    <?php
+                } ?>
 
             </div><!-- .row (inner) -->
 
@@ -153,7 +161,7 @@ function show_galattschool( $atts, $content, $tag ) {
 }
 
 /**
- * Галерея документов Аттестаты школы для страницы Цены. Использование:
+ * Галерея документов Справки и свидетельства для страницы Цены. Использование:
  * - в админке WordPress:
  * [galsprsva]
  * - в файле-шаблоне:
@@ -163,29 +171,33 @@ add_shortcode( 'galsprsva', 'show_galsprsva');
 function show_galsprsva( $atts, $content, $tag ) {
 
     ob_start();
-        $child_pages = array( "511", "812" ); ?>
+        $child_pages = array( "511", "812" ); //1845 ?>  
 
         <?php foreach( $child_pages as $child_page ) { ?>
+        <?php  if( ! wp_is_mobile() ) : ?>
 
             <h2><?php echo get_the_title($child_page); ?></h2>
             <div class="gallery-row">
 
-                    <?php
-                    $mypages = get_pages( array( 'child_of' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
-                    foreach( $mypages as $page ) {      
-                        $content = $page->post_content;
-                        // пропустим страницу без контента
-                        if ( ! $content ) continue;
-                        $content = apply_filters( 'the_content', $content );
-                        ?>
-                        
-                        <div class="entry"><?php echo $content; ?></div>
+                <?php
+                $args = reshaemo_is_mobile( $child_page, 1 );
+                //$mypages = get_pages( array( 'parent' => $child_page, 'sort_column' => 'post_date', 'sort_order' => 'asc', 'hierarchical' => false, 'number' => 1 ) );
+                $mypages = get_pages( $args );                     
+                foreach( $mypages as $page ) {      
+                    $content = $page->post_content;
+                    // пропустим страницу без контента
+                    if ( ! $content ) continue;
+                    $content = apply_filters( 'the_content', $content );
+                    ?>
+                    
+                    <div class="entry"><?php echo $content; ?></div>
 
-                        <?php
-                    } ?>
+                    <?php
+                } ?>
 
             </div><!-- .row (inner) -->
 
+        <?php endif; ?>
         <?php }
     return ob_get_clean();
 }
@@ -226,4 +238,4 @@ function show_galdiplspec( $atts, $content, $tag ) {
 
         <?php }
     return ob_get_clean();
-}
+} ?>

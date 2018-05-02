@@ -16,7 +16,7 @@ function show_akademspvk( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/sprvk/akademspavka-357x517.jpg"  data-fancybox data-caption="Академическая справка">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/akademspavka-357x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/akademspavka-90x130.jpg" alt="Card image cap" width="90" height="130"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Академическая справка</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -44,7 +44,7 @@ function show_archspvk( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/sprvk/archive_spavka_357x517.jpg"  data-fancybox data-caption="Архивная справка">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/archive_spavka_357x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/archive_spavka_90x130.jpg" alt="Card image cap" width="90" height="130"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Архивная<br /> справка</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -72,7 +72,7 @@ function show_svyzovspvk( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/sprvk/spravka_vyzov_ses_357x517.jpg"  data-fancybox data-caption="Справка-вызов на сессию">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/spravka_vyzov_ses_357x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/spravka_vyzov_ses_90x130.jpg" alt="Card image cap" width="90" height="130"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Справка-вызов<br /> на сессию</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -100,7 +100,7 @@ function show_obuchspvk( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/sprvk/obuchenii_spravka_357x517.jpg"  data-fancybox data-caption="Справка об обучении">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/obuchenii_spravka_357x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/obuchenii_spravka_90x130.jpg" alt="Card image cap" width="90" height="130"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Справка об обучении</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -128,7 +128,7 @@ function show_voenkomspvk( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/sprvk/voenkomat_spravka_357x517.jpg"  data-fancybox data-caption="Справка в военкомат">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/voenkomat_spravka_357x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/voenkomat_spravka_90x130.jpg" alt="Card image cap" width="90" height="130"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Справка в военкомат</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -156,7 +156,7 @@ function show_vuzdiplpr( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/sprvk/prilozhenie-diplomu-vuz-357x517.jpg"  data-fancybox data-caption="Приложение к диплому ВУЗа">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/prilozhenie-diplomu-vuz-357x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/prilozhenie-diplomu-vuz-90x130.jpg" alt="Card image cap" width="90" height="130"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Приложение к диплому ВУЗа</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -184,7 +184,7 @@ function show_ssuzdiplpr( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/sprvk/prilozhenie_ssuza_357x517.jpg"  data-fancybox data-caption="Приложение к диплому ССУЗа">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/prilozhenie_ssuza_357x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/prilozhenie_ssuza_90x130.jpg" alt="Card image cap" width="90" height="130"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Приложение к диплому ССУЗа</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -212,7 +212,7 @@ function show_diplnepolnvysh( $atts, $content, $tag ) {
 
         <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/sprvk/dipl-neplnvysh-357x517.jpg"  data-fancybox data-caption="Диплом о неполном высшем образовании">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/dipl-neplnvysh-357x517.jpg" alt="Card image cap"></a>	            
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/sprvk/dipl-neplnvysh-90x130.jpg" alt="Card image cap" width="90" height="130"></a>	            
             <div class="card-body">
                 <p class="card-text"><span class="upcase">О неполном<br />высшем</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
                 <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>

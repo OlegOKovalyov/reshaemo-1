@@ -62,18 +62,22 @@ get_header(); ?>
 
                         <div class="video-links list" id="list_1">
                             <span id="up-marker" data-scroll="0"></span>
-
-                                    <?php
-                                      $postid = '514';                                    
-                                      $children = wp_list_pages('title_li=&child_of='.$postid.'&echo=0'.'&depth=1');
-                                      if ($children) { ?>
-                                      <ul class="nav">
-                                      <?php echo $children; ?>
-                                      </ul>
-                                    <?php } ?>
-
+                              <ul class="nav">
+                                <li class="page-item">                                      
+                                    <a class="" href="/videoobzor-diplomov-o-vysshem/">Видеообзор дипломов о высшем образовании</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="" href="/videoobzor-diplomov-o-srednem-obrazovanii/">Видеообзор дипломов о среднем образовании</a>
+                                </li>
+                                <li class="page-item">    
+                                    <a class="" href="/videoobzor-diplomov-o-sredne-specialnom-obrazovanii/">Видеообзор дипломов средне-специальном образовании</a>
+                                </li>
+                                <li class="page-item">    
+                                    <a class="" href="/videoobzor-spravok-svidetelstv/">Видеообзор справок и свидетельств</a>
+                                </li>                                          
+                              </ul>
                             <span id="down-marker" data-scroll="1"></span>
-                            <a class="see-video" href="<?php echo home_url() . '/videoprezentacija-kompanii/' ?>">смотреть все видео о документах</a>
+                            <a class="see-video" href="<?php echo home_url() . '/videoobzor-diplomov/' ?>">смотреть все видео о документах</a>
                         </div><!-- .video-links -->                        
                       
                     </div><!-- .row -->

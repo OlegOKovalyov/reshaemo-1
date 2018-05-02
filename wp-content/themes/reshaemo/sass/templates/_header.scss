@@ -1,5 +1,9 @@
 body {
-    font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Roboto-Regular", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Roboto-Medium";
 }
 
 /* Убираем рамку FireFox */
@@ -53,6 +57,9 @@ section {
                     background: #E9F8FF; 
                     margin-left: 0;
                     height: 180px;
+                    a {
+                        font-family: "Roboto-Medium";
+                    }
                     a:hover {
                         color: #fff;
                     }
@@ -112,6 +119,7 @@ section {
         border-top: 4px solid #E9F8FF;
         border-bottom: 4px solid #E9F8FF;
         font-size: 2.15rem;
+        letter-spacing: -1px;
         text-transform: uppercase;
         a {
             color: #fff;
@@ -169,65 +177,136 @@ li.nav-item .nav-card {
                     color: #fff;
                 }
             }
-            &.menu-item-392 > a {
-                &:before {
-                    content: "";
-                    position: absolute;                     
-                    top: 13px;
-                    left: 6%; // 40px;
-                    background: url(images/i_topmenu1.png);
-                    width: 70px;
-                    height: 70px;                       
+            &.menu-item-392 {
+                & > a {
+                    &:before {
+                        content: "";
+                        position: absolute;                     
+                        top: 13px;
+                        left: 6%; // 40px;
+                        //background: url(images/i_topmenu1.png);
+                        background: url('images/i_menu_sprite.png') -274px -10px;
+                        width: 70px;
+                        height: 70px;                  
+                    }
+                     &:hover {
+                        &:before {
+                            content: "";
+                            position: absolute;                     
+                            top: 13px;
+                            left: 6%; // 40px;
+                            //background: url(images/i_topmenu1.png);
+                            background: url('images/i_menu_sprite.png') -98px -98px;
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }                     
                 }
-            }
-            &.menu-item-395 > a {
-                &:before {
-                    content: "";
-                    position:absolute;
-                    //z-index: -1;
-                    top: 25px;
-                    left: 26%;
-                    width: 70px;
-                    height: 70px;
-                    background: url(images/i_topmenu2.png);
+            } 
+            &.menu-item-395 {
+                & > a {
+                    &:before {
+                        content: "";
+                        position: absolute;                     
+                        top: 25px;
+                        left: 26%; // 40px;
+                        //background: url(images/i_topmenu2.png);
+                        background: url('images/i_menu_sprite.png') -10px -186px;
+                        width: 70px;
+                        height: 70px;                  
+                    }
+                     &:hover {
+                        &:before {
+                            content: "";
+                            position: absolute;                     
+                            top: 25px;
+                            left: 26%; // 40px;
+                            //background: url(images/i_topmenu2.png);
+                            background: url('images/i_menu_sprite.png') -186px -10px;
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }                     
                 }
-            }
-            &.menu-item-400 > a {
-                &:before {
-                    content: "";
-                    position:absolute;
-                    //z-index: -1;
-                    top: 18px;
-                    left: 46%;
-                    width: 70px;
-                    height: 70px;
-                    background: url(images/i_topmenu3.png);
+            } 
+            &.menu-item-400 {
+                & > a {
+                    &:before {
+                        content: "";
+                        position: absolute;                     
+                        top: 18px;
+                        left: 46%; // 40px;
+                        //background: url(images/i_topmenu3.png);
+                        background: url('images/i_menu_sprite.png') -98px -186px;
+                        width: 70px;
+                        height: 70px;                  
+                    }
+                     &:hover {
+                        &:before {
+                            content: "";
+                            position: absolute;                     
+                            top: 18px;
+                            left: 46%; // 40px;
+                            //background: url(images/i_topmenu3.png);
+                            background: url('images/i_menu_sprite.png') -10px -98px;
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }                     
                 }
-            }
-            &.menu-item-403 > a {
-                &:before {
-                    content: "";
-                    position:absolute;
-                    //z-index: -1;
-                    top: 22px;
-                    left: 66%;
-                    width: 70px;
-                    height: 70px;
-                    background: url(images/i_topmenu4.png);
+            } 
+            &.menu-item-403 {
+                & > a {
+                    &:before {
+                        content: "";
+                        position: absolute;                     
+                        top: 22px;
+                        left: 66%; // 40px;
+                        //background: url(images/i_topmenu3.png);
+                        background: url('images/i_menu_sprite.png') -186px -186px;
+                        width: 70px;
+                        height: 70px;                  
+                    }
+                     &:hover {
+                        &:before {
+                            content: "";
+                            position: absolute;                     
+                            top: 22px;
+                            left: 66%; // 40px;
+                            //background: url(images/i_topmenu3.png);
+                            background: url('images/i_menu_sprite.png') -98px -10px;
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }                     
                 }
-            }   
-            &.menu-item-406 > a {
-                &:before {
-                    content: "";
-                    position:absolute;
-                    //z-index: -1;
-                    top: 18px;
-                    left: 86%;
-                    width: 70px;
-                    height: 70px;
-                    background: url(images/i_topmenu5.png);
+            } 
+            &.menu-item-406 {
+                & > a {
+                    &:before {
+                        content: "";
+                        position: absolute;                     
+                        top: 18px;
+                        left: 86%; // 40px;
+                        //background: url(images/i_topmenu3.png);
+                        background: url('images/i_menu_sprite.png') -186px -98px;
+                        width: 70px;
+                        height: 70px;                  
+                    }
+                     &:hover {
+                        &:before {
+                            content: "";
+                            position: absolute;                     
+                            top: 18px;
+                            left: 86%; // 40px;
+                            //background: url(images/i_topmenu3.png);
+                            background: url('images/i_menu_sprite.png') -10px -10px;
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }                     
                 }
-            }                                               
+            } 
             & > a {
                 text-align: center;
                 font-size: 1rem;

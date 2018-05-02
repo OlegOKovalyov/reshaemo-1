@@ -117,7 +117,7 @@
     .video-block {
         .row {
             h2 {
-                margin-left: 5rem;
+                margin-left: -3rem;
             }
         }
     }
@@ -161,7 +161,10 @@
 /* Подстраницы страницы Видеообзор дипломов */
 .video-card-deck {
     .card {
-        background-color: #C6F3EC;
+        //background-color: #C6F3EC;
+        background-color: transparent;
+        border: none;
+        box-shadow: unset;
         margin-bottom: 2rem;
     }
     .card-iframe {

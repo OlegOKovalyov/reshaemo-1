@@ -16,7 +16,7 @@ function show_borncertf( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/svidva/born_cert-373x517.jpg"  data-fancybox data-caption="Свидетельство о рождении">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/born_cert-373x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/born_cert-90x125.jpg" alt="Card image cap" width="90" height="125"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство о рождении</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -44,7 +44,7 @@ function show_deathcertf( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/svidva/deth_cert-368x517.jpg"  data-fancybox data-caption="Свидетельство о сметри">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/deth_cert-368x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/deth_cert-90x125.jpg" alt="Card image cap" width="90" height="125"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство о сметри</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -72,7 +72,7 @@ function show_margcertf( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/svidva/marriage_cert-370x517.jpg"  data-fancybox data-caption="Свидетельство о браке">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/marriage_cert-370x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/marriage_cert-90x125.jpg" alt="Card image cap" width="90" height="125"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство о браке</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -100,7 +100,7 @@ function show_devrcertf( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/svidva/devorce_cert-368x517.jpg"  data-fancybox data-caption="Свидетельство о разводе">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/devorce_cert-368x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/devorce_cert-90x125.jpg" alt="Card image cap" width="90" height="125"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство о разводе</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -128,7 +128,7 @@ function show_adoptcertf( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/svidva/adoption_cert_368x517.jpg"  data-fancybox data-caption="Свидетельство об усыновлении">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/adoption_cert_368x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/adoption_cert_90x125.jpg" alt="Card image cap" width="90" height="125"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство об усыновлении</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -156,7 +156,7 @@ function show_fathrcertf( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/svidva/father_cert_368x517.jpg"  data-fancybox data-caption="Свидетельство об отцовстве">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/father_cert_368x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/father_cert_90x125.jpg" alt="Card image cap" width="90" height="125"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство об отцовстве</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>
@@ -184,7 +184,7 @@ function show_chngnmcertf( $atts, $content, $tag ) {
 
 	    <div class="card card-vo">
 			<a href="<?php echo bloginfo('template_url'); ?>/images/svidva/changename_cert_368x517.jpg"  data-fancybox data-caption="Свидетельство о перемене имени">
-				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/changename_cert_368x517.jpg" alt="Card image cap"></a>
+				<img class="card-img-top" src="<?php echo bloginfo('template_url'); ?>/images/svidva/changename_cert_90x125.jpg" alt="Card image cap" width="90" height="125"></a>
 	        <div class="card-body">
 	            <p class="card-text"><span class="upcase">Свидетельство о перемене имени</span><br /><span class="lcaseb">Бланк Гознак</span><br /></p>
 	            <h4 class="card-title"><?php echo esc_html( $atts['price'] ); ?></h4>

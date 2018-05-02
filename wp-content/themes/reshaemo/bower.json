@@ -19,5 +19,8 @@
     "bower_components/",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "fancybox": "^3.3.5"
+  }
 }

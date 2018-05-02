@@ -45,18 +45,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "../bower_components/bootstrap/scss/breadcrumb";
 
 /*--------------------------------------------------------------
-# Reshaemo Font Awesome 4.7.0 
---------------------------------------------------------------*/
-$fa-font-path:"node_modules/font-awesome/fonts";
-@import "node_modules/font-awesome/scss/font-awesome.scss";
-
-/*--------------------------------------------------------------
-# Reshaemo OwlCarousel 2-2.2.1 
---------------------------------------------------------------*/
-@import "../owlcarousel/src/scss/core";
-@import "../owlcarousel/src/scss/theme.default";
-
-/*--------------------------------------------------------------
 # Reshaemo Theme 1.0.0 
 --------------------------------------------------------------*/
 @import "templates/header";
@@ -80,3 +68,31 @@ $fa-font-path:"node_modules/font-awesome/fonts";
 @import "layout/responsive-min";
 @import "layout/responsive-max";
 @import "layout/responsive";
+
+/*--------------------------------------------------------------
+# Google font Roboto
+--------------------------------------------------------------*/
+//@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic');
+
+/*--------------------------------------------------------------
+# Reshaemo Font Awesome 4.7.0 
+--------------------------------------------------------------*/
+$fa-font-path:"node_modules/font-awesome/fonts";
+@import "node_modules/font-awesome/scss/font-awesome";
+
+/*--------------------------------------------------------------
+# Reshaemo OwlCarousel 2-2.2.1 
+--------------------------------------------------------------*/
+@import "../owlcarousel/src/scss/core";
+@import "../owlcarousel/src/scss/theme.default";
+
+/*--------------------------------------------------------------
+# Reshaemo Contact Form 7 
+--------------------------------------------------------------*/
+//@import "/wp-content/plugins/contact-form-7/includes/css/styles.css";
+@import "../../../plugins/contact-form-7/includes/css/styles";
+
+/*--------------------------------------------------------------
+# Fancybox 3.2.5
+--------------------------------------------------------------*/
+@import "../fancybox/dist/jquery.fancybox";

@@ -188,13 +188,8 @@ function reshaemo_scripts() {
 	/* CSS */
 	wp_enqueue_style( 'reshaemo-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'reshaemo-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
-
-	wp_enqueue_style( 'reshaemo-fancybox3', get_template_directory_uri() . '/fancybox/dist/jquery.fancybox.min.css' );
-
-	wp_enqueue_script( 'reshaemo-javascript', get_template_directory_uri() . '/js/app.min.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'reshaemo-fancybox3', get_template_directory_uri() . '/fancybox/dist/jquery.fancybox.min.js', array(), '20151215', true );
+    /* JS */
+	wp_enqueue_script( 'reshaemo-javascript', get_template_directory_uri() . '/js/app.min.js', array('jquery'), '20180323', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -271,3 +266,82 @@ function user_browser($agent) {
         if (!$browser && strpos($agent, 'Gecko')) return 'Browser based on Gecko'; // для неопознанных браузеров проверяем, если они на движке Gecko, и возращаем сообщение об этом
         return $browser.' '.$version; // для всех остальных возвращаем браузер и версию
 }
+
+/* Функция проверки, входит ли пользователь с мобильного устройства */
+function reshaemo_is_mobile( $child_page, $number ) {
+    if( wp_is_mobile() ) {
+        $args = array(
+            'parent' => $child_page, 
+            'sort_column' => 'post_date', 
+            'sort_order' => 'ASC',
+            'hierarchical' => false, 
+            'number' => $number
+        );
+    } else {
+        $args = array(
+            'child_of' => $child_page, 
+            'sort_column' => 'post_date', 
+            'sort_order' => 'ASC'
+        );        
+    }
+    return $args;
+}
+
+// Оптимизируем сайт на WordPress (начало)
+// Деактивируем некоторые последствия вызова wp_head:
+remove_action('wp_head','feed_links_extra', 3); // убирает ссылки на rss категорий
+remove_action('wp_head','feed_links', 2); // минус ссылки на основной rss и комментарии
+remove_action('wp_head','rsd_link');  // сервис Really Simple Discovery
+remove_action('wp_head','wlwmanifest_link'); // Windows Live Writer
+remove_action('wp_head','wp_generator');  // скрыть версию wordpress
+
+// Скрываем разные линки при отображении постов блога (следующий, предыдущий, короткий url):
+remove_action('wp_head','start_post_rel_link',10,0);
+remove_action('wp_head','index_rel_link');
+remove_action('wp_head','adjacent_posts_rel_link_wp_head', 10, 0 );
+remove_action('wp_head','wp_shortlink_wp_head', 10, 0 );
+
+// Удаляем JSON API ссылки:
+remove_action( 'wp_head', 'rest_output_link_wp_head');
+remove_action( 'wp_head', 'wp_oembed_add_discovery_links');
+remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
+
+// Выключаем плагин Emoji
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+// Перемещаем jQuery в футер сайта
+add_action('wp_enqueue_scripts', 'true_peremeshhaem_jquery_v_futer');  
+function true_peremeshhaem_jquery_v_futer() {  
+ 	// снимаем стандартную регистрацию jQuery
+        wp_deregister_script('jquery');  
+ 
+        // регистрируем для подключения в футере, описание параметров - в документации функции (ссылка чуть выше)
+        wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, null, true);  
+ 
+	// подключаем
+        wp_enqueue_script('jquery');
+}
+
+// Отключаем файл стилей плагина Contact Form 7 (после чего подключаем его в style.css)
+add_action( 'wp_print_styles', 'true_otkljuchaem_stili_contact_form', 100 ); // по идее вы можете использовать и хук wp_enqueue_scripts, хотя конкретно его я не тестировал
+function true_otkljuchaem_stili_contact_form() {
+	wp_deregister_style( 'contact-form-7' ); // в параметрах - ID подключаемого файла
+}
+
+// Отключаем файл скриптов плагина Contact Form 7 (после чего подключаем его в main.js)
+add_action( 'wp_enqueue_scripts', 'wpcf7_script_off' );
+function wpcf7_script_off() {
+	wp_deregister_script( 'contact-form-7' );
+}
+
+// Remove the query string '?ver' from static resources and encode the parameters into the URL
+function rm_query_string( $src ){   
+    $parts = explode( '?ver', $src );
+    return $parts[0];
+}
+if ( !is_admin() ) {
+    add_filter( 'script_loader_src', 'rm_query_string', 15, 1 );
+    add_filter( 'style_loader_src', 'rm_query_string', 15, 1 );
+}
+// /Оптимизируем сайт на WordPress (окончание)

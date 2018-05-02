@@ -12,12 +12,14 @@
         margin-left: -20px;
     }
     h2 {
-        color: rgb(47, 151, 13);        
+        color: rgb(47, 151, 13);
+        font-family: "Roboto-Bold";        
         font-size: 2.3rem;
         text-transform: uppercase;
     }
     .lead {
         color: rgb(60, 90, 174);
+        font-family: "Roboto-Medium";
         font-size: 1.2rem;
         font-weight: 500;
         letter-spacing: -0.5px;
@@ -51,6 +53,7 @@ form.wpcf7-form {
     }
     legend {
         color: #fff;
+        font-family: "Roboto-Medium";
         font-size: 1.7rem;
         font-weight: 600;
         padding-top: 25px;
@@ -104,6 +107,7 @@ form.wpcf7-form {
         line-height: 1.094;        
     }
     #idsubmbtn {
+        font-family: "Roboto-Bold";
         font-size: 1.4rem;            
         font-weight: 600;
         border-radius: 10px;
@@ -138,6 +142,7 @@ form.wpcf7-form {
     input.wpcf7-form-control,
     select.wpcf7-form-control {
         align-self: center;
+        margin-bottom: .36rem;
     }
     span.wpcf7-not-valid-tip {
         flex-direction: unset;

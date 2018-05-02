@@ -41,6 +41,7 @@
 			border-top-right-radius: .5rem;
 			color: #3C5AAE;
 			display: block;
+			font-family: "Roboto-Medium";
 			font-size: 0.65rem;
 			font-weight: 500;
 			height: 100%;
@@ -119,14 +120,23 @@
 	}
 }
 
-.owl-theme .owl-nav [class*="owl-"] {
+.owl-theme .owl-nav div[class*="owl-"] {
 	background: #B2D6F0;
 	color: darken(#75C6FE, 10%);
 }
 
-.owl-theme .owl-nav [class*="owl-"]:hover {
+.owl-theme .owl-nav div[class*="owl-"]:hover {
 	background-color: #75C6FE;
 	
+}
+
+/* Owl-carousel img-size*/
+.owl-carousel .owl-item {
+    .entry .card-vo {
+        img {
+            width: 104px;
+        }
+    }
 }
 
 /* Галереи всех документов на странице Цены */
@@ -193,6 +203,7 @@
 		a {
 			color: #0941D5;
 			display: block;
+			font-family: "Roboto-Medium";
 			padding: 0.6rem 1rem;
 			&:hover {
 				color: #fff;				
