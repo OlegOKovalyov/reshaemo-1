@@ -15,7 +15,8 @@
         margin-bottom: .5rem;
     }
     h1 {
-        font-size: 1.2rem !important;
+        font-size: 1.4rem !important;
+        font-family: 'Roboto-Bold';
     } 
     .gallery h1 {
         border-bottom: 2.5px solid !important;
@@ -46,7 +47,7 @@
         }
     }
     h1 {
-        font-size: 1.29rem !important;
+        font-size: 1.5rem !important;
     }
     .gallery h1 {
         border-bottom: 3px solid !important;
@@ -86,6 +87,8 @@
     }
     .brand-card-body {
         font-size: .9rem;
+        margin-left: -1rem;
+        width: 120%;
     } 
     ul#menu-main-menu > li.menu-item {
         font-size: .9rem;
@@ -94,7 +97,7 @@
         padding: .8rem .8rem;
     }
     h1 {
-        font-size: 1.3rem !important;
+        font-size: 1.6rem !important;
     }    
     form.mainpf, 
     form.wpcf7-form {

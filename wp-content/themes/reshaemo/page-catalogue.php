@@ -40,7 +40,7 @@ get_header(); ?>
                   'container'=>''
                   ) );
                 ?>                
-
+                <h1><?php the_title() ?></h1>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-one" role="tabpanel"> <!-- был еще один атрибут: aria-labelledby="nav-one-tab" -->
                         <div class="container">

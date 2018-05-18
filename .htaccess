@@ -10,3 +10,22 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+#RewriteEngine On
+#RewriteRule ^ceny/(.+)$ http://wpreshaemo.loc/$1 [R=301,L]
+
+RewriteCond  %{DOCUMENT_ROOT}/ceny/vuzy-moskvy/a/$1 -f
+
+RewriteRule ^(.*)$ vuzy-moskvy/$1 [L,QSA]
+
+# Включаем mod_rewrite
+RewriteEngine On
+
+# Убираем последний слеш
+#RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Преобразуем /ceny/vuzy-moskvy/ в /vuzy-moskvy/
+#RewriteRule ^(\w+)$ /vuzy-moskvy/ [R=301]
+
+# Преобразуем /ceny/vuzy-moskvy/a/ в /ceny/vuzy-moskvy/
+#RewriteRule ^(\w+)$ /ceny/vuzy-moskvy/ [R=301]

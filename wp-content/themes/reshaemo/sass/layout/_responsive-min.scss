@@ -17,13 +17,22 @@
             margin-right: -2rem;
         }
     }
+    .page-template-page-videopr-php {
+        .card-body {
+            padding: 0;
+            h2 {
+                font-size: 1.1rem;
+                margin: 0;
+            }
+        }
+    }    
 }
      
 /* lg-устройства (больше или равно 992px) */
 @media (min-width: 992px) {
     /* CSS для: 992px <= ширины <= 1119px */
     .top-wrap .toplarge-menu {
-        h4, h6 {
+        .h4, .h6 {
             display: none;
         }
     }
@@ -44,6 +53,15 @@
             width: 80%;
         }        
     }
+    .page-template-page-videopr-php {
+        .card-body {
+            padding: 0;
+            h2 {
+                font-size: 1.3rem;
+                margin: 0;
+            }
+        }
+    }     
     .page-orderforms #sprvk-form div.wpcf7-mail-sent-ok,
     .page-orderforms #svvo-form div.wpcf7-mail-sent-ok {
         margin-left: 2rem;

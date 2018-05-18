@@ -35,7 +35,7 @@
     .top-wrap .toplarge-menu {
         flex-direction: row-reverse;
         justify-content: end;
-        h4 {
+        .h4 {
             border-top: 4px solid #E9F8FF;
             border-bottom: 4px solid #E9F8FF;
             font-size: 1.3rem;
@@ -48,7 +48,7 @@
                 color: #fff;
             }
         }
-        h6 {
+        .h6 {
             color: #fff;
             font-size: 0.8rem;
             font-weight: normal;
@@ -194,6 +194,18 @@
     .sb-catlg h2 {
         margin: 2rem 0 3rem 0;
         text-align: center;
+    }
+    .page-template-page-videopr-php {
+        .card-body {
+            padding: 0;
+            h2 {
+                font-size: 1.1rem;
+                margin: 0;
+            }
+            img.card-img-top {
+                width: 100%;
+            }
+        }
     }
     .cat-diplprofmsk ul.diplprofmsk li > a {
         margin-left: 3rem;
@@ -345,7 +357,8 @@
         }
     }
     h1 {
-        font-size: 1.2rem !important;
+        font-size: 1.3rem !important;
+        font-family: 'Roboto-Bold';
     }
     .gallery h1 {
         border-bottom: 2px solid !important;

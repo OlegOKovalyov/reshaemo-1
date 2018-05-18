@@ -159,8 +159,8 @@ function show_topbtmlargemenu( $atts, $content, $tag ) {
                                 <p class="brand-card-text"><a href="mailto:<?php echo esc_html( $atts['email'] ); ?>"><?php echo esc_html( $atts['email'] ); ?></a></p>
                                 <p class="brand-card-tel1"><a href="tel:<?php echo esc_html( $atts['tel1'] ); ?>"><?php echo esc_html( $atts['tel1'] ); ?></a></p>
                                 <p class="brand-card-tel2"><a href="tel:<?php echo esc_html( $atts['tel2'] ); ?>"><?php echo esc_html( $atts['tel2'] ); ?></a></p>
-                                <p class="h4 brand-card-title"><a href="<?php echo bloginfo('home'); ?>" class="brand-card-link">Дипломы</a></p>
-                                <p class="h6 brand-card-subtitle mb-2">Гознаки, Аттестаты, Справки, Документы</p>
+                                <h4 class="brand-card-title"><a href="<?php echo bloginfo('home'); ?>" class="brand-card-link">Дипломы</a></h4>
+                                <h6 class="brand-card-subtitle mb-2">Гознаки, Аттестаты, Справки, Документы</h6>
                             </div><!-- .brand-card-body -->
                         </div><!-- .brand-card -->
                     </div><!-- .site-branding -->
@@ -168,8 +168,8 @@ function show_topbtmlargemenu( $atts, $content, $tag ) {
                 <div class="triangle-left"></div>                      
                 <div class="col-lg-10 col-md-12 toplarge-menu">
                     <!-- <span>Дипломы: </span><span> гознаки, аттестаты. справки. документы</span> -->
-                    <p class="h6 brand-card-subtitle mb-2"> Гознаки, Аттестаты, Справки, Документы</p>
-                    <p class="h4 brand-card-title"><a href="<?php echo bloginfo('home'); ?>" class="brand-card-link">Дипломы</a></p>
+                    <h6 class="brand-card-subtitle mb-2"> Гознаки, Аттестаты, Справки, Документы</h6>
+                    <h4 class="brand-card-title"><a href="<?php echo bloginfo('home'); ?>" class="brand-card-link">Дипломы</a></h4>
                     <!-- <nav class="navbar navbar-expand-lg navbar-topmenu bg-topmenu"> -->
                     <nav class="navbar navbar-expand-lg navbar-light bg-topmenu">
                     <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
@@ -232,8 +232,8 @@ function show_topbtmlargemenu2( $atts, $content, $tag ) {
                                 <p class="brand-card-text"><a href="mailto:<?php echo esc_html( $atts['email'] ); ?>"><?php echo esc_html( $atts['email'] ); ?></a></p>
                                 <p class="brand-card-tel1"><a href="tel:<?php echo esc_html( $atts['tel1'] ); ?>"><?php echo esc_html( $atts['tel1'] ); ?></a></p>
                                 <p class="brand-card-tel2"><a href="tel:<?php echo esc_html( $atts['tel2'] ); ?>"><?php echo esc_html( $atts['tel2'] ); ?></a></p>
-                                <p class="h4 brand-card-title"><a href="<?php echo bloginfo('home'); ?>" class="brand-card-link">Дипломы</a></p>
-                                <p class="h6 brand-card-subtitle mb-2">Гознаки, Аттестаты, Справки, Документы</p>
+                                <h4 class="brand-card-title"><a href="<?php echo bloginfo('home'); ?>" class="brand-card-link">Дипломы</a></h4>
+                                <h6 class="brand-card-subtitle mb-2">Гознаки, Аттестаты, Справки, Документы</h6>
                             </div><!-- .brand-card-body -->
                         </div><!-- .brand-card -->
                     </div><!-- .site-branding -->
@@ -241,8 +241,6 @@ function show_topbtmlargemenu2( $atts, $content, $tag ) {
                 <div class="triangle-left"></div>                      
                 <div class="col toplarge-menu">
                     <!-- <nav class="navbar navbar-expand-lg navbar-topmenu bg-topmenu"> -->
-                    <p class="h6 brand-card-subtitle mb-2"> Гознаки, Аттестаты, Справки, Документы</p>
-                    <p class="h4 brand-card-title"><a href="<?php echo bloginfo('home'); ?>" class="brand-card-link">Дипломы</a></p>
                     <nav class="navbar navbar-expand-lg navbar-light bg-topmenu">
                     <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
                     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #BFE0F1;"> -->
@@ -694,7 +692,7 @@ function show_tabsrspecobrz( $atts, $content, $tag ) {
 <div class="container-fluid">
     <div class="container">
 
-        <?php $child_pages = array( "470", "875" ); ?>
+        <?php $child_pages = array( "470", "1928" ); ?>
 
         <div class="row">
             <div class="col-12">
@@ -749,7 +747,7 @@ function show_attschool( $atts, $content, $tag ) {
 <div class="container-fluid">
     <div class="container">
 
-        <?php $child_pages = array( "983", "501" ); // было 485, 501 ?>
+        <?php $child_pages = array( "485", "501" ); ?>
 
         <div class="row">
             <div class="col-12">
@@ -804,7 +802,7 @@ function show_sprsva( $atts, $content, $tag ) {
 <div class="container-fluid">
     <div class="container">
 
-        <?php $child_pages = array( "511", "812" ); ?>
+        <?php $child_pages = array( "511", "1845" ); ?>
         <?php //$child_pages = array( "667" ); ?>
 
         <div class="row">
@@ -1066,7 +1064,7 @@ function wp_comments_corenavi() {
 }
 
 
-/* Advanced Pagination Function */
+/* Advanced Pagination Function - не используется */
 function custom_pagination($numpages = '', $pagerange = '', $paged='') {
 
   if (empty($pagerange)) {
@@ -1458,7 +1456,7 @@ function recent_comments_remak_sample ($number=3, $length=280) { // Исходн
     echo '</ul>' . '</div>';
 }
 
-function recent_comments_remak ($number=3, $length=280) {
+function recent_comments_remak ($number=3, $length=250) {
     $args = array (
         'number' => $number,
         'status' => 'approve',
@@ -1470,7 +1468,7 @@ function recent_comments_remak ($number=3, $length=280) {
         $comment_content_short = substr($comment_content_short, 0, $length);
         echo '<li class="recentcomments"><span class="author">' . $comment->comment_author . '</span><pre> | </pre>';
         echo '<span class="date">' . comment_date('j.m.Y', $comment) . '</span>';
-        echo '<p>' . $comment_content_short . '</p>' . '</li>';
+        echo '<p>' . $comment_content_short . '...</p>' . '</li>';
     endforeach;
     echo '</ul>' . '</div>';
 }

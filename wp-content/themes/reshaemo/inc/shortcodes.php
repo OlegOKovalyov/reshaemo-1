@@ -11,7 +11,7 @@ add_shortcode( 'videodipls', 'show_videodipls');
 function show_videodipls( $atts, $content, $tag ) {
 
 	ob_start(); ?>
-        <div class="col video-block row mt-5">
+        <div class="video-block row mt-5 row">
             <div class="col-md-7">
                 <nav class="nav flex-column">
                     <a class="nav-link" href="/videoobzor-diplomov-o-vysshem/">Видеообзор дипломов о высшем образовании</a>
@@ -21,8 +21,8 @@ function show_videodipls( $atts, $content, $tag ) {
                 </nav>
 
             </div>
-            <div class="col-md-5">
-                <a href="#">
+            <div class="col-md-5 blk-montr">
+                <a href="/videoobzor-diplomov/">
                     <img src="/wp-content/themes/reshaemo/images/mntr-play.png" alt="Монтитор компьютера">
                 </a>
             </div>
@@ -47,19 +47,19 @@ function show_videomiscdipls( $atts, $content, $tag ) {
     ob_start();
     ?>
 
-    <div class="card-deck video-card-deck">
+    <div class="video-card-deck">
       
-      <div class="card">
+      <div class="card col-12">
         <div class="card-body">
-          <h3 class="card-title"><?php echo esc_html( $atts['doc1'] ); ?></h3>
+          <h2 class="card-title text-center"><?php echo esc_html( $atts['doc1'] ); ?></h2>
           <img class="card-img-top" src="/wp-content/uploads/2018/04/videoimage-300x168.jpg" alt="Card image cap">
           <a href="<?php echo esc_html( $atts['link1'] ); ?>" class="btn btn-outline-order mb-4">Смотреть</a>      
         </div>
       </div>
 
-      <div class="card">
+      <div class="card col-12">
         <div class="card-body">
-          <h3 class="card-title"><?php echo esc_html( $atts['doc2'] ); ?></h3>
+          <h2 class="card-title text-center"><?php echo esc_html( $atts['doc2'] ); ?></h2>
           <img class="card-img-top" src="/wp-content/uploads/2018/04/videoimage-300x168.jpg" alt="Card image cap">
           <a href="<?php echo esc_html( $atts['link2'] ); ?>" class="btn btn-outline-order mb-4">Смотреть</a>
         </div>
@@ -88,11 +88,11 @@ function show_videoiframe( $atts, $content, $tag ) {
     ob_start();
     ?>
 
-    <div class="card-deck video-card-deck">
+    <div class="video-card-deck">
       
       <div class="card card-iframe">
         <div class="card-body">
-            <h3 class="card-title"><?php echo esc_html( $atts['name1'] ); ?></h3>
+            <h2 class="card-title text-center"><?php echo esc_html( $atts['name1'] ); ?></h2>
             <div class="video-container">
               <iframe width="100%" height="220" src="<?php echo esc_html( $atts['src1'] ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>         
           </div>
@@ -101,7 +101,7 @@ function show_videoiframe( $atts, $content, $tag ) {
 
       <div class="card card-iframe">
         <div class="card-body">
-            <h3 class="card-title"><?php echo esc_html( $atts['name2'] ); ?></h3>
+            <h2 class="card-title text-center"><?php echo esc_html( $atts['name2'] ); ?></h2>
             <div class="video-container">
               <iframe width="100%" height="220" src="<?php echo esc_html( $atts['src2'] ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>             
           </div>

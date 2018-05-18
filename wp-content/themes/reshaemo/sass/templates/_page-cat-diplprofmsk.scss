@@ -10,7 +10,7 @@
 		display: flex;
 		justify-content: flex-end;
 		list-style-type: none;
-		margin-top: -3rem;
+		margin-top: -1rem;
 		padding-bottom: 1rem;
 		width: 100%;
 		li > a {
@@ -112,4 +112,14 @@
 			}
 		}
 	}
+}
+
+/* Страницы из меню сайдбара "Диплом в городах подмосковья" */
+.parent-pageid-1425 { // loc:637 web: 1425
+	section {
+		h1:first-child {
+			display: none;
+		}
+	}
+
 }

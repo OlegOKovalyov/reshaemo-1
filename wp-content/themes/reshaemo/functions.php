@@ -345,3 +345,111 @@ if ( !is_admin() ) {
     add_filter( 'style_loader_src', 'rm_query_string', 15, 1 );
 }
 // /Оптимизируем сайт на WordPress (окончание)
+
+// Изменяем URL страницы "ВУЗы Москвы"
+function true_301_redirect1() {
+    /* в массиве указываем все старые=>новые ссылки  */
+    $rules = array(
+        // страницы
+        array('old'=>'/ceny/vuzy-moskvy/','new'=>'/vuzy-moskvy/')
+    );
+    foreach( $rules as $rule ) :
+        // если URL совпадает с одним из указанных в массиве, то редиректим
+        if( urldecode($_SERVER['REQUEST_URI']) == $rule['old'] ) :
+            wp_redirect( site_url( $rule['new'] ), 301 );
+            exit();
+        endif;
+    endforeach;
+}
+ 
+add_action('template_redirect', 'true_301_redirect1');
+
+function true_request1( $query ){
+ 
+    $url_zapros = urldecode($_SERVER['REQUEST_URI']);
+ 
+    /* для страниц */
+    if( $url_zapros == '/vuzy-moskvy/' ){
+        $query['pagename'] = urlencode('ceny/vuzy-moskvy');
+        unset($query['name']);
+    }
+ 
+    return $query;
+}
+ 
+add_filter( 'request', 'true_request1', 9999, 1 );
+
+function true_posts_links1( $url, $post ){
+    if( !is_object( $post ) )
+        $post = get_post( $post_id );
+ 
+    $replace = $post->post_name;
+ 
+    /* замены для записей и страниц,
+        к сожалению тут только по ID замену можно сделать */
+ 
+    if( $post->ID == 422 ) 
+        $replace = 'vuzy-moskvy';
+
+    $url = str_replace($post->post_name, $replace, $url );
+    return $url;
+}
+ 
+add_filter( 'post_link', 'true_posts_links1', 'edit_files', 2 );
+add_filter( 'page_link', 'true_posts_links1', 'edit_files', 2 );
+add_filter( 'post_type_link', 'true_posts_links1', 'edit_files', 2 );
+
+
+
+// Изменяем URL страницы каждого ВУЗа Москвы"
+function true_301_redirect() {
+    /* в массиве указываем все старые=>новые ссылки  */
+    $rules = array(
+        // страницы
+        array('old'=>'/vuzy-moskvy/a/','new'=>'/vu-zy-moskvy/') 
+    );
+    foreach( $rules as $rule ) :
+        // если URL совпадает с одним из указанных в массиве, то редиректим
+        if( urldecode($_SERVER['REQUEST_URI']) == $rule['old'] ) :
+            wp_redirect( site_url( $rule['new'] ), 301 );
+            exit();
+        endif;
+    endforeach;
+}
+ 
+add_action('template_redirect', 'true_301_redirect');
+
+function true_request( $query ){
+ 
+    $url_zapros = urldecode($_SERVER['REQUEST_URI']);
+ 
+    /* для страниц */
+    if( $url_zapros == '/vu-zy-moskvy/' ){
+        $query['pagename'] = urlencode('vuzy-moskvy/a');
+        unset($query['name']);
+    }    
+ 
+    return $query;
+}
+ 
+add_filter( 'request', 'true_request', 9999, 1 );
+
+function true_posts_links( $url, $post ){
+    if( !is_object( $post ) )
+        $post = get_post( $post_id );
+ 
+    $replace = $post->post_name;
+ 
+    /* замены для записей и страниц,
+        к сожалению тут только по ID замену можно сделать */
+ 
+    if( $post->ID == 353 ) 
+       $replace = 'vu-zy-moskvy';
+
+    $url = str_replace($post->post_name, $replace, $url );
+    return $url;
+}
+ 
+add_filter( 'post_link', 'true_posts_links', 'edit_files', 2 );
+add_filter( 'page_link', 'true_posts_links', 'edit_files', 2 );
+add_filter( 'post_type_link', 'true_posts_links', 'edit_files', 2 );

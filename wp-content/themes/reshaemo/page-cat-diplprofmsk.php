@@ -55,11 +55,7 @@ $letter_upp = mb_strtoupper($letter, 'UTF-8'); ?>
 
                 <section>
 
-                    <h2><?php the_title(); ?></h2>
-
-
-
-
+                    <h1><?php the_title(); ?></h1>
                     <div class="container">
                         <?php
                             $children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0'.'&depth=1');

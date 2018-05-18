@@ -42,7 +42,7 @@ get_header(); ?>
                             <span id="up-marker" data-scroll="0"></span>
 
                                     <?php
-                                      $postid = '514';                                    
+                                      $postid = '514';                                     
                                       $children = wp_list_pages('title_li=&child_of='.$postid.'&echo=0'.'&depth=1');
                                       if ($children) { ?>
                                       <ul class="nav">

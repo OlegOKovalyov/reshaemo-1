@@ -54,15 +54,15 @@ $letter_upp = mb_strtoupper($letter, 'UTF-8'); ?>
 
                 <section>
 
-                    <h2 class="text-center"><?php the_title(); ?></h2>
+                    <h1 class="text-center"><?php the_title(); ?></h1>
 
-                    <div class="container">
+                    <!-- <div class="container"> -->
            
                     <?php while (have_posts()): the_post();?>
                         <?php the_content();?>
                     <?php endwhile; ?>
 
-                    </div><!-- .container -->                    
+                   <!--  </div> --><!-- .container -->                    
 
                 </section>
 

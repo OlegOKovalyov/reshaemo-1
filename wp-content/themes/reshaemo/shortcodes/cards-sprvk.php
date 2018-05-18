@@ -291,7 +291,7 @@ function show_carouselsvva( $atts, $content, $tag ) {
 <div class="container-fluid">
     <div class="container">
 
-        <?php $child_pages = array( "812" ); ?>
+        <?php $child_pages = array( "812" ); // loc:812 web:1845 ?>
 
         <div class="row">
             <div class="col-12">
